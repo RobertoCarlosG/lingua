@@ -1,15 +1,13 @@
 services:
   - type: web
     name: lingua-backend
-    runtime: node
+    runtime: python
     rootDir: backend
-    buildCommand: npm install
-    startCommand: npm start
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
-      - key: NODE_ENV
-        value: production
-      - key: ANTHROPIC_API_KEY
-        sync: false
+      - key: PYTHON_VERSION
+        value: 3.12.4
       - key: SUPABASE_URL
         sync: false
       - key: SUPABASE_SERVICE_KEY

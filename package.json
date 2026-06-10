@@ -1,10 +1,11 @@
 {
   "name": "lingua",
   "private": true,
-  "workspaces": ["frontend", "backend"],
+  "workspaces": ["frontend"],
   "scripts": {
-    "dev": "concurrently \"npm run dev -w frontend\" \"npm run dev -w backend\"",
-    "build": "npm run build -w frontend && npm run build -w backend"
+    "dev": "concurrently \"yarn workspace lingua-frontend dev\" \"yarn dev:api\"",
+    "dev:api": "cd backend && uvicorn app.main:app --reload --port 3001",
+    "build": "yarn workspace lingua-frontend build"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

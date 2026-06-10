@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Plus, Search, Volume2, ChevronDown } from 'lucide-react'
+import { Plus, Search, ChevronDown, BookMarked, Loader2 } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
+import { lookupWord } from '@/lib/dictionary'
 import { useStore } from '@/lib/store'
 import { cn, formatDate } from '@/lib/utils'
 import type { VocabWord, WordStatus } from '@/types/database'
@@ -27,6 +28,30 @@ function AddWordModal({ onClose, onSave, language }: {
   const [form, setForm] = useState({
     word: '', ipa: '', translation: '', definition: '', example_sentence: '', tags: '',
   })
+  const [looking, setLooking] = useState(false)
+  const [lookupError, setLookupError] = useState<string | null>(null)
+
+  async function handleLookup() {
+    if (!form.word.trim() || looking) return
+    setLooking(true)
+    setLookupError(null)
+    const entry = await lookupWord(form.word)
+    if (entry) {
+      const meaning = entry.meanings[0]
+      setForm(f => ({
+        ...f,
+        word: entry.word,
+        ipa: entry.ipa ?? f.ipa,
+        translation: entry.translation_suggestion ?? f.translation,
+        definition: meaning?.definition ?? f.definition,
+        example_sentence: meaning?.example ?? f.example_sentence,
+        tags: f.tags || (meaning?.part_of_speech ?? ''),
+      }))
+    } else {
+      setLookupError('No se encontró en el diccionario')
+    }
+    setLooking(false)
+  }
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -55,7 +80,21 @@ function AddWordModal({ onClose, onSave, language }: {
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label className="text-xs text-white/40 mb-1 block">Palabra</label>
-              <input className={inputClass} value={form.word} onChange={e => setForm(f => ({...f, word: e.target.value}))} placeholder="accomplish" required />
+              <div className="flex gap-1.5">
+                <input className={inputClass} value={form.word} onChange={e => setForm(f => ({...f, word: e.target.value}))} placeholder="accomplish" required />
+                {language === 'en' && (
+                  <button
+                    type="button"
+                    onClick={handleLookup}
+                    disabled={looking || !form.word.trim()}
+                    title="Buscar en el diccionario"
+                    className="glass-btn px-2.5 text-blue-300 disabled:opacity-40 shrink-0"
+                  >
+                    {looking ? <Loader2 size={14} className="animate-spin" /> : <BookMarked size={14} />}
+                  </button>
+                )}
+              </div>
+              {lookupError && <p className="text-xs text-amber-400 mt-1">{lookupError}</p>}
             </div>
             <div>
               <label className="text-xs text-white/40 mb-1 block">IPA</label>

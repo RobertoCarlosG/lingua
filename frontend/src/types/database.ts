@@ -4,7 +4,7 @@ export type WordStatus = 'new' | 'learning' | 'known' | 'mastered'
 
 export type ErrorSeverity = 'minor' | 'moderate' | 'recurring'
 
-export interface VocabWord {
+export type VocabWord = {
   id: string
   user_id: string
   language: Language
@@ -21,7 +21,7 @@ export interface VocabWord {
   last_reviewed_at: string | null
 }
 
-export interface ErrorEntry {
+export type ErrorEntry = {
   id: string
   user_id: string
   language: Language
@@ -35,7 +35,7 @@ export interface ErrorEntry {
   last_seen_at: string
 }
 
-export interface SessionLog {
+export type SessionLog = {
   id: string
   user_id: string
   language: Language
@@ -48,7 +48,7 @@ export interface SessionLog {
   created_at: string
 }
 
-export interface Lesson {
+export type Lesson = {
   id: string
   user_id: string
   language: Language
@@ -58,30 +58,38 @@ export interface Lesson {
   created_at: string
 }
 
-export interface Database {
+export type Database = {
   public: {
     Tables: {
       vocab_words: {
         Row: VocabWord
         Insert: Omit<VocabWord, 'id' | 'created_at'>
         Update: Partial<Omit<VocabWord, 'id'>>
+        Relationships: []
       }
       error_entries: {
         Row: ErrorEntry
         Insert: Omit<ErrorEntry, 'id' | 'created_at'>
         Update: Partial<Omit<ErrorEntry, 'id'>>
+        Relationships: []
       }
       session_logs: {
         Row: SessionLog
         Insert: Omit<SessionLog, 'id' | 'created_at'>
         Update: Partial<Omit<SessionLog, 'id'>>
+        Relationships: []
       }
       lessons: {
         Row: Lesson
         Insert: Omit<Lesson, 'id' | 'created_at'>
         Update: Partial<Omit<Lesson, 'id'>>
+        Relationships: []
       }
     }
+    Views: Record<string, never>
+    Functions: Record<string, never>
+    Enums: Record<string, never>
+    CompositeTypes: Record<string, never>
   }
 }
 

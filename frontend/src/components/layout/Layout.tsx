@@ -1,7 +1,7 @@
 import { Outlet, NavLink } from 'react-router-dom'
 import {
   LayoutDashboard, BookOpen, AlertCircle, FileText,
-  MessageSquare, Menu, X, Globe
+  Menu, X, Globe
 } from 'lucide-react'
 import { useStore } from '@/lib/store'
 import { LanguageToggle } from '@/components/ui/LanguageToggle'
@@ -12,7 +12,6 @@ const NAV_ITEMS = [
   { to: '/vocabulary', icon: BookOpen, label: 'Vocabulario' },
   { to: '/errors', icon: AlertCircle, label: 'Banco de errores' },
   { to: '/lessons', icon: FileText, label: 'Lecciones' },
-  { to: '/chat', icon: MessageSquare, label: 'Práctica IA' },
 ]
 
 export function Layout() {

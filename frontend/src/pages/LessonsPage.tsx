@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
-import { Plus, FileText, ChevronRight, Volume2, CheckCircle, Circle, AlertCircle } from 'lucide-react'
+import { Plus, FileText, ChevronRight, Volume2, CheckCircle, Circle, AlertCircle, Wand2, Loader2 } from 'lucide-react'
+import { generateLessonYaml } from '@/lib/dictionary'
 import { supabase } from '@/lib/supabase'
 import { useStore } from '@/lib/store'
 import { cn } from '@/lib/utils'
@@ -200,9 +201,27 @@ function LessonRenderer({ lesson }: { lesson: LessonYAML }) {
 }
 
 function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
+  const { activeLanguage } = useStore()
   const [yaml, setYaml] = useState(LESSON_TEMPLATE_VOCAB)
   const [errors, setErrors] = useState<string[]>([])
   const [template, setTemplate] = useState<'vocab' | 'phonetics'>('vocab')
+  const [genWords, setGenWords] = useState('')
+  const [generating, setGenerating] = useState(false)
+
+  async function handleGenerate() {
+    const words = genWords.split(',').map(w => w.trim()).filter(Boolean)
+    if (words.length === 0 || generating) return
+    setGenerating(true)
+    setErrors([])
+    const generated = await generateLessonYaml(words, `Vocabulario: ${words.slice(0, 3).join(', ')}...`)
+    if (generated) {
+      setYaml(generated)
+      setGenWords('')
+    } else {
+      setErrors(['No se pudo generar la lección — revisa las palabras o que el backend esté activo'])
+    }
+    setGenerating(false)
+  }
 
   function handleRender() {
     const parsed = parseLesson(yaml)
@@ -242,6 +261,27 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
           </button>
         ))}
       </div>
+
+      {activeLanguage === 'en' && (
+        <div className="flex gap-1.5">
+          <input
+            className="glass-input flex-1 px-3 py-2 text-xs"
+            placeholder="Genera desde palabras: accomplish, endeavor, insight..."
+            value={genWords}
+            onChange={e => setGenWords(e.target.value)}
+            onKeyDown={e => e.key === 'Enter' && handleGenerate()}
+          />
+          <button
+            type="button"
+            onClick={handleGenerate}
+            disabled={generating || !genWords.trim()}
+            className="glass-btn px-3 text-xs text-blue-300 flex items-center gap-1.5 disabled:opacity-40 shrink-0"
+          >
+            {generating ? <Loader2 size={13} className="animate-spin" /> : <Wand2 size={13} />}
+            Generar YAML
+          </button>
+        </div>
+      )}
 
       <textarea
         value={yaml}
