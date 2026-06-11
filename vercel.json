@@ -1,6 +1,6 @@
 {
-  "buildCommand": "yarn workspace lingua-frontend build",
-  "outputDirectory": "frontend/dist",
+  "buildCommand": "yarn build",
+  "outputDirectory": "dist",
   "installCommand": "yarn install",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
