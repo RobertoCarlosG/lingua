@@ -6,6 +6,9 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import PlainTextResponse
+from pydantic import BaseModel
+
+from app.lesson_validator import validate_lesson
 
 load_dotenv()
 
@@ -88,6 +91,17 @@ async def lookup_word(word: str):
             raise HTTPException(status_code=404, detail=f"'{word}' no encontrada")
         entry["translation_suggestion"] = await fetch_translation(client, word)
     return entry
+
+
+class LessonValidationRequest(BaseModel):
+    yaml_content: str
+
+
+@app.post("/api/lessons/validate")
+async def validate_lesson_yaml(payload: LessonValidationRequest):
+    """Valida el YAML de una lección: sintaxis, campos requeridos y
+    consistencia de vocabulario/secciones/ejercicios."""
+    return validate_lesson(payload.yaml_content)
 
 
 @app.get("/api/lessons/generate", response_class=PlainTextResponse)

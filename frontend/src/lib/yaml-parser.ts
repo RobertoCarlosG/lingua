@@ -11,18 +11,48 @@ export function parseLesson(yamlString: string): LessonYAML | null {
   }
 }
 
+const VALID_LANGUAGES = ['en', 'pt']
+const VALID_LESSON_TYPES = ['vocabulary', 'phonetics', 'grammar', 'reading', 'conversation']
+const VALID_EXERCISE_TYPES = ['fill_blank', 'translate', 'multiple_choice', 'reorder']
+
 export function validateLesson(lesson: LessonYAML): string[] {
   const errors: string[] = []
+
   if (!lesson.title) errors.push('Falta el campo "title"')
   if (!lesson.language) errors.push('Falta el campo "language" (en | pt)')
-  if (!lesson.type) errors.push('Falta el campo "type"')
-  if (lesson.vocabulary) {
-    lesson.vocabulary.forEach((v, i) => {
-      if (!v.word) errors.push(`Vocab[${i}]: falta "word"`)
-      if (!v.ipa) errors.push(`Vocab[${i}]: falta "ipa"`)
-      if (!v.translation) errors.push(`Vocab[${i}]: falta "translation"`)
-    })
+  else if (!VALID_LANGUAGES.includes(lesson.language)) {
+    errors.push(`"language" debe ser en | pt, no "${lesson.language}"`)
   }
+  if (!lesson.type) errors.push('Falta el campo "type"')
+  else if (!VALID_LESSON_TYPES.includes(lesson.type)) {
+    errors.push(`"type" debe ser uno de: ${VALID_LESSON_TYPES.join(', ')}`)
+  }
+
+  lesson.vocabulary?.forEach((v, i) => {
+    if (!v.word) errors.push(`vocabulary[${i}]: falta "word"`)
+    if (!v.translation) errors.push(`vocabulary[${i}]: falta "translation"`)
+  })
+
+  lesson.sections?.forEach((s, i) => {
+    if (!s.title) errors.push(`sections[${i}]: falta "title"`)
+    if (!s.content) errors.push(`sections[${i}]: falta "content"`)
+  })
+
+  lesson.exercises?.forEach((ex, i) => {
+    if (!VALID_EXERCISE_TYPES.includes(ex.type)) {
+      errors.push(`exercises[${i}]: "type" debe ser uno de: ${VALID_EXERCISE_TYPES.join(', ')}`)
+    }
+    if (!ex.prompt) errors.push(`exercises[${i}]: falta "prompt"`)
+    if (!ex.answer) errors.push(`exercises[${i}]: falta "answer"`)
+    if (ex.type === 'multiple_choice') {
+      if (!ex.options || ex.options.length === 0) {
+        errors.push(`exercises[${i}]: multiple_choice requiere "options"`)
+      } else if (!ex.options.includes(ex.answer)) {
+        errors.push(`exercises[${i}]: "answer" debe estar en "options"`)
+      }
+    }
+  })
+
   return errors
 }
 

@@ -16,7 +16,20 @@ create table if not exists vocab_words (
   times_correct integer not null default 0,
   tags text[] default '{}',
   last_reviewed_at timestamptz,
+  -- Repetición espaciada (SM-2 simplificado)
+  interval_days real not null default 0,
+  ease real not null default 2.5,
+  due_at timestamptz not null default now(),
   created_at timestamptz not null default now()
+);
+
+-- Historial de repasos (SRS)
+create table if not exists reviews (
+  id uuid primary key default gen_random_uuid(),
+  user_id text not null default 'demo-user',
+  word_id uuid not null references vocab_words(id) on delete cascade,
+  rating text not null check (rating in ('again', 'hard', 'good', 'easy')),
+  reviewed_at timestamptz not null default now()
 );
 
 -- Error bank
@@ -68,6 +81,9 @@ create table if not exists lessons (
 -- Índices de performance
 create index if not exists vocab_words_language_idx on vocab_words(language);
 create index if not exists vocab_words_status_idx on vocab_words(status);
+create index if not exists vocab_words_due_at_idx on vocab_words(due_at);
+create index if not exists reviews_word_id_idx on reviews(word_id);
+create index if not exists reviews_reviewed_at_idx on reviews(reviewed_at);
 create index if not exists error_entries_language_idx on error_entries(language);
 create index if not exists error_entries_recurring_idx on error_entries(is_recurring);
 create index if not exists lessons_language_idx on lessons(language);

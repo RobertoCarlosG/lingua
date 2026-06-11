@@ -19,6 +19,9 @@ export type VocabWord = {
   tags: string[]
   created_at: string
   last_reviewed_at: string | null
+  interval_days: number
+  ease: number
+  due_at: string | null
 }
 
 export type ErrorEntry = {
@@ -46,6 +49,14 @@ export type SessionLog = {
   errors_made: number
   notes: string
   created_at: string
+}
+
+export type Review = {
+  id: string
+  user_id: string
+  word_id: string
+  rating: 'again' | 'hard' | 'good' | 'easy'
+  reviewed_at: string
 }
 
 export type Lesson = {
@@ -83,6 +94,12 @@ export type Database = {
         Row: Lesson
         Insert: Omit<Lesson, 'id' | 'created_at'>
         Update: Partial<Omit<Lesson, 'id'>>
+        Relationships: []
+      }
+      reviews: {
+        Row: Review
+        Insert: Omit<Review, 'id' | 'reviewed_at'>
+        Update: Partial<Omit<Review, 'id'>>
         Relationships: []
       }
     }

@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
-import { Plus, FileText, ChevronRight, Volume2, CheckCircle, Circle, AlertCircle, Wand2, Loader2 } from 'lucide-react'
+import { Plus, FileText, ChevronRight, Volume2, CheckCircle, Circle, AlertCircle, Wand2, Loader2, Upload, BookPlus } from 'lucide-react'
 import { generateLessonYaml } from '@/lib/dictionary'
+import { lessonVocabToWords } from '@/lib/lesson-to-vocab'
 import { supabase } from '@/lib/supabase'
 import { useStore } from '@/lib/store'
 import { cn } from '@/lib/utils'
@@ -207,6 +208,17 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
   const [template, setTemplate] = useState<'vocab' | 'phonetics'>('vocab')
   const [genWords, setGenWords] = useState('')
   const [generating, setGenerating] = useState(false)
+  const fileInputRef = useRef<HTMLInputElement>(null)
+
+  async function handleFileUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0]
+    if (!file) return
+    const text = await file.text()
+    setYaml(text)
+    const parsed = parseLesson(text)
+    setErrors(parsed ? validateLesson(parsed) : ['YAML inválido — revisa la sintaxis'])
+    e.target.value = ''
+  }
 
   async function handleGenerate() {
     const words = genWords.split(',').map(w => w.trim()).filter(Boolean)
@@ -246,7 +258,7 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
 
   return (
     <div className="space-y-3">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 flex-wrap">
         <span className="text-xs text-white/40">Plantilla:</span>
         {(['vocab', 'phonetics'] as const).map(t => (
           <button
@@ -260,6 +272,22 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
             {t === 'vocab' ? 'Vocabulario' : 'Fonética'}
           </button>
         ))}
+        <span className="flex-1" />
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept=".yml,.yaml,text/yaml"
+          className="hidden"
+          onChange={handleFileUpload}
+        />
+        <button
+          type="button"
+          onClick={() => fileInputRef.current?.click()}
+          className="glass-btn px-2.5 py-1 text-xs text-white/60 flex items-center gap-1.5"
+        >
+          <Upload size={12} />
+          Subir .yml
+        </button>
       </div>
 
       {activeLanguage === 'en' && (
@@ -317,6 +345,26 @@ export function LessonsPage() {
   const [activeLesson, setActiveLesson] = useState<LessonYAML | null>(null)
   const [showEditor, setShowEditor] = useState(false)
   const [loading, setLoading] = useState(true)
+  const [importing, setImporting] = useState(false)
+  const [imported, setImported] = useState<number | null>(null)
+
+  async function importVocabulary() {
+    if (!activeLesson?.vocabulary?.length || importing) return
+    setImporting(true)
+    const words = lessonVocabToWords(activeLesson, new Date())
+    const { data: existingRows } = await supabase
+      .from('vocab_words')
+      .select('word')
+      .eq('language', activeLesson.language)
+      .in('word', words.map(w => w.word))
+    const existing = new Set((existingRows ?? []).map(r => r.word.toLowerCase()))
+    const fresh = words.filter(w => !existing.has(w.word.toLowerCase()))
+    if (fresh.length > 0) {
+      await supabase.from('vocab_words').insert(fresh.map(w => ({ ...w, user_id: 'demo-user' })))
+    }
+    setImported(fresh.length)
+    setImporting(false)
+  }
 
   useEffect(() => {
     fetchLessons()
@@ -337,6 +385,7 @@ export function LessonsPage() {
     const parsed = parseLesson(yamlContent)
     if (!parsed) return
     setActiveLesson(parsed)
+    setImported(null)
     setShowEditor(false)
 
     const { data } = await supabase
@@ -349,7 +398,10 @@ export function LessonsPage() {
 
   function openLesson(lesson: Lesson) {
     const parsed = parseLesson(lesson.yaml_content)
-    if (parsed) setActiveLesson(parsed)
+    if (parsed) {
+      setActiveLesson(parsed)
+      setImported(null)
+    }
   }
 
   const isEN = activeLanguage === 'en'
@@ -430,12 +482,39 @@ export function LessonsPage() {
         </>
       ) : (
         <div>
-          <button
-            onClick={() => setActiveLesson(null)}
-            className="flex items-center gap-1.5 text-sm text-white/40 hover:text-white/70 transition-colors mb-5"
-          >
-            ← Volver a lecciones
-          </button>
+          <div className="flex items-center justify-between mb-5">
+            <button
+              onClick={() => setActiveLesson(null)}
+              className="flex items-center gap-1.5 text-sm text-white/40 hover:text-white/70 transition-colors"
+            >
+              ← Volver a lecciones
+            </button>
+            {(activeLesson.vocabulary?.length ?? 0) > 0 && (
+              <button
+                onClick={importVocabulary}
+                disabled={importing || imported !== null}
+                className={cn(
+                  'flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs border transition-all',
+                  imported !== null
+                    ? 'bg-green-500/10 border-green-500/25 text-green-300 cursor-default'
+                    : 'bg-white/[0.06] border-white/15 text-white/70 hover:bg-white/[0.12]'
+                )}
+              >
+                {importing ? (
+                  <Loader2 size={13} className="animate-spin" />
+                ) : imported !== null ? (
+                  <CheckCircle size={13} />
+                ) : (
+                  <BookPlus size={13} />
+                )}
+                {imported !== null
+                  ? imported === 0
+                    ? 'Ya estaban en tu glosario'
+                    : `${imported} palabras agregadas al glosario`
+                  : 'Agregar vocabulario al glosario'}
+              </button>
+            )}
+          </div>
           <LessonRenderer lesson={activeLesson} />
         </div>
       )}

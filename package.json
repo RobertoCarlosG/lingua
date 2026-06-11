@@ -4,7 +4,7 @@
   "workspaces": ["frontend"],
   "scripts": {
     "dev": "concurrently \"yarn workspace lingua-frontend dev\" \"yarn dev:api\"",
-    "dev:api": "cd backend && uvicorn app.main:app --reload --port 3001",
+    "dev:api": "cd backend && .venv/bin/uvicorn app.main:app --reload --port 3001",
     "build": "yarn workspace lingua-frontend build"
   },
   "devDependencies": {

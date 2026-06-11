@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Plus, Search, ChevronDown, BookMarked, Loader2 } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { lookupWord } from '@/lib/dictionary'
+import { initialSrs } from '@/lib/srs'
 import { useStore } from '@/lib/store'
 import { cn, formatDate } from '@/lib/utils'
 import type { VocabWord, WordStatus } from '@/types/database'
@@ -67,6 +68,7 @@ function AddWordModal({ onClose, onSave, language }: {
       times_seen: 0,
       times_correct: 0,
       last_reviewed_at: null,
+      ...initialSrs(new Date()),
     })
   }
 

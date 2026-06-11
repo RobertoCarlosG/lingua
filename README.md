@@ -1,25 +1,44 @@
 # Lingua — App de aprendizaje EN & PT
 
-Stack: React + Vite + TypeScript + Tailwind (Vercel) · Express (Render) · Supabase
+Stack: React + Vite + TypeScript + Tailwind (Vercel) · FastAPI/Python (Render) · Supabase
+
+> El chat con IA está deshabilitado en este MVP. El código de `ChatPage.tsx` se conserva para reactivarlo después.
 
 ## Estructura
 
 ```
 lingua/
-├── frontend/          # React app → Vercel
+├── frontend/          # React app → Vercel (yarn workspace)
 │   └── src/
-│       ├── pages/     # Dashboard, Vocabulary, ErrorBank, Lessons, Chat
+│       ├── pages/     # Dashboard, Vocabulary, ErrorBank, Lessons
 │       ├── components/
-│       ├── lib/       # supabase.ts, store.ts, yaml-parser.ts, utils.ts
+│       ├── lib/       # supabase.ts, store.ts, yaml-parser.ts, dictionary.ts
 │       └── types/     # database.ts (tipos TypeScript)
-├── backend/           # Express API → Render
-│   └── src/index.js   # Proxy Anthropic + endpoints
+├── backend/           # FastAPI → Render
+│   ├── app/main.py    # /health, /api/dictionary, /api/lessons/generate
+│   └── requirements.txt
 ├── supabase/
 │   └── migrations/    # SQL para crear las tablas
 ├── vercel.json
 ├── render.yaml
 └── .env.example
 ```
+
+## API de diccionario
+
+El backend consulta APIs públicas (sin API key):
+
+- [Free Dictionary API](https://dictionaryapi.dev) — IPA, definiciones, ejemplos, audio (solo inglés)
+- [MyMemory](https://mymemory.translated.net/doc/spec.php) — sugerencia de traducción EN→ES
+
+Endpoints:
+
+| Endpoint | Descripción |
+|----------|-------------|
+| `GET /api/dictionary/{word}` | Busca una palabra: IPA, definiciones, audio, traducción sugerida |
+| `GET /api/lessons/generate?words=a,b,c&title=...&level=B1` | Genera el YAML de una lección de vocabulario |
+
+En la UI: botón de diccionario en "Agregar palabra" (autocompleta IPA/definición/ejemplo/traducción) y "Generar YAML" en el editor de lecciones.
 
 ## Setup paso a paso
 
@@ -35,11 +54,10 @@ lingua/
 ### 2. Backend en Render
 
 1. Crea un nuevo **Web Service** en render.com
-2. Conecta tu repositorio → `root directory: backend`
-3. Build: `npm install` · Start: `npm start`
+2. Conecta tu repositorio → `root directory: backend` · Runtime: **Python**
+3. Build: `pip install -r requirements.txt` · Start: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
 4. Agrega las variables de entorno:
    ```
-   ANTHROPIC_API_KEY=sk-ant-...
    SUPABASE_URL=https://xxx.supabase.co
    SUPABASE_SERVICE_KEY=eyJ...
    FRONTEND_URL=https://tu-app.vercel.app
@@ -65,11 +83,14 @@ lingua/
 cp .env.example frontend/.env.local
 cp .env.example backend/.env
 
-# Instala todo
-npm install
+# Frontend (yarn workspaces)
+yarn install
+
+# Backend (Python)
+cd backend && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt && cd ..
 
 # Levanta ambos servidores
-npm run dev
+yarn dev
 ```
 
 Frontend: http://localhost:5173  
@@ -79,11 +100,26 @@ Backend: http://localhost:3001
 
 | Sección | Descripción |
 |---------|-------------|
-| **Dashboard** | Progreso semanal, stats, plan del día |
-| **Vocabulario** | Glosario con estados (new/learning/known/mastered) |
+| **Dashboard** | Racha, actividad semanal y meta de días activos calculadas de `session_logs` (datos reales) |
+| **Repaso** | Flashcards con repetición espaciada (SM-2): otra vez / difícil / bien / fácil. Registra cada sesión |
+| **Vocabulario** | Glosario con estados; el estado se promueve solo según el intervalo SRS. Botón de diccionario que autocompleta |
 | **Banco de errores** | Registro de errores con detección de recurrentes |
-| **Lecciones** | Editor YAML → renderizado interactivo con ejercicios |
-| **Práctica IA** | Chat con Claude como tutor, comandos `[vocabulario]` etc. |
+| **Lecciones** | Editor YAML → renderizado interactivo. Subir archivo `.yml`, generar desde palabras, y agregar el vocabulario al glosario con un clic |
+| ~~Práctica IA~~ | Deshabilitada en este MVP |
+
+## Tests (TDD)
+
+```bash
+# Frontend (vitest) — 51 tests
+cd frontend && yarn vitest run
+
+# Backend (pytest) — 18 tests
+cd backend && .venv/bin/pytest
+```
+
+El flujo de aprendizaje cierra el ciclo: subes o generas una lección YAML → su vocabulario
+entra al glosario con SRS inicial → la página **Repaso** te muestra las palabras vencidas
+cada día → cada repaso reprograma la palabra (SM-2) y alimenta el dashboard.
 
 ## Sistema de lecciones YAML
 

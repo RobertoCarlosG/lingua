@@ -1,7 +1,7 @@
 import { Outlet, NavLink } from 'react-router-dom'
 import {
   LayoutDashboard, BookOpen, AlertCircle, FileText,
-  Menu, X, Globe
+  Brain, Menu, X, Globe
 } from 'lucide-react'
 import { useStore } from '@/lib/store'
 import { LanguageToggle } from '@/components/ui/LanguageToggle'
@@ -9,6 +9,7 @@ import { cn } from '@/lib/utils'
 
 const NAV_ITEMS = [
   { to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
+  { to: '/review', icon: Brain, label: 'Repaso' },
   { to: '/vocabulary', icon: BookOpen, label: 'Vocabulario' },
   { to: '/errors', icon: AlertCircle, label: 'Banco de errores' },
   { to: '/lessons', icon: FileText, label: 'Lecciones' },
