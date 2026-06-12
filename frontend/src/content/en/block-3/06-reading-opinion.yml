@@ -1,0 +1,110 @@
+title: "Bloque 3 · 06 — Reading: an opinion column"
+language: en
+level: C1
+type: reading
+objectives:
+  - "Leer una columna de opinión británica auténtica de nivel C1 sobre el teletrabajo"
+  - "Reconocer en contexto las estructuras del bloque: inversión, clefts, conectores formales y understatement"
+  - "Practicar la inferencia: distinguir lo que el autor dice de lo que realmente sostiene"
+vocabulary:
+  - word: "to thrive"
+    ipa: "/θraɪv/"
+    translation: "prosperar, florecer"
+    definition: "To grow, develop or be successful, especially in difficult conditions."
+    example: "Far from collapsing, many firms have quietly thrived since the shift."
+    tags: ["verbo", "C1"]
+  - word: "sceptical"
+    ipa: "/ˈskeptɪkl/"
+    translation: "escéptico"
+    definition: "Doubting that something is true or useful (British spelling with 'sc')."
+    example: "Hitherto sceptical managers now concede that output has risen."
+    tags: ["adjetivo", "C1"]
+  - word: "apprenticeship"
+    ipa: "/əˈprentɪsʃɪp/"
+    translation: "aprendizaje (de un oficio), periodo de formación"
+    definition: "The period during which somebody learns a trade or profession, often informally, by watching others."
+    example: "What worries me is not productivity but apprenticeship."
+    tags: ["sustantivo", "C1"]
+  - word: "offhand"
+    ipa: "/ˌɒfˈhænd/"
+    translation: "improvisado, de pasada; brusco"
+    definition: "Said or done without previous thought or preparation; casually."
+    example: "Young employees learn from the offhand correction overheard at the next desk."
+    tags: ["adjetivo", "C1"]
+  - word: "adrift"
+    ipa: "/əˈdrɪft/"
+    translation: "a la deriva, perdido"
+    definition: "Without direction or purpose, like a boat floating without control."
+    example: "Competent on paper, yet somewhat adrift in practice."
+    tags: ["adjetivo", "C1"]
+  - word: "bargain"
+    ipa: "/ˈbɑːɡɪn/"
+    translation: "pacto, trato; ganga"
+    definition: "An agreement between two sides in which each accepts something less than ideal."
+    example: "A hybrid bargain, albeit an imperfect one, seems the least bad option."
+    tags: ["sustantivo", "C1"]
+sections:
+  - title: "Columna: The Office Is Dead. Long Live the Kitchen Table."
+    type: reading
+    content: |
+      Seldom has a change in working life taken hold so quickly. Five years ago,
+      asking to work from home felt vaguely transgressive; today it is the daily
+      commute that requires justification. Not only have firms survived the shift,
+      but many have quietly thrived, with hitherto sceptical managers conceding
+      that output has, if anything, risen.
+
+      What worries me, however, is not productivity but apprenticeship. It is in
+      the unglamorous corners of office life — the overheard phone call, the
+      offhand correction, the chat by the kettle — that young employees actually
+      learn their trade. Strip those away and you are left with a generation that
+      is competent on paper yet somewhat adrift in practice.
+
+      The standard reply is that mentoring can simply be scheduled, as though
+      wisdom could be delivered in a half-hour video call every other Tuesday.
+      I am not entirely convinced. The most valuable lessons are precisely the
+      ones nobody planned to teach; you cannot put serendipity in a calendar
+      invite.
+
+      None of this means we should march everyone back to the office five days a
+      week; that ship has sailed, and rightly so. But a hybrid bargain — albeit
+      an imperfect one — strikes me as the least bad option on the table. Under
+      no circumstances should we pretend that the kitchen table can teach what
+      the office once did.
+    tips:
+      - "Primera lectura: capta la postura global del autor. Segunda lectura: subraya las estructuras del bloque (inversión, clefts, albeit, hitherto...)."
+      - "Ojo al understatement: 'I am not entirely convinced' y 'the least bad option' dicen más de lo que aparentan."
+      - "'That ship has sailed' = ya no hay vuelta atrás; los modismos náuticos abundan en el periodismo británico."
+exercises:
+  - type: multiple_choice
+    prompt: "Según el autor, ¿cuál es el verdadero problema del teletrabajo?"
+    options:
+      - "La caída de la productividad de las empresas"
+      - "La formación informal de los empleados jóvenes"
+      - "El coste de mantener oficinas vacías"
+    answer: "La formación informal de los empleados jóvenes"
+    explanation: "El texto lo enfoca con una cleft: 'What worries me, however, is not productivity but apprenticeship.'"
+  - type: multiple_choice
+    prompt: "Inferencia: cuando el autor escribe 'I am not entirely convinced', en realidad..."
+    options:
+      - "rechaza la idea de que el mentorazgo programado funcione"
+      - "está casi convencido y solo le falta un dato"
+      - "prefiere no opinar sobre el mentorazgo"
+    answer: "rechaza la idea de que el mentorazgo programado funcione"
+    explanation: "Es understatement británico: negar lo positivo equivale a un rechazo claro, reforzado por la ironía del 'calendar invite'."
+  - type: multiple_choice
+    prompt: "En el texto, 'that ship has sailed' significa que..."
+    options:
+      - "ya no hay vuelta atrás posible"
+      - "la oportunidad está a punto de llegar"
+      - "el plan fracasó por mala suerte"
+    answer: "ya no hay vuelta atrás posible"
+    explanation: "Modismo: el barco ya zarpó; volver a la oficina cinco días a la semana ya no es una opción realista."
+  - type: fill_blank
+    prompt: "Completa la frase del texto: 'a hybrid bargain — ___ an imperfect one — strikes me as the least bad option.'"
+    answer: "albeit"
+    explanation: "'albeit + sintagma' ('an imperfect one') es el conector formal de concesión visto en la lección 04."
+  - type: fill_blank
+    prompt: "Según los managers 'hitherto sceptical', el texto dice que output has, if anything, ___."
+    answer: "risen"
+    explanation: "'if anything' refuerza que, en todo caso, la producción ha subido (risen, participio de rise)."
+notes: "Relee la columna tras terminar el bloque: deberías poder nombrar cada estructura avanzada que aparece (inversión inicial, it-cleft, wh-cleft, albeit, hitherto, understatement)."

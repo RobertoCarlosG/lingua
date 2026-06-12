@@ -1,0 +1,94 @@
+title: "Bloque 1 · 05 — Reading: A weekend in London"
+language: en
+level: B2
+type: reading
+objectives:
+  - "Leer y comprender un texto auténtico de nivel B2 en inglés británico"
+  - "Deducir el significado de vocabulario nuevo a partir del contexto"
+  - "Reconocer en un texto real el vocabulario y la gramática de las lecciones anteriores"
+vocabulary:
+  - word: "bustling"
+    ipa: "/ˈbʌslɪŋ/"
+    translation: "bullicioso, lleno de actividad"
+    definition: "full of people moving about in a busy, energetic way"
+    example: "Camden Market is always bustling on a Saturday afternoon."
+    tags: ["adjetivo", "B2"]
+  - word: "drizzle"
+    ipa: "/ˈdrɪzl/"
+    translation: "llovizna"
+    definition: "light rain that falls in very small drops, typical of British weather"
+    example: "There's a bit of drizzle, so take your umbrella just in case."
+    tags: ["sustantivo", "verbo", "B2"]
+  - word: "peckish"
+    ipa: "/ˈpekɪʃ/"
+    translation: "con un poco de hambre"
+    definition: "slightly hungry; an informal British word"
+    example: "I'm feeling a bit peckish — fancy sharing some crisps?"
+    tags: ["adjetivo", "coloquial", "británico", "B2"]
+  - word: "stroll"
+    ipa: "/strəʊl/"
+    translation: "paseo tranquilo"
+    definition: "a slow, relaxed walk for pleasure"
+    example: "After lunch we went for a stroll along the river."
+    tags: ["sustantivo", "verbo", "B2"]
+  - word: "landmark"
+    ipa: "/ˈlændmɑːk/"
+    translation: "monumento, lugar emblemático"
+    definition: "a famous building or place that is easy to recognise"
+    example: "Big Ben is probably the most photographed landmark in Britain."
+    tags: ["sustantivo", "B2"]
+  - word: "queue"
+    ipa: "/kjuː/"
+    translation: "hacer cola; cola, fila"
+    definition: "to wait in a line of people; also the line itself (British English)"
+    example: "We queued for half an hour to get into the museum."
+    tags: ["verbo", "sustantivo", "británico", "B2"]
+sections:
+  - title: "A weekend in London"
+    type: reading
+    content: |
+      Last autumn, my flatmate Priya and I spent a weekend in London, and it turned out to be
+      far more memorable than we had expected. We set off early on Saturday and arrived at
+      King's Cross just after nine. Despite the drizzle, the city felt wonderfully alive:
+      commuters, tourists and street performers all sharing the same bustling pavements.
+
+      Our first stop was Borough Market, where we queued for twenty minutes for coffee — a
+      very British start to the day. Feeling peckish by noon, we shared a portion of fish and
+      chips before taking a stroll along the South Bank. From there you can admire one
+      landmark after another: the London Eye, Big Ben across the river and St Paul's in the
+      distance. Later, Priya hunted for bargains in the Covent Garden shops while I guarded
+      our bags and our last twenty quid.
+
+      On Sunday morning we had a proper lie-in, then visited the Tate Modern, which, like most
+      museums in Britain, is completely free. By the time we caught the train home, exhausted
+      but delighted, we had already agreed to come back in spring — hopefully with better
+      weather and a bigger budget.
+    tips:
+      - "Primera lectura sin diccionario: intenta captar la idea general antes de mirar el vocabulario."
+      - "Fíjate en cómo aparecen palabras de lecciones anteriores: set off, lie-in, bargains, quid, queue."
+      - "Observa el past perfect en 'we had already agreed': una acción anterior a otro momento del pasado."
+exercises:
+  - type: multiple_choice
+    prompt: "Según el texto, ¿cómo estaba el clima el sábado por la mañana en Londres?"
+    options: ["Lloviznaba", "Hacía un sol espléndido", "Estaba nevando"]
+    answer: "Lloviznaba"
+    explanation: "El texto dice 'Despite the drizzle': a pesar de la llovizna, la ciudad se sentía viva."
+  - type: multiple_choice
+    prompt: "¿Para qué hicieron cola veinte minutos en Borough Market?"
+    options: ["Para comprar café", "Para comprar fish and chips", "Para entrar al Tate Modern", "Para subir al London Eye"]
+    answer: "Para comprar café"
+    explanation: "El texto dice 'we queued for twenty minutes for coffee'."
+  - type: fill_blank
+    prompt: "Completa la frase del texto: 'Feeling ___ by noon, we shared a portion of fish and chips.'"
+    answer: "peckish"
+    explanation: "'Peckish' significa tener un poco de hambre; es coloquial y muy británico."
+  - type: fill_blank
+    prompt: "Completa la frase del texto: 'before taking a ___ along the South Bank.'"
+    answer: "stroll"
+    explanation: "'To take a stroll' es dar un paseo tranquilo y sin prisa."
+  - type: multiple_choice
+    prompt: "¿Qué hicieron las protagonistas el domingo por la mañana?"
+    options: ["Se quedaron en la cama hasta tarde", "Tomaron el tren de vuelta a casa", "Fueron de compras a Covent Garden", "Desayunaron en Borough Market"]
+    answer: "Se quedaron en la cama hasta tarde"
+    explanation: "'We had a proper lie-in': la palabra de la lección 01 para quedarse en la cama hasta tarde."
+notes: "Texto de unas 180 palabras que recicla vocabulario de las lecciones 01, 02 y 04. Reléelo en voz alta para trabajar el ritmo del inglés británico."

@@ -1,0 +1,110 @@
+title: "Bloque 1 · 01 — Saudações e apresentações"
+language: pt
+level: A1
+type: conversation
+objectives:
+  - "Saludar y despedirte en portugués brasileño según el momento del día"
+  - "Presentarte y preguntar el nombre de otra persona"
+  - "Usar obrigado/obrigada correctamente según tu género"
+vocabulary:
+  - word: "oi"
+    ipa: "/ˈoj/"
+    translation: "hola"
+    definition: "Saludo informal, el más común en Brasil. Equivale a 'hola' entre amigos y conocidos."
+    example: "Oi, tudo bem?"
+    tags: ["saludo", "A1"]
+  - word: "bom dia"
+    ipa: "/ˈbõw ˈdʒiɐ/"
+    translation: "buenos días"
+    definition: "Saludo de la mañana. Igual que en español, 'dia' es masculino, pero ojo con la pronunciación: la 'di' suena /dʒi/."
+    example: "Bom dia! Como você está?"
+    tags: ["saludo", "A1"]
+  - word: "boa tarde"
+    ipa: "/ˈboɐ ˈtaʁdʒi/"
+    translation: "buenas tardes"
+    definition: "Saludo desde el mediodía hasta el anochecer. 'Tarde' es femenino, por eso se dice 'boa', no 'bom'."
+    example: "Boa tarde, professora!"
+    tags: ["saludo", "A1"]
+  - word: "tudo bem?"
+    ipa: "/ˈtudu ˈbẽj̃/"
+    translation: "¿todo bien?, ¿cómo estás?"
+    definition: "La pregunta de cortesía más usada en Brasil. La respuesta típica es la misma frase sin entonación de pregunta: 'Tudo bem!' o 'Tudo bom!'."
+    example: "Oi, Maria! Tudo bem?"
+    tags: ["saludo", "conversación", "A1"]
+  - word: "prazer"
+    ipa: "/pɾaˈzeʁ/"
+    translation: "mucho gusto"
+    definition: "Literalmente 'placer'. Se dice al conocer a alguien, como 'mucho gusto' en México. También se usa 'muito prazer'."
+    example: "Prazer, eu sou o João."
+    tags: ["presentación", "A1"]
+  - word: "meu nome é"
+    ipa: "/ˈmew ˈnomi ˈɛ/"
+    translation: "mi nombre es, me llamo"
+    definition: "Forma estándar de presentarse. 'Nome' se parece a 'nombre' pero sin la 'r'. Alternativa: 'eu me chamo'."
+    example: "Meu nome é Roberto, e o seu?"
+    tags: ["presentación", "A1"]
+  - word: "obrigado / obrigada"
+    ipa: "/obɾiˈɡadu/ /obɾiˈɡadɐ/"
+    translation: "gracias"
+    definition: "Concuerda con el género de quien HABLA: un hombre dice 'obrigado' y una mujer dice 'obrigada', sin importar a quién se agradece."
+    example: "Muito obrigada pela ajuda!"
+    tags: ["cortesía", "A1"]
+  - word: "tchau"
+    ipa: "/ˈtʃaw/"
+    translation: "adiós, chau"
+    definition: "Despedida informal universal en Brasil, tomada del italiano 'ciao'. Otra opción: 'até logo' (hasta luego)."
+    example: "Tchau, até amanhã!"
+    tags: ["despedida", "A1"]
+sections:
+  - title: "Diálogo: dos colegas se conocen"
+    type: dialogue
+    content: |
+      — Oi, bom dia! Tudo bem?
+      — Tudo bem, e você?
+      — Tudo ótimo. Meu nome é Ana, e o seu?
+      — Prazer, Ana! Eu sou o Carlos.
+      — Muito prazer, Carlos. Você é daqui de São Paulo?
+      — Não, eu sou do Rio. Bom, preciso ir. Tchau!
+      — Tchau, até logo!
+    tips:
+      - "'E você?' significa '¿y tú?'. En Brasil 'você' es el trato normal con casi todo el mundo; no suena formal como 'usted' en México."
+      - "'Eu sou o Carlos' lleva artículo antes del nombre propio: en Brasil es muy común decir 'o Carlos', 'a Ana'."
+  - title: "Obrigado u obrigada: el género de quien agradece"
+    type: explanation
+    content: |
+      A diferencia del español, donde 'gracias' es invariable, en portugués
+      'obrigado' es un adjetivo (viene de 'estar obligado') y concuerda con
+      la persona que habla, no con quien recibe el agradecimiento.
+
+      - Hombre: "Obrigado!" (aunque le agradezca a una mujer)
+      - Mujer: "Obrigada!" (aunque le agradezca a un hombre)
+
+      Para responder se dice "De nada!", igual que en español, o el muy
+      brasileño "Imagina!" (literalmente '¡imagínate!', o sea, 'no es nada').
+    tips:
+      - "Para intensificar: 'muito obrigado / muito obrigada' = 'muchas gracias'."
+exercises:
+  - type: translate
+    prompt: "Traduce al portugués: 'buenos días'"
+    answer: "bom dia"
+    explanation: "Igual que en español, 'dia' es masculino. Recuerda la pronunciación /ˈbõw ˈdʒiɐ/."
+  - type: fill_blank
+    prompt: "Completa el saludo más común de Brasil: 'Oi, tudo ___?'"
+    answer: "bem"
+    explanation: "'Tudo bem?' es el equivalente brasileño de '¿cómo estás?'."
+  - type: multiple_choice
+    prompt: "Una mujer quiere dar las gracias. ¿Qué debe decir?"
+    options:
+      - "obrigado"
+      - "obrigada"
+      - "obrigadas"
+    answer: "obrigada"
+    explanation: "El agradecimiento concuerda con el género de quien habla: las mujeres dicen 'obrigada'."
+  - type: translate
+    prompt: "Traduce al portugués: 'mi nombre es'"
+    answer: "meu nome é"
+    explanation: "Muy parecido al español: solo cambia 'nombre' por 'nome' y 'mi' por 'meu'."
+  - type: reorder
+    prompt: "Ordena las palabras para presentarte: 'é / nome / meu / Ana'"
+    answer: "meu nome é Ana"
+    explanation: "El orden es igual que en español: 'mi nombre es Ana'."

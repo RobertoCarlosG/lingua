@@ -1,0 +1,125 @@
+title: "Bloque 4 · 05 — Register: formal and informal English"
+language: en
+level: C1
+type: grammar
+objectives:
+  - "Distinguir y producir los registros formal e informal en inglés británico."
+  - "Manejar pares clave: purchase/buy, commence/start, endeavour/try, request/ask for."
+  - "Evitar el error típico del hispanohablante: sonar demasiado formal por abusar de latinismos."
+vocabulary:
+  - word: "purchase"
+    ipa: "/ˈpɜːtʃɪs/"
+    translation: "comprar / adquirir (formal; informal: buy)"
+    definition: "To buy something; used in contracts, receipts and formal correspondence."
+    example: "Tickets may be purchased online or at the box office."
+    tags: ["formal", "C1"]
+  - word: "commence"
+    ipa: "/kəˈmens/"
+    translation: "comenzar (formal; informal: start)"
+    definition: "To begin; found in official announcements, ceremonies and legal documents."
+    example: "The graduation ceremony will commence at eleven o'clock sharp."
+    tags: ["formal", "C1"]
+  - word: "endeavour"
+    ipa: "/ɪnˈdevə/"
+    translation: "esforzarse por; procurar (formal; informal: try)"
+    definition: "To try very hard to achieve something; British spelling with -our."
+    example: "We shall endeavour to respond to all enquiries within five working days."
+    tags: ["formal", "C1"]
+  - word: "request"
+    ipa: "/rɪˈkwest/"
+    translation: "solicitar (formal; informal: ask for)"
+    definition: "To ask for something politely or officially."
+    example: "Guests are requested to vacate their rooms by ten in the morning."
+    tags: ["formal", "C1"]
+  - word: "subsequently"
+    ipa: "/ˈsʌbsɪkwəntli/"
+    translation: "posteriormente (formal; informal: later / afterwards)"
+    definition: "After a particular event; afterwards. Common in reports and academic writing."
+    example: "The suspect was arrested and subsequently released without charge."
+    tags: ["formal", "C1"]
+  - word: "sort out"
+    ipa: "/ˌsɔːt ˈaʊt/"
+    translation: "resolver; arreglar (informal; formal: resolve)"
+    definition: "To deal with a problem or arrange something successfully; everyday British English."
+    example: "Don't worry about the tickets — I'll sort it out this afternoon."
+    tags: ["informal", "C1"]
+  - word: "loads of"
+    ipa: "/ˈləʊdz əv/"
+    translation: "un montón de (informal; formal: a great deal of)"
+    definition: "A very large amount or number of something; conversational British English."
+    example: "There were loads of people at the car boot sale on Sunday."
+    tags: ["informal", "C1"]
+  - word: "kick off"
+    ipa: "/ˌkɪk ˈɒf/"
+    translation: "empezar; arrancar (informal; formal: commence)"
+    definition: "To begin, originally of a football match; now used for meetings and events."
+    example: "The meeting kicks off at half nine, so grab a cuppa beforehand."
+    tags: ["informal", "C1"]
+sections:
+  - title: "¿Qué registro toca usar y cuándo?"
+    type: explanation
+    content: |
+      El registro es la ropa que le pones a tus palabras. El mensaje 'la reunión empieza a las 9' puede vestirse
+      de traje ('The meeting will commence at 9 a.m.') o de jeans ('The meeting kicks off at 9'). Ninguna versión
+      es mejor: lo que puntúa a nivel C1 es elegir la adecuada para la situación.
+
+      Guía rápida:
+
+      - FORMAL (purchase, commence, endeavour, request, subsequently): contratos, cartas oficiales, ensayos
+        académicos, quejas por escrito, avisos públicos.
+      - NEUTRO (buy, start, try, ask for): casi todo lo demás; siempre es la opción segura.
+      - INFORMAL (sort out, loads of, kick off): conversación, mensajes a amigos, correos entre colegas de confianza.
+
+      Regla práctica del inglés británico: el verbo de origen latino suele ser el formal (commence, purchase)
+      y el de origen germánico o el phrasal verb suele ser el neutro o informal (start, buy, kick off).
+    tips:
+      - "Mezclar registros en un mismo texto ('We endeavour to sort it out') suena raro: mantén la coherencia."
+      - "En un correo de queja formal británico, 'I would like to request a refund' abre más puertas que 'Give me my money back'."
+      - "Recuerda la ortografía británica: endeavour, con -our, como colour y favour."
+  - title: "El error del hispanohablante: el latinismo automático"
+    type: explanation
+    content: |
+      Aquí viene la trampa específica para ti como hispanohablante: las palabras formales del inglés se parecen
+      a las palabras NORMALES del español. 'Commence' suena a 'comenzar', 'request' a 'solicitar' (que en México
+      usamos hasta para pedir la cuenta), 'utilise' a 'utilizar'. Resultado: el hispanohablante elige el latinismo
+      sin darse cuenta y produce frases gramaticalmente perfectas pero socialmente extrañas.
+
+      Imagina decirle a un amigo: 'Shall we commence? I shall purchase the beverages.' Es el equivalente a decir
+      en español: 'Procedamos a iniciar; yo efectuaré la adquisición de las bebidas'. Tu amigo británico pensará
+      que estás bromeando o traduciendo con un diccionario de 1950.
+
+      Antídotos:
+
+      1. En conversación, tu opción por defecto debe ser la germánica o el phrasal verb: start, buy, ask for,
+         sort out. Reserva commence, purchase y request para papel y ceremonias.
+      2. Desconfía de los cognados cómodos: 'utilise' casi siempre puede ser 'use'; 'obtain' casi siempre 'get'.
+      3. Calibra con el interlocutor: si el correo que recibiste dice 'Hi Roberto' y termina con 'Cheers',
+        responde en el mismo tono.
+    tips:
+      - "Si la palabra inglesa se parece mucho a la española, sospecha: probablemente es la versión formal."
+      - "El inglés informal británico vive en los phrasal verbs: sort out, kick off, pop in, crack on."
+      - "Escucha pódcast británicos casuales para calibrar el registro neutro real de la conversación."
+exercises:
+  - type: multiple_choice
+    prompt: "En un mensaje a un amigo, ¿cuál suena natural en inglés británico?"
+    options: ["Can you sort out the tickets?", "Could you kindly endeavour to procure the tickets?", "I hereby request that you purchase the tickets."]
+    answer: "Can you sort out the tickets?"
+    explanation: "Con amigos se usa el registro informal; las otras dos opciones suenan a documento legal."
+  - type: fill_blank
+    prompt: "Aviso formal: 'The ceremony will ___ at noon.' (equivalente formal de 'start')"
+    answer: "commence"
+    explanation: "'Commence' es el verbo formal para inauguraciones, ceremonias y documentos oficiales."
+  - type: translate
+    prompt: "Traduce al inglés formal (un verbo): 'solicitar'"
+    answer: "request"
+    explanation: "'Request' es el equivalente formal de 'ask for'."
+  - type: multiple_choice
+    prompt: "¿Cuál es el equivalente neutro/informal de 'purchase'?"
+    options: ["buy", "acquire", "procure", "obtain"]
+    answer: "buy"
+    explanation: "'Buy' es la opción cotidiana; las demás pertenecen al registro formal."
+  - type: fill_blank
+    prompt: "Carta formal británica: 'We shall ___ to resolve the issue promptly.' (formal de 'try', ortografía británica)"
+    answer: "endeavour"
+    explanation: "Ortografía británica con -our: endeavour, como colour, favour y honour."
+notes: "Regla de oro: en caso de duda, usa el registro neutro (buy, start, try). Nunca queda mal."

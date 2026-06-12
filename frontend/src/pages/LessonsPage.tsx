@@ -2,8 +2,10 @@ import { useEffect, useState, useRef } from 'react'
 import { Plus, FileText, ChevronRight, Volume2, CheckCircle, Circle, AlertCircle, Wand2, Loader2, Upload, BookPlus } from 'lucide-react'
 import { generateLessonYaml } from '@/lib/dictionary'
 import { lessonVocabToWords } from '@/lib/lesson-to-vocab'
+import { seedLessons } from '@/lib/seed-lessons'
 import { supabase } from '@/lib/supabase'
 import { useStore } from '@/lib/store'
+import { useAuth } from '@/lib/auth'
 import { cn } from '@/lib/utils'
 import { parseLesson, validateLesson, LESSON_TEMPLATE_VOCAB, LESSON_TEMPLATE_PHONETICS } from '@/lib/yaml-parser'
 import type { Lesson, LessonYAML, VocabItem, Exercise } from '@/types/database'
@@ -341,6 +343,7 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
 
 export function LessonsPage() {
   const { activeLanguage } = useStore()
+  const { user } = useAuth()
   const [lessons, setLessons] = useState<Lesson[]>([])
   const [activeLesson, setActiveLesson] = useState<LessonYAML | null>(null)
   const [showEditor, setShowEditor] = useState(false)
@@ -360,7 +363,7 @@ export function LessonsPage() {
     const existing = new Set((existingRows ?? []).map(r => r.word.toLowerCase()))
     const fresh = words.filter(w => !existing.has(w.word.toLowerCase()))
     if (fresh.length > 0) {
-      await supabase.from('vocab_words').insert(fresh.map(w => ({ ...w, user_id: 'demo-user' })))
+      await supabase.from('vocab_words').insert(fresh.map(w => ({ ...w, user_id: user!.id })))
     }
     setImported(fresh.length)
     setImporting(false)
@@ -372,11 +375,14 @@ export function LessonsPage() {
 
   async function fetchLessons() {
     setLoading(true)
+    // Garantiza que el contenido precargado ya esté insertado antes del primer fetch
+    await seedLessons()
     const { data } = await supabase
       .from('lessons')
       .select('*')
       .eq('language', activeLanguage)
       .order('created_at', { ascending: false })
+      .order('title', { ascending: true })
     setLessons(data ?? [])
     setLoading(false)
   }
@@ -390,7 +396,7 @@ export function LessonsPage() {
 
     const { data } = await supabase
       .from('lessons')
-      .insert({ language: activeLanguage, title: parsed.title, yaml_content: yamlContent, user_id: 'demo-user', rendered_at: new Date().toISOString() })
+      .insert({ language: activeLanguage, title: parsed.title, yaml_content: yamlContent, user_id: user!.id, rendered_at: new Date().toISOString() })
       .select()
       .single()
     if (data) setLessons(prev => [data, ...prev])

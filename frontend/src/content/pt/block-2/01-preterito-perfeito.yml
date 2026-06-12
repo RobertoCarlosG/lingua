@@ -1,0 +1,117 @@
+title: "Bloque 2 · 01 — Pretérito perfeito"
+language: pt
+level: A2
+type: grammar
+objectives:
+  - "Conjugar verbos regulares en -ar, -er, -ir en pretérito perfeito"
+  - "Reconocer y usar los irregulares clave: fui, fiz, tive, vim"
+  - "Entender que el perfeito del portugués cubre tanto 'fui' como 'he ido' del español"
+vocabulary:
+  - word: "falei"
+    ipa: "/faˈlej/"
+    translation: "hablé / he hablado"
+    definition: "Primera persona del singular de 'falar' en pretérito perfeito. Modelo de los verbos regulares en -ar."
+    example: "Ontem eu falei com a minha mãe por telefone."
+    tags: ["verbo", "pretérito", "A2"]
+  - word: "comi"
+    ipa: "/koˈmi/"
+    translation: "comí / he comido"
+    definition: "Primera persona del singular de 'comer' en pretérito perfeito. Modelo de los verbos regulares en -er."
+    example: "Eu comi feijoada no domingo."
+    tags: ["verbo", "pretérito", "A2"]
+  - word: "fui"
+    ipa: "/ˈfuj/"
+    translation: "fui / he ido"
+    definition: "Primera persona de 'ir' y también de 'ser' en pretérito perfeito, igual que en español. El contexto indica cuál es."
+    example: "Eu fui ao cinema com os meus amigos."
+    tags: ["verbo", "irregular", "pretérito", "A2"]
+  - word: "fiz"
+    ipa: "/ˈfis/"
+    translation: "hice / he hecho"
+    definition: "Primera persona de 'fazer' en pretérito perfeito. Ojo: se parece a 'hice', pero la forma cambia mucho respecto al infinitivo."
+    example: "Eu fiz um bolo de chocolate para a festa."
+    tags: ["verbo", "irregular", "pretérito", "A2"]
+  - word: "tive"
+    ipa: "/ˈtʃivi/"
+    translation: "tuve / he tenido"
+    definition: "Primera persona de 'ter' en pretérito perfeito. Se pronuncia con 'chi' al inicio por la palatalización del 'ti' brasileño."
+    example: "Eu tive uma reunião muito longa hoje."
+    tags: ["verbo", "irregular", "pretérito", "A2"]
+  - word: "vim"
+    ipa: "/ˈvĩ/"
+    translation: "vine / he venido"
+    definition: "Primera persona de 'vir' en pretérito perfeito. Es una sílaba nasal corta; no confundir con 'vi' (de 'ver')."
+    example: "Eu vim de ônibus para o trabalho."
+    tags: ["verbo", "irregular", "pretérito", "A2"]
+sections:
+  - title: "Verbos regulares en el pretérito perfeito"
+    type: explanation
+    content: |
+      El pretérito perfeito es el pasado más usado en portugués y funciona casi igual
+      que el pretérito del español. Las terminaciones regulares son:
+
+      FALAR (-ar): eu falei, você/ele falou, nós falamos, vocês/eles falaram
+      COMER (-er): eu comi, você/ele comeu, nós comemos, vocês/eles comeram
+      ABRIR (-ir): eu abri, você/ele abriu, nós abrimos, vocês/eles abriram
+
+      Fíjate en las diferencias con el español:
+      - "falei" termina en -ei, no en -é (hablé → falei).
+      - La tercera persona termina en -ou / -eu / -iu: ele falou, ele comeu, ele abriu.
+      - "nós falamos" sirve para presente y pasado, como "hablamos" en español.
+    tips:
+      - "Pronuncia 'falei' como 'fa-LEI', con diptongo claro al final."
+      - "En Brasil casi nadie usa 'tu' ni 'vós': aprende 'você falou' y 'vocês falaram' y cubres la conversación diaria."
+  - title: "Irregulares clave y la gran diferencia con el español"
+    type: explanation
+    content: |
+      Cuatro irregulares que aparecen todo el tiempo:
+
+      IR/SER: eu fui, ele foi, nós fomos, eles foram
+      FAZER: eu fiz, ele fez, nós fizemos, eles fizeram
+      TER: eu tive, ele teve, nós tivemos, eles tiveram
+      VIR: eu vim, ele veio, nós viemos, eles vieram
+
+      LA GRAN DIFERENCIA: en español de México distingues "fui al mercado" (ayer)
+      de "he ido al mercado" (alguna vez). En portugués brasileño el pretérito
+      perfeito cubre LOS DOS casos:
+
+      - "Ontem eu fui ao mercado." = Ayer fui al mercado.
+      - "Eu já fui ao mercado três vezes." = Ya he ido al mercado tres veces.
+
+      No traduzcas "he ido" como "tenho ido": esa forma existe, pero significa
+      una acción repetida últimamente ("he estado yendo"). Para tu "he + participio"
+      de experiencia o resultado, usa el perfeito simple, muchas veces con "já".
+    tips:
+      - "Si en español dirías 'he hecho', en portugués di simplemente 'fiz' (a menudo con 'já': 'eu já fiz')."
+      - "'Fui' es de 'ir' y de 'ser' a la vez, exactamente como en español: una trampa menos."
+exercises:
+  - type: translate
+    prompt: "Traduce al portugués: 'Yo hablé con María ayer.'"
+    answer: "Eu falei com a Maria ontem."
+    explanation: "Verbo regular en -ar: falar → falei. En Brasil es común el artículo antes de nombres propios: 'a Maria'."
+  - type: fill_blank
+    prompt: "Eu ___ um bolo para o aniversário da minha irmã. (fazer, pretérito perfeito)"
+    answer: "fiz"
+    explanation: "'Fazer' es irregular: eu fiz, ele fez."
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'he ido a Brasil dos veces' en portugués brasileño?"
+    options:
+      - "Eu já fui ao Brasil duas vezes."
+      - "Eu tenho ido ao Brasil duas vezes."
+      - "Eu hei ido ao Brasil duas vezes."
+    answer: "Eu já fui ao Brasil duas vezes."
+    explanation: "El pretérito perfeito cubre el 'he ido' del español; 'já' refuerza la idea de experiencia."
+  - type: multiple_choice
+    prompt: "Completa: 'Ela ___ de São Paulo na semana passada.' (vir)"
+    options:
+      - "veio"
+      - "vim"
+      - "veno"
+      - "viu"
+    answer: "veio"
+    explanation: "'Vir' en tercera persona es 'veio'. 'Vim' es solo para 'eu' y 'viu' es de 'ver'."
+  - type: reorder
+    prompt: "Ordena las palabras para formar una frase: 'ontem / tive / eu / muito trabalho'"
+    answer: "eu tive muito trabalho ontem"
+    explanation: "Orden natural: sujeto + verbo + complemento + tiempo. 'Tive' es el perfeito de 'ter'."
+notes: "El pretérito perfeito es tu mejor inversión gramatical del bloque: con él puedes contar casi cualquier cosa que pasó. Recuerda: donde el español usa 'he + participio' para experiencias, el portugués brasileño usa el perfeito simple."

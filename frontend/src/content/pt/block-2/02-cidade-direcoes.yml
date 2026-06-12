@@ -1,0 +1,128 @@
+title: "Bloque 2 · 02 — A cidade e direções"
+language: pt
+level: A2
+type: vocabulary
+objectives:
+  - "Aprender el vocabulario básico de la ciudad: calle, esquina, cuadra"
+  - "Pedir y dar direcciones sencillas en portugués brasileño"
+  - "Usar las contracciones no/na y do/da al hablar de lugares"
+vocabulary:
+  - word: "rua"
+    ipa: "/ˈhu.ɐ/"
+    translation: "calle"
+    definition: "Vía pública de una ciudad. Ojo con la pronunciación: la 'r' inicial brasileña suena como una 'j' suave del español ('júa')."
+    example: "Eu moro na Rua das Flores, número 120."
+    tags: ["sustantivo", "ciudad", "A2"]
+  - word: "esquina"
+    ipa: "/isˈkinɐ/"
+    translation: "esquina"
+    definition: "Punto donde se cruzan dos calles. Igual que en español, pero la 'e' inicial átona suena como 'i'."
+    example: "A padaria fica na esquina da minha rua."
+    tags: ["sustantivo", "ciudad", "A2"]
+  - word: "quarteirão"
+    ipa: "/kwaχtejˈɾɐ̃w̃/"
+    translation: "cuadra / manzana"
+    definition: "Espacio entre dos esquinas. Es la 'cuadra' mexicana; en Brasil nadie dice 'quadra' para esto en contextos formales, aunque la oirás en el habla coloquial."
+    example: "O banco fica a dois quarteirões daqui."
+    tags: ["sustantivo", "ciudad", "A2"]
+  - word: "perto"
+    ipa: "/ˈpɛχtu/"
+    translation: "cerca"
+    definition: "A poca distancia. Se usa con 'de': perto de casa, perto do metrô. No se parece a 'cerca', así que memorízalo bien."
+    example: "O supermercado fica perto da minha casa."
+    tags: ["adverbio", "ciudad", "A2"]
+  - word: "longe"
+    ipa: "/ˈlõʒi/"
+    translation: "lejos"
+    definition: "A mucha distancia. También se usa con 'de': longe do centro. La 'g' suena como la 'll' argentina (/ʒ/)."
+    example: "O aeroporto fica longe do centro da cidade."
+    tags: ["adverbio", "ciudad", "A2"]
+  - word: "à direita"
+    ipa: "/a dʒiˈɾejtɐ/"
+    translation: "a la derecha"
+    definition: "Dirección hacia el lado derecho. El 'di' brasileño se pronuncia 'dyi' (/dʒi/). El acento grave en 'à' marca la contracción de 'a + a'."
+    example: "Vire à direita na próxima esquina."
+    tags: ["expresión", "direcciones", "A2"]
+  - word: "à esquerda"
+    ipa: "/a isˈkeχdɐ/"
+    translation: "a la izquierda"
+    definition: "Dirección hacia el lado izquierdo. Nada que ver con 'izquierda' en la forma, pero ambas vienen del vasco 'ezkerra'."
+    example: "O banheiro fica à esquerda, no fim do corredor."
+    tags: ["expresión", "direcciones", "A2"]
+  - word: "em frente"
+    ipa: "/ẽj̃ ˈfɾẽtʃi/"
+    translation: "enfrente / derecho, de frente"
+    definition: "Puede significar 'enfrente de' (em frente ao banco) o 'siga derecho' (siga em frente). El 'te' final suena 'chi' (/tʃi/)."
+    example: "Siga em frente até o semáforo e depois vire à direita."
+    tags: ["expresión", "direcciones", "A2"]
+sections:
+  - title: "Pedir y dar direcciones"
+    type: explanation
+    content: |
+      Para preguntar por un lugar, las fórmulas más comunes son:
+
+      - "Onde fica o banco?" = ¿Dónde queda el banco?
+      - "Como eu chego ao metrô?" = ¿Cómo llego al metro?
+      - "Tem uma farmácia perto daqui?" = ¿Hay una farmacia cerca de aquí?
+
+      Fíjate en el verbo FICAR: en portugués los lugares "ficam" (quedan), no "están".
+      "O hotel fica na esquina" suena mucho más natural que "o hotel está na esquina".
+
+      Para responder:
+      - "Siga em frente." = Siga derecho.
+      - "Vire à direita / à esquerda." = Dé vuelta a la derecha / izquierda.
+      - "Fica a dois quarteirões daqui." = Queda a dos cuadras de aquí.
+      - "É pertinho!" = ¡Está cerquita! (el diminutivo -inho es omnipresente en Brasil)
+    tips:
+      - "Usa 'fica' para ubicaciones: 'Onde fica...?' es la pregunta mágica del turista."
+      - "'Vire' viene de 'virar' (dar vuelta); no uses 'doble', que no existe en portugués con ese sentido."
+  - title: "Las contracciones no/na y do/da"
+    type: explanation
+    content: |
+      En portugués las preposiciones EM y DE se contraen SIEMPRE con el artículo.
+      No es opcional como 'de el' → 'del' en español; aquí no hay forma separada:
+
+      EM + o = NO      → O banco fica no centro. (en el centro)
+      EM + a = NA      → Eu moro na Rua Augusta. (en la calle Augusta)
+      DE + o = DO      → Perto do mercado. (cerca del mercado)
+      DE + a = DA      → Longe da praia. (lejos de la playa)
+
+      Plurales: nos, nas, dos, das.
+
+      Trampa para hispanohablantes: "no" en portugués casi siempre significa
+      "en el", no la negación. La negación es "não".
+      "Eu trabalho no centro" = "Trabajo en el centro" (¡no es una frase negativa!).
+    tips:
+      - "Si ves 'no' antes de un sustantivo masculino, léelo como 'en el': no parque, no hotel, no Brasil."
+      - "'A + a' con acento grave (à) aparece en 'à direita' y 'à esquerda': es la llamada crase."
+exercises:
+  - type: translate
+    prompt: "Traduce al portugués: 'El banco queda a dos cuadras de aquí.'"
+    answer: "O banco fica a dois quarteirões daqui."
+    explanation: "'Fica' para ubicación y 'quarteirões' como plural de 'quarteirão'."
+  - type: fill_blank
+    prompt: "Eu moro ___ Rua das Flores. (contracción de em + a)"
+    answer: "na"
+    explanation: "EM + A se contrae obligatoriamente en NA."
+  - type: multiple_choice
+    prompt: "¿Qué significa 'Siga em frente e vire à esquerda'?"
+    options:
+      - "Siga derecho y dé vuelta a la izquierda."
+      - "Siga derecho y dé vuelta a la derecha."
+      - "Regrese y cruce la calle."
+    answer: "Siga derecho y dé vuelta a la izquierda."
+    explanation: "'Em frente' = derecho/de frente; 'à esquerda' = a la izquierda."
+  - type: multiple_choice
+    prompt: "Completa: 'A farmácia fica perto ___ mercado.'"
+    options:
+      - "do"
+      - "da"
+      - "de el"
+      - "no"
+    answer: "do"
+    explanation: "'Perto de' + 'o mercado' → 'perto do mercado'. 'De el' no existe en portugués: la contracción es obligatoria."
+  - type: reorder
+    prompt: "Ordena las palabras: 'fica / o hotel / esquina / na'"
+    answer: "o hotel fica na esquina"
+    explanation: "Sujeto + 'fica' + lugar con contracción 'na' (em + a)."
+notes: "Practica las contracciones hasta que salgan solas: no/na/do/da aparecen en casi cada frase sobre lugares. Y recuerda que 'no' no es negación."

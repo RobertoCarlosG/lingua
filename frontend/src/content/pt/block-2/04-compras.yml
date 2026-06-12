@@ -1,0 +1,112 @@
+title: "Bloque 2 · 04 — Conversação: compras do dia a dia"
+language: pt
+level: A2
+type: conversation
+objectives:
+  - "Preguntar precios y regatear con cortesía en una tienda brasileña"
+  - "Manejar pagos: tarjeta, efectivo, cambio (troco)"
+  - "Entender un diálogo real de mercado en portugués brasileño"
+vocabulary:
+  - word: "quanto custa"
+    ipa: "/ˈkwɐ̃tu ˈkustɐ/"
+    translation: "cuánto cuesta"
+    definition: "La pregunta básica para precios. También oirás 'quanto é?' o el coloquial 'quanto que é?'."
+    example: "Quanto custa esse abacaxi?"
+    tags: ["expresión", "compras", "A2"]
+  - word: "caro"
+    ipa: "/ˈkaɾu/"
+    translation: "caro"
+    definition: "De precio alto, igual que en español. En el habla coloquial: 'tá caro' (está caro), con 'está' reducido a 'tá'."
+    example: "Nossa, tá caro demais esse queijo!"
+    tags: ["adjetivo", "compras", "A2"]
+  - word: "barato"
+    ipa: "/baˈɾatu/"
+    translation: "barato"
+    definition: "De precio bajo. Idéntico al español; el diminutivo 'baratinho' suaviza y es muy común en Brasil."
+    example: "Na feira, as frutas são bem baratas."
+    tags: ["adjetivo", "compras", "A2"]
+  - word: "troco"
+    ipa: "/ˈtɾoku/"
+    translation: "cambio / vuelto (dinero)"
+    definition: "El dinero que te devuelven al pagar. En México dirías 'cambio' o 'feria'; en Brasil siempre es 'troco'."
+    example: "Aqui está o seu troco: cinco reais."
+    tags: ["sustantivo", "compras", "A2"]
+  - word: "desconto"
+    ipa: "/dʒisˈkõtu/"
+    translation: "descuento"
+    definition: "Rebaja en el precio. Pedir 'um desconto' pagando en efectivo es práctica común en tiendas pequeñas de Brasil."
+    example: "Tem desconto se eu pagar à vista?"
+    tags: ["sustantivo", "compras", "A2"]
+  - word: "cartão"
+    ipa: "/kaχˈtɐ̃w̃/"
+    translation: "tarjeta"
+    definition: "Tarjeta de crédito o débito. 'Cartão de crédito' y 'cartão de débito'. La terminación -ão suele equivaler al -ón español."
+    example: "Posso pagar com cartão de débito?"
+    tags: ["sustantivo", "compras", "A2"]
+  - word: "dinheiro"
+    ipa: "/dʒiˈɲejɾu/"
+    translation: "dinero / efectivo"
+    definition: "Dinero en general; al pagar, 'em dinheiro' significa 'en efectivo'. El 'di' inicial suena 'dyi' (/dʒi/)."
+    example: "Vou pagar em dinheiro, não trouxe o cartão."
+    tags: ["sustantivo", "compras", "A2"]
+  - word: "sacola"
+    ipa: "/saˈkɔlɐ/"
+    translation: "bolsa (de compras)"
+    definition: "La bolsa para llevar las compras. En el súper te preguntarán si quieres 'sacola'; la bolsa de mano de mujer es 'bolsa'."
+    example: "Precisa de sacola ou você trouxe a sua?"
+    tags: ["sustantivo", "compras", "A2"]
+sections:
+  - title: "No mercadinho do bairro"
+    type: dialogue
+    content: |
+      Ana entra num mercadinho em São Paulo para comprar frutas e queijo.
+
+      ANA: Bom dia! Quanto custa o quilo do queijo minas?
+      VENDEDOR: Bom dia! Tá quarenta e cinco reais o quilo.
+      ANA: Nossa, tá caro! E essas mangas, quanto é?
+      VENDEDOR: As mangas tão três por dez reais. Tão bem docinhas!
+      ANA: Tá bom. Me dá três mangas e meio quilo do queijo, por favor.
+      VENDEDOR: Perfeito. Mais alguma coisa?
+      ANA: Só isso. Tem desconto se eu pagar em dinheiro?
+      VENDEDOR: Pra você, faço trinta reais tudo.
+      ANA: Fechado! Pode pagar com cartão também?
+      VENDEDOR: Pode sim, mas aí é sem desconto, viu?
+      ANA: Então pago em dinheiro. Aqui estão cinquenta reais.
+      VENDEDOR: Seu troco: vinte reais. Quer uma sacola?
+      ANA: Quero sim, obrigada!
+      VENDEDOR: Obrigado eu! Volte sempre!
+    tips:
+      - "'Tá' es la forma hablada de 'está'; la oirás en cada frase: 'tá caro', 'tá bom'."
+      - "'Pode pagar com cartão?' literalmente pregunta si 'se puede' pagar: en Brasil se usa 'pode' donde tú dirías 'se puede' o 'aceptan'."
+      - "'Fechado!' = '¡trato hecho!'. Y 'volte sempre' es la despedida estándar de los comercios."
+      - "Las mujeres dicen 'obrigada' y los hombres 'obrigado': el agradecimiento concuerda con quien habla."
+exercises:
+  - type: translate
+    prompt: "Traduce al portugués: '¿Cuánto cuesta el queso?'"
+    answer: "Quanto custa o queijo?"
+    explanation: "'Quanto custa' + artículo 'o' antes del sustantivo masculino."
+  - type: fill_blank
+    prompt: "Aqui está o seu ___ : dez reais. (dinero que devuelven al pagar)"
+    answer: "troco"
+    explanation: "'Troco' es el cambio o vuelto; no se dice 'cambio' en este contexto."
+  - type: multiple_choice
+    prompt: "¿Qué significa 'Tem desconto se eu pagar à vista?'"
+    options:
+      - "¿Hay descuento si pago de contado?"
+      - "¿Hay descuento si pago a plazos?"
+      - "¿Puedo pagar con tarjeta?"
+    answer: "¿Hay descuento si pago de contado?"
+    explanation: "'À vista' significa pago inmediato y completo, normalmente en efectivo."
+  - type: multiple_choice
+    prompt: "En el diálogo, ¿por qué Ana decide pagar 'em dinheiro'?"
+    options:
+      - "Porque con tarjeta no le dan el descuento."
+      - "Porque el vendedor no acepta tarjeta."
+      - "Porque olvidó su tarjeta en casa."
+    answer: "Porque con tarjeta no le dan el descuento."
+    explanation: "El vendedor dice: 'Pode sim, mas aí é sem desconto, viu?'"
+  - type: reorder
+    prompt: "Ordena las palabras: 'com / pagar / posso / cartão'"
+    answer: "posso pagar com cartão"
+    explanation: "'Posso' + infinitivo + 'com cartão': la forma cortés de preguntar si aceptan tarjeta."
+notes: "El regateo suave ('tem desconto?', 'faz um precinho?') es normal en ferias y tiendas pequeñas de Brasil, pero no en supermercados ni cadenas."

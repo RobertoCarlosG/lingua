@@ -4,6 +4,7 @@ import { supabase } from '@/lib/supabase'
 import { lookupWord } from '@/lib/dictionary'
 import { initialSrs } from '@/lib/srs'
 import { useStore } from '@/lib/store'
+import { useAuth } from '@/lib/auth'
 import { cn, formatDate } from '@/lib/utils'
 import type { VocabWord, WordStatus } from '@/types/database'
 
@@ -131,6 +132,7 @@ function AddWordModal({ onClose, onSave, language }: {
 
 export function VocabularyPage() {
   const { activeLanguage } = useStore()
+  const { user } = useAuth()
   const [words, setWords] = useState<VocabWord[]>([])
   const [search, setSearch] = useState('')
   const [filterStatus, setFilterStatus] = useState<WordStatus | 'all'>('all')
@@ -156,7 +158,7 @@ export function VocabularyPage() {
   async function handleSave(wordData: Omit<VocabWord, 'id' | 'created_at' | 'user_id'>) {
     const { data } = await supabase
       .from('vocab_words')
-      .insert({ ...wordData, user_id: 'demo-user' })
+      .insert({ ...wordData, user_id: user!.id })
       .select()
       .single()
     if (data) {

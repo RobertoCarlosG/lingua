@@ -21,7 +21,16 @@ describe('lookupWord', () => {
     const entry = await lookupWord('accomplish')
 
     expect(entry).toEqual(ENTRY)
-    expect(fetchMock).toHaveBeenCalledWith(expect.stringContaining('/api/dictionary/accomplish'))
+    expect(fetchMock).toHaveBeenCalledWith(expect.stringContaining('/api/dictionary/en/accomplish'))
+  })
+
+  it('usa el idioma indicado en la ruta', async () => {
+    const fetchMock = vi.fn().mockResolvedValue({ ok: true, json: () => Promise.resolve(ENTRY) })
+    vi.stubGlobal('fetch', fetchMock)
+
+    await lookupWord('saudade', 'pt')
+
+    expect(fetchMock).toHaveBeenCalledWith(expect.stringContaining('/api/dictionary/pt/saudade'))
   })
 
   it('codifica la palabra en la URL', async () => {

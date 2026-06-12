@@ -1,0 +1,129 @@
+title: "Bloque 1 · 04 — Números, dias e horas"
+language: pt
+level: A1
+type: vocabulary
+objectives:
+  - "Contar del 1 al 20 en portugués"
+  - "Decir los días de la semana y entender el sistema de 'feiras'"
+  - "Preguntar y decir la hora"
+vocabulary:
+  - word: "um"
+    ipa: "/ˈũ/"
+    translation: "uno, un"
+    definition: "Número 1. Tiene femenino: 'uma'. La vocal es nasal: /ũ/, como decir 'un' sin terminar la 'n'."
+    example: "Eu quero um café, por favor."
+    tags: ["número", "A1"]
+  - word: "dois"
+    ipa: "/ˈdojs/"
+    translation: "dos"
+    definition: "Número 2. También tiene femenino: 'duas'. 'Dois cafés' pero 'duas águas'."
+    example: "Uma mesa para dois, por favor."
+    tags: ["número", "A1"]
+  - word: "três"
+    ipa: "/ˈtɾes/"
+    translation: "tres"
+    definition: "Número 3. Lleva acento circunflejo. Muy parecido al español."
+    example: "São três horas da tarde."
+    tags: ["número", "A1"]
+  - word: "dez"
+    ipa: "/ˈdɛs/"
+    translation: "diez"
+    definition: "Número 10. La 'z' final suena /s/. Sirve de base para dezesseis (16), dezessete (17), dezoito (18) y dezenove (19)."
+    example: "A aula começa às dez horas."
+    tags: ["número", "A1"]
+  - word: "segunda-feira"
+    ipa: "/seˌɡũdɐ ˈfejɾɐ/"
+    translation: "lunes"
+    definition: "Literalmente 'segunda feria'. En portugués los días laborales se numeran: segunda (lunes) a sexta-feira (viernes). En el habla se acorta: 'na segunda' = 'el lunes'."
+    example: "Eu trabalho na segunda-feira."
+    tags: ["día", "semana", "A1"]
+  - word: "sábado"
+    ipa: "/ˈsabadu/"
+    translation: "sábado"
+    definition: "Igual que en español. Junto con 'domingo', es el único día que no es 'feira'."
+    example: "No sábado eu não trabalho."
+    tags: ["día", "semana", "A1"]
+  - word: "domingo"
+    ipa: "/doˈmĩɡu/"
+    translation: "domingo"
+    definition: "Idéntico al español en escritura; la 'o' final suena /u/ y la 'i' es nasal."
+    example: "Domingo é dia de descansar."
+    tags: ["día", "semana", "A1"]
+  - word: "hora"
+    ipa: "/ˈɔɾɐ/"
+    translation: "hora"
+    definition: "Igual que en español, la 'h' es muda. Para preguntar la hora: 'Que horas são?' (en plural)."
+    example: "Que horas são? São duas horas."
+    tags: ["tiempo", "A1"]
+sections:
+  - title: "Números del 1 al 20"
+    type: explanation
+    content: |
+      Casi todos los números se parecen al español; fíjate en las diferencias:
+
+      1 um/uma     6 seis        11 onze        16 dezesseis
+      2 dois/duas  7 sete        12 doze        17 dezessete
+      3 três       8 oito        13 treze       18 dezoito
+      4 quatro     9 nove        14 catorze     19 dezenove
+      5 cinco      10 dez        15 quinze      20 vinte
+
+      Diferencias clave con el español:
+      - 'Um' y 'dois' tienen femenino: uma casa, duas casas.
+      - Del 16 al 19 se forman con 'dez' + número: dez-e-seis → dezesseis.
+      - 'Sete' y 'nove' pierden la 'i' del español (siete, nueve).
+    tips:
+      - "'Seis' a veces se dice 'meia' (de 'meia dúzia', media docena) al dictar números de teléfono."
+  - title: "Los días son 'feiras' y la hora se pregunta en plural"
+    type: explanation
+    content: |
+      Los días laborables en portugués no se parecen a los del español:
+      se numeran como 'ferias' heredadas del calendario litúrgico.
+
+      - segunda-feira = lunes
+      - terça-feira = martes
+      - quarta-feira = miércoles
+      - quinta-feira = jueves
+      - sexta-feira = viernes
+      - sábado = sábado
+      - domingo = domingo
+
+      Truco: el lunes es la SEGUNDA feira porque el domingo cuenta como
+      primer día de la semana.
+
+      Para la hora:
+      - Que horas são? = ¿Qué hora es? (¡en plural!)
+      - É uma hora. = Es la una. (singular solo con la una)
+      - São três horas. = Son las tres.
+      - São três e meia. = Son las tres y media.
+    tips:
+      - "En el habla se omite 'feira': 'na segunda' = 'el lunes', 'na sexta' = 'el viernes'."
+      - "'En lunes' se dice con 'na/no': 'na segunda-feira', 'no sábado', 'no domingo'."
+exercises:
+  - type: translate
+    prompt: "Traduce al portugués: 'tres'"
+    answer: "três"
+    explanation: "Con acento circunflejo: três /ˈtɾes/."
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'lunes' en portugués?"
+    options:
+      - "primeira-feira"
+      - "segunda-feira"
+      - "terça-feira"
+    answer: "segunda-feira"
+    explanation: "El domingo cuenta como primer día, así que el lunes es la 'segunda' feira."
+  - type: fill_blank
+    prompt: "Completa la pregunta para saber la hora: 'Que horas ___?'"
+    answer: "são"
+    explanation: "En portugués la hora se pregunta en plural: 'Que horas são?'."
+  - type: translate
+    prompt: "Escribe en portugués el número 10"
+    answer: "dez"
+    explanation: "'Dez', con 'z' final que suena /s/."
+  - type: multiple_choice
+    prompt: "'Sexta-feira' corresponde en español a..."
+    options:
+      - "jueves"
+      - "viernes"
+      - "sábado"
+    answer: "viernes"
+    explanation: "Sexta-feira es el sexto día contando desde el domingo: el viernes."

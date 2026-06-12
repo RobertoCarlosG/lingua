@@ -1,0 +1,117 @@
+title: "Bloque 2 · 03 — Falsos amigos español–português"
+language: pt
+level: A2
+type: vocabulary
+objectives:
+  - "Identificar los falsos amigos más peligrosos entre español y portugués"
+  - "Evitar malentendidos clásicos: apelido, escritório, embaraçada"
+  - "Aprender la palabra portuguesa correcta para cada concepto confundido"
+vocabulary:
+  - word: "escritório"
+    ipa: "/iskɾiˈtɔɾju/"
+    translation: "oficina (lugar de trabajo)"
+    definition: "NO es el mueble 'escritorio'. Es el lugar donde trabajas. El mueble para escribir se llama 'escrivaninha' o 'mesa'."
+    example: "Eu trabalho num escritório no centro de São Paulo."
+    tags: ["sustantivo", "falso amigo", "A2"]
+  - word: "apelido"
+    ipa: "/apeˈlidu/"
+    translation: "apodo / sobrenombre"
+    definition: "NO es 'apellido'. Es el apodo cariñoso o burlón. El apellido familiar se dice 'sobrenome' en Brasil."
+    example: "O apelido dele é Zé, mas o nome completo é José Carlos."
+    tags: ["sustantivo", "falso amigo", "A2"]
+  - word: "borracha"
+    ipa: "/boˈhaʃɐ/"
+    translation: "goma de borrar; hule, caucho"
+    definition: "NO significa 'borracha' (ebria). Es la goma para borrar o el material hule. 'Borracha' de alcohol se dice 'bêbada'."
+    example: "Você pode me emprestar a sua borracha? Errei a resposta."
+    tags: ["sustantivo", "falso amigo", "A2"]
+  - word: "polvo"
+    ipa: "/ˈpowvu/"
+    translation: "pulpo"
+    definition: "NO es 'polvo' (partículas de tierra). Es el animal marino de ocho tentáculos. El polvo de limpiar se dice 'poeira' o 'pó'."
+    example: "No restaurante português, pedimos arroz de polvo."
+    tags: ["sustantivo", "falso amigo", "A2"]
+  - word: "cena"
+    ipa: "/ˈsenɐ/"
+    translation: "escena"
+    definition: "NO es la 'cena' (comida nocturna). Es una escena de película o teatro. La comida de la noche se dice 'jantar'."
+    example: "A última cena do filme me fez chorar."
+    tags: ["sustantivo", "falso amigo", "A2"]
+  - word: "oficina"
+    ipa: "/ofiˈsinɐ/"
+    translation: "taller (mecánico o artesanal)"
+    definition: "NO es la 'oficina' de trabajo. Es el taller donde reparan coches o se hacen trabajos manuales. Tu oficina es el 'escritório'."
+    example: "Meu carro quebrou e está na oficina."
+    tags: ["sustantivo", "falso amigo", "A2"]
+  - word: "esquisito"
+    ipa: "/iskiˈzitu/"
+    translation: "raro, extraño"
+    definition: "NO significa 'exquisito' (delicioso). Significa raro o extraño, ¡casi lo contrario! Para decir delicioso usa 'delicioso' o 'gostoso'."
+    example: "Esse suco está com um gosto esquisito, não vou beber."
+    tags: ["adjetivo", "falso amigo", "A2"]
+  - word: "embaraçada"
+    ipa: "/ẽbaɾaˈsadɐ/"
+    translation: "avergonzada; enredada"
+    definition: "NO significa 'embarazada' (esperando bebé). Significa avergonzada o enredada. Embarazada se dice 'grávida'. Confundirlas causa el malentendido más famoso entre los dos idiomas."
+    example: "Ela ficou embaraçada quando esqueceu o nome do chefe."
+    tags: ["adjetivo", "falso amigo", "A2"]
+sections:
+  - title: "Cuando el parecido engaña"
+    type: explanation
+    content: |
+      El español y el portugués comparten casi el 90% del vocabulario, y eso es una
+      ventaja enorme... hasta que deja de serlo. Los falsos amigos son palabras
+      idénticas o casi idénticas que significan cosas distintas.
+
+      Los pares más traicioneros de esta lección:
+
+      - escritório = oficina (tu oficina) / oficina = taller (del mecánico)
+        ¡Se intercambian! Trabajas en un "escritório" y llevas el coche a la "oficina".
+      - apelido = apodo. Tu apellido es el "sobrenome".
+      - borracha = goma de borrar. Una persona ebria es "bêbada".
+      - polvo = pulpo. El polvo de los muebles es "poeira".
+      - cena = escena. La cena (comida) es el "jantar".
+      - esquisito = raro. Si la comida está rica, di "deliciosa" o "gostosa".
+      - embaraçada = avergonzada. Esperando bebé es "grávida".
+
+      Frase para no olvidar: "Fiquei embaraçada porque chamei o jantar de cena
+      e disse que a comida estava esquisita."
+    tips:
+      - "Si un brasileño te pregunta tu 'apelido', quiere saber tu apodo, no tu apellido."
+      - "Nunca felicites al cocinero diciendo que la comida está 'esquisita': le estarás diciendo que está rara."
+      - "Para decir que una amiga espera bebé, di 'grávida'. 'Embaraçada' solo la hará sonrojarse."
+exercises:
+  - type: multiple_choice
+    prompt: "Un brasileño dice: 'Meu carro está na oficina.' ¿Qué significa?"
+    options:
+      - "Su coche está en el taller mecánico."
+      - "Su coche está en la oficina de trabajo."
+      - "Su coche está en el estacionamiento."
+    answer: "Su coche está en el taller mecánico."
+    explanation: "'Oficina' en portugués es el taller; la oficina de trabajo es el 'escritório'."
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'embarazada' (esperando bebé) en portugués?"
+    options:
+      - "grávida"
+      - "embaraçada"
+      - "envergonhada"
+    answer: "grávida"
+    explanation: "'Embaraçada' significa avergonzada o enredada. El falso amigo más famoso de los dos idiomas."
+  - type: fill_blank
+    prompt: "Para borrar el error usé la ___ . (goma de borrar, en portugués)"
+    answer: "borracha"
+    explanation: "'Borracha' es la goma de borrar; una persona ebria es 'bêbada'."
+  - type: translate
+    prompt: "Traduce al español el significado de la palabra portuguesa 'apelido'."
+    answer: "apodo"
+    explanation: "'Apelido' es el apodo; el apellido es 'sobrenome'."
+  - type: multiple_choice
+    prompt: "Si un brasileño dice que tu sopa está 'esquisita', ¿qué te está diciendo?"
+    options:
+      - "Que está rara."
+      - "Que está deliciosa."
+      - "Que está caliente."
+      - "Que está salada."
+    answer: "Que está rara."
+    explanation: "'Esquisito' significa raro o extraño, casi lo contrario de 'exquisito' en español."
+notes: "Los falsos amigos no se dominan con lógica sino con repetición: repasa esta lista varias veces. Premio doble: 'escritório' y 'oficina' se intercambian entre los dos idiomas, así que aprendiendo uno aprendes los dos."

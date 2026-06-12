@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Plus, AlertTriangle, RefreshCw } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { useStore } from '@/lib/store'
+import { useAuth } from '@/lib/auth'
 import { cn, formatDate } from '@/lib/utils'
 import type { ErrorEntry } from '@/types/database'
 
@@ -64,6 +65,7 @@ function AddErrorModal({ onClose, onSave, language }: {
 
 export function ErrorBankPage() {
   const { activeLanguage } = useStore()
+  const { user } = useAuth()
   const [errors, setErrors] = useState<ErrorEntry[]>([])
   const [showAdd, setShowAdd] = useState(false)
   const [loading, setLoading] = useState(true)
@@ -86,7 +88,7 @@ export function ErrorBankPage() {
   async function handleSave(errorData: Omit<ErrorEntry, 'id' | 'created_at' | 'user_id'>) {
     const { data } = await supabase
       .from('error_entries')
-      .insert({ ...errorData, user_id: 'demo-user' })
+      .insert({ ...errorData, user_id: user!.id })
       .select()
       .single()
     if (data) {

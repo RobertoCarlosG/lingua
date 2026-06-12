@@ -1,0 +1,103 @@
+title: "Bloque 4 · 01 — British idioms"
+language: en
+level: C1
+type: vocabulary
+objectives:
+  - "Reconocer y usar ocho idioms genuinamente británicos en contextos cotidianos."
+  - "Captar el tono irónico y de understatement típico del inglés británico coloquial."
+  - "Pronunciar los idioms con el acento RP no rótico."
+vocabulary:
+  - word: "throw a spanner in the works"
+    ipa: "/θrəʊ ə ˈspænər ɪn ðə ˈwɜːks/"
+    translation: "arruinar los planes; meter un palo en la rueda"
+    definition: "To do something that suddenly prevents a plan, process or arrangement from succeeding."
+    example: "We had the whole trip organised, but the rail strike threw a spanner in the works."
+    tags: ["idiom", "C1"]
+  - word: "not my cup of tea"
+    ipa: "/nɒt maɪ ˌkʌp əv ˈtiː/"
+    translation: "no es lo mío; no me llama la atención"
+    definition: "Not the kind of thing one likes or is interested in; a polite, understated way of expressing dislike."
+    example: "I gave cricket a fair go, but to be honest it is simply not my cup of tea."
+    tags: ["idiom", "C1"]
+  - word: "chuffed to bits"
+    ipa: "/ˌtʃʌft tə ˈbɪts/"
+    translation: "encantadísimo; contentísimo"
+    definition: "Extremely pleased or delighted about something, often a personal achievement."
+    example: "She was chuffed to bits when her colleagues organised a surprise leaving do for her."
+    tags: ["idiom", "C1"]
+  - word: "over the moon"
+    ipa: "/ˌəʊvə ðə ˈmuːn/"
+    translation: "feliz como una lombriz; en las nubes de felicidad"
+    definition: "Extremely happy and excited about something."
+    example: "Dad was over the moon when his favourite team finally won the cup."
+    tags: ["idiom", "C1"]
+  - word: "take the mickey"
+    ipa: "/ˌteɪk ðə ˈmɪki/"
+    translation: "burlarse de alguien; vacilar a alguien"
+    definition: "To tease or make fun of someone, usually in a light-hearted way."
+    example: "My flatmates love taking the mickey out of my attempts at a Yorkshire accent."
+    tags: ["idiom", "C1"]
+  - word: "a damp squib"
+    ipa: "/ə ˌdæmp ˈskwɪb/"
+    translation: "un fiasco; una decepción total"
+    definition: "An event that is much less impressive or exciting than expected; an anticlimax."
+    example: "The much-publicised product launch turned out to be a bit of a damp squib."
+    tags: ["idiom", "C1"]
+  - word: "gutted"
+    ipa: "/ˈɡʌtɪd/"
+    translation: "devastado; destrozado (por una decepción)"
+    definition: "Extremely disappointed or upset about something that has happened."
+    example: "He was absolutely gutted when his flight to Manchester was cancelled at the last minute."
+    tags: ["idiom", "C1"]
+  - word: "lose the plot"
+    ipa: "/ˌluːz ðə ˈplɒt/"
+    translation: "perder la cabeza; perder el hilo por completo"
+    definition: "To stop behaving rationally or to become confused and unable to deal with a situation."
+    example: "After marking essays until three in the morning, I completely lost the plot and emailed the wrong file."
+    tags: ["idiom", "C1"]
+sections:
+  - title: "El humor británico detrás de los idioms"
+    type: explanation
+    content: |
+      Los idioms británicos no son adornos: son la moneda corriente de la conversación informal en el Reino Unido,
+      y a nivel C1 se espera que los entiendas al vuelo y los uses con naturalidad.
+
+      Fíjate en tres rasgos culturales que los atraviesan:
+
+      1. Understatement (atenuación). Decir 'not my cup of tea' es la forma británica de decir que algo te
+         desagrada profundamente sin sonar grosero. Cuanto más suave la frase, más fuerte puede ser el rechazo real.
+      2. Emoción exagerada solo para lo positivo y lo negativo extremos. 'Chuffed to bits', 'over the moon' y
+         'gutted' aparecen constantemente al hablar de futbol, trabajo y vida personal.
+      3. Burla afectuosa. 'Take the mickey' describe el deporte nacional británico: reírse de los amigos con cariño.
+         Si un británico se burla de ti, normalmente es señal de aprecio.
+
+      Ojo con la pronunciación RP: es no rótica, así que la 'r' final no se pronuncia ('spanner' es /ˈspænə/),
+      pero reaparece como linking r cuando la siguiente palabra empieza con vocal: 'spanner in' /ˈspænər ɪn/.
+    tips:
+      - "No traduzcas los idioms literalmente: aprende cada uno como una unidad con su contexto típico."
+      - "'Gutted' y 'chuffed' son informales: úsalos con amigos y colegas, no en un ensayo académico."
+      - "'Take the mickey out of someone' siempre lleva 'out of' antes de la persona."
+exercises:
+  - type: multiple_choice
+    prompt: "¿Qué idiom describe a alguien profundamente decepcionado?"
+    options: ["gutted", "chuffed to bits", "over the moon", "not my cup of tea"]
+    answer: "gutted"
+    explanation: "'Gutted' expresa una decepción devastadora; los otros dos primeros expresan alegría y el último, desinterés."
+  - type: fill_blank
+    prompt: "The new manager threw a ___ in the works by cancelling the whole project."
+    answer: "spanner"
+    explanation: "El idiom británico es 'throw a spanner in the works'; en inglés americano se usa 'wrench'."
+  - type: translate
+    prompt: "Traduce al inglés usando el idiom británico con 'tea': 'no es lo mío'"
+    answer: "not my cup of tea"
+    explanation: "Es la forma británica más educada de decir que algo no te gusta."
+  - type: fill_blank
+    prompt: "My brother is always taking the ___ out of my cooking, but he eats everything."
+    answer: "mickey"
+    explanation: "'Take the mickey out of someone' significa burlarse de alguien con cariño."
+  - type: multiple_choice
+    prompt: "Si un crítico dice que la película fue 'a damp squib', quiere decir que fue..."
+    options: ["una decepción", "un éxito rotundo", "una sorpresa agradable", "demasiado larga"]
+    answer: "una decepción"
+    explanation: "Un 'squib' es un petardo; si está húmedo ('damp'), no explota: pura expectativa sin resultado."
+notes: "Estos ocho idioms aparecen constantemente en series, pódcast y conversaciones británicas. Escucha cómo los usan hablantes nativos antes de soltarlos tú."

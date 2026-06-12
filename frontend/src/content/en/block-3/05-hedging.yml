@@ -1,0 +1,138 @@
+title: "Bloque 3 · 05 — Hedging and British understatement"
+language: en
+level: C1
+type: conversation
+objectives:
+  - "Suavizar opiniones y críticas al estilo británico (hedging): 'I'd argue that...', 'I'm not entirely convinced...'"
+  - "Decodificar el understatement: entender lo que un británico dice frente a lo que realmente quiere decir"
+  - "Evitar sonar brusco en reuniones y correos con interlocutores británicos"
+vocabulary:
+  - word: "somewhat"
+    ipa: "/ˈsʌmwɒt/"
+    translation: "algo, un tanto"
+    definition: "To some degree; a polite softener that often hides a strong negative opinion."
+    example: "The results were somewhat disappointing, to say the least."
+    tags: ["adverbio", "C1"]
+  - word: "rather"
+    ipa: "/ˈrɑːðə/"
+    translation: "bastante, más bien"
+    definition: "To a noticeable degree; very British softener before adjectives and nouns."
+    example: "That is rather a bold claim, if you don't mind my saying so."
+    tags: ["adverbio", "C1"]
+  - word: "arguably"
+    ipa: "/ˈɑːɡjuəbli/"
+    translation: "posiblemente, podría argumentarse que"
+    definition: "Used to state an opinion as if it were open to debate, which softens it."
+    example: "It is arguably the finest pub in the whole of Yorkshire."
+    tags: ["adverbio", "C1"]
+  - word: "a tad"
+    ipa: "/ə ˈtæd/"
+    translation: "un pelín, una pizca"
+    definition: "Slightly; a little. Informal British softener."
+    example: "The timeline seems a tad optimistic, doesn't it?"
+    tags: ["expresión", "C1"]
+  - word: "underwhelming"
+    ipa: "/ˌʌndəˈwelmɪŋ/"
+    translation: "decepcionante, que deja frío"
+    definition: "Failing to impress; much less exciting than expected."
+    example: "The sequel was, to put it kindly, rather underwhelming."
+    tags: ["adjetivo", "C1"]
+  - word: "to put it mildly"
+    ipa: "/tə ˈpʊt ɪt ˈmaɪldli/"
+    translation: "por decirlo suavemente"
+    definition: "Used to signal that the reality is much stronger than the words chosen."
+    example: "The meeting did not go well, to put it mildly."
+    tags: ["expresión", "C1"]
+sections:
+  - title: "El arte de no decir lo que se dice"
+    type: explanation
+    content: |
+      En la cultura comunicativa británica, la franqueza directa puede percibirse
+      como agresiva. Por eso existe el 'hedging': una capa de amortiguadores
+      lingüísticos que envuelve opiniones, críticas y negativas.
+
+      Herramientas principales:
+
+      1. Verbos de opinión atenuados: "I'd argue that...", "I would have thought
+         that...", "I can't help feeling that..."
+
+      2. Negación de lo positivo en lugar de afirmación de lo negativo:
+         · "I'm not entirely convinced."   (= no me convence nada)
+         · "It's not quite what I had in mind."  (= no es esto en absoluto)
+         · "That's not exactly ideal."  (= es un problema serio)
+
+      3. Minimizadores: somewhat, rather, slightly, a tad, a little, quite.
+         Cuanto más pequeño el adverbio, mayor suele ser el problema real.
+
+      4. Preguntas en lugar de órdenes: "Would you mind having another look at
+         the figures?" en vez de "Check the figures again."
+
+      Regla de oro: calibra la magnitud real multiplicando la queja por tres.
+      Si un británico dice que algo es 'a bit of a problem', prepárate.
+    tips:
+      - "'With (the greatest) respect...' suele anunciar un desacuerdo frontal, no respeto."
+      - "'Interesting' aplicado a tu idea es, con frecuencia, un educado 'no me gusta'."
+      - "No uses hedging para todo: en emergencias o instrucciones de seguridad, los británicos también son directos."
+  - title: "Diálogo: una revisión de proyecto muy educada"
+    type: dialogue
+    content: |
+      Margaret (directora británica) revisa la propuesta de Diego. Tras cada
+      intervención tienes, entre paréntesis, lo que realmente quiere decir.
+
+      Margaret: Thanks for this, Diego. There's quite a lot to like here.
+      (→ Hay bastantes cosas que NO me convencen y vamos a repasarlas.)
+
+      Diego: Glad to hear it. I worked all weekend on the budget section.
+
+      Margaret: Yes... the budget. I'd argue the timeline is a tad optimistic.
+      (→ El calendario es imposible. Rehazlo.)
+
+      Diego: We could perhaps add two weeks for testing?
+
+      Margaret: That might help. Though I'm not entirely convinced the supplier
+      can deliver at that price, if I'm honest.
+      (→ Estoy segura de que el proveedor NO puede. Cambia de proveedor.)
+
+      Diego: I see. And the design? The client seemed happy.
+
+      Margaret: Mmm. It's not quite what I had in mind, but we can come back
+      to that.
+      (→ El diseño no le gusta nada y habrá que rehacerlo también.)
+
+      Diego: So... overall?
+
+      Margaret: A very useful first draft. Just a few small tweaks needed.
+      (→ Es un borrador: queda muchísimo trabajo por delante.)
+    tips:
+      - "Fíjate en que Margaret nunca dice 'no', 'bad' ni 'wrong': todo va envuelto en atenuadores."
+      - "'A few small tweaks' al final de una reunión británica puede significar semanas de trabajo."
+exercises:
+  - type: multiple_choice
+    prompt: "Tu jefa británica dice: 'I'm not entirely convinced by this proposal.' ¿Qué significa en realidad?"
+    options:
+      - "Tiene alguna duda menor pero la aprobará"
+      - "La propuesta no le convence y probablemente la rechace"
+      - "Está casi convencida del todo"
+    answer: "La propuesta no le convence y probablemente la rechace"
+    explanation: "Negar lo positivo ('not entirely convinced') es la forma británica de expresar un rechazo claro."
+  - type: fill_blank
+    prompt: "It's not quite ___ I had in mind. (= no es esto lo que quería, dicho con suavidad)"
+    answer: "what"
+    explanation: "La fórmula fija es 'It's not quite what I had in mind': rechazo educado de una propuesta."
+  - type: translate
+    prompt: "Suaviza al estilo británico la frase 'Estoy en desacuerdo.' (empieza con 'I'm not sure I')"
+    answer: "I'm not sure I agree."
+    explanation: "En lugar de 'I disagree', el hedging británico niega la certeza: 'I'm not sure I agree.'"
+  - type: multiple_choice
+    prompt: "Un colega británico describe los resultados como 'somewhat disappointing'. Lo más probable es que los resultados fueran..."
+    options:
+      - "ligeramente peores de lo esperado"
+      - "un fracaso considerable"
+      - "buenos en general"
+    answer: "un fracaso considerable"
+    explanation: "Regla del understatement: el minimizador 'somewhat' suele encubrir un problema mucho mayor."
+  - type: reorder
+    prompt: "argue / I'd / that / option / the / cheaper / riskier / is"
+    answer: "I'd argue that the cheaper option is riskier"
+    explanation: "'I'd argue that...' presenta una opinión firme como si fuera debatible: hedging clásico."
+notes: "El hedging no es hipocresía: es un código compartido. Ambas partes saben decodificarlo; el problema surge cuando el interlocutor extranjero lo toma al pie de la letra."

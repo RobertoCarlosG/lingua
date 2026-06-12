@@ -1,0 +1,115 @@
+title: "Bloque 3 · 02 — Modals of deduction in the past"
+language: en
+level: C1
+type: grammar
+objectives:
+  - "Expresar grados de certeza sobre el pasado con must have / can't have / might have + participio"
+  - "Distinguir 'needn't have done' (lo hiciste sin necesidad) de 'didn't need to do'"
+  - "Usar 'should have' para reproches y expectativas no cumplidas con el tono adecuado"
+vocabulary:
+  - word: "must have"
+    ipa: "/məst əv/"
+    translation: "debe de haber (deducción casi segura)"
+    definition: "Used to say that you are almost certain something happened, based on evidence."
+    example: "She must have missed the train; she is never this late."
+    tags: ["modal", "C1"]
+  - word: "can't have"
+    ipa: "/kɑːnt əv/"
+    translation: "no puede haber (imposibilidad lógica)"
+    definition: "Used to say that you are almost certain something did NOT happen."
+    example: "He can't have finished already — the report is fifty pages long."
+    tags: ["modal", "C1"]
+  - word: "might have"
+    ipa: "/maɪt əv/"
+    translation: "puede que haya, quizá haya"
+    definition: "Used to say that something possibly happened, without much certainty."
+    example: "They might have taken the earlier flight; nobody has heard from them."
+    tags: ["modal", "C1"]
+  - word: "could have"
+    ipa: "/kʊd əv/"
+    translation: "podría haber (posibilidad u oportunidad no realizada)"
+    definition: "Used for past possibility, or for something that was possible but did not happen."
+    example: "You could have hurt yourself climbing that ladder in the dark."
+    tags: ["modal", "C1"]
+  - word: "needn't have"
+    ipa: "/ˈniːdnt əv/"
+    translation: "no hacía falta que (pero lo hiciste)"
+    definition: "Used when somebody did something that was not necessary."
+    example: "You needn't have brought wine — we have got plenty in the cellar."
+    tags: ["modal", "C1"]
+  - word: "should have"
+    ipa: "/ʃʊd əv/"
+    translation: "debería haber (reproche o expectativa incumplida)"
+    definition: "Used to criticise a past action or to say that something expected did not happen."
+    example: "We should have booked a table; the place was absolutely heaving."
+    tags: ["modal", "C1"]
+sections:
+  - title: "La escala de certeza y sus trampas"
+    type: explanation
+    content: |
+      Todos estos modales comparten estructura: MODAL + HAVE + PARTICIPIO. En el
+      habla rápida británica, 'have' se reduce a /əv/: "must've", "can't've".
+
+      Imagina una escala de certeza sobre el pasado:
+
+        100 %  must have done      → casi seguro que SÍ ocurrió
+         50 %  may / might / could have done → quizá ocurrió, quizá no
+          0 %  can't / couldn't have done    → casi seguro que NO ocurrió
+
+      Ojo: el opuesto de 'must have' NO es 'mustn't have' (raro en británico),
+      sino 'can't have':
+        · "The lights are on — they must have come home."
+        · "The lights are off — they can't have come home yet."
+
+      Matices que marcan el C1:
+
+      1. needn't have done  vs  didn't need to do
+         · "She needn't have waited."  → Esperó, y fue innecesario.
+         · "She didn't need to wait."  → No era necesario; probablemente NO esperó.
+         La diferencia es si la acción ocurrió o no.
+
+      2. could have done tiene dos lecturas según contexto:
+         · Posibilidad: "He could have left early." (quizá se fue temprano)
+         · Oportunidad desaprovechada o riesgo: "You could have been killed!"
+
+      3. should have / ought to have + participio expresa reproche o lamento.
+         'Ought to have' es algo más formal y menos frecuente:
+         "You ought to have consulted us first."
+
+      4. En deducciones, 'will have done' expresa certeza casi total sobre algo
+         esperable: "She will have landed by now." (seguro que ya aterrizó)
+    tips:
+      - "Pronuncia 'have' débil: /əv/. 'Must have been' suena /ˈmʌstəv bɪn/."
+      - "Para negar una deducción segura usa can't have, no mustn't have."
+      - "Pregúntate siempre: ¿la acción ocurrió? Si ocurrió sin necesidad → needn't have done."
+exercises:
+  - type: multiple_choice
+    prompt: "The lights are off and the curtains are drawn; they ___ gone to bed."
+    options:
+      - "must have"
+      - "can't have"
+      - "needn't have"
+      - "shouldn't have"
+    answer: "must have"
+    explanation: "Hay evidencia (luces apagadas, cortinas cerradas) que apunta a una deducción casi segura: must have."
+  - type: fill_blank
+    prompt: "You ___ have bought bread — we already had two loaves at home. (no hacía falta, pero lo compraste)"
+    answer: "needn't"
+    explanation: "'needn't have bought' indica que la acción ocurrió pero era innecesaria."
+  - type: translate
+    prompt: "Traduce: 'No puede haber sido Laura; estaba conmigo todo el día.' (empieza con 'It' y usa la contracción can't)"
+    answer: "It can't have been Laura; she was with me all day."
+    explanation: "Imposibilidad lógica sobre el pasado: can't have + been. 'Mustn't have' no se usa así en inglés británico."
+  - type: multiple_choice
+    prompt: "Elige la frase que implica que la acción SÍ ocurrió, aunque era innecesaria:"
+    options:
+      - "She didn't need to wait."
+      - "She needn't have waited."
+      - "She didn't have to wait."
+    answer: "She needn't have waited."
+    explanation: "'needn't have + participio' = lo hizo sin necesidad. Las otras dos solo dicen que no era necesario."
+  - type: reorder
+    prompt: "have / should / we / a / table / booked"
+    answer: "We should have booked a table"
+    explanation: "Reproche o lamento sobre el pasado: should have + participio (booked)."
+notes: "Estos modales son oro en conversación real: permiten especular con elegancia ('She must have got stuck in traffic') en lugar de afirmar sin matices."

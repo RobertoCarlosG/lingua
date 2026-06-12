@@ -1,0 +1,119 @@
+title: "Bloque 2 · 06 — Reading: a job advert and an interview"
+language: en
+level: B2
+type: reading
+objectives:
+  - "Comprender un anuncio de empleo británico real: requisitos, salario y condiciones"
+  - "Familiarizarte con el proceso de selección británico: shortlist, references, probation"
+  - "Seguir un fragmento de entrevista de trabajo en inglés"
+vocabulary:
+  - word: "applicant"
+    ipa: "/ˈæplɪkənt/"
+    translation: "candidato, solicitante"
+    definition: "A person who formally applies for a job."
+    example: "The successful applicant will start in September."
+    tags: ["sustantivo", "B2"]
+  - word: "requirement"
+    ipa: "/rɪˈkwaɪəmənt/"
+    translation: "requisito"
+    definition: "Something that is necessary or demanded, for example for a job."
+    example: "A degree in marketing is an essential requirement for this role."
+    tags: ["sustantivo", "B2"]
+  - word: "salary"
+    ipa: "/ˈsæləri/"
+    translation: "salario, sueldo"
+    definition: "The fixed amount of money you receive for your work, usually expressed per year in the UK."
+    example: "The salary is £32,000 per year, plus a performance bonus."
+    tags: ["sustantivo", "B2"]
+  - word: "shortlist"
+    ipa: "/ˈʃɔːtlɪst/"
+    translation: "preseleccionar / lista de preseleccionados"
+    definition: "To choose a small group of candidates from all the applicants, or the list of those candidates."
+    example: "Only shortlisted candidates will be contacted for an interview."
+    tags: ["verbo", "sustantivo", "B2"]
+  - word: "reference"
+    ipa: "/ˈrefrəns/"
+    translation: "referencia (laboral)"
+    definition: "A statement from a previous employer describing your work and character."
+    example: "Please provide two references, one of them from your current line manager."
+    tags: ["sustantivo", "B2"]
+  - word: "probation"
+    ipa: "/prəˈbeɪʃn/"
+    translation: "periodo de prueba"
+    definition: "A trial period at the start of a new job, during which your performance is assessed."
+    example: "The first three months of the contract will be a probation period."
+    tags: ["sustantivo", "B2"]
+sections:
+  - title: "Reading: the job advert"
+    type: reading
+    content: |
+      MARKETING EXECUTIVE — MANCHESTER
+
+      TechBridge Ltd is seeking an enthusiastic Marketing Executive to join
+      our growing team in central Manchester. The successful applicant will
+      manage our social media channels, organise events and support the Head
+      of Marketing with national campaigns.
+
+      Requirements: a degree in marketing or a related field, at least two
+      years' experience in a similar role, and excellent communication skills.
+
+      We offer a salary of £32,000 per year, 25 days' annual leave and
+      flexible working. The first three months will be a probation period.
+      Shortlisted candidates will be invited to interview in July.
+
+      Please send your CV and two references to jobs@techbridge.co.uk by
+      Friday 26 June.
+    tips:
+      - "Fíjate en las marcas británicas del anuncio: CV, annual leave, salario anual en libras (£) y ortografía como 'organise'."
+      - "'The successful applicant' es la fórmula típica de los anuncios británicos para referirse a quien consiga el puesto."
+  - title: "Dialogue: at the interview"
+    type: dialogue
+    content: |
+      INTERVIEWER: Good morning, Ms López. Thank you for coming in. Could you
+      start by telling us a little about yourself?
+
+      CANDIDATE: Of course. I've worked in digital marketing for three years,
+      and in my current role I organise campaigns for clients in the retail
+      sector.
+
+      INTERVIEWER: I see from your CV that you led a product launch last
+      year. What did you learn from that experience?
+
+      CANDIDATE: That clear communication is essential. If I had planned the
+      timeline earlier, the launch would have gone even more smoothly.
+
+      INTERVIEWER: One last question: why do you want to leave your current
+      employer?
+
+      CANDIDATE: I'm looking for new challenges, and this role matches both
+      my skills and my career goals.
+
+      INTERVIEWER: Lovely. We'll contact your references over the next few
+      days and let you know whether you've been shortlisted for the second
+      round.
+    tips:
+      - "Observa cómo la candidata usa un third conditional para analizar una experiencia pasada: 'If I had planned..., the launch would have gone...'."
+      - "'Why do you want to leave your current employer?' es una pregunta casi obligatoria: prepara una respuesta positiva, sin criticar a tu empresa actual."
+exercises:
+  - type: multiple_choice
+    prompt: "Según el anuncio, ¿cuánto dura el periodo de prueba?"
+    options: ["three months", "two years", "25 days", "one year"]
+    answer: "three months"
+    explanation: "El anuncio dice: 'The first three months will be a probation period.'"
+  - type: multiple_choice
+    prompt: "Según el anuncio, ¿qué debe enviar el candidato antes del 26 de junio?"
+    options: ["A CV and two references", "A cover letter and a photo", "A portfolio and a degree certificate", "Only an application form"]
+    answer: "A CV and two references"
+    explanation: "El anuncio pide: 'Please send your CV and two references to jobs@techbridge.co.uk.'"
+  - type: fill_blank
+    prompt: "Completa según el anuncio: 'Only ___ candidates will be invited to interview in July.' (preseleccionados)"
+    answer: "shortlisted"
+    explanation: "Shortlisted candidates son los candidatos que pasan el primer filtro y entran en la shortlist."
+  - type: fill_blank
+    prompt: "Completa con la palabra del anuncio: 'The successful ___ will manage our social media channels.' (candidato)"
+    answer: "applicant"
+    explanation: "Applicant = la persona que solicita el empleo. 'The successful applicant' es quien consigue el puesto."
+  - type: translate
+    prompt: "Traduce al inglés el término del proceso de selección: 'periodo de prueba' (2 palabras)."
+    answer: "probation period"
+    explanation: "En los contratos británicos, los primeros meses suelen ser un probation period."

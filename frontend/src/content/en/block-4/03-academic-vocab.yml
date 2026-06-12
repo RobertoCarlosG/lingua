@@ -1,0 +1,115 @@
+title: "Bloque 4 · 03 — Academic vocabulary and nominalisation"
+language: en
+level: C1
+type: vocabulary
+objectives:
+  - "Incorporar ocho términos académicos de alta frecuencia en ensayos y artículos."
+  - "Aplicar la nominalización (analyse → analysis) para lograr un estilo académico."
+  - "Usar la ortografía británica en verbos como scrutinise y nominalisation."
+vocabulary:
+  - word: "underpin"
+    ipa: "/ˌʌndəˈpɪn/"
+    translation: "sustentar; servir de base a"
+    definition: "To form the basis of an idea, argument or system; to support it from below."
+    example: "Decades of empirical research underpin the theory presented in this chapter."
+    tags: ["academic", "C1"]
+  - word: "paradigm"
+    ipa: "/ˈpærədaɪm/"
+    translation: "paradigma; modelo dominante"
+    definition: "A typical model or framework of ideas that shapes how a subject is understood."
+    example: "The communicative approach replaced the old grammar-translation paradigm in language teaching."
+    tags: ["academic", "C1"]
+  - word: "empirical"
+    ipa: "/ɪmˈpɪrɪkəl/"
+    translation: "empírico"
+    definition: "Based on observation, experiment or experience rather than on theory alone."
+    example: "There is little empirical evidence to support such a sweeping claim."
+    tags: ["academic", "C1"]
+  - word: "scrutinise"
+    ipa: "/ˈskruːtɪnaɪz/"
+    translation: "examinar minuciosamente"
+    definition: "To examine something very carefully and critically, looking for errors or problems."
+    example: "The committee will scrutinise the proposal before any funding is approved."
+    tags: ["academic", "C1"]
+  - word: "corroborate"
+    ipa: "/kəˈrɒbəreɪt/"
+    translation: "corroborar"
+    definition: "To provide evidence or information that confirms a statement, theory or finding."
+    example: "Two independent studies corroborate the findings of the original experiment."
+    tags: ["academic", "C1"]
+  - word: "discrepancy"
+    ipa: "/dɪˈskrepənsi/"
+    translation: "discrepancia; desajuste"
+    definition: "A difference between two things that should be the same, such as figures or accounts."
+    example: "The auditors noticed a worrying discrepancy between the two sets of accounts."
+    tags: ["academic", "C1"]
+  - word: "salient"
+    ipa: "/ˈseɪliənt/"
+    translation: "destacado; más relevante"
+    definition: "Most noticeable or important; standing out from the rest."
+    example: "The report summarises the most salient features of the new curriculum."
+    tags: ["academic", "C1"]
+  - word: "mitigate"
+    ipa: "/ˈmɪtɪɡeɪt/"
+    translation: "mitigar; atenuar"
+    definition: "To make something harmful or unpleasant less severe or serious."
+    example: "Regular review sessions can mitigate the effects of forgetting."
+    tags: ["academic", "C1"]
+sections:
+  - title: "Nominalización: el motor del estilo académico"
+    type: explanation
+    content: |
+      El inglés académico prefiere los sustantivos a los verbos. A este proceso de convertir verbos y adjetivos
+      en sustantivos se le llama nominalisation (con ortografía británica, -isation), y es probablemente el rasgo
+      que más distingue un ensayo C1 de uno B2.
+
+      Compara:
+
+      - B2: 'We analysed the data and discovered that students forget words quickly.'
+      - C1: 'The analysis of the data led to the discovery that lexical attrition occurs rapidly.'
+
+      Transformaciones esenciales que debes dominar:
+
+      - analyse → analysis
+      - assume → assumption
+      - conclude → conclusion
+      - discover → discovery
+      - argue → argument
+      - fail → failure
+      - significant → significance
+
+      ¿Por qué funciona? La nominalización permite empaquetar una oración entera en un sustantivo y usarla como
+      sujeto de la siguiente: 'This assumption underpins the whole paradigm.' Así el texto avanza idea por idea
+      en lugar de persona por persona, y suena objetivo e impersonal, justo lo que exige la escritura académica.
+
+      Advertencia: no abuses. Un texto con demasiadas nominalizaciones se vuelve denso e ilegible. La destreza
+      C1 consiste en alternar: nominaliza para conectar ideas, pero conserva verbos fuertes (underpin, corroborate,
+      mitigate) para dar energía a las afirmaciones centrales.
+    tips:
+      - "Recuerda la ortografía británica: scrutinise, nominalisation, organise (con -ise, no -ize)."
+      - "Usa nominalizaciones al inicio de la oración para retomar la idea anterior: 'This discrepancy suggests...'"
+      - "Aprende cada término con su preposición: discrepancy between, threat to, basis for."
+exercises:
+  - type: fill_blank
+    prompt: "Two independent witnesses were able to ___ her account of the events. (confirmar)"
+    answer: "corroborate"
+    explanation: "'Corroborate' significa aportar pruebas que confirman una afirmación o testimonio."
+  - type: multiple_choice
+    prompt: "¿Cuál es la nominalización correcta de 'assume'?"
+    options: ["assumption", "assumal", "assumence", "assumity"]
+    answer: "assumption"
+    explanation: "assume → assumption, igual que conclude → conclusion y analyse → analysis."
+  - type: translate
+    prompt: "Traduce al inglés (verbo, ortografía británica): 'examinar minuciosamente'"
+    answer: "scrutinise"
+    explanation: "En ortografía británica se escribe con -ise; 'scrutinize' es la variante americana."
+  - type: fill_blank
+    prompt: "There is a notable ___ between the results of the two laboratories."
+    answer: "discrepancy"
+    explanation: "'Discrepancy between X and Y' es la estructura fija para señalar desajustes entre datos."
+  - type: multiple_choice
+    prompt: "En un texto académico, 'salient' significa..."
+    options: ["destacado", "salado", "que sobresale de un edificio", "saliente de una reunión"]
+    answer: "destacado"
+    explanation: "'Salient' califica los puntos más notables o relevantes de un argumento o informe."
+notes: "La lista AWL (Academic Word List) de la Universidad Victoria de Wellington es el complemento perfecto de esta lección."

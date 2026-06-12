@@ -1,0 +1,112 @@
+title: "Bloque 2 · 05 — Reported speech"
+language: en
+level: B2
+type: grammar
+objectives:
+  - "Transformar discurso directo en indirecto aplicando el backshift de tiempos verbales"
+  - "Distinguir el uso de say y tell en el discurso indirecto"
+  - "Usar reporting verbs de nivel B2: suggest, warn, promise, deny"
+vocabulary:
+  - word: "suggest"
+    ipa: "/səˈdʒest/"
+    translation: "sugerir, proponer"
+    definition: "To mention an idea or plan for someone to consider. Followed by -ing or 'that'."
+    example: "My colleague suggested postponing the meeting until Friday."
+    tags: ["verbo", "B2"]
+  - word: "warn"
+    ipa: "/wɔːn/"
+    translation: "advertir"
+    definition: "To tell someone about a possible danger or problem."
+    example: "The line manager warned us that the deadline could not be moved."
+    tags: ["verbo", "B2"]
+  - word: "promise"
+    ipa: "/ˈprɒmɪs/"
+    translation: "prometer"
+    definition: "To tell someone that you will definitely do something."
+    example: "She promised to send the payslips before the end of the day."
+    tags: ["verbo", "B2"]
+  - word: "deny"
+    ipa: "/dɪˈnaɪ/"
+    translation: "negar"
+    definition: "To say that something is not true. Followed by -ing or 'that'."
+    example: "The supplier denied receiving our order in time."
+    tags: ["verbo", "B2"]
+  - word: "claim"
+    ipa: "/kleɪm/"
+    translation: "afirmar, sostener"
+    definition: "To say that something is true, although it has not been proved."
+    example: "The contractor claimed that the delay was not his fault."
+    tags: ["verbo", "B2"]
+  - word: "admit"
+    ipa: "/ədˈmɪt/"
+    translation: "admitir, reconocer"
+    definition: "To agree, often unwillingly, that something is true. Followed by -ing or 'that'."
+    example: "He admitted making a mistake in the budget calculations."
+    tags: ["verbo", "B2"]
+sections:
+  - title: "El discurso indirecto: backshift, say vs tell y reporting verbs"
+    type: explanation
+    content: |
+      El reported speech sirve para contar lo que alguien dijo. En el trabajo
+      lo usarás constantemente: resumir reuniones, transmitir instrucciones,
+      escribir minutes.
+
+      1. BACKSHIFT: cuando el verbo introductor va en pasado (said, told),
+         los tiempos verbales retroceden un paso:
+         - present simple → past simple:
+           "I am busy." → She said she was busy.
+         - present continuous → past continuous:
+           "We are hiring." → They said they were hiring.
+         - past simple / present perfect → past perfect:
+           "I sent the email." → He said he had sent the email.
+         - will → would:
+           "I will send the report tomorrow." → He said he would send the
+           report the next day.
+         - can → could; must → had to.
+         También cambian las referencias de tiempo y lugar:
+         tomorrow → the next day / the following day; yesterday → the day
+         before; here → there; this → that.
+
+      2. SAY vs TELL (el error clásico):
+         - say NO lleva objeto de persona: She said (that) she was busy.
+           Incorrecto: "She said me..."
+         - tell SIEMPRE lleva objeto de persona: She told ME (that) she was
+           busy. Incorrecto: "She told that..."
+         Truco: tell necesita saber A QUIÉN; say no.
+
+      3. REPORTING VERBS: en B2 se espera que vayas más allá de say/tell.
+         Cada verbo tiene su estructura:
+         - suggest + -ing: He suggested postponing the meeting.
+         - warn + persona + that / + persona + not to: She warned us that
+           the budget was limited. / She warned us not to miss the deadline.
+         - promise + to + infinitivo: He promised to call the client.
+         - deny + -ing: They denied losing the documents.
+         - admit + -ing: She admitted forgetting the attachment.
+         - claim + that: He claimed that the figures were correct.
+    tips:
+      - "Memoriza el par mínimo: 'She said she was busy' vs 'She told me she was busy'. Tell exige persona; say la rechaza."
+      - "suggest, deny y admit van con -ing, nunca con 'to + infinitivo': suggested postponing, no 'suggested to postpone'."
+      - "En las actas de reuniones (minutes) el reported speech es la norma: 'David said that the deadline was unrealistic.'"
+exercises:
+  - type: multiple_choice
+    prompt: "Elige el verbo correcto: 'She ___ me that the meeting was cancelled.'"
+    options: ["told", "said", "spoke", "talked"]
+    answer: "told"
+    explanation: "Tell lleva objeto de persona (told me); say no lo admite (she said that...)."
+  - type: fill_blank
+    prompt: "Aplica el backshift. Directo: 'I will send the report tomorrow.' → Indirecto: 'He said he ___ send the report the next day.'"
+    answer: "would"
+    explanation: "Will retrocede a would en el discurso indirecto."
+  - type: fill_blank
+    prompt: "Completa con la forma correcta del verbo 'make': 'The manager denied ___ the mistake.'"
+    answer: "making"
+    explanation: "Deny va seguido de gerundio: denied making, nunca 'denied to make'."
+  - type: translate
+    prompt: "Traduce al inglés sin usar 'that' (5 palabras): 'Ella dijo que estaba ocupada.'"
+    answer: "She said she was busy."
+    explanation: "Backshift: 'I am busy' (presente) pasa a 'she was busy' (pasado). Say no lleva objeto de persona."
+  - type: multiple_choice
+    prompt: "Elige la estructura correcta: 'My colleague suggested ___ the meeting.'"
+    options: ["postponing", "to postpone", "postpone", "that postpone"]
+    answer: "postponing"
+    explanation: "Suggest va seguido de gerundio: suggested postponing."

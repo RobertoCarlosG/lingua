@@ -1,0 +1,110 @@
+title: "Bloque 1 · 02 — Phrasal verbs for everyday life"
+language: en
+level: B2
+type: vocabulary
+objectives:
+  - "Dominar ocho phrasal verbs de alta frecuencia en la vida cotidiana británica"
+  - "Distinguir entre phrasal verbs separables e inseparables y colocar correctamente los pronombres"
+  - "Reconocer los distintos significados de phrasal verbs polisémicos como turn up y give up"
+vocabulary:
+  - word: "get by"
+    ipa: "/ˌɡet ˈbaɪ/"
+    translation: "arreglárselas, sobrevivir (con poco)"
+    definition: "to manage to live or do something with the minimum you need"
+    example: "It's hard to get by in London on a part-time salary."
+    tags: ["phrasal verb", "inseparable", "B2"]
+  - word: "sort out"
+    ipa: "/ˌsɔːt ˈaʊt/"
+    translation: "resolver, organizar"
+    definition: "to solve a problem or organise something that was messy or confusing"
+    example: "I finally sorted out the mess with my electricity bill this morning."
+    tags: ["phrasal verb", "separable", "británico", "B2"]
+  - word: "put off"
+    ipa: "/ˌpʊt ˈɒf/"
+    translation: "posponer, aplazar"
+    definition: "to delay doing something, usually because you do not want to do it"
+    example: "Stop putting off that dentist appointment — your tooth will only get worse."
+    tags: ["phrasal verb", "separable", "B2"]
+  - word: "run into"
+    ipa: "/ˌrʌn ˈɪntuː/"
+    translation: "encontrarse con (alguien) por casualidad"
+    definition: "to meet someone by chance, without planning it"
+    example: "I ran into my old flatmate at the supermarket yesterday."
+    tags: ["phrasal verb", "inseparable", "B2"]
+  - word: "look after"
+    ipa: "/ˌlʊk ˈɑːftə/"
+    translation: "cuidar de"
+    definition: "to take care of a person, animal or thing"
+    example: "Could you look after the kids on Saturday? We've got a wedding to go to."
+    tags: ["phrasal verb", "inseparable", "británico", "B2"]
+  - word: "set off"
+    ipa: "/ˌset ˈɒf/"
+    translation: "salir, ponerse en camino"
+    definition: "to start a journey"
+    example: "We set off at six to beat the traffic on the motorway."
+    tags: ["phrasal verb", "inseparable", "B2"]
+  - word: "turn up"
+    ipa: "/ˌtɜːn ˈʌp/"
+    translation: "aparecer, presentarse"
+    definition: "to arrive somewhere, often unexpectedly or late; also, to be found by chance"
+    example: "He turned up at the party two hours late, as usual."
+    tags: ["phrasal verb", "B2"]
+  - word: "give up"
+    ipa: "/ˌɡɪv ˈʌp/"
+    translation: "dejar (un hábito), rendirse"
+    definition: "to stop doing something you used to do, or to stop trying"
+    example: "She gave up smoking a fortnight ago and feels much better already."
+    tags: ["phrasal verb", "separable", "B2"]
+sections:
+  - title: "Separables vs inseparables: dónde va el pronombre"
+    type: explanation
+    content: |
+      Los phrasal verbs se dividen en dos grandes familias, y en el nivel B2 ya no basta con
+      conocer su significado: hay que colocar bien el objeto.
+
+      1. SEPARABLES (sort out, put off, give up). El objeto puede ir antes o después de la
+         partícula:
+         - "I sorted out the problem." / "I sorted the problem out." (ambas correctas)
+         PERO si el objeto es un PRONOMBRE, va OBLIGATORIAMENTE en medio:
+         - "I sorted it out." (correcto)
+         - "I sorted out it." (incorrecto, suena muy mal a un nativo)
+
+      2. INSEPARABLES (get by, run into, look after, set off). El verbo y la partícula nunca
+         se separan, ni siquiera con pronombre:
+         - "She looks after her grandmother." → "She looks after her."
+         - "I ran into Tom." → "I ran into him."
+
+      3. Algunos no llevan objeto (intransitivos), como "set off" o "turn up" en su uso más
+         común: "We set off early." / "Nobody turned up."
+
+      Truco práctico: cuando aprendas un phrasal verb nuevo, memorízalo con un pronombre de
+      ejemplo. "Sort it out", "put it off", "give it up" te recuerdan que son separables;
+      "look after him", "run into her" te recuerdan que son inseparables.
+    tips:
+      - "'Sort out' es comodín británico universal: sirve para problemas, papeleo, habitaciones desordenadas y hasta personas ('Sort yourself out!')."
+      - "No confundas 'turn up' (aparecer) con 'turn up the volume' (subir el volumen): el contexto decide."
+      - "'Give up' + gerundio: 'give up smoking', 'give up eating sugar'. Nunca infinitivo con to."
+exercises:
+  - type: fill_blank
+    prompt: "Stop putting it ___ — book the dentist appointment today."
+    answer: "off"
+    explanation: "'Put off' = posponer. Como es separable y el objeto es el pronombre 'it', este va en medio: put it off."
+  - type: multiple_choice
+    prompt: "¿Cuál de estos phrasal verbs es INSEPARABLE?"
+    options: ["run into", "sort out", "put off", "give up"]
+    answer: "run into"
+    explanation: "'Run into' nunca se separa: 'I ran into him', jamás 'I ran him into'."
+  - type: multiple_choice
+    prompt: "Elige la única frase correcta:"
+    options: ["I'll sort it out tomorrow.", "I'll sort out it tomorrow.", "I'll sort tomorrow it out."]
+    answer: "I'll sort it out tomorrow."
+    explanation: "Con phrasal verbs separables, el pronombre objeto va obligatoriamente entre el verbo y la partícula."
+  - type: translate
+    prompt: "Traduce al inglés usando 'look after' y 'fortnight', sin punto final: 'Ella cuida a sus sobrinos cada quincena.'"
+    answer: "She looks after her nephews every fortnight"
+    explanation: "'Look after' es inseparable y 'fortnight' es la forma británica de decir dos semanas."
+  - type: fill_blank
+    prompt: "We need to set ___ before seven if we want to avoid the motorway traffic."
+    answer: "off"
+    explanation: "'Set off' = ponerse en camino, salir de viaje. Es intransitivo: no lleva objeto."
+notes: "Estos ocho phrasal verbs reaparecen en las lecciones 05 y 06 y en el examen del bloque. Repásalos con la regla del pronombre en mente."

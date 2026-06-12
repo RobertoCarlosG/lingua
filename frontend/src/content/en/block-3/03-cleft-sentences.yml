@@ -1,0 +1,109 @@
+title: "Bloque 3 · 03 — Cleft sentences and fronting"
+language: en
+level: C1
+type: grammar
+objectives:
+  - "Construir it-clefts ('It was my sister who...') para enfocar un elemento concreto"
+  - "Usar wh-clefts ('What I need is...') y fórmulas como 'The thing that strikes me is...'"
+  - "Aplicar el fronting ('This I cannot accept') para énfasis y cohesión en registro formal"
+vocabulary:
+  - word: "to strike (somebody)"
+    ipa: "/straɪk/"
+    translation: "llamar la atención, impactar (a alguien)"
+    definition: "To come to somebody's mind suddenly; to impress somebody in a particular way."
+    example: "The thing that strikes me most is how calm she remained."
+    tags: ["verbo", "C1"]
+  - word: "to emphasise"
+    ipa: "/ˈemfəsaɪz/"
+    translation: "enfatizar, recalcar"
+    definition: "To give special importance or prominence to something."
+    example: "What I want to emphasise is the urgency of the matter."
+    tags: ["verbo", "C1"]
+  - word: "remarkable"
+    ipa: "/rɪˈmɑːkəbl/"
+    translation: "notable, extraordinario"
+    definition: "Unusual or surprising in a way that deserves attention."
+    example: "What makes the building remarkable is its complete lack of right angles."
+    tags: ["adjetivo", "C1"]
+  - word: "baffling"
+    ipa: "/ˈbæflɪŋ/"
+    translation: "desconcertante, incomprensible"
+    definition: "Impossible to understand; totally confusing."
+    example: "It is the committee's silence that I find truly baffling."
+    tags: ["adjetivo", "C1"]
+  - word: "precisely"
+    ipa: "/prɪˈsaɪsli/"
+    translation: "precisamente, exactamente"
+    definition: "Exactly; used to emphasise that something is exactly the case."
+    example: "It was precisely this attitude that cost him the promotion."
+    tags: ["adverbio", "C1"]
+  - word: "utterly"
+    ipa: "/ˈʌtəli/"
+    translation: "completamente, totalmente"
+    definition: "Completely; used for emphasis, often with negative adjectives."
+    example: "What he proposed was utterly unworkable."
+    tags: ["adverbio", "C1"]
+sections:
+  - title: "Partir la frase para enfocar: clefts y fronting"
+    type: explanation
+    content: |
+      El inglés no puede reordenar la frase con la libertad del español ('Las llaves
+      las encontró mi hermana'). Para enfocar un elemento, lo que hace es PARTIR la
+      frase en dos: eso es una 'cleft sentence' (frase hendida).
+
+      1. IT-CLEFT: It + be + [elemento enfocado] + who/that...
+         · Neutral:  My sister found the keys.
+         · Enfocada: It was my sister who found the keys.
+           (fue ELLA, no otra persona)
+         Puedes enfocar casi cualquier elemento:
+         · "It was in Leeds that we first met."  (el lugar)
+         · "It wasn't until 2019 that the truth emerged."  (el momento)
+
+      2. WH-CLEFT (pseudo-cleft): What + cláusula + be + [foco]
+         · "What I need right now is a strong cup of tea."
+         · "What he did was apologise to the whole team."
+           (con 'do', el foco puede ser un infinitivo sin 'to')
+         Variantes con sustantivo, típicas del habla culta:
+         · "The thing that strikes me is her patience."
+         · "The reason why I called is that we need to talk."
+         · "All I'm asking for is a little honesty."  ('all' = lo único)
+
+      3. FRONTING: adelantar un complemento sin partir la frase.
+         · "This I cannot accept."  (objeto adelantado, tono solemne)
+         · "Off he went, without so much as a goodbye."
+         El fronting es menos frecuente y más literario que las clefts; en
+         conversación se usa sobre todo con tono retórico o irónico.
+
+      Matiz de registro: las wh-clefts son comunísimas en el habla diaria británica
+      ('What gets me is...', 'What you want to do is...'); las it-clefts dominan en
+      la escritura argumentativa; el fronting pertenece al extremo formal-literario.
+    tips:
+      - "En las it-clefts usa 'who' para personas y 'that' para casi todo lo demás; 'that' también vale para personas."
+      - "La fórmula 'It wasn't until... that...' es un comodín de examen: 'It wasn't until she left that I understood.'"
+      - "'What he did was (to) apologise': el infinitivo tras 'do' puede ir sin 'to' y así suena más natural."
+exercises:
+  - type: translate
+    prompt: "Traduce empezando con 'It was': 'Fue mi hermana quien encontró las llaves.' (usa 'who' y 'the keys')"
+    answer: "It was my sister who found the keys."
+    explanation: "It-cleft clásica: It + was + elemento enfocado (my sister) + who + resto."
+  - type: fill_blank
+    prompt: "___ I need right now is a strong cup of tea."
+    answer: "What"
+    explanation: "Wh-cleft: 'What I need... is...' enfoca el objeto deseado al final."
+  - type: multiple_choice
+    prompt: "The thing ___ strikes me most is her patience."
+    options:
+      - "that"
+      - "what"
+      - "who"
+    answer: "that"
+    explanation: "Tras 'the thing' va 'that' (o nada); 'what' nunca sigue a un antecedente como 'the thing'."
+  - type: reorder
+    prompt: "was / it / manager / the / who / decision / the / made"
+    answer: "It was the manager who made the decision"
+    explanation: "It-cleft enfocando al responsable: It was the manager who..."
+  - type: fill_blank
+    prompt: "What he did ___ apologise to the whole team."
+    answer: "was"
+    explanation: "En la wh-cleft con 'do', el verbo 'be' une las dos partes: What he did was (to) apologise..."
+notes: "Truco de oro para el speaking: arranca opiniones con 'What strikes me is...' o 'The thing is...' y sonarás mucho más natural y C1."

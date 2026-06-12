@@ -1,0 +1,127 @@
+title: "Bloque 1 · 02 — Fonética: os sons do português"
+language: pt
+level: A1
+type: phonetics
+objectives:
+  - "Reconocer y pronunciar las vocales nasales ão, ãe y õe"
+  - "Distinguir los sonidos lh /ʎ/ y nh /ɲ/"
+  - "Pronunciar la r inicial como /h/ y las sílabas di/ti como /dʒi/ y /tʃi/"
+vocabulary:
+  - word: "não"
+    ipa: "/nɐ̃w̃/"
+    translation: "no"
+    definition: "Negación básica. El diptongo nasal 'ão' no existe en español: sale aire por la nariz al pronunciarlo."
+    example: "Não, obrigado."
+    tags: ["fonética", "nasal", "A1"]
+  - word: "coração"
+    ipa: "/koɾaˈsɐ̃w̃/"
+    translation: "corazón"
+    definition: "Casi igual que en español, pero la terminación '-ción/-zón' suele corresponder a '-ção' nasal en portugués."
+    example: "Meu coração bate forte."
+    tags: ["fonética", "nasal", "A1"]
+  - word: "mãe"
+    ipa: "/mɐ̃j̃/"
+    translation: "madre, mamá"
+    definition: "Ejemplo clásico del diptongo nasal 'ãe'. Toda la vocal y la semivocal se nasalizan."
+    example: "Minha mãe é do Brasil."
+    tags: ["fonética", "nasal", "familia", "A1"]
+  - word: "trabalho"
+    ipa: "/tɾaˈbaʎu/"
+    translation: "trabajo"
+    definition: "El dígrafo 'lh' suena /ʎ/, como la 'll' tradicional del español (la de quien distingue 'pollo' de 'poyo')."
+    example: "Eu gosto do meu trabalho."
+    tags: ["fonética", "lh", "A1"]
+  - word: "banho"
+    ipa: "/ˈbɐ̃ɲu/"
+    translation: "baño (ducha)"
+    definition: "El dígrafo 'nh' suena /ɲ/, exactamente como la 'ñ' española. 'Tomar banho' = bañarse."
+    example: "Vou tomar banho agora."
+    tags: ["fonética", "nh", "A1"]
+  - word: "rio"
+    ipa: "/ˈhiw/"
+    translation: "río"
+    definition: "La 'r' inicial en Brasil suena /h/, como una 'j' suave aspirada, no como la 'r' fuerte del español."
+    example: "O rio é muito bonito."
+    tags: ["fonética", "r", "A1"]
+  - word: "dia"
+    ipa: "/ˈdʒiɐ/"
+    translation: "día"
+    definition: "En gran parte de Brasil, 'd' antes de 'i' se palataliza: suena /dʒ/, como la 'y' argentina o la 'j' del inglés 'jeans'."
+    example: "Hoje é um dia lindo."
+    tags: ["fonética", "di", "A1"]
+  - word: "tia"
+    ipa: "/ˈtʃiɐ/"
+    translation: "tía"
+    definition: "Igual que con 'di', la 't' antes de 'i' se palataliza: suena /tʃ/, como la 'ch' del español. 'Tia' suena casi como 'chía'."
+    example: "Minha tia mora em Salvador."
+    tags: ["fonética", "ti", "familia", "A1"]
+sections:
+  - title: "Las vocales nasales: ão, ãe, õe"
+    type: phonetics
+    content: |
+      El sonido más característico del portugués (y el que no existe en español)
+      es la nasalización: parte del aire sale por la nariz mientras pronuncias
+      la vocal. La tilde (~) sobre la vocal marca la nasalidad.
+
+      - ão /ɐ̃w̃/: não (no), coração (corazón), pão (pan), São Paulo
+      - ãe /ɐ̃j̃/: mãe (madre), pães (panes)
+      - õe /õj̃/: põe (pone), limões (limones)
+
+      Truco para hispanohablantes: di 'an' sin llegar a pronunciar la 'n'
+      completa, dejando el aire salir por la nariz. 'Não' NO suena como 'nao'
+      ni como 'naun': es una sola sílaba nasal /nɐ̃w̃/.
+    tips:
+      - "Muchas palabras españolas en '-ción' o '-zón' terminan en '-ção' en portugués: corazón → coração, nación → nação, canción → canção."
+      - "El plural de '-ão' suele ser '-ões': coração → corações."
+  - title: "Consonantes clave: lh, nh, r inicial y di/ti"
+    type: phonetics
+    content: |
+      - lh /ʎ/: como la 'll' tradicional española. trabalho (trabajo),
+        filho (hijo), mulher (mujer).
+      - nh /ɲ/: exactamente la 'ñ' española. banho (baño), manhã (mañana),
+        senhor (señor).
+      - r inicial (y rr): en Brasil suena /h/, como una 'j' suave o una
+        aspiración. rio /ˈhiw/, Rio de Janeiro, carro /ˈkahu/.
+      - di y ti: en la mayor parte de Brasil se palatalizan.
+        di → /dʒi/: dia /ˈdʒiɐ/, tarde /ˈtaʁdʒi/.
+        ti → /tʃi/: tia /ˈtʃiɐ/, noite /ˈnojtʃi/.
+
+      Para un mexicano, los falsos amigos fonéticos son la trampa: las letras
+      son las mismas que en español, pero los sonidos cambian. 'Dia' se escribe
+      casi igual pero suena /ˈdʒiɐ/, no /ˈdia/.
+    tips:
+      - "La 'e' final átona suena /i/ en Brasil: por eso 'tarde' termina en /dʒi/ y 'noite' en /tʃi/."
+      - "La 'o' final átona suena /u/: 'banho' termina en /u/, no en /o/."
+exercises:
+  - type: multiple_choice
+    prompt: "¿Cómo suena la 'r' inicial de 'rio' en el portugués de Brasil?"
+    options:
+      - "Como la 'r' fuerte del español en 'rojo'"
+      - "Como una 'j' suave aspirada /h/"
+      - "Como una 'l'"
+    answer: "Como una 'j' suave aspirada /h/"
+    explanation: "La r inicial brasileña es /h/: 'rio' suena aproximadamente 'jíu' con j muy suave."
+  - type: multiple_choice
+    prompt: "¿Qué sonido tiene el dígrafo 'nh' en 'banho'?"
+    options:
+      - "/ɲ/ como la 'ñ' española"
+      - "/n/ como una 'n' normal"
+      - "/nj/ como 'ni' en 'nieve'"
+    answer: "/ɲ/ como la 'ñ' española"
+    explanation: "'nh' = ñ. 'Banho' suena como 'báñu'."
+  - type: multiple_choice
+    prompt: "¿Cómo se pronuncia 'dia' en el portugués de Brasil?"
+    options:
+      - "/ˈdia/"
+      - "/ˈdʒiɐ/"
+      - "/ˈtʃiɐ/"
+    answer: "/ˈdʒiɐ/"
+    explanation: "La 'd' ante 'i' se palataliza a /dʒ/ en la mayor parte de Brasil."
+  - type: translate
+    prompt: "Traduce al portugués: 'no'"
+    answer: "não"
+    explanation: "Negación básica, con diptongo nasal /nɐ̃w̃/. No olvides la tilde nasal (~)."
+  - type: translate
+    prompt: "Traduce al portugués: 'corazón'"
+    answer: "coração"
+    explanation: "La terminación española '-zón' corresponde aquí a '-ção': coração /koɾaˈsɐ̃w̃/."

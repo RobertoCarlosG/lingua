@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "dashboard": "Painel",
+    "review": "Revisão",
+    "vocabulary": "Vocabulário",
+    "errors": "Banco de erros",
+    "lessons": "Lições"
+  },
+  "layout": {
+    "signOut": "Sair",
+    "uiLanguage": "Idioma do app"
+  },
+  "login": {
+    "tagline": "Aprenda idiomas com repetição espaçada",
+    "savePrompt": "Faça login para salvar seu progresso",
+    "google": "Continuar com o Google",
+    "footer": "Seu progresso fica salvo na sua conta.\nFunciona em todos os seus dispositivos."
+  },
+  "common": {
+    "loading": "Carregando...",
+    "cancel": "Cancelar",
+    "save": "Salvar"
+  },
+  "dashboard": {
+    "title": "Progresso de {{language}}",
+    "subtitle": "Nível atual: {{levels}}",
+    "streak_one": "{{count}} dia seguido",
+    "streak_other": "{{count}} dias seguidos",
+    "dueBanner_one": "{{count}} palavra pronta para revisar",
+    "dueBanner_other": "{{count}} palavras prontas para revisar",
+    "dueHint": "A repetição espaçada funciona quando é diária",
+    "reviewCta": "Revisar →",
+    "words": "Palavras",
+    "errors": "Erros registrados",
+    "sessions": "Sessões",
+    "activeDays": "Dias ativos (semana)",
+    "chartTitle": "Palavras revisadas — últimos 7 dias",
+    "chartSeries": "palavras",
+    "noActivity": "Ainda não há atividade esta semana. Sua primeira <reviewLink>sessão de revisão</reviewLink> aparecerá aqui.",
+    "today": "Hoje — {{date}}",
+    "weekActivity": "Atividade da semana",
+    "focus": {
+      "en": [
+        "Revisão livre + leitura leve",
+        "Vocabulário novo + revisão SRS",
+        "Leitura + compreensão",
+        "Gramática em contexto",
+        "Escrita + correção de erros",
+        "Fonética + shadowing",
+        "Revisão da semana"
+      ],
+      "pt": [
+        "Revisão livre + leitura leve",
+        "Vocabulário novo + revisão SRS",
+        "Leitura + falsos amigos",
+        "Gramática + conjugações",
+        "Escrita + vocabulário",
+        "Fonética PT-BR + revisão semanal",
+        "Revisão da semana"
+      ]
+    }
+  },
+  "review": {
+    "title": "Revisão",
+    "subtitle": "Repetição espaçada do seu vocabulário",
+    "emptyTitle": "Nenhuma palavra pendente de revisão. 🎉",
+    "emptyHint": "Adicione palavras em Vocabulário ou importe uma lição para alimentar a revisão.",
+    "done": "Sessão concluída!",
+    "summary": "{{total}} palavras revisadas · {{missed}} para reforçar",
+    "more": "Buscar mais palavras"
+  },
+  "flashcard": {
+    "reveal": "Mostrar resposta",
+    "again": "De novo",
+    "hard": "Difícil",
+    "good": "Bem",
+    "easy": "Fácil"
+  },
+  "vocab": {
+    "title": "Vocabulário",
+    "subtitle_one": "{{count}} palavra no seu glossário",
+    "subtitle_other": "{{count}} palavras no seu glossário",
+    "add": "Adicionar",
+    "search": "Buscar palavra...",
+    "filterAll": "Todas",
+    "empty": "Ainda não há palavras.",
+    "addFirst": "Adicione sua primeira palavra",
+    "modalTitle": "Adicionar palavra",
+    "word": "Palavra",
+    "ipa": "IPA",
+    "translation": "Tradução",
+    "definition": "Definição",
+    "example": "Exemplo",
+    "tags": "Tags (separadas por vírgula)",
+    "lookupTitle": "Buscar no dicionário",
+    "notFound": "Não encontrada no dicionário",
+    "status": {
+      "new": "Nova",
+      "learning": "Aprendendo",
+      "known": "Conhecida",
+      "mastered": "Dominada"
+    }
+  },
+  "errors": {
+    "title": "Banco de erros",
+    "subtitle": "{{count}} erros · {{recurring}} recorrentes",
+    "register": "Registrar",
+    "recurringTitle": "Erros recorrentes — preste atenção",
+    "empty": "Nenhum erro registrado. Bom começo!",
+    "recurringBadge": "recorrente",
+    "markAgain": "Marcar que ocorreu de novo",
+    "modalTitle": "Registrar erro",
+    "errorText": "O que você escreveu / disse",
+    "correction": "Correção",
+    "explanation": "Explicação",
+    "category": "Categoria"
+  },
+  "lessons": {
+    "title": "Lições",
+    "subtitle": "Crie lições com YAML, elas são renderizadas aqui",
+    "new": "Nova lição",
+    "editorTitle": "Editor YAML",
+    "template": "Modelo:",
+    "templateVocab": "Vocabulário",
+    "templatePhonetics": "Fonética",
+    "upload": "Enviar .yml",
+    "generatePlaceholder": "Gere a partir de palavras: accomplish, endeavor, insight...",
+    "generate": "Gerar YAML",
+    "generateError": "Não foi possível gerar a lição — verifique as palavras ou se o backend está ativo",
+    "invalidYaml": "YAML inválido — verifique a sintaxe",
+    "render": "Renderizar lição",
+    "empty": "Ainda não há lições.",
+    "createFirst": "Criar primeira lição com YAML",
+    "back": "← Voltar às lições",
+    "import": "Adicionar vocabulário ao glossário",
+    "importedZero": "Já estavam no seu glossário",
+    "imported_one": "{{count}} palavra adicionada ao glossário",
+    "imported_other": "{{count}} palavras adicionadas ao glossário",
+    "vocabSection": "Vocabulário ({{count}} palavras)",
+    "wordCount_one": "{{count}} palavra",
+    "wordCount_other": "{{count}} palavras",
+    "exercises": "Exercícios",
+    "check": "Verificar",
+    "correct": "Correto!",
+    "answer": "Resposta: {{answer}}",
+    "yourAnswer": "Sua resposta..."
+  }
+}

@@ -1,0 +1,124 @@
+title: "Bloque 1 · 03 — Present perfect vs past simple"
+language: en
+level: B2
+type: grammar
+objectives:
+  - "Distinguir con seguridad cuándo usar present perfect y cuándo past simple"
+  - "Dominar la preferencia británica por el present perfect con just, already y yet"
+  - "Consolidar los participios irregulares más frecuentes del inglés cotidiano"
+vocabulary:
+  - word: "been"
+    ipa: "/biːn/"
+    translation: "sido, estado (participio de be)"
+    definition: "past participle of 'be'; with 'have been to' it means you visited a place and came back"
+    example: "I've been to Edinburgh twice, but I've never seen the castle in summer."
+    tags: ["participio", "irregular", "B2"]
+  - word: "gone"
+    ipa: "/ɡɒn/"
+    translation: "ido (participio de go)"
+    definition: "past participle of 'go'; 'has gone to' means the person is still there"
+    example: "She's gone to the shops — she'll be back in ten minutes."
+    tags: ["participio", "irregular", "B2"]
+  - word: "done"
+    ipa: "/dʌn/"
+    translation: "hecho (participio de do)"
+    definition: "past participle of 'do'"
+    example: "Have you done the washing-up yet, or shall I do it?"
+    tags: ["participio", "irregular", "B2"]
+  - word: "seen"
+    ipa: "/siːn/"
+    translation: "visto (participio de see)"
+    definition: "past participle of 'see'"
+    example: "I've seen that film three times and it still makes me laugh."
+    tags: ["participio", "irregular", "B2"]
+  - word: "written"
+    ipa: "/ˈrɪtn/"
+    translation: "escrito (participio de write)"
+    definition: "past participle of 'write'"
+    example: "I've already written to the council about the rubbish collection."
+    tags: ["participio", "irregular", "B2"]
+  - word: "eaten"
+    ipa: "/ˈiːtn/"
+    translation: "comido (participio de eat)"
+    definition: "past participle of 'eat'"
+    example: "No dinner for me, thanks — I've just eaten."
+    tags: ["participio", "irregular", "B2"]
+  - word: "forgotten"
+    ipa: "/fəˈɡɒtn/"
+    translation: "olvidado (participio de forget)"
+    definition: "past participle of 'forget'"
+    example: "Oh no, I've forgotten my umbrella and it's started to drizzle."
+    tags: ["participio", "irregular", "B2"]
+sections:
+  - title: "La frontera entre el pasado y el presente"
+    type: explanation
+    content: |
+      La regla central es sencilla de enunciar y difícil de automatizar:
+
+      1. PAST SIMPLE: la acción pertenece a un tiempo TERMINADO y, normalmente, se dice o se
+         sobreentiende cuándo ocurrió.
+         - "I lost my keys yesterday." (ayer: tiempo cerrado)
+         - "We moved to Leeds in 2019."
+
+      2. PRESENT PERFECT: la acción conecta con el PRESENTE. O bien el tiempo no ha terminado
+         (today, this week, this month), o bien el resultado importa ahora, o bien hablamos de
+         experiencias de vida sin fecha.
+         - "I've lost my keys." (y por eso ahora no puedo entrar en mi piso)
+         - "I've seen that film three times this month." (this month aún no termina)
+         - "Have you ever been to Wales?" (experiencia de vida, sin fecha)
+
+      La pregunta clave que debes hacerte: ¿estoy señalando UN MOMENTO concreto del pasado?
+      Si la respuesta es sí (yesterday, last week, in 2020, two hours ago), usa past simple.
+      Si lo que te importa es el resultado o la conexión con ahora, usa present perfect.
+    tips:
+      - "Palabras imán del past simple: yesterday, ago, last week, in 2015, when I was a child."
+      - "Palabras imán del present perfect: ever, never, just, already, yet, so far, this week."
+      - "'Been' vs 'gone': She's been to Paris (fue y volvió) / She's gone to Paris (sigue allí)."
+  - title: "Just, already y yet: la marca británica"
+    type: explanation
+    content: |
+      Aquí hay una diferencia real entre las dos orillas del Atlántico, y esta app enseña la
+      norma BRITÁNICA.
+
+      En el Reino Unido, las acciones muy recientes con just, already y yet se expresan con
+      PRESENT PERFECT, mientras que en Estados Unidos es habitual oírlas con past simple:
+
+      - Británico: "I've just eaten."        / Americano: "I just ate."
+      - Británico: "She's already left."     / Americano: "She already left."
+      - Británico: "Have you finished yet?"  / Americano: "Did you finish yet?"
+
+      Reglas de colocación:
+      1. JUST y ALREADY van entre have y el participio: "I've just made the tea.",
+         "We've already sorted it out."
+      2. YET va al final de la frase y solo aparece en negativas y preguntas:
+         "I haven't done it yet.", "Have you tidied your room yet?"
+
+      En un examen de Cambridge o en una conversación en Londres, la forma con present perfect
+      es la que se espera de ti en este nivel.
+    tips:
+      - "'Already' en afirmativas, 'yet' en negativas y preguntas: nunca los intercambies."
+      - "Si dudas, di la versión con present perfect: en el Reino Unido siempre será correcta."
+exercises:
+  - type: multiple_choice
+    prompt: "Elige la forma correcta en inglés británico: 'I ___ my keys — I can't get into my flat.'"
+    options: ["have lost", "lost", "was losing"]
+    answer: "have lost"
+    explanation: "El resultado importa ahora (no puedo entrar), así que se usa present perfect: I have lost my keys."
+  - type: fill_blank
+    prompt: "Have you tidied your room ___? Grandma arrives in an hour!"
+    answer: "yet"
+    explanation: "'Yet' va al final de preguntas y negativas con present perfect."
+  - type: translate
+    prompt: "Traduce al inglés británico usando present perfect con 'just', sin contracciones y sin punto final: 'Acabo de hacer el té.'"
+    answer: "I have just made the tea"
+    explanation: "En británico, 'acabo de + infinitivo' se expresa con have just + participio."
+  - type: multiple_choice
+    prompt: "Completa: 'She's ___ to the shops; she'll be back in ten minutes.'"
+    options: ["gone", "been", "went"]
+    answer: "gone"
+    explanation: "'Has gone to' indica que la persona todavía está allí; 'has been to' indicaría que ya volvió."
+  - type: fill_blank
+    prompt: "I ___ seen that film three times this month. (escribe el auxiliar que falta)"
+    answer: "have"
+    explanation: "'This month' es un periodo que aún no termina, así que se usa present perfect: I have seen."
+notes: "La preferencia británica por el present perfect con just/already/yet se evalúa directamente en el examen 07."

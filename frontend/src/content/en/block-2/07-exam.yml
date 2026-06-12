@@ -1,0 +1,96 @@
+title: "Bloque 2 · 07 — Examen: Professional English"
+language: en
+level: B2
+type: grammar
+objectives:
+  - "Evaluar todo el contenido del Bloque 2: vocabulario laboral, emails formales, reuniones, condicionales y reported speech"
+  - "Demostrar dominio del inglés profesional británico a nivel B2"
+sections:
+  - title: "Instrucciones y mini-repaso del bloque"
+    type: explanation
+    content: |
+      EXAMEN DEL BLOQUE 2 — Professional English
+
+      Instrucciones: responde los 12 ejercicios sin consultar las lecciones.
+      Necesitas 9 aciertos o más para aprobar el bloque. El examen mezcla
+      traducciones, huecos y opción múltiple, y cubre las lecciones 01 a 06.
+
+      Mini-repaso antes de empezar:
+
+      - Vocabulario laboral británico (01): CV (no résumé), annual leave,
+        redundancy, payslip, line manager, overtime.
+      - Emails formales (02): "I am writing to enquire about...",
+        "I would be grateful if you could...", "I look forward to hearing
+        from you." Despedidas: nombre conocido → Yours sincerely; "Dear Sir
+        or Madam" → Yours faithfully.
+      - Reuniones (03): as far as I'm concerned (opinión), if I may
+        (interrumpir con educación), to sum up (resumir); agenda, minutes,
+        action points.
+      - Condicionales (04): first (If + presente, will), second (If + pasado,
+        would; "If I were you..."), third (If + past perfect, would have +
+        participio).
+      - Reported speech (05): backshift (will → would, presente → pasado),
+        say vs tell (tell + persona), suggest/deny/admit + -ing,
+        promise + to + infinitivo.
+      - Proceso de selección (06): applicant, requirement, salary, shortlist,
+        reference, probation period.
+
+      Cuando estés listo, empieza. Good luck!
+    tips:
+      - "Lee cada pregunta completa antes de responder: muchas indican entre paréntesis la estructura que debes usar."
+      - "En los huecos, escribe solo la palabra o palabras que faltan, sin repetir el resto de la frase."
+exercises:
+  - type: multiple_choice
+    prompt: "Lección 01. ¿Cómo se llama en inglés británico el documento con tu formación y experiencia que envías al solicitar un empleo?"
+    options: ["CV", "résumé", "payslip", "reference"]
+    answer: "CV"
+    explanation: "En el Reino Unido se usa CV (curriculum vitae); résumé es la forma americana."
+  - type: fill_blank
+    prompt: "Lección 06. Completa: 'The first three months in the new job will be a ___ period.' (periodo de prueba)"
+    answer: "probation"
+    explanation: "Probation period = periodo de prueba al inicio de un contrato británico."
+  - type: multiple_choice
+    prompt: "Lección 02. Tu email empieza con 'Dear Sir or Madam'. ¿Con qué despedida debe terminar?"
+    options: ["Yours faithfully", "Yours sincerely", "Best wishes", "Kind regards"]
+    answer: "Yours faithfully"
+    explanation: "Destinatario desconocido (Dear Sir or Madam) → Yours faithfully; nombre conocido → Yours sincerely."
+  - type: fill_blank
+    prompt: "Lección 02. Completa la apertura formal: 'I am writing to ___ about the vacancy advertised in The Guardian.' (pedir información)"
+    answer: "enquire"
+    explanation: "I am writing to enquire about... es la fórmula británica para solicitar información."
+  - type: translate
+    prompt: "Lección 02. Traduce la frase hecha de cierre: 'Quedo a la espera de su respuesta.' (7 palabras, empieza con 'I look')"
+    answer: "I look forward to hearing from you."
+    explanation: "Look forward to va seguido de gerundio: hearing."
+  - type: fill_blank
+    prompt: "Lección 03. Completa la frase para dar tu opinión: 'As far as I'm ___, we should postpone the launch.'"
+    answer: "concerned"
+    explanation: "As far as I'm concerned = en lo que a mí respecta."
+  - type: multiple_choice
+    prompt: "Lección 03. Quieres interrumpir educadamente en una reunión. ¿Qué dices?"
+    options: ["If I may, I'd like to add something.", "Be quiet, it's my turn.", "That idea is wrong.", "I don't care about that item."]
+    answer: "If I may, I'd like to add something."
+    explanation: "If I may pide permiso antes de intervenir: es la fórmula educada británica."
+  - type: fill_blank
+    prompt: "Lección 04. Second conditional. Completa con el verbo 'have': 'If I ___ the budget, I would hire two more people.'"
+    answer: "had"
+    explanation: "Second conditional: If + past simple (had), would + infinitivo."
+  - type: multiple_choice
+    prompt: "Lección 04. Third conditional. Elige la opción correcta: 'If we had tested the software, we ___ the bug before the launch.'"
+    options: ["would have found", "would find", "will find", "had found"]
+    answer: "would have found"
+    explanation: "Third conditional: If + past perfect, would have + participio."
+  - type: fill_blank
+    prompt: "Lección 05. Aplica el backshift de 'will': 'She said she ___ send the payslips the following day.'"
+    answer: "would"
+    explanation: "En reported speech, will retrocede a would."
+  - type: multiple_choice
+    prompt: "Lección 05. Elige el verbo correcto: 'The director ___ us that the office would close early.'"
+    options: ["told", "said", "explained", "spoke"]
+    answer: "told"
+    explanation: "Tell lleva objeto de persona (told us); say no lo admite."
+  - type: translate
+    prompt: "Lección 04 y 06. Traduce usando third conditional: 'Si hubiera leído el anuncio, habría enviado mi CV.' (empieza con 'If I had read the advert')"
+    answer: "If I had read the advert, I would have sent my CV."
+    explanation: "Third conditional: If + past perfect (had read), would have + participio (would have sent)."
+notes: "Aprobado con 9/12 aciertos o más. Si fallas, repasa las lecciones 01-06 del bloque."

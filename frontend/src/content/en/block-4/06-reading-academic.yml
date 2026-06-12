@@ -1,0 +1,107 @@
+title: "Bloque 4 · 06 — Reading: an academic text"
+language: en
+level: C1
+type: reading
+objectives:
+  - "Leer y comprender un abstract académico británico auténtico de nivel C1."
+  - "Reconocer en contexto el vocabulario académico y las colocaciones del bloque."
+  - "Extraer la conclusión central y los datos que la sustentan."
+vocabulary:
+  - word: "retention"
+    ipa: "/rɪˈtenʃən/"
+    translation: "retención (de información en la memoria)"
+    definition: "The ability to keep information in your memory over time."
+    example: "Spaced practice dramatically improves long-term vocabulary retention."
+    tags: ["academic", "C1"]
+  - word: "longitudinal"
+    ipa: "/ˌlɒŋɡɪˈtjuːdɪnəl/"
+    translation: "longitudinal (estudio a lo largo del tiempo)"
+    definition: "Involving repeated observations of the same subjects over a long period of time."
+    example: "The longitudinal study followed the same learners for an entire academic year."
+    tags: ["academic", "C1"]
+  - word: "cohort"
+    ipa: "/ˈkəʊhɔːt/"
+    translation: "cohorte; grupo de estudio"
+    definition: "A group of people sharing a characteristic who are studied over a period of time."
+    example: "The second cohort received weekly retrieval practice instead of massed revision."
+    tags: ["academic", "C1"]
+  - word: "retrieval"
+    ipa: "/rɪˈtriːvəl/"
+    translation: "recuperación (de información de la memoria)"
+    definition: "The process of getting information back from memory, as in testing yourself."
+    example: "Retrieval practice strengthens memory far more than simply re-reading notes."
+    tags: ["academic", "C1"]
+  - word: "cramming"
+    ipa: "/ˈkræmɪŋ/"
+    translation: "estudiar de panzazo; atracón de estudio"
+    definition: "Trying to learn a lot of information in a very short time, usually just before an exam."
+    example: "Cramming the night before may pass the test, but the words vanish within a week."
+    tags: ["academic", "C1"]
+  - word: "prevailing"
+    ipa: "/prɪˈveɪlɪŋ/"
+    translation: "imperante; predominante"
+    definition: "Existing and accepted as normal at a particular time or in a particular place."
+    example: "The prevailing view among teachers favoured intensive vocabulary sessions."
+    tags: ["academic", "C1"]
+sections:
+  - title: "Abstract: Spacing and the fate of new words"
+    type: reading
+    content: |
+      Recent empirical research into second language acquisition has begun to scrutinise the assumption
+      that vocabulary retention is underpinned primarily by frequency of exposure. This paper reports on
+      a longitudinal study of 240 adult learners of English at a British university, comparing massed
+      presentation with spaced retrieval practice over a full academic year. The findings corroborate
+      earlier laboratory work: learners who organised their revision around spaced retrieval significantly
+      outperformed their peers, and the discrepancy between the two cohorts widened steadily as the year
+      progressed. The most salient result, however, concerns forgetting. Whereas participants were often
+      bitterly disappointed by how quickly newly memorised items faded, the data suggest that such losses
+      can be mitigated by brief, well-timed reviews rather than by lengthy cramming sessions. We therefore
+      draw the conclusion that course designers should factor in the timing of revision, not merely its
+      quantity, and we argue that the prevailing paradigm of intensive vocabulary teaching should be phased
+      out in favour of spaced schedules. In the foreseeable future, mounting pressure on classroom contact
+      hours is likely to make such efficiency gains indispensable.
+    tips:
+      - "Primera lectura: ignora las palabras desconocidas y busca solo la conclusión central."
+      - "Segunda lectura: subraya las colocaciones del bloque (draw the conclusion, mounting pressure, foreseeable future)."
+      - "Los abstracts siempre siguen el mismo patrón: contexto → método → resultados → conclusión."
+  - title: "Cómo desarmar un abstract"
+    type: explanation
+    content: |
+      Un abstract comprime un artículo completo en un párrafo, así que cada oración cumple una función fija:
+
+      1. Contexto y problema: 'Recent empirical research... has begun to scrutinise the assumption...'
+      2. Método: 'a longitudinal study of 240 adult learners... over a full academic year'.
+      3. Resultados: 'The findings corroborate earlier laboratory work... the discrepancy... widened'.
+      4. Conclusión e implicaciones: 'We therefore draw the conclusion that... should be phased out...'
+
+      Fíjate también en cómo el texto usa la nominalización de la lección 03 ('retention', 'presentation',
+      'revision', 'conclusion') y phrasal verbs formales de la lección 04 ('factor in', 'phase out') sin
+      perder el tono académico. Eso es exactamente lo que se espera de tu escritura a nivel C1.
+    tips:
+      - "Cuando leas artículos reales, localiza primero la oración con 'we conclude' o 'we argue': es el corazón del texto."
+      - "Apunta las cadenas verbo + sustantivo del texto (mitigate losses, corroborate findings) para tu SRS."
+exercises:
+  - type: multiple_choice
+    prompt: "Según el abstract, ¿qué supuesto se pone bajo escrutinio?"
+    options: ["que la retención depende sobre todo de la frecuencia de exposición", "que los adultos no pueden aprender vocabulario", "que los exámenes miden mal la memoria", "que el inglés británico es más difícil que el americano"]
+    answer: "que la retención depende sobre todo de la frecuencia de exposición"
+    explanation: "El texto dice que se empieza a 'scrutinise the assumption that vocabulary retention is underpinned primarily by frequency of exposure'."
+  - type: multiple_choice
+    prompt: "¿Qué ocurrió con la discrepancia entre las dos cohortes a lo largo del año?"
+    options: ["se amplió de forma constante", "se redujo gradualmente", "desapareció por completo", "no se midió"]
+    answer: "se amplió de forma constante"
+    explanation: "El texto afirma que 'the discrepancy between the two cohorts widened steadily as the year progressed'."
+  - type: fill_blank
+    prompt: "According to the abstract, memory losses can be ___ by brief, well-timed reviews. (mitigar, en participio)"
+    answer: "mitigated"
+    explanation: "'Such losses can be mitigated by brief, well-timed reviews' — voz pasiva con el verbo de la lección 03."
+  - type: translate
+    prompt: "Traduce al inglés el sustantivo académico del texto: 'retención'"
+    answer: "retention"
+    explanation: "'Retention' es la nominalización de 'retain' y palabra clave del abstract."
+  - type: multiple_choice
+    prompt: "Los autores proponen que el paradigma imperante de enseñanza intensiva de vocabulario debería..."
+    options: ["eliminarse gradualmente", "reforzarse con más horas", "mantenerse sin cambios", "aplicarse solo a adultos"]
+    answer: "eliminarse gradualmente"
+    explanation: "El texto usa el phrasal verb de la lección 04: 'should be phased out in favour of spaced schedules'."
+notes: "Relee el abstract en voz alta cuidando la pronunciación no rótica: 'paper' /ˈpeɪpə/, 'year' /jɪə/, 'favour' /ˈfeɪvə/."

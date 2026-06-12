@@ -1,0 +1,106 @@
+title: "Bloque 4 · 02 — Advanced collocations"
+language: en
+level: C1
+type: vocabulary
+objectives:
+  - "Dominar ocho colocaciones de nivel C1 frecuentes en prensa y textos formales británicos."
+  - "Entender por qué las colocaciones pesan más que las palabras sueltas en los exámenes C1."
+  - "Evitar combinaciones calcadas del español que suenan extrañas en inglés."
+vocabulary:
+  - word: "bitterly disappointed"
+    ipa: "/ˈbɪtəli ˌdɪsəˈpɔɪntɪd/"
+    translation: "amargamente decepcionado"
+    definition: "Extremely and painfully disappointed; the standard intensifier for this adjective."
+    example: "The fans were bitterly disappointed when the final was called off because of the weather."
+    tags: ["collocation", "C1"]
+  - word: "highly unlikely"
+    ipa: "/ˌhaɪli ʌnˈlaɪkli/"
+    translation: "muy poco probable"
+    definition: "Very improbable; 'highly' is the natural intensifier with 'unlikely', 'likely' and 'probable'."
+    example: "It is highly unlikely that the trains will run on time during the strike."
+    tags: ["collocation", "C1"]
+  - word: "draw a conclusion"
+    ipa: "/ˌdrɔː ə kənˈkluːʒən/"
+    translation: "sacar una conclusión"
+    definition: "To decide what to believe after considering the evidence; the verb is 'draw', never 'take'."
+    example: "It is too early to draw any firm conclusions from such a small sample."
+    tags: ["collocation", "C1"]
+  - word: "pose a threat"
+    ipa: "/ˌpəʊz ə ˈθret/"
+    translation: "representar una amenaza"
+    definition: "To be a possible danger to someone or something."
+    example: "Rising sea levels pose a serious threat to coastal towns across the country."
+    tags: ["collocation", "C1"]
+  - word: "utterly ridiculous"
+    ipa: "/ˌʌtəli rɪˈdɪkjʊləs/"
+    translation: "completamente ridículo"
+    definition: "Completely absurd; 'utterly' collocates with strong negative adjectives."
+    example: "The suggestion that we should work through the bank holiday is utterly ridiculous."
+    tags: ["collocation", "C1"]
+  - word: "vested interest"
+    ipa: "/ˌvestɪd ˈɪntrəst/"
+    translation: "interés personal (en un resultado)"
+    definition: "A strong personal reason for wanting something to happen because one benefits from it."
+    example: "The developers have a vested interest in playing down the environmental damage."
+    tags: ["collocation", "C1"]
+  - word: "foreseeable future"
+    ipa: "/fɔːˌsiːəbl ˈfjuːtʃə/"
+    translation: "futuro previsible"
+    definition: "The period of time in which events can reasonably be predicted; used with 'in the' or 'for the'."
+    example: "The branch in Leeds will remain open for the foreseeable future."
+    tags: ["collocation", "C1"]
+  - word: "mounting pressure"
+    ipa: "/ˌmaʊntɪŋ ˈpreʃə/"
+    translation: "presión creciente"
+    definition: "Steadily increasing pressure, usually on a government, organisation or public figure."
+    example: "The minister resigned under mounting pressure from her own party."
+    tags: ["collocation", "C1"]
+sections:
+  - title: "Por qué las colocaciones importan más que las palabras sueltas"
+    type: explanation
+    content: |
+      A nivel C1, tu vocabulario ya no se mide por cuántas palabras conoces, sino por cómo las combinas.
+      Un hablante nativo nunca dice 'strongly disappointed' ni 'take a conclusion': dice 'bitterly disappointed'
+      y 'draw a conclusion'. Esas parejas fijas son las colocaciones, y son lo que distingue un inglés correcto
+      de un inglés natural.
+
+      Tres razones para estudiarlas como unidades:
+
+      1. Fluidez. El cerebro nativo no construye 'mounting pressure' palabra por palabra; recupera el bloque
+         entero ya hecho. Si tú haces lo mismo, hablas más rápido y con menos errores.
+      2. Precisión. 'Highly unlikely' no es igual que 'very unlikely': la primera es la opción culta y periodística.
+         Los examinadores de C1 puntúan exactamente este tipo de elección.
+      3. Defensa contra el calco. En español decimos 'tomar una conclusión' o 'hacer una amenaza'; si traduces
+         pieza por pieza, produces combinaciones que un nativo jamás usaría. La colocación memoriza el verbo
+         correcto por ti: draw a conclusion, pose a threat.
+
+      Estrategia práctica: cuando apuntes una palabra nueva, apúntala siempre con su pareja. No anotes
+      'interest'; anota 'vested interest'. No anotes 'future'; anota 'in the foreseeable future'.
+    tips:
+      - "Anota el vocabulario nuevo en bloques de dos o tres palabras, nunca palabras aisladas."
+      - "Los intensificadores no son intercambiables: bitterly disappointed, highly unlikely, utterly ridiculous."
+      - "Lee titulares de la BBC o The Guardian: la prensa británica es una mina de colocaciones C1."
+exercises:
+  - type: fill_blank
+    prompt: "The supporters were ___ disappointed when the match was abandoned at half-time."
+    answer: "bitterly"
+    explanation: "'Bitterly' es el intensificador natural de 'disappointed'; 'strongly' o 'hardly' suenan mal aquí."
+  - type: multiple_choice
+    prompt: "¿Cuál es la colocación correcta en inglés?"
+    options: ["draw a conclusion", "take a conclusion", "make a conclusion", "get a conclusion"]
+    answer: "draw a conclusion"
+    explanation: "El verbo fijo es 'draw'; 'take a conclusion' es un calco directo del español."
+  - type: translate
+    prompt: "Traduce al inglés la colocación: 'representar una amenaza'"
+    answer: "pose a threat"
+    explanation: "El verbo que se usa con 'threat' es 'pose', no 'represent' ni 'make'."
+  - type: fill_blank
+    prompt: "The government is under ___ pressure to tackle the housing crisis."
+    answer: "mounting"
+    explanation: "'Mounting pressure' es la colocación periodística estándar para presión que crece."
+  - type: multiple_choice
+    prompt: "Completa la frase: 'It is ___ unlikely that the project will be finished this year.'"
+    options: ["highly", "strongly", "deeply", "heavily"]
+    answer: "highly"
+    explanation: "'Highly' se combina con 'unlikely' y 'likely'; los demás intensificadores no funcionan aquí."
+notes: "Truco de estudio: crea tarjetas SRS con la colocación completa en el anverso y la palabra clave tapada con ___ en el reverso."

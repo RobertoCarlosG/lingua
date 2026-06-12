@@ -1,0 +1,118 @@
+title: "Bloque 1 · 06 — Polite requests and small talk"
+language: en
+level: B2
+type: conversation
+objectives:
+  - "Formular peticiones corteses con las estructuras Would you mind e I was wondering if"
+  - "Manejar el small talk británico: ofrecimientos, agradecimientos y respuestas naturales"
+  - "Entender la cultura de la cortesía indirecta del Reino Unido y evitar sonar brusco"
+vocabulary:
+  - word: "Would you mind...?"
+    ipa: "/wʊd ju ˈmaɪnd/"
+    translation: "¿Te importaría...?"
+    definition: "a polite way to ask someone to do something; it is always followed by an -ing verb"
+    example: "Would you mind closing the window? It's a bit chilly in here."
+    tags: ["expresión", "cortesía", "B2"]
+  - word: "I was wondering if..."
+    ipa: "/aɪ wəz ˈwʌndərɪŋ ɪf/"
+    translation: "Me preguntaba si..."
+    definition: "a soft, indirect way to introduce a request or invitation"
+    example: "I was wondering if you could give me a hand with the shopping."
+    tags: ["expresión", "cortesía", "B2"]
+  - word: "fancy"
+    ipa: "/ˈfænsi/"
+    translation: "apetecer, tener ganas de"
+    definition: "to want or feel like having something; very common in informal British invitations"
+    example: "Fancy a cuppa? I've just put the kettle on."
+    tags: ["verbo", "coloquial", "británico", "B2"]
+  - word: "cheers"
+    ipa: "/tʃɪəz/"
+    translation: "gracias; salud (informal)"
+    definition: "an informal British way to say thank you, goodbye, or to make a toast"
+    example: "Cheers for sorting that out so quickly, mate."
+    tags: ["interjección", "coloquial", "británico", "B2"]
+  - word: "lovely"
+    ipa: "/ˈlʌvli/"
+    translation: "encantador, estupendo"
+    definition: "a very British all-purpose word for anything pleasant: weather, people, food or plans"
+    example: "That sounds lovely — see you at eight, then."
+    tags: ["adjetivo", "británico", "B2"]
+  - word: "I'm afraid..."
+    ipa: "/aɪm əˈfreɪd/"
+    translation: "me temo que..."
+    definition: "a polite way to introduce bad news or to refuse something"
+    example: "I'm afraid I can't make it on Friday — would Saturday work instead?"
+    tags: ["expresión", "cortesía", "B2"]
+  - word: "Could you possibly...?"
+    ipa: "/kʊd ju ˈpɒsəbli/"
+    translation: "¿Podrías quizá...?"
+    definition: "an extra-polite request form, useful with strangers or in formal situations"
+    example: "Could you possibly keep an eye on my bag for a moment?"
+    tags: ["expresión", "cortesía", "B2"]
+sections:
+  - title: "Diálogo: un favor entre vecinos"
+    type: dialogue
+    content: |
+      Emma: Morning, Tom! Lovely day, isn't it?
+      Tom: Gorgeous — makes a change from all that drizzle. Fancy a cuppa? I've just put the kettle on.
+      Emma: Oh, go on then, cheers. Actually... I was wondering if I could ask you a small favour.
+      Tom: Of course. What's up?
+      Emma: We're off to Cornwall for a fortnight, and I was wondering if you'd mind watering the plants while we're away.
+      Tom: Not at all — happy to help. Would you mind leaving a key with me before you set off?
+      Emma: I'll drop it round on Friday, then. You're a star, Tom. Cheers!
+      Tom: No bother at all. Have a lovely holiday!
+    tips:
+      - "'Go on then' es la forma británica de aceptar un ofrecimiento haciéndose un poco de rogar."
+      - "Respuesta a 'Would you mind...?': si aceptas, di 'Not at all' o 'Of course not' (significa 'no me importa, lo hago encantado')."
+      - "'You're a star' y 'no bother' son fórmulas cálidas e informales para agradecer y restar importancia a un favor."
+  - title: "La cortesía indirecta: por qué los británicos nunca piden nada directamente"
+    type: explanation
+    content: |
+      En el Reino Unido, la cortesía funciona por INDIRECTAS. Pedir algo de forma directa
+      ("Open the window", "Help me") suena brusco aunque añadas please. La estrategia
+      británica es envolver la petición en capas de suavidad:
+
+      1. "Would you mind + -ing": la estructura estrella. Ojo a la gramática: va seguida de
+         gerundio, nunca de infinitivo. "Would you mind opening the window?" y no
+         "Would you mind to open".
+
+      2. "I was wondering if...": el pasado (was wondering) no indica tiempo, sino distancia
+         cortés. Cuanto más improbable suena la petición, más educada es:
+         "I was wondering if you could possibly lend me a tenner."
+
+      3. Suavizadores: a bit, just, possibly, perhaps. "It's a bit chilly" en lugar de
+         "It's cold"; "Could you just have a quick look?" en lugar de "Look at this".
+
+      4. Para rechazar: nunca un "no" seco. Se usa "I'm afraid..." más una excusa o una
+         alternativa: "I'm afraid I can't make it, but how about next week?"
+
+      Para un hispanohablante esto puede parecer exagerado, pero en contexto británico la
+      franqueza directa se percibe como mala educación. En el nivel B2 se espera que adaptes
+      el registro a la situación.
+    tips:
+      - "Regla de oro: cuanto más larga la petición, más educada suena."
+      - "'Fancy...?' es solo para contextos informales: amigos, familia, compañeros de confianza."
+exercises:
+  - type: multiple_choice
+    prompt: "Completa con la forma gramaticalmente correcta: 'Would you mind ___ the door? It's freezing.'"
+    options: ["closing", "to close", "close"]
+    answer: "closing"
+    explanation: "'Would you mind' va siempre seguido de gerundio (-ing), nunca de infinitivo."
+  - type: translate
+    prompt: "Traduce a una petición cortés británica usando 'Would you mind' + gerundio, con signo de interrogación final: '¿Te importaría abrir la ventana?'"
+    answer: "Would you mind opening the window?"
+    explanation: "Estructura: Would you mind + verbo en -ing. El infinitivo (to open) sería un error típico de hispanohablantes."
+  - type: fill_blank
+    prompt: "___ a coffee? — Oh, go on then, cheers! (escribe la palabra que falta)"
+    answer: "Fancy"
+    explanation: "'Fancy a...?' es la invitación informal británica por excelencia: ¿te apetece un...?"
+  - type: multiple_choice
+    prompt: "En el diálogo, Tom dice 'Cheers'. ¿Qué significa aquí?"
+    options: ["Gracias", "Salud, brindemos", "Hasta nunca"]
+    answer: "Gracias"
+    explanation: "'Cheers' es un agradecimiento informal muy frecuente; también se usa para brindar, pero no en este contexto."
+  - type: fill_blank
+    prompt: "I was ___ if you could help me move this sofa on Saturday."
+    answer: "wondering"
+    explanation: "'I was wondering if...' introduce una petición de forma suave e indirecta; el pasado marca cortesía, no tiempo."
+notes: "Practica el diálogo en voz alta cambiando el favor pedido: regar las plantas, cuidar al gato, recoger un paquete."

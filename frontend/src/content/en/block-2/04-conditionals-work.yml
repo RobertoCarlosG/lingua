@@ -1,0 +1,91 @@
+title: "Bloque 2 · 04 — Conditionals at work"
+language: en
+level: B2
+type: grammar
+objectives:
+  - "Formar y usar el first conditional para situaciones laborales probables"
+  - "Usar el second conditional para hipótesis y consejos en el trabajo"
+  - "Usar el third conditional para hablar de errores y oportunidades pasadas"
+vocabulary:
+  - word: "promotion"
+    ipa: "/prəˈməʊʃn/"
+    translation: "ascenso"
+    definition: "A move to a more important position in a company."
+    example: "If she keeps performing like this, she will get a promotion next year."
+    tags: ["sustantivo", "B2"]
+  - word: "pay rise"
+    ipa: "/ˈpeɪ raɪz/"
+    translation: "aumento de sueldo"
+    definition: "An increase in salary. British speakers say pay rise; Americans say raise."
+    example: "I would ask for a pay rise if I were you."
+    tags: ["sustantivo", "B2"]
+  - word: "target"
+    ipa: "/ˈtɑːɡɪt/"
+    translation: "objetivo, meta"
+    definition: "A goal or result that you try to achieve, often measured in numbers."
+    example: "If the team misses its sales target, the bonus will be cancelled."
+    tags: ["sustantivo", "B2"]
+  - word: "budget"
+    ipa: "/ˈbʌdʒɪt/"
+    translation: "presupuesto"
+    definition: "The amount of money available for a project or department."
+    example: "If we had a bigger budget, we would hire two more developers."
+    tags: ["sustantivo", "B2"]
+sections:
+  - title: "Los tres condicionales en el trabajo"
+    type: explanation
+    content: |
+      Los condicionales son imprescindibles en el inglés profesional:
+      negociaciones, planes, consejos y análisis de errores. Las tres
+      estructuras que debes dominar en B2:
+
+      1. FIRST CONDITIONAL — situaciones reales o probables (futuro):
+         Estructura: If + present simple, will + infinitivo.
+         - "If we miss the deadline, the client will cancel the contract."
+         - "If you finish the report today, I'll review it tomorrow."
+         OJO: después de 'if' NUNCA va 'will': "If we will miss..." es incorrecto.
+
+      2. SECOND CONDITIONAL — hipótesis presentes o futuras poco probables:
+         Estructura: If + past simple, would + infinitivo.
+         - "If I had a bigger budget, I would hire two more people."
+         - "If she worked here, she would understand the problem."
+         Con el verbo 'be' usa 'were' para todas las personas en registro
+         formal: "If I were the line manager, I would organise fewer meetings."
+         De ahí el consejo clásico: "If I were you, I'd ask for a pay rise."
+
+      3. THIRD CONDITIONAL — pasado imposible de cambiar (reproches, análisis):
+         Estructura: If + past perfect, would have + participio.
+         - "If she had checked the figures, she would have noticed the error."
+         - "If you had worked harder last year, you would have got the promotion."
+         Es el condicional de las 'lessons learned': sirve para analizar qué
+         salió mal en un proyecto sin posibilidad de cambiarlo ya.
+
+      Truco para distinguirlos: pregúntate si la situación es posible (first),
+      imaginaria ahora (second) o pasada y cerrada (third).
+    tips:
+      - "Después de 'if' nunca uses 'will' ni 'would': el condicional va en la otra mitad de la frase."
+      - "En registro formal británico, 'If I were you...' (no 'was') es la forma preferida para dar consejos."
+      - "Third conditional = pasado + arrepentimiento: si ves 'had + participio' tras if, la otra parte lleva 'would have + participio'."
+exercises:
+  - type: fill_blank
+    prompt: "First conditional. Completa con el verbo 'miss' en la forma correcta: 'If we ___ the deadline, the client will cancel the contract.'"
+    answer: "miss"
+    explanation: "En el first conditional, tras 'if' va presente simple: If we miss..., the client will cancel..."
+  - type: fill_blank
+    prompt: "Second conditional formal. Completa con el verbo 'be': 'If I ___ the line manager, I would organise fewer meetings.'"
+    answer: "were"
+    explanation: "En el second conditional formal se usa 'were' para todas las personas: If I were..."
+  - type: translate
+    prompt: "Traduce usando second conditional: 'Si tuviera más tiempo, terminaría el informe.' (empieza con 'If I had')"
+    answer: "If I had more time, I would finish the report."
+    explanation: "Second conditional: If + past simple (had), would + infinitivo (would finish)."
+  - type: multiple_choice
+    prompt: "Third conditional. Elige la opción correcta: 'If she had checked the figures, she ___ the error.'"
+    options: ["would have noticed", "would notice", "will notice", "had noticed"]
+    answer: "would have noticed"
+    explanation: "Third conditional: If + past perfect, would have + participio."
+  - type: multiple_choice
+    prompt: "¿Qué condicional usarías para analizar un error pasado que ya no se puede cambiar?"
+    options: ["third conditional", "first conditional", "second conditional"]
+    answer: "third conditional"
+    explanation: "El third conditional habla de situaciones pasadas imposibles de cambiar: If we had tested it, we would have found the bug."

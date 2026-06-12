@@ -1,0 +1,105 @@
+title: "Bloque 1 · 05 — Comida e restaurante"
+language: pt
+level: A1
+type: vocabulary
+objectives:
+  - "Nombrar las comidas del día en portugués brasileño"
+  - "Pedir comida y bebida en un restaurante"
+  - "Pedir la cuenta y el menú con cortesía"
+vocabulary:
+  - word: "café da manhã"
+    ipa: "/kaˈfɛ da mɐ̃ˈɲɐ̃/"
+    translation: "desayuno"
+    definition: "Literalmente 'café de la mañana'. Es la forma brasileña; en Portugal dicen 'pequeno-almoço'. 'Manhã' lleva doble nasal."
+    example: "O café da manhã do hotel é ótimo."
+    tags: ["comida", "A1"]
+  - word: "almoço"
+    ipa: "/awˈmosu/"
+    translation: "comida (del mediodía), almuerzo"
+    definition: "La comida principal del mediodía, lo que en México llamamos 'la comida'. La 'l' antes de consonante suena /w/: /awˈmosu/."
+    example: "O almoço é ao meio-dia."
+    tags: ["comida", "A1"]
+  - word: "jantar"
+    ipa: "/ʒɐ̃ˈtaʁ/"
+    translation: "cena; cenar"
+    definition: "Es sustantivo y verbo a la vez: 'o jantar' (la cena) y 'vou jantar' (voy a cenar). La 'j' suena /ʒ/, como en el francés 'je'."
+    example: "Vamos jantar às oito horas."
+    tags: ["comida", "A1"]
+  - word: "suco"
+    ipa: "/ˈsuku/"
+    translation: "jugo"
+    definition: "Jugo de fruta. En Brasil los jugos naturales son omnipresentes: 'suco de laranja' (de naranja), 'suco de maracujá'."
+    example: "Eu quero um suco de laranja, por favor."
+    tags: ["bebida", "A1"]
+  - word: "água"
+    ipa: "/ˈaɡwɐ/"
+    translation: "agua"
+    definition: "Igual que en español, pero con acento gráfico en la 'á'. En restaurantes preguntan: 'com gás ou sem gás?' (¿con o sin gas?)."
+    example: "Uma água sem gás, por favor."
+    tags: ["bebida", "A1"]
+  - word: "conta"
+    ipa: "/ˈkõtɐ/"
+    translation: "cuenta"
+    definition: "La cuenta del restaurante. Como en 'conto' y 'contar', el portugués pierde el diptongo 'ue' del español: cuenta → conta."
+    example: "A conta, por favor!"
+    tags: ["restaurante", "A1"]
+  - word: "cardápio"
+    ipa: "/kaʁˈdapju/"
+    translation: "menú, carta"
+    definition: "La carta del restaurante. 'Menu' también se entiende, pero 'cardápio' es la palabra brasileña típica."
+    example: "Pode trazer o cardápio?"
+    tags: ["restaurante", "A1"]
+  - word: "sobremesa"
+    ipa: "/ˌsobɾiˈmezɐ/"
+    translation: "postre"
+    definition: "¡Falso amigo! En portugués 'sobremesa' es el postre, no la charla después de comer como en español."
+    example: "De sobremesa, eu quero um pudim."
+    tags: ["comida", "falso amigo", "A1"]
+sections:
+  - title: "Diálogo: en un restaurante de Río"
+    type: dialogue
+    content: |
+      — Boa noite! Uma mesa para dois, por favor.
+      — Claro! Aqui está o cardápio.
+      — Obrigado. Eu quero um suco de laranja e uma água sem gás, por favor.
+      — E para comer?
+      — O que você recomenda?
+      — A feijoada está ótima hoje.
+      — Perfeito! Duas feijoadas, então.
+      (depois da comida)
+      — Vocês querem sobremesa? Temos pudim e açaí.
+      — Um pudim, por favor. E a conta também!
+      — Claro, já trago.
+    tips:
+      - "'Eu quero...' (yo quiero) es normal y educado en Brasil si añades 'por favor'; también puedes decir 'eu queria...' (querría) para sonar más suave."
+      - "La feijoada (frijoles negros con carne de cerdo) es el platillo nacional; tradicionalmente se come el miércoles y el sábado."
+      - "'Já trago' = 'ahorita lo traigo'."
+exercises:
+  - type: translate
+    prompt: "Traduce al portugués: 'la cuenta, por favor'"
+    answer: "a conta, por favor"
+    explanation: "'Cuenta' pierde el diptongo: 'conta'. El artículo femenino es 'a'."
+  - type: multiple_choice
+    prompt: "¿Qué significa 'sobremesa' en portugués?"
+    options:
+      - "la charla después de comer"
+      - "el postre"
+      - "el mantel"
+    answer: "el postre"
+    explanation: "Falso amigo clásico: en portugués 'sobremesa' es el postre."
+  - type: fill_blank
+    prompt: "El desayuno en Brasil se llama 'café da ___'."
+    answer: "manhã"
+    explanation: "'Café da manhã' = café de la mañana. 'Manhã' se pronuncia /mɐ̃ˈɲɐ̃/."
+  - type: translate
+    prompt: "Traduce al portugués: 'jugo'"
+    answer: "suco"
+    explanation: "'Suco' /ˈsuku/. 'Suco de laranja' = jugo de naranja."
+  - type: multiple_choice
+    prompt: "¿Qué pides para ver los platillos disponibles?"
+    options:
+      - "a conta"
+      - "o cardápio"
+      - "a sobremesa"
+    answer: "o cardápio"
+    explanation: "'Cardápio' es la carta o menú; 'a conta' es la cuenta."

@@ -1,0 +1,128 @@
+title: "Bloque 2 · 02 — Writing formal emails"
+language: en
+level: B2
+type: reading
+objectives:
+  - "Conocer la estructura de un email formal británico"
+  - "Usar frases hechas de apertura y cierre: I am writing to enquire..., I look forward to hearing from you"
+  - "Distinguir cuándo usar Yours sincerely y cuándo Yours faithfully"
+vocabulary:
+  - word: "enquire"
+    ipa: "/ɪnˈkwaɪə/"
+    translation: "preguntar, solicitar información"
+    definition: "To ask for information in a formal way. British spelling; Americans usually write 'inquire'."
+    example: "I am writing to enquire about the marketing position advertised on your website."
+    tags: ["verbo", "B2"]
+  - word: "attach"
+    ipa: "/əˈtætʃ/"
+    translation: "adjuntar"
+    definition: "To send a document together with an email."
+    example: "Please find attached my CV and two references."
+    tags: ["verbo", "B2"]
+  - word: "regarding"
+    ipa: "/rɪˈɡɑːdɪŋ/"
+    translation: "con respecto a, en relación con"
+    definition: "A formal word meaning about or concerning a particular subject."
+    example: "I am writing regarding the invoice we received on 14 May."
+    tags: ["preposición", "B2"]
+  - word: "hesitate"
+    ipa: "/ˈhezɪteɪt/"
+    translation: "dudar, vacilar"
+    definition: "To pause before doing something because you are not sure. Common in the phrase 'do not hesitate to contact me'."
+    example: "Please do not hesitate to contact me if you require further information."
+    tags: ["verbo", "B2"]
+  - word: "grateful"
+    ipa: "/ˈɡreɪtfl/"
+    translation: "agradecido"
+    definition: "Feeling thankful. Used in polite requests: I would be grateful if you could..."
+    example: "I would be grateful if you could confirm the meeting date."
+    tags: ["adjetivo", "B2"]
+  - word: "acknowledge"
+    ipa: "/əkˈnɒlɪdʒ/"
+    translation: "acusar recibo, confirmar que se ha recibido algo"
+    definition: "To confirm formally that you have received something, such as an email or a payment."
+    example: "We acknowledge receipt of your application and will reply within five working days."
+    tags: ["verbo", "B2"]
+sections:
+  - title: "Estructura del email formal británico"
+    type: explanation
+    content: |
+      Un email formal británico sigue una estructura muy predecible. Apréndela
+      como plantilla y solo tendrás que cambiar el contenido:
+
+      1. Saludo (greeting):
+         - "Dear Mr Smith," / "Dear Ms Patel," → cuando conoces el apellido.
+           Fíjate: en inglés británico no se escribe punto tras Mr o Ms.
+         - "Dear Sir or Madam," → cuando NO sabes a quién escribes.
+
+      2. Motivo del correo (primera frase, sin rodeos):
+         - "I am writing to enquire about..." (para pedir información)
+         - "I am writing regarding..." (en relación con un asunto)
+         - "I am writing to complain about..." (para quejarte)
+
+      3. Cuerpo: peticiones educadas y referencias a adjuntos:
+         - "I would be grateful if you could send me..."
+         - "Please find attached my CV." (frase fija para adjuntos)
+         - "Could you please acknowledge receipt of this email?"
+
+      4. Cierre antes de la despedida:
+         - "Please do not hesitate to contact me if you require further information."
+         - "I look forward to hearing from you." → OJO: 'look forward to'
+           va seguido de -ing, nunca de infinitivo (hearing, no 'to hear').
+
+      5. Despedida (la regla de oro británica):
+         - "Yours sincerely," → si empezaste con un nombre ("Dear Ms Patel").
+         - "Yours faithfully," → si empezaste con "Dear Sir or Madam".
+         Truco: nombre conocido → sincerely; desconocido → faithfully.
+         Nunca se combinan al revés en una carta o email formal británico.
+    tips:
+      - "Regla mnemotécnica: si sabes el nombre, 'Yours sincerely'; si no lo sabes ('Dear Sir or Madam'), 'Yours faithfully'."
+      - "'I look forward to hearing from you' lleva -ing porque 'to' aquí es preposición, no infinitivo."
+      - "Evita contracciones (I'm, don't) en emails formales: escribe 'I am', 'do not'."
+  - title: "Modelo: an email of enquiry"
+    type: reading
+    content: |
+      Dear Sir or Madam,
+
+      I am writing to enquire about the Project Coordinator position advertised
+      on your website on 2 June. I am particularly interested in this role, as
+      I have three years' experience coordinating projects in the technology
+      sector.
+
+      Please find attached my CV, together with two references. I would be
+      grateful if you could acknowledge receipt of my application and let me
+      know the next steps in the recruitment process.
+
+      Please do not hesitate to contact me if you require further information
+      regarding my experience or qualifications.
+
+      I look forward to hearing from you.
+
+      Yours faithfully,
+      Roberto González
+    tips:
+      - "Observa que el email termina con 'Yours faithfully' porque empieza con 'Dear Sir or Madam'."
+      - "Cada párrafo cumple una función: motivo, adjuntos y petición, ofrecimiento, cierre."
+exercises:
+  - type: multiple_choice
+    prompt: "Si tu email empieza con 'Dear Sir or Madam', ¿cuál es la despedida correcta en inglés británico?"
+    options: ["Yours faithfully", "Yours sincerely", "Best wishes", "Lots of love"]
+    answer: "Yours faithfully"
+    explanation: "Cuando no conoces el nombre del destinatario se usa Yours faithfully; Yours sincerely se reserva para cuando sí lo conoces."
+  - type: fill_blank
+    prompt: "Completa la frase de apertura: 'I am writing to ___ about the position advertised on your website.'"
+    answer: "enquire"
+    explanation: "I am writing to enquire about... es la fórmula británica estándar para pedir información."
+  - type: fill_blank
+    prompt: "Completa la frase de cierre: 'Please do not ___ to contact me if you require further information.'"
+    answer: "hesitate"
+    explanation: "Please do not hesitate to contact me es una frase hecha de cortesía para cerrar emails formales."
+  - type: translate
+    prompt: "Traduce la frase hecha de cierre 'Quedo a la espera de su respuesta.' (7 palabras, empieza con 'I look')"
+    answer: "I look forward to hearing from you."
+    explanation: "Recuerda que look forward to va seguido de gerundio: hearing, no to hear."
+  - type: multiple_choice
+    prompt: "Elige la opción correcta para una petición educada: 'I would be ___ if you could confirm the meeting date.'"
+    options: ["grateful", "graceful", "regarding", "attached"]
+    answer: "grateful"
+    explanation: "I would be grateful if you could... es la estructura formal para pedir algo con cortesía."

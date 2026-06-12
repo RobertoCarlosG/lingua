@@ -1,0 +1,100 @@
+title: "Bloque 1 · 07 — Examen: Everyday English"
+language: en
+level: B2
+type: grammar
+objectives:
+  - "Evaluar el dominio del vocabulario y la gramática de las lecciones 01 a 06 del bloque"
+  - "Demostrar el uso correcto del present perfect británico con just, already y yet"
+  - "Aplicar phrasal verbs, vocabulario de compras y fórmulas de cortesía en contexto"
+sections:
+  - title: "Instrucciones y mini-repaso del bloque"
+    type: explanation
+    content: |
+      INSTRUCCIONES DEL EXAMEN
+
+      Este examen cubre todo el Bloque 1: vida cotidiana en el Reino Unido. Son 12 ejercicios
+      que mezclan traducción, huecos y opción múltiple. Necesitas 9 aciertos o más para
+      aprobar. Responde sin consultar las lecciones: el objetivo es comprobar qué has
+      automatizado de verdad. En los ejercicios de traducción, sigue las indicaciones del
+      enunciado (sin contracciones, sin punto final) para que tu respuesta coincida.
+
+      MINI-REPASO EN 60 SEGUNDOS
+
+      1. Rutinas (01): commute, errand, chore, kettle. Británicos puros: lie-in (quedarse en
+         la cama), fortnight (dos semanas), rubbish (basura), run out of (quedarse sin).
+
+      2. Phrasal verbs (02): separables (sort out, put off, give up) llevan el pronombre en
+         medio: sort it out. Inseparables (look after, run into, get by, set off) nunca se
+         separan: look after him.
+
+      3. Gramática (03): past simple para momentos cerrados del pasado (yesterday, ago);
+         present perfect cuando conecta con ahora. En británico, just/already/yet van con
+         present perfect: I've just eaten. / Have you finished yet?
+
+      4. Compras (04): quid (libra, plural invariable), till (caja), receipt (recibo, p muda),
+         refund (reembolso), contactless, overdraft (descubierto), high street, bargain.
+
+      5. Lectura y conversación (05-06): peckish (con hambre), stroll (paseo), queue (cola),
+         drizzle (llovizna). Cortesía: Would you mind + -ing, I was wondering if..., Fancy
+         a...?, cheers (gracias), lovely, I'm afraid... para decir que no con suavidad.
+
+      Mucha suerte. Good luck — you've got this!
+    tips:
+      - "Lee cada enunciado dos veces antes de responder: muchos errores vienen de las prisas."
+      - "En las traducciones, respeta las restricciones del enunciado (sin contracciones, sin punto final)."
+      - "Si fallas un ejercicio, anota de qué lección era para dirigir tu repaso."
+exercises:
+  - type: multiple_choice
+    prompt: "Lección 01. ¿Cuál es la palabra británica para un periodo de dos semanas?"
+    options: ["fortnight", "biweek", "fourteen-day", "half-month"]
+    answer: "fortnight"
+    explanation: "'Fortnight' viene de 'fourteen nights' y es de uso diario en el Reino Unido."
+  - type: fill_blank
+    prompt: "Lección 01. On Sundays I always have a ___ until ten o'clock — I refuse to set an alarm."
+    answer: "lie-in"
+    explanation: "'Lie-in' es quedarse en la cama hasta tarde; el equivalente americano sería 'sleeping in'."
+  - type: translate
+    prompt: "Lección 01. Traduce usando 'run out of' en present perfect, sin contracciones y sin punto final: 'Nos hemos quedado sin leche.'"
+    answer: "We have run out of milk"
+    explanation: "Present perfect porque la situación conecta con el presente: ahora no hay leche."
+  - type: multiple_choice
+    prompt: "Lección 02. ¿Cuál de estos phrasal verbs es INSEPARABLE?"
+    options: ["look after", "sort out", "put off", "give up"]
+    answer: "look after"
+    explanation: "'Look after' nunca se separa: look after her, jamás look her after. Los otros tres son separables."
+  - type: fill_blank
+    prompt: "Lección 02. We need to set ___ before seven if we want to catch the early train."
+    answer: "off"
+    explanation: "'Set off' significa ponerse en camino, empezar un viaje."
+  - type: multiple_choice
+    prompt: "Lección 03. Elige la forma británica correcta: 'I can't find my wallet — I think I ___ it.'"
+    options: ["have lost", "lost", "am losing"]
+    answer: "have lost"
+    explanation: "El resultado importa ahora (no encuentro la cartera), así que se usa present perfect."
+  - type: fill_blank
+    prompt: "Lección 03. Have you done the washing-up ___? The guests arrive in ten minutes!"
+    answer: "yet"
+    explanation: "'Yet' acompaña a preguntas y negativas con present perfect y va al final de la frase."
+  - type: translate
+    prompt: "Lección 03. Traduce usando present perfect con 'just', sin contracciones y sin punto final: 'Ella acaba de salir.'"
+    answer: "She has just left"
+    explanation: "En británico, 'acabar de' se expresa con have/has just + participio: She has just left."
+  - type: multiple_choice
+    prompt: "Lección 04. En una conversación informal, ¿qué significa 'quid'?"
+    options: ["Una libra esterlina", "Un billete de cincuenta", "Una moneda antigua fuera de circulación", "Un penique"]
+    answer: "Una libra esterlina"
+    explanation: "'Quid' es la forma coloquial de 'pound' y su plural es invariable: twenty quid."
+  - type: fill_blank
+    prompt: "Lección 04. Keep the ___ in case you need to ask for a refund later."
+    answer: "receipt"
+    explanation: "'Receipt' es el recibo o ticket de compra; recuerda que la p es muda: /rɪˈsiːt/."
+  - type: multiple_choice
+    prompt: "Lección 06. Tu vecino te dice: 'Fancy a cuppa?'. ¿Qué te está proponiendo?"
+    options: ["Tomar una taza de té", "Brindar con una copa de vino", "Prestarte una taza", "Salir a correr"]
+    answer: "Tomar una taza de té"
+    explanation: "'Fancy a...?' = ¿te apetece...? y 'cuppa' es la forma coloquial de 'cup of tea'."
+  - type: translate
+    prompt: "Lección 06. Traduce a una petición cortés con 'Would you mind' + gerundio, con signo de interrogación final: '¿Te importaría cerrar la puerta?'"
+    answer: "Would you mind closing the door?"
+    explanation: "'Would you mind' exige gerundio: closing, nunca 'to close'."
+notes: "Aprobado con 9/12 aciertos o más. Si fallas, repasa las lecciones 01-06 del bloque."

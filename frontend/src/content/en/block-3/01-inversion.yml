@@ -1,0 +1,108 @@
+title: "Bloque 3 · 01 — Inversion and emphasis"
+language: en
+level: C1
+type: grammar
+objectives:
+  - "Dominar la inversión negativa con adverbios restrictivos (seldom, hardly, no sooner...)"
+  - "Usar 'Not only did...', 'Little did she know...' y 'Under no circumstances...' para dar énfasis"
+  - "Reconocer el registro formal y literario de estas estructuras y cuándo conviene usarlas"
+vocabulary:
+  - word: "seldom"
+    ipa: "/ˈseldəm/"
+    translation: "rara vez, pocas veces"
+    definition: "Not often; on very few occasions (formal alternative to 'rarely')."
+    example: "Seldom have I witnessed such generosity in a stranger."
+    tags: ["adverbio", "C1"]
+  - word: "scarcely"
+    ipa: "/ˈskeəsli/"
+    translation: "apenas, casi no"
+    definition: "Only just; almost not. Often paired with 'when' to link two past events."
+    example: "Scarcely had she sat down when the phone rang."
+    tags: ["adverbio", "C1"]
+  - word: "no sooner"
+    ipa: "/nəʊ ˈsuːnə/"
+    translation: "apenas, nada más (hacer algo)"
+    definition: "Used with 'than' to say that one thing happened immediately after another."
+    example: "No sooner had we arrived than it started to pour."
+    tags: ["adverbio", "C1"]
+  - word: "hardly"
+    ipa: "/ˈhɑːdli/"
+    translation: "apenas, a duras penas"
+    definition: "Almost not at all; only just. With 'when', it links two events that happened almost at once."
+    example: "Hardly had the meeting begun when the fire alarm went off."
+    tags: ["adverbio", "C1"]
+  - word: "rarely"
+    ipa: "/ˈreəli/"
+    translation: "raramente, en contadas ocasiones"
+    definition: "Not often; on few occasions."
+    example: "Rarely does one encounter so thorny a dilemma."
+    tags: ["adverbio", "C1"]
+  - word: "under no circumstances"
+    ipa: "/ˌʌndə nəʊ ˈsɜːkəmstənsɪz/"
+    translation: "bajo ninguna circunstancia"
+    definition: "Never, whatever happens; used to forbid something emphatically."
+    example: "Under no circumstances should you disclose this password."
+    tags: ["expresión", "C1"]
+sections:
+  - title: "La inversión negativa: cómo y cuándo"
+    type: explanation
+    content: |
+      En inglés formal, escrito o retórico, puedes colocar un adverbio negativo o
+      restrictivo al inicio de la frase para darle énfasis dramático. Cuando lo haces,
+      el orden sujeto-verbo se invierte EXACTAMENTE como en una pregunta:
+
+        · Afirmación normal:  I have seldom seen such chaos.
+        · Con inversión:      Seldom have I seen such chaos.
+
+      Reglas clave:
+
+      1. Si el verbo ya lleva auxiliar (have, will, can, should...), el auxiliar pasa
+         delante del sujeto: "Never will I forget that day."
+
+      2. Si el verbo está en presente o pasado simple, necesitas do/does/did:
+         "Little did she know that her life was about to change."
+         (NO se dice 'Little she knew...')
+
+      3. Con 'Not only..., but (also)...', SOLO se invierte la primera parte:
+         "Not only did he arrive late, but he also forgot the report."
+
+      4. Las parejas temporales tienen conector fijo:
+         · Hardly / Scarcely + past perfect ... WHEN + past simple
+         · No sooner + past perfect ... THAN + past simple
+         "No sooner had we sat down than the waiter brought the bill."
+
+      Matiz de registro: estas estructuras suenan formales, literarias o enfáticas.
+      En conversación relajada un británico diría "I'd only just sat down when...";
+      la inversión se reserva para discursos, ensayos, periodismo y momentos de
+      énfasis deliberado. Usarla en exceso al hablar suena afectado.
+    tips:
+      - "Piensa en la inversión como 'modo pregunta sin pregunta': Seldom HAVE I..., Rarely DOES she..."
+      - "Truco para el examen: 'no sooner' siempre va con 'than'; 'hardly' y 'scarcely' siempre con 'when'."
+      - "'Under no circumstances' y 'On no account' exigen inversión siempre que abren la frase."
+exercises:
+  - type: translate
+    prompt: "Traduce al inglés empezando con 'Not only': 'No solo llegó tarde, sino que también olvidó el informe.' (usa 'he' y 'the report')"
+    answer: "Not only did he arrive late, but he also forgot the report."
+    explanation: "Tras 'Not only' inicial se invierte con did + sujeto + verbo base; la segunda parte de la frase mantiene el orden normal."
+  - type: fill_blank
+    prompt: "No sooner ___ we arrived than it started to pour."
+    answer: "had"
+    explanation: "'No sooner' exige past perfect invertido: No sooner had we arrived than..."
+  - type: multiple_choice
+    prompt: "Under no circumstances ___ the building before the alarm stops."
+    options:
+      - "you should leave"
+      - "should you leave"
+      - "you leave should"
+      - "should leave you"
+    answer: "should you leave"
+    explanation: "La expresión negativa al inicio obliga a invertir: auxiliar (should) + sujeto (you) + verbo."
+  - type: reorder
+    prompt: "did / know / little / she / that / her / life / was / about / to / change"
+    answer: "Little did she know that her life was about to change"
+    explanation: "'Little did she know' es una fórmula fija de inversión muy usada en narrativa."
+  - type: fill_blank
+    prompt: "Seldom ___ we witnessed such generosity."
+    answer: "have"
+    explanation: "Con present perfect, el auxiliar 'have' pasa delante del sujeto: Seldom have we witnessed..."
+notes: "La inversión negativa es una de las estructuras más rentables del C1: aparece constantemente en exámenes oficiales (rephrasing) y eleva el registro de cualquier ensayo."

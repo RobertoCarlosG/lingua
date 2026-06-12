@@ -21,13 +21,20 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-DICTIONARY_API = "https://api.dictionaryapi.dev/api/v2/entries/en/{word}"
+DICTIONARY_API = "https://api.dictionaryapi.dev/api/v2/entries/{lang}/{word}"
 TRANSLATE_API = "https://api.mymemory.translated.net/get"
 
+# Espejo de `dictionary.lookup` en el registro del frontend (lib/languages.ts).
+# Para idiomas sin cobertura en la Free Dictionary API se degrada con elegancia:
+# solo traducción sugerida vía MyMemory, sin IPA/definiciones/audio.
+DICTIONARY_LOOKUP_LANGUAGES = {"en", "pt"}
 
-async def fetch_dictionary_entry(client: httpx.AsyncClient, word: str) -> dict | None:
+
+async def fetch_dictionary_entry(
+    client: httpx.AsyncClient, word: str, lang: str = "en"
+) -> dict | None:
     """Consulta la Free Dictionary API y normaliza la respuesta."""
-    resp = await client.get(DICTIONARY_API.format(word=word.strip().lower()))
+    resp = await client.get(DICTIONARY_API.format(lang=lang, word=word.strip().lower()))
     if resp.status_code != 200:
         return None
     entry = resp.json()[0]
@@ -62,11 +69,13 @@ async def fetch_dictionary_entry(client: httpx.AsyncClient, word: str) -> dict |
     }
 
 
-async def fetch_translation(client: httpx.AsyncClient, word: str) -> str | None:
-    """Sugiere una traducción EN→ES usando la API pública de MyMemory."""
+async def fetch_translation(
+    client: httpx.AsyncClient, word: str, source_lang: str = "en"
+) -> str | None:
+    """Sugiere una traducción {source_lang}→ES usando la API pública de MyMemory."""
     try:
         resp = await client.get(
-            TRANSLATE_API, params={"q": word, "langpair": "en|es"}
+            TRANSLATE_API, params={"q": word, "langpair": f"{source_lang}|es"}
         )
         if resp.status_code != 200:
             return None
@@ -84,12 +93,36 @@ async def health():
 @app.get("/api/dictionary/{word}")
 async def lookup_word(word: str):
     """Busca una palabra en inglés: IPA, definiciones, ejemplo, audio y
-    una sugerencia de traducción al español."""
+    una sugerencia de traducción al español. (Alias legado de /en/{word})"""
     async with httpx.AsyncClient(timeout=10) as client:
         entry = await fetch_dictionary_entry(client, word)
         if entry is None:
             raise HTTPException(status_code=404, detail=f"'{word}' no encontrada")
         entry["translation_suggestion"] = await fetch_translation(client, word)
+    return entry
+
+
+@app.get("/api/dictionary/{lang}/{word}")
+async def lookup_word_multilang(lang: str, word: str):
+    """Busca una palabra en cualquier idioma soportado. Si el diccionario no
+    cubre el idioma, degrada a solo traducción sugerida (sin IPA ni audio)."""
+    if lang not in DICTIONARY_LOOKUP_LANGUAGES:
+        supported = ", ".join(sorted(DICTIONARY_LOOKUP_LANGUAGES))
+        raise HTTPException(
+            status_code=400,
+            detail=f"Idioma no soportado: '{lang}'. Disponibles: {supported}",
+        )
+
+    async with httpx.AsyncClient(timeout=10) as client:
+        entry = await fetch_dictionary_entry(client, word, lang)
+        translation = await fetch_translation(client, word, lang)
+
+    if entry is None and translation is None:
+        raise HTTPException(status_code=404, detail=f"'{word}' no encontrada")
+
+    if entry is None:
+        entry = {"word": word.strip().lower(), "ipa": None, "audio": None, "meanings": []}
+    entry["translation_suggestion"] = translation
     return entry
 
 

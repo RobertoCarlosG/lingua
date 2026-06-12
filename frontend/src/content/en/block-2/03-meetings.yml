@@ -1,0 +1,131 @@
+title: "Bloque 2 · 03 — Meetings and presentations"
+language: en
+level: B2
+type: conversation
+objectives:
+  - "Participar en reuniones de trabajo en inglés con vocabulario británico (agenda, minutes, action point)"
+  - "Dar tu opinión con 'as far as I'm concerned' e interrumpir educadamente con 'if I may'"
+  - "Resumir acuerdos al final de una reunión con 'to sum up'"
+vocabulary:
+  - word: "agenda"
+    ipa: "/əˈdʒendə/"
+    translation: "orden del día"
+    definition: "The list of topics to be discussed at a meeting."
+    example: "The first item on the agenda is the budget for next quarter."
+    tags: ["sustantivo", "B2"]
+  - word: "minutes"
+    ipa: "/ˈmɪnɪts/"
+    translation: "acta (de una reunión)"
+    definition: "The official written record of what was said and decided at a meeting."
+    example: "Priya will take the minutes and circulate them by email tomorrow."
+    tags: ["sustantivo", "B2"]
+  - word: "chair"
+    ipa: "/tʃeə/"
+    translation: "presidir / presidente de la reunión"
+    definition: "To lead a meeting, or the person who leads it."
+    example: "Sarah will chair the meeting while the director is on annual leave."
+    tags: ["verbo", "sustantivo", "B2"]
+  - word: "item"
+    ipa: "/ˈaɪtəm/"
+    translation: "punto (del orden del día)"
+    definition: "One of the topics on the agenda of a meeting."
+    example: "Shall we move on to the next item on the agenda?"
+    tags: ["sustantivo", "B2"]
+  - word: "action point"
+    ipa: "/ˈækʃn pɔɪnt/"
+    translation: "tarea acordada, punto de acción"
+    definition: "A specific task that someone agrees to do as a result of a meeting."
+    example: "We agreed on three action points, and each one has a clear deadline."
+    tags: ["sustantivo", "B2"]
+  - word: "postpone"
+    ipa: "/pəʊstˈpəʊn/"
+    translation: "aplazar, posponer"
+    definition: "To move an event or task to a later time or date."
+    example: "Could we postpone this item until next week's meeting?"
+    tags: ["verbo", "B2"]
+  - word: "attend"
+    ipa: "/əˈtend/"
+    translation: "asistir"
+    definition: "To be present at a meeting or event."
+    example: "Twelve people attended the presentation, including two clients."
+    tags: ["verbo", "B2"]
+sections:
+  - title: "Frases clave para reuniones"
+    type: explanation
+    content: |
+      En una reunión británica el tono importa tanto como el contenido. Estas
+      son las tres funciones que necesitas dominar en nivel B2:
+
+      1. Dar tu opinión:
+         - "As far as I'm concerned, the deadline is unrealistic."
+           (= En lo que a mí respecta...) Suena profesional y deja claro que
+           es tu punto de vista, no un hecho.
+         - Alternativas: "In my view...", "From my point of view...".
+
+      2. Interrumpir educadamente (nunca digas solo "No" o "You're wrong"):
+         - "If I may, I'd like to add something."
+         - "Sorry to interrupt, but could I make a point?"
+         La fórmula "if I may" pide permiso antes de hablar: es la forma
+         británica de interrumpir sin parecer agresivo.
+
+      3. Resumir y cerrar:
+         - "To sum up, we have agreed on three action points."
+         - "So, to summarise: the launch moves to October."
+         Quien preside (the chair) suele cerrar con un resumen y reparte los
+         action points, que quedarán registrados en las minutes (el acta).
+
+      Recuerda el vocabulario organizativo: la agenda (orden del día) se envía
+      antes; durante la reunión se discute item por item; alguien toma las
+      minutes; y al final se acuerdan action points. Si un tema no da tiempo,
+      se aplaza: "we'll postpone it until the next meeting".
+    tips:
+      - "Ojo con los falsos amigos: 'agenda' es el orden del día (no tu libreta) y 'minutes' es el acta (no los minutos del reloj)."
+      - "'As far as I'm concerned' siempre lleva 'concerned' al final; no digas 'as far as I think'."
+      - "Para suavizar desacuerdos usa 'I see your point, but...' antes de dar tu opinión contraria."
+  - title: "Diálogo: a project meeting at a British company"
+    type: dialogue
+    content: |
+      SARAH (chair): Right, shall we make a start? Thanks, everyone, for
+      attending. The first item on the agenda is the autumn campaign.
+
+      DAVID: As far as I'm concerned, the current deadline is unrealistic.
+      We simply do not have the resources to deliver by mid-September.
+
+      PRIYA: If I may, I'd like to add something. The design team could
+      deliver the artwork a week earlier if we postpone the website update.
+
+      SARAH: That sounds sensible. David, could you make sure that goes in
+      the minutes?
+
+      DAVID: Of course. So we're moving the website update to October — is
+      that right?
+
+      SARAH: Exactly. To sum up, we've agreed to postpone the website update
+      and bring the artwork forward. I'll circulate the action points this
+      afternoon. Thanks, everyone — short and productive.
+    tips:
+      - "Fíjate en cómo Priya interrumpe: 'If I may, I'd like to add something.' Pide permiso antes de aportar."
+      - "'Shall we make a start?' es la forma británica típica de abrir una reunión."
+exercises:
+  - type: fill_blank
+    prompt: "Completa la frase para dar tu opinión: 'As far as I'm ___, the deadline is unrealistic.'"
+    answer: "concerned"
+    explanation: "As far as I'm concerned = en lo que a mí respecta. Es una frase fija."
+  - type: multiple_choice
+    prompt: "Estás en una reunión y quieres interrumpir educadamente. ¿Cuál es la mejor opción?"
+    options: ["If I may, I'd like to add something.", "Stop talking, please.", "You are wrong about that.", "Listen to me now."]
+    answer: "If I may, I'd like to add something."
+    explanation: "If I may pide permiso antes de hablar; las otras opciones resultan bruscas o maleducadas."
+  - type: fill_blank
+    prompt: "Completa el cierre de la reunión: 'To ___ up, we have agreed on three action points.'"
+    answer: "sum"
+    explanation: "To sum up = en resumen. Es la fórmula habitual para cerrar una reunión o presentación."
+  - type: multiple_choice
+    prompt: "¿Cómo se llama el documento con la lista de temas que se van a tratar en una reunión?"
+    options: ["agenda", "minutes", "payslip", "action point"]
+    answer: "agenda"
+    explanation: "La agenda es el orden del día; las minutes son el acta que se escribe después."
+  - type: translate
+    prompt: "Traduce usando la frase hecha: 'En lo que a mí respecta, el presupuesto es demasiado bajo.' (empieza con 'As far as I'm concerned' y usa 'the budget')"
+    answer: "As far as I'm concerned, the budget is too low."
+    explanation: "Estructura: As far as I'm concerned, + oración con tu opinión."

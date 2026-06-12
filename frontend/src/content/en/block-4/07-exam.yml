@@ -1,0 +1,88 @@
+title: "Bloque 4 · 07 — Examen: Idiomatic and academic English"
+language: en
+level: C1
+type: vocabulary
+objectives:
+  - "Evaluar el dominio de los idioms, colocaciones, vocabulario académico, phrasal verbs y registro del Bloque 4."
+  - "Demostrar precisión léxica de nivel C1 sin apoyo de las lecciones."
+sections:
+  - title: "Instrucciones y mini-repaso"
+    type: explanation
+    content: |
+      Bienvenido al examen del Bloque 4. Son 12 ejercicios que cubren las seis lecciones del bloque.
+      Resuélvelo sin consultar las lecciones ni el diccionario: la meta es medir lo que ya es tuyo.
+      Necesitas 9 aciertos o más para aprobar.
+
+      Mini-repaso relámpago antes de empezar:
+
+      - Lección 01 (British idioms): gutted = devastado; chuffed to bits = encantadísimo;
+        throw a spanner in the works = arruinar los planes; not my cup of tea = no es lo mío.
+      - Lección 02 (Collocations): el intensificador correcto importa — bitterly disappointed,
+        highly unlikely, utterly ridiculous; y el verbo correcto también — draw a conclusion, pose a threat.
+      - Lección 03 (Academic vocabulary): scrutinise, corroborate, mitigate, discrepancy;
+        nominalización: analyse → analysis, assume → assumption.
+      - Lección 04 (Phrasal verbs): phase out = eliminar gradualmente; water down = suavizar;
+        hammer out = negociar arduamente; factor in = tomar en cuenta.
+      - Lección 05 (Register): formal purchase/commence/endeavour/request frente a
+        neutro buy/start/try/ask for. Con amigos, registro informal.
+      - Lección 06 (Reading): retention, retrieval, cohort, cramming en contexto académico.
+
+      Recuerda la ortografía británica (-ise, -our) en tus respuestas escritas. Mucha suerte.
+    tips:
+      - "Lee cada prompt dos veces antes de responder: varios ejercicios ponen a prueba matices, no memoria bruta."
+      - "En los fill_blank, escribe solo la palabra o frase que falta, sin puntuación extra."
+exercises:
+  - type: translate
+    prompt: "Traduce al inglés con el idiom británico del té: 'no es lo mío'"
+    answer: "not my cup of tea"
+    explanation: "Lección 01: la fórmula británica educada para expresar desagrado."
+  - type: fill_blank
+    prompt: "He was absolutely ___ when City lost the final in the last minute. (devastado, idiom británico)"
+    answer: "gutted"
+    explanation: "Lección 01: 'gutted' expresa decepción devastadora en registro informal británico."
+  - type: multiple_choice
+    prompt: "'Chuffed to bits' significa..."
+    options: ["encantadísimo", "agotado", "confundido", "furioso"]
+    answer: "encantadísimo"
+    explanation: "Lección 01: 'chuffed to bits' = extremadamente contento."
+  - type: fill_blank
+    prompt: "The sudden strike threw a ___ in the works just as the tour was about to begin."
+    answer: "spanner"
+    explanation: "Lección 01: 'throw a spanner in the works', con la herramienta británica, no 'wrench'."
+  - type: multiple_choice
+    prompt: "Elige la colocación correcta: 'The evidence allows us to ___ a clear conclusion.'"
+    options: ["draw", "take", "do", "put"]
+    answer: "draw"
+    explanation: "Lección 02: 'draw a conclusion'; 'take a conclusion' es calco del español."
+  - type: fill_blank
+    prompt: "It is ___ unlikely that the works will finish on schedule. (intensificador correcto)"
+    answer: "highly"
+    explanation: "Lección 02: 'highly unlikely' es la colocación estándar; 'strongly' o 'deeply' no funcionan."
+  - type: translate
+    prompt: "Traduce al inglés (verbo académico, ortografía británica): 'examinar minuciosamente'"
+    answer: "scrutinise"
+    explanation: "Lección 03: con -ise británico; 'scrutinize' es la grafía americana."
+  - type: multiple_choice
+    prompt: "¿Cuál es la nominalización correcta de 'analyse'?"
+    options: ["analysis", "analyzation", "analysement", "analysing"]
+    answer: "analysis"
+    explanation: "Lección 03: analyse → analysis, pieza básica del estilo académico."
+  - type: fill_blank
+    prompt: "The new findings ___ the witness's original account. (corroborar)"
+    answer: "corroborate"
+    explanation: "Lección 03: 'corroborate' = aportar pruebas que confirman una afirmación."
+  - type: multiple_choice
+    prompt: "'To water down a proposal' significa..."
+    options: ["suavizarla y debilitarla", "rechazarla por completo", "aprobarla sin cambios", "presentarla con retraso"]
+    answer: "suavizarla y debilitarla"
+    explanation: "Lección 04: 'water down' = diluir una propuesta o ley hasta restarle fuerza."
+  - type: fill_blank
+    prompt: "The UK plans to ___ out coal power entirely within a decade. (eliminar gradualmente)"
+    answer: "phase"
+    explanation: "Lección 04: 'phase out' describe una eliminación planificada por etapas."
+  - type: multiple_choice
+    prompt: "En una carta comercial formal, el equivalente de 'buy' es..."
+    options: ["purchase", "grab", "pick up", "snap up"]
+    answer: "purchase"
+    explanation: "Lección 05: 'purchase' es el registro formal; las otras opciones son informales."
+notes: "Aprobado con 9/12 aciertos o más. Si fallas, repasa las lecciones 01-06 del bloque."

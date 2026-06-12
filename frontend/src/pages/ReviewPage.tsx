@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Brain, CheckCircle2, RotateCcw } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { useStore } from '@/lib/store'
+import { useAuth } from '@/lib/auth'
 import { cn } from '@/lib/utils'
 import { reviewWord, statusForInterval, type Rating } from '@/lib/srs'
 import { toDateString } from '@/lib/stats'
@@ -12,6 +13,7 @@ const SESSION_LIMIT = 30
 
 export function ReviewPage() {
   const { activeLanguage } = useStore()
+  const { user } = useAuth()
   const [queue, setQueue] = useState<VocabWord[]>([])
   const [index, setIndex] = useState(0)
   const [loading, setLoading] = useState(true)
@@ -62,7 +64,7 @@ export function ReviewPage() {
           last_reviewed_at: now.toISOString(),
         })
         .eq('id', word.id),
-      supabase.from('reviews').insert({ word_id: word.id, rating, user_id: 'demo-user' }),
+      supabase.from('reviews').insert({ word_id: word.id, rating, user_id: user!.id }),
     ])
 
     if (index + 1 >= queue.length) {
@@ -76,7 +78,7 @@ export function ReviewPage() {
   async function logSession() {
     const minutes = Math.max(1, Math.round((Date.now() - startedAt.current) / 60000))
     await supabase.from('session_logs').insert({
-      user_id: 'demo-user',
+      user_id: user!.id,
       language: activeLanguage,
       date: toDateString(new Date()),
       duration_minutes: minutes,

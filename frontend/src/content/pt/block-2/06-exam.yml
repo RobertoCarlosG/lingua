@@ -1,0 +1,112 @@
+title: "Bloque 2 · 06 — Examen: Português básico II"
+language: pt
+level: A2
+type: vocabulary
+objectives:
+  - "Evaluar el dominio del pretérito perfeito regular e irregular"
+  - "Comprobar el vocabulario de ciudad, direcciones y compras"
+  - "Verificar que reconoces los falsos amigos español–portugués"
+vocabulary: []
+sections:
+  - title: "Instrucciones y mini-repaso"
+    type: explanation
+    content: |
+      Este es el examen del Bloque 2. Cubre las lecciones 01 a 05: pretérito
+      perfeito, la ciudad y direcciones, falsos amigos, compras y la lectura
+      sobre São Paulo. Responde sin consultar las lecciones; necesitas al menos
+      8 de 10 aciertos para aprobar.
+
+      Mini-repaso relámpago antes de empezar:
+
+      1. PRETÉRITO PERFEITO: falei, comi, abri + irregulares fui, fiz, tive, vim.
+         Cubre tanto "fui" como "he ido" del español.
+      2. CONTRACCIONES: em + o/a = no/na; de + o/a = do/da. Son obligatorias.
+         "No" antes de sustantivo significa "en el", no es negación.
+      3. DIRECCIONES: siga em frente, vire à direita / à esquerda,
+         fica a dois quarteirões, perto de / longe de.
+      4. FALSOS AMIGOS: escritório = oficina, oficina = taller, apelido = apodo,
+         borracha = goma de borrar, esquisito = raro, embaraçada = avergonzada,
+         polvo = pulpo, cena = escena.
+      5. COMPRAS: quanto custa?, tá caro, troco, desconto, pagar com cartão,
+         em dinheiro, à vista.
+
+      Boa prova!
+    tips:
+      - "Lee cada pregunta dos veces: varios reactivos juegan justamente con los falsos amigos."
+      - "En los ejercicios de traducir, escribe la respuesta más corta y natural posible."
+exercises:
+  - type: fill_blank
+    prompt: "Ontem eu ___ com a minha avó por telefone. (falar, pretérito perfeito)"
+    answer: "falei"
+    explanation: "Verbo regular en -ar, primera persona: falei. (Lección 01)"
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'he ido a la playa muchas veces' en portugués brasileño?"
+    options:
+      - "Eu já fui à praia muitas vezes."
+      - "Eu tenho ido à praia muitas vezes."
+      - "Eu hei ido à praia muitas vezes."
+    answer: "Eu já fui à praia muitas vezes."
+    explanation: "El perfeito simple cubre el 'he ido' del español; 'tenho ido' implicaría una rutina reciente. (Lección 01)"
+  - type: fill_blank
+    prompt: "Eu ___ um bolo ontem à noite. (fazer, pretérito perfeito)"
+    answer: "fiz"
+    explanation: "'Fazer' es irregular: eu fiz. (Lección 01)"
+  - type: multiple_choice
+    prompt: "Completa: 'O banco fica ___ centro da cidade.'"
+    options:
+      - "no"
+      - "na"
+      - "em el"
+      - "do"
+    answer: "no"
+    explanation: "EM + O = NO, contracción obligatoria. Recuerda que aquí 'no' no es negación. (Lección 02)"
+  - type: translate
+    prompt: "Traduce al portugués: 'Dé vuelta a la derecha en la esquina.'"
+    answer: "Vire à direita na esquina."
+    explanation: "'Vire' de 'virar' + 'à direita' + contracción 'na'. (Lección 02)"
+  - type: multiple_choice
+    prompt: "¿Qué significa la palabra portuguesa 'escritório'?"
+    options:
+      - "oficina (lugar de trabajo)"
+      - "escritorio (mueble)"
+      - "taller mecánico"
+      - "escritorio público"
+    answer: "oficina (lugar de trabajo)"
+    explanation: "Falso amigo: 'escritório' es la oficina; el mueble es 'escrivaninha' y el taller es 'oficina'. (Lección 03)"
+  - type: multiple_choice
+    prompt: "Tu amiga brasileña dice: 'Fiquei muito embaraçada na reunião.' ¿Qué le pasó?"
+    options:
+      - "Se sintió muy avergonzada."
+      - "Quedó embarazada."
+      - "Se sintió muy cansada."
+    answer: "Se sintió muy avergonzada."
+    explanation: "'Embaraçada' = avergonzada. Embarazada (esperando bebé) es 'grávida'. (Lección 03)"
+  - type: fill_blank
+    prompt: "En portugués, el apodo de una persona se llama ___ . (falso amigo de 'apellido')"
+    answer: "apelido"
+    explanation: "'Apelido' = apodo; el apellido es 'sobrenome'. (Lección 03)"
+  - type: translate
+    prompt: "Traduce al portugués: '¿Cuánto cuesta?'"
+    answer: "Quanto custa?"
+    explanation: "La pregunta básica de compras. (Lección 04)"
+  - type: multiple_choice
+    prompt: "Pagas 50 reais por una compra de 30. El vendedor te da 'o troco'. ¿Qué te dio?"
+    options:
+      - "El cambio: 20 reais."
+      - "Un descuento de 20 reais."
+      - "Un recibo de la compra."
+    answer: "El cambio: 20 reais."
+    explanation: "'Troco' es el vuelto o cambio que te devuelven. (Lección 04)"
+  - type: fill_blank
+    prompt: "Posso pagar com ___ de crédito? (tarjeta)"
+    answer: "cartão"
+    explanation: "'Cartão' = tarjeta; la terminación -ão equivale al -ón español. (Lección 04)"
+  - type: multiple_choice
+    prompt: "En la lectura del bloque, ¿qué desayunó Mariana en la padaria?"
+    options:
+      - "Café con leche y pan de queso."
+      - "Jugo de naranja y fruta."
+      - "Café negro y pan dulce."
+    answer: "Café con leche y pan de queso."
+    explanation: "'Ela pediu um café com leite e um pão de queijo quentinho.' (Lección 05)"
+notes: "Aprobado con 8/10 aciertos o más. Si fallas, repasa las lecciones 01-05 del bloque."

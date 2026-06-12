@@ -1,0 +1,109 @@
+title: "Bloque 3 · 07 — Examen: Advanced grammar"
+language: en
+level: C1
+type: grammar
+objectives:
+  - "Evaluar el dominio de todo el bloque 3: inversión, modales de deducción, clefts, conectores formales y hedging"
+  - "Resolver 12 ejercicios mixtos sin consultar las lecciones"
+vocabulary: []
+sections:
+  - title: "Instrucciones y mini-repaso"
+    type: explanation
+    content: |
+      EXAMEN DEL BLOQUE 3. Resuelve los 12 ejercicios sin mirar las lecciones
+      anteriores. Necesitas 9 aciertos o más para aprobar. Respeta mayúsculas
+      al inicio de frase y la puntuación indicada en cada enunciado.
+
+      Mini-repaso de 60 segundos antes de empezar:
+
+      · Inversión negativa: adverbio negativo/restrictivo al inicio → orden de
+        pregunta. "Not only DID he arrive late...", "Seldom HAVE I seen...",
+        "Under no circumstances SHOULD you...". Parejas fijas: no sooner...than,
+        hardly/scarcely...when.
+
+      · Deducción en pasado: must have (casi seguro que sí), can't have (casi
+        seguro que no), might/could have (quizá), needn't have (lo hizo sin
+        necesidad), should have (reproche). Siempre + participio.
+
+      · Clefts: "It was X who/that..." enfoca un elemento; "What I need is..."
+        enfoca al final; "The thing that strikes me is...".
+
+      · Conectores formales: albeit + sintagma (sin verbo conjugado), whereby
+        tras 'system/scheme', hence + consecuencia, hitherto = hasta ahora,
+        nevertheless = sin embargo, conversely = a la inversa.
+
+      · Hedging británico: 'not entirely convinced', 'not quite what I had in
+        mind', 'somewhat disappointing' → la realidad siempre es más grave de
+        lo que suena.
+    tips:
+      - "Lee cada enunciado completo antes de responder: las pistas entre paréntesis indican la estructura exigida."
+      - "En los reorder, recuerda que la frase resultante empieza con mayúscula y no lleva punto final."
+exercises:
+  - type: translate
+    prompt: "Traduce empezando con 'Not only': 'No solo perdió el tren, sino que también olvidó su cartera.' (usa 'she' y 'wallet')"
+    answer: "Not only did she miss the train, but she also forgot her wallet."
+    explanation: "Inversión con did en la primera parte; la segunda parte mantiene el orden normal con 'but she also...'."
+  - type: fill_blank
+    prompt: "No sooner ___ the concert begun than the power went out."
+    answer: "had"
+    explanation: "'No sooner' + past perfect invertido + 'than': No sooner had the concert begun than..."
+  - type: reorder
+    prompt: "circumstances / no / under / should / you / open / that / door"
+    answer: "Under no circumstances should you open that door"
+    explanation: "La expresión negativa inicial obliga a invertir: should you open."
+  - type: multiple_choice
+    prompt: "Her car isn't in the drive and the curtains are drawn; she ___ left for work already."
+    options:
+      - "must have"
+      - "can't have"
+      - "needn't have"
+      - "should have"
+    answer: "must have"
+    explanation: "La evidencia apunta a una deducción casi segura sobre el pasado: must have left."
+  - type: fill_blank
+    prompt: "You ___ have worried — everything turned out fine in the end. (no hacía falta, pero te preocupaste)"
+    answer: "needn't"
+    explanation: "'needn't have + participio' = la acción ocurrió pero era innecesaria."
+  - type: translate
+    prompt: "Traduce: 'Él no puede haber visto el correo.' (usa la contracción can't y 'the email')"
+    answer: "He can't have seen the email."
+    explanation: "Imposibilidad lógica en el pasado: can't have + participio (seen)."
+  - type: fill_blank
+    prompt: "___ surprised me most was how calmly she reacted."
+    answer: "What"
+    explanation: "Wh-cleft: 'What surprised me most was...' enfoca la información nueva al final."
+  - type: reorder
+    prompt: "it / was / neighbour / the / who / called / police / the"
+    answer: "It was the neighbour who called the police"
+    explanation: "It-cleft que enfoca al sujeto: It was the neighbour who..."
+  - type: multiple_choice
+    prompt: "The figures are sound, ___ slightly outdated."
+    options:
+      - "albeit"
+      - "whereby"
+      - "hence"
+      - "nevertheless"
+    answer: "albeit"
+    explanation: "'albeit + adjetivo' (sin verbo conjugado) expresa concesión formal: correctos, aunque algo desfasados."
+  - type: fill_blank
+    prompt: "They run a scheme ___ staff can swap shifts online. (relativo formal: mediante el cual)"
+    answer: "whereby"
+    explanation: "'whereby' es el relativo formal que sigue a antecedentes como 'scheme' o 'system'."
+  - type: multiple_choice
+    prompt: "High streets keep losing shops; ___, online retailers are opening physical stores."
+    options:
+      - "conversely"
+      - "hence"
+      - "thereby"
+      - "albeit"
+    answer: "conversely"
+    explanation: "Las dos frases presentan tendencias opuestas, así que el conector adecuado es 'conversely' (a la inversa)."
+  - type: multiple_choice
+    prompt: "Tu colega británico responde a tu propuesta: 'That's not quite what I had in mind.' Lo más probable es que..."
+    options:
+      - "le parezca casi perfecta y pida un retoque"
+      - "la rechace de plano aunque suene suave"
+      - "no haya entendido la propuesta"
+    answer: "la rechace de plano aunque suene suave"
+    explanation: "Understatement británico: 'not quite what I had in mind' es un rechazo educado pero claro."
+notes: "Aprobado con 9/12 aciertos o más. Si fallas, repasa las lecciones 01-06 del bloque."

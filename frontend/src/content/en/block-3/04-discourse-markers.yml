@@ -1,0 +1,128 @@
+title: "Bloque 3 · 04 — Advanced linkers and discourse markers"
+language: en
+level: C1
+type: vocabulary
+objectives:
+  - "Incorporar conectores formales (albeit, notwithstanding, hence, whereby...) con su gramática exacta"
+  - "Distinguir conectores que unen frases completas de los que solo admiten sintagmas"
+  - "Elevar el registro de ensayos y correos formales sin sonar artificial"
+vocabulary:
+  - word: "albeit"
+    ipa: "/ɔːlˈbiːɪt/"
+    translation: "aunque, si bien"
+    definition: "Though; even if. Formal, and only used before a phrase or adjective, never a full clause with its own verb."
+    example: "The plan worked, albeit more slowly than we had hoped."
+    tags: ["conector", "C1"]
+  - word: "notwithstanding"
+    ipa: "/ˌnɒtwɪðˈstændɪŋ/"
+    translation: "a pesar de, no obstante"
+    definition: "In spite of; despite. Very formal, common in legal and academic prose; it can follow the noun it governs."
+    example: "Notwithstanding the criticism, the bill was passed unamended."
+    tags: ["conector", "C1"]
+  - word: "hence"
+    ipa: "/hens/"
+    translation: "por lo tanto, de ahí"
+    definition: "For this reason; as a result. It can introduce a clause or simply a noun phrase."
+    example: "The factory closed last spring; hence the sharp rise in local unemployment."
+    tags: ["conector", "C1"]
+  - word: "thereby"
+    ipa: "/ˌðeəˈbaɪ/"
+    translation: "con lo cual, por consiguiente"
+    definition: "By doing or saying that; as a result of the action just mentioned. Usually followed by an -ing form."
+    example: "She signed the contract, thereby waiving her right to appeal."
+    tags: ["conector", "C1"]
+  - word: "nevertheless"
+    ipa: "/ˌnevəðəˈles/"
+    translation: "sin embargo, no obstante"
+    definition: "In spite of what has just been said; however."
+    example: "The evidence was thin; nevertheless, the jury convicted him."
+    tags: ["conector", "C1"]
+  - word: "whereby"
+    ipa: "/weəˈbaɪ/"
+    translation: "mediante el cual, por el cual"
+    definition: "By means of which; according to which. A formal relative used after nouns like 'system', 'scheme' or 'agreement'."
+    example: "They have introduced a scheme whereby employees may work from home twice a week."
+    tags: ["conector", "C1"]
+  - word: "hitherto"
+    ipa: "/ˌhɪðəˈtuː/"
+    translation: "hasta ahora, hasta entonces"
+    definition: "Until now or until the point in time being discussed. Formal, often before a past participle."
+    example: "The study revealed hitherto unknown side effects of the drug."
+    tags: ["adverbio", "C1"]
+  - word: "conversely"
+    ipa: "/ˈkɒnvɜːsli/"
+    translation: "a la inversa, por el contrario"
+    definition: "In an opposite or reversed way; used to introduce a statement that reverses the previous one."
+    example: "Cities keep growing denser; conversely, rural areas continue to empty."
+    tags: ["adverbio", "C1"]
+sections:
+  - title: "No todos los conectores funcionan igual"
+    type: explanation
+    content: |
+      El error típico al llegar al C1 es tratar todos estos conectores como
+      sinónimos intercambiables de 'but' o 'so'. Cada uno tiene una gramática
+      propia que conviene memorizar junto con la palabra:
+
+      1. ALBEIT nunca introduce una oración completa con sujeto y verbo conjugado.
+         · Correcto:   "a victory, albeit a narrow one" / "albeit reluctantly"
+         · Incorrecto: "albeit he was tired"  → ahí se usa 'although'.
+         Piensa en albeit = 'although it be': solo admite sintagmas.
+
+      2. NOTWITHSTANDING es preposición (como 'despite') y puede ir DETRÁS del
+         sustantivo, rasgo casi único en inglés:
+         · "Notwithstanding his objections, ..."  =  "His objections
+           notwithstanding, ..."
+
+      3. HENCE puede ir seguido solo de un sintagma nominal, sin verbo:
+         · "He grew up in Vienna — hence the accent."
+         Esto lo hace ideal para explicar causas de forma elegante y breve.
+
+      4. THEREBY casi siempre va seguido de -ing y se refiere al resultado de la
+         acción de la frase anterior: "..., thereby reducing costs by a third."
+
+      5. WHEREBY es un relativo: necesita un antecedente tipo 'system', 'scheme',
+         'arrangement', 'mechanism'. No empieza frases.
+
+      6. HITHERTO suele acompañar participios ('hitherto unpublished letters') y
+         desplaza la referencia temporal: 'hasta ese momento del que hablamos'.
+
+      7. NEVERTHELESS y CONVERSELY conectan frases independientes y suelen ir
+         tras punto y coma o punto, seguidos de coma.
+
+      Registro: todos pertenecen al inglés formal escrito. En un correo de trabajo
+      encajan bien; en el pub, un 'mind you' o un 'still' cumplen la misma función.
+    tips:
+      - "Memoriza cada conector con un patrón: 'albeit + adjetivo', 'scheme whereby...', 'thereby + -ing'."
+      - "Si dudas entre albeit y although: ¿hay verbo conjugado después? Entonces although."
+      - "'Hence the + sustantivo' ('hence the delay') es una fórmula breve que impresiona en writing."
+exercises:
+  - type: fill_blank
+    prompt: "The results were encouraging, ___ preliminary. (aunque — conector formal que no admite verbo conjugado)"
+    answer: "albeit"
+    explanation: "'albeit + adjetivo' es el patrón clásico; 'although' exigiría una cláusula completa."
+  - type: multiple_choice
+    prompt: "They have set up a system ___ complaints are dealt with within 48 hours."
+    options:
+      - "whereby"
+      - "thereby"
+      - "hence"
+      - "albeit"
+    answer: "whereby"
+    explanation: "'whereby' es relativo y necesita un antecedente como 'system': un sistema mediante el cual..."
+  - type: fill_blank
+    prompt: "The treatment targets a ___ incurable form of the disease. (hasta ahora)"
+    answer: "hitherto"
+    explanation: "'hitherto + participio/adjetivo' = 'hasta ahora considerado...': hitherto incurable."
+  - type: multiple_choice
+    prompt: "Demand has collapsed; ___ the lower prices you see everywhere."
+    options:
+      - "hence"
+      - "whereby"
+      - "conversely"
+    answer: "hence"
+    explanation: "'hence + sintagma nominal' expresa consecuencia sin necesidad de verbo: de ahí los precios bajos."
+  - type: translate
+    prompt: "Traduce usando 'nevertheless' tras punto y coma: 'El plan era arriesgado; sin embargo, decidieron seguir adelante.' (usa 'go ahead')"
+    answer: "The plan was risky; nevertheless, they decided to go ahead."
+    explanation: "'nevertheless' conecta dos frases independientes; tras punto y coma y seguido de coma."
+notes: "Dosifica: dos o tres de estos conectores bien puestos elevan un ensayo; ocho seguidos lo vuelven una parodia de texto jurídico."

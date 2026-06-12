@@ -1,0 +1,106 @@
+title: "Bloque 2 · 05 — Leitura: um dia em São Paulo"
+language: pt
+level: A2
+type: reading
+objectives:
+  - "Leer y comprender un texto A2 sobre la vida cotidiana en São Paulo"
+  - "Reconocer el pretérito perfeito y el vocabulario de ciudad en contexto"
+  - "Ampliar vocabulario urbano: padaria, metrô, passeio"
+vocabulary:
+  - word: "padaria"
+    ipa: "/padaˈɾiɐ/"
+    translation: "panadería"
+    definition: "En Brasil la padaria es mucho más que una panadería: sirve café, jugos y comida; es una institución del barrio paulistano."
+    example: "Toda manhã eu tomo café na padaria da esquina."
+    tags: ["sustantivo", "ciudad", "A2"]
+  - word: "metrô"
+    ipa: "/meˈtɾo/"
+    translation: "metro (transporte)"
+    definition: "Tren subterráneo. Con acento circunflejo y pronunciación aguda: 'metrô', no 'métro'. El de São Paulo es el más grande de Brasil."
+    example: "Eu pego o metrô para ir ao trabalho."
+    tags: ["sustantivo", "transporte", "A2"]
+  - word: "pão de queijo"
+    ipa: "/ˈpɐ̃w̃ dʒi ˈkejʒu/"
+    translation: "pan de queso"
+    definition: "Panecillo de yuca con queso, originario de Minas Gerais y amado en todo Brasil. Se come tibio, ideal con café."
+    example: "Pedi um pão de queijo quentinho com café."
+    tags: ["sustantivo", "comida", "A2"]
+  - word: "passeio"
+    ipa: "/paˈseju/"
+    translation: "paseo"
+    definition: "Salida para divertirse o caminar. El verbo es 'passear'. 'Dar um passeio' = dar un paseo."
+    example: "No domingo fizemos um passeio pelo parque."
+    tags: ["sustantivo", "ocio", "A2"]
+  - word: "cedo"
+    ipa: "/ˈsedu/"
+    translation: "temprano"
+    definition: "A hora temprana. No se parece a 'temprano', así que ojo: 'acordar cedo' = despertarse temprano."
+    example: "Hoje eu acordei muito cedo, às seis da manhã."
+    tags: ["adverbio", "tiempo", "A2"]
+  - word: "cheio"
+    ipa: "/ˈʃeju/"
+    translation: "lleno"
+    definition: "Que está completo de gente o cosas. El 'ch' portugués suena como 'sh' inglés, nunca como el 'ch' mexicano."
+    example: "O metrô estava cheio na hora do rush."
+    tags: ["adjetivo", "A2"]
+sections:
+  - title: "Um dia em São Paulo"
+    type: reading
+    content: |
+      Ontem a Mariana acordou cedo, às sete da manhã. Ela tomou um banho rápido
+      e foi à padaria da esquina. Lá, ela pediu um café com leite e um pão de
+      queijo quentinho. A padaria estava cheia, como sempre.
+
+      Depois do café, a Mariana pegou o metrô na estação Vila Madalena. O metrô
+      de São Paulo é rápido, mas na hora do rush fica muito cheio. Ela desceu
+      na estação Brigadeiro e caminhou dois quarteirões até o escritório.
+
+      Ela trabalhou até as cinco da tarde. Depois do trabalho, encontrou a sua
+      amiga Camila e as duas foram ao Parque Ibirapuera. Elas fizeram um passeio
+      de bicicleta e tiraram muitas fotos. O parque é enorme e tem lagos, museus
+      e árvores bonitas.
+
+      À noite, a Mariana voltou para casa de ônibus. Ela jantou uma sopa, assistiu
+      a uma série e dormiu às onze. Foi um dia simples, mas muito bom.
+    tips:
+      - "Subraya los verbos en pretérito perfeito: acordou, tomou, foi, pediu, pegou, desceu, trabalhou, fizeram... es la lección 01 en acción."
+      - "'Quentinho' (calientito), 'pertinho' (cerquita): el diminutivo -inho funciona igual que el -ito mexicano."
+      - "'Assistir a uma série' = ver una serie. En portugués se 'asiste' a la tele, no se 've'."
+exercises:
+  - type: multiple_choice
+    prompt: "¿A qué hora se despertó Mariana?"
+    options:
+      - "A las siete de la mañana."
+      - "A las seis de la mañana."
+      - "A las ocho de la mañana."
+    answer: "A las siete de la mañana."
+    explanation: "El texto dice: 'acordou cedo, às sete da manhã'."
+  - type: multiple_choice
+    prompt: "¿Qué pidió Mariana en la padaria?"
+    options:
+      - "Un café con leche y un pan de queso."
+      - "Un jugo de naranja y un sándwich."
+      - "Un café negro y un pastel."
+    answer: "Un café con leche y un pan de queso."
+    explanation: "'Ela pediu um café com leite e um pão de queijo quentinho.'"
+  - type: multiple_choice
+    prompt: "¿Qué hicieron Mariana y Camila en el Parque Ibirapuera?"
+    options:
+      - "Un paseo en bicicleta y tomaron fotos."
+      - "Un picnic junto al lago."
+      - "Visitaron un museo de arte."
+    answer: "Un paseo en bicicleta y tomaron fotos."
+    explanation: "'Elas fizeram um passeio de bicicleta e tiraram muitas fotos.'"
+  - type: fill_blank
+    prompt: "Segundo o texto: 'O metrô de São Paulo é rápido, mas na hora do rush fica muito ___ .'"
+    answer: "cheio"
+    explanation: "'Cheio' = lleno. Frase literal del segundo párrafo."
+  - type: translate
+    prompt: "Traduce al español: 'Ela acordou cedo.'"
+    answer: "Ella se despertó temprano."
+    explanation: "'Acordar' = despertarse (¡no 'acordarse', que sería 'lembrar'!) y 'cedo' = temprano."
+  - type: reorder
+    prompt: "Ordena las palabras según el texto: 'o metrô / a Mariana / pegou / na estação'"
+    answer: "a mariana pegou o metrô na estação"
+    explanation: "'Pegar o metrô' = tomar el metro; en Brasil se 'pega' el transporte, no se 'toma'."
+notes: "Relee el texto en voz alta cuidando la pronunciación brasileña: 'cidade' suena 'sidadyi', 'noite' suena 'noitchi'. 'Acordar' es otro falso amigo: significa despertarse, no acordarse."

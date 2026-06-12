@@ -1,0 +1,111 @@
+title: "Bloque 1 · 04 — At the shops: money and services"
+language: en
+level: B2
+type: vocabulary
+objectives:
+  - "Aprender el vocabulario británico esencial de compras, dinero y servicios bancarios"
+  - "Manejar con naturalidad términos coloquiales como quid y expresiones de la high street"
+  - "Desenvolverse en situaciones reales: pagar, pedir el recibo y solicitar un reembolso"
+vocabulary:
+  - word: "quid"
+    ipa: "/kwɪd/"
+    translation: "libra esterlina (coloquial)"
+    definition: "an informal word for one pound sterling; the plural is also 'quid', never 'quids'"
+    example: "The taxi from the station only cost me ten quid."
+    tags: ["sustantivo", "coloquial", "británico", "B2"]
+  - word: "till"
+    ipa: "/tɪl/"
+    translation: "caja (registradora)"
+    definition: "the machine or counter in a shop where you pay; Americans say 'cash register'"
+    example: "There was a long queue at the till, so I used the self-checkout instead."
+    tags: ["sustantivo", "británico", "B2"]
+  - word: "receipt"
+    ipa: "/rɪˈsiːt/"
+    translation: "recibo, ticket de compra"
+    definition: "a piece of paper that proves you paid for something; note the silent 'p'"
+    example: "Keep the receipt in case the kettle stops working."
+    tags: ["sustantivo", "B2"]
+  - word: "refund"
+    ipa: "/ˈriːfʌnd/"
+    translation: "reembolso, devolución de dinero"
+    definition: "money that a shop gives back to you when you return something"
+    example: "The jumper had a hole in it, so I took it back and asked for a full refund."
+    tags: ["sustantivo", "B2"]
+  - word: "contactless"
+    ipa: "/ˈkɒntæktləs/"
+    translation: "pago sin contacto"
+    definition: "a way of paying by touching your card or phone on the machine, without a PIN"
+    example: "Most people in Britain pay by contactless now, even for a coffee."
+    tags: ["adjetivo", "B2"]
+  - word: "overdraft"
+    ipa: "/ˈəʊvədrɑːft/"
+    translation: "descubierto bancario, sobregiro"
+    definition: "an arrangement that lets you spend more money than you have in your bank account"
+    example: "By the end of the month I'm usually deep into my overdraft."
+    tags: ["sustantivo", "B2"]
+  - word: "high street"
+    ipa: "/ˈhaɪ striːt/"
+    translation: "calle comercial principal"
+    definition: "the main shopping street of a town, with banks, shops and cafés"
+    example: "Half the shops on our high street have closed since the pandemic."
+    tags: ["sustantivo", "británico", "B2"]
+  - word: "bargain"
+    ipa: "/ˈbɑːɡɪn/"
+    translation: "ganga"
+    definition: "something you buy for much less than its normal price"
+    example: "These boots were an absolute bargain — only fifteen quid in the sale."
+    tags: ["sustantivo", "B2"]
+sections:
+  - title: "Dinero a la británica: de la high street al overdraft"
+    type: explanation
+    content: |
+      Comprar en el Reino Unido tiene su propio dialecto. Claves para sonar natural:
+
+      1. EL DINERO COLOQUIAL. La moneda es el pound (£), pero en la calle todo el mundo dice
+         "quid": "twenty quid", "a few quid". Cuidado: el plural es invariable, nunca digas
+         "quids". También oirás "a fiver" (billete de cinco) y "a tenner" (billete de diez).
+
+      2. EN LA TIENDA. Pagas en el "till" (no "cash register"), pides el "receipt"
+         (la p es muda: /rɪˈsiːt/) y, si algo sale mal, pides un "refund". La frase mágica:
+         "Could I have a refund, please? Here's my receipt."
+
+      3. FORMAS DE PAGO. El Reino Unido es casi una sociedad sin efectivo: "contactless" es
+         la norma. En el supermercado te preguntarán "Cash or card?" y verás carteles de
+         "Card payments only".
+
+      4. EL BANCO. El "overdraft" (descubierto) forma parte de la vida de muchos británicos:
+         "to go into your overdraft" es gastar más de lo que tienes. Otras palabras útiles:
+         "current account" (cuenta corriente) y "savings account" (cuenta de ahorros).
+
+      5. LA HIGH STREET. Es la calle comercial de cualquier pueblo o barrio, y también un
+         concepto económico: "high street banks", "high street shops" son los negocios de
+         toda la vida, frente a las tiendas online. Cazar un "bargain" en las rebajas
+         ("the sales", en enero y verano) es deporte nacional.
+    tips:
+      - "La p de 'receipt' es muda: /rɪˈsiːt/. Pronunciarla delata inmediatamente a un no nativo."
+      - "'Queue' (cola) es sagrada en el Reino Unido: colarse ('to jump the queue') es casi un delito social."
+      - "Para regatear o celebrar un precio bajo: 'What a bargain!' o 'It was a steal!'"
+exercises:
+  - type: multiple_choice
+    prompt: "Completa con la forma correcta: 'How much was the taxi? — Twenty ___.'"
+    options: ["quid", "quids", "pound"]
+    answer: "quid"
+    explanation: "'Quid' es invariable: one quid, twenty quid. 'Quids' no existe y 'pound' necesitaría plural (pounds)."
+  - type: fill_blank
+    prompt: "Could I have a ___, please? I might need to return this jumper next week."
+    answer: "receipt"
+    explanation: "El recibo o ticket de compra es 'receipt', con p muda: /rɪˈsiːt/."
+  - type: translate
+    prompt: "Traduce al inglés británico usando 'contactless' y 'till', en past simple, sin punto final: 'Pagué con contactless en la caja.'"
+    answer: "I paid by contactless at the till"
+    explanation: "'By contactless' es la forma de pago y 'till' es la caja registradora británica."
+  - type: multiple_choice
+    prompt: "¿Qué significa 'overdraft'?"
+    options: ["Gastar más dinero del que tienes en tu cuenta", "Una cuenta de ahorros con intereses altos", "Una transferencia bancaria internacional", "El recibo mensual del banco"]
+    answer: "Gastar más dinero del que tienes en tu cuenta"
+    explanation: "El overdraft es el descubierto: el banco te permite quedarte en números rojos hasta cierto límite."
+  - type: fill_blank
+    prompt: "These boots were half price in the sale — what a ___!"
+    answer: "bargain"
+    explanation: "'Bargain' es una ganga: algo comprado por mucho menos de su precio normal."
+notes: "Vocabulario clave para la lección de lectura 05, donde los protagonistas van de compras por Londres."

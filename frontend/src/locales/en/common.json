@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "review": "Review",
+    "vocabulary": "Vocabulary",
+    "errors": "Error bank",
+    "lessons": "Lessons"
+  },
+  "layout": {
+    "signOut": "Sign out",
+    "uiLanguage": "App language"
+  },
+  "login": {
+    "tagline": "Learn languages with spaced repetition",
+    "savePrompt": "Sign in to save your progress",
+    "google": "Continue with Google",
+    "footer": "Your progress is saved to your account.\nWorks on all your devices."
+  },
+  "common": {
+    "loading": "Loading...",
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "dashboard": {
+    "title": "{{language}} progress",
+    "subtitle": "Current level: {{levels}}",
+    "streak_one": "{{count}} day streak",
+    "streak_other": "{{count}} day streak",
+    "dueBanner_one": "{{count}} word ready for review",
+    "dueBanner_other": "{{count}} words ready for review",
+    "dueHint": "Spaced repetition works when it's daily",
+    "reviewCta": "Review →",
+    "words": "Words",
+    "errors": "Logged errors",
+    "sessions": "Sessions",
+    "activeDays": "Active days (week)",
+    "chartTitle": "Words reviewed — last 7 days",
+    "chartSeries": "words",
+    "noActivity": "No activity yet this week. Your first <reviewLink>review session</reviewLink> will appear here.",
+    "today": "Today — {{date}}",
+    "weekActivity": "This week's activity",
+    "focus": {
+      "en": [
+        "Free review + light reading",
+        "New vocabulary + SRS review",
+        "Reading + comprehension",
+        "Grammar in context",
+        "Writing + error correction",
+        "Phonetics + shadowing",
+        "Weekly review"
+      ],
+      "pt": [
+        "Free review + light reading",
+        "New vocabulary + SRS review",
+        "Reading + false friends",
+        "Grammar + conjugations",
+        "Writing + vocabulary",
+        "PT-BR phonetics + weekly review",
+        "Weekly review"
+      ]
+    }
+  },
+  "review": {
+    "title": "Review",
+    "subtitle": "Spaced repetition for your vocabulary",
+    "emptyTitle": "No words due for review. 🎉",
+    "emptyHint": "Add words in Vocabulary or import a lesson to feed your reviews.",
+    "done": "Session complete!",
+    "summary": "{{total}} words reviewed · {{missed}} to reinforce",
+    "more": "Find more words"
+  },
+  "flashcard": {
+    "reveal": "Show answer",
+    "again": "Again",
+    "hard": "Hard",
+    "good": "Good",
+    "easy": "Easy"
+  },
+  "vocab": {
+    "title": "Vocabulary",
+    "subtitle_one": "{{count}} word in your glossary",
+    "subtitle_other": "{{count}} words in your glossary",
+    "add": "Add",
+    "search": "Search words...",
+    "filterAll": "All",
+    "empty": "No words yet.",
+    "addFirst": "Add your first word",
+    "modalTitle": "Add word",
+    "word": "Word",
+    "ipa": "IPA",
+    "translation": "Translation",
+    "definition": "Definition",
+    "example": "Example",
+    "tags": "Tags (comma-separated)",
+    "lookupTitle": "Look up in the dictionary",
+    "notFound": "Not found in the dictionary",
+    "status": {
+      "new": "New",
+      "learning": "Learning",
+      "known": "Known",
+      "mastered": "Mastered"
+    }
+  },
+  "errors": {
+    "title": "Error bank",
+    "subtitle": "{{count}} errors · {{recurring}} recurring",
+    "register": "Log error",
+    "recurringTitle": "Recurring errors — pay attention",
+    "empty": "No errors logged. Great start!",
+    "recurringBadge": "recurring",
+    "markAgain": "Mark as happened again",
+    "modalTitle": "Log error",
+    "errorText": "What you wrote / said",
+    "correction": "Correction",
+    "explanation": "Explanation",
+    "category": "Category"
+  },
+  "lessons": {
+    "title": "Lessons",
+    "subtitle": "Create lessons with YAML, they render here",
+    "new": "New lesson",
+    "editorTitle": "YAML editor",
+    "template": "Template:",
+    "templateVocab": "Vocabulary",
+    "templatePhonetics": "Phonetics",
+    "upload": "Upload .yml",
+    "generatePlaceholder": "Generate from words: accomplish, endeavor, insight...",
+    "generate": "Generate YAML",
+    "generateError": "Could not generate the lesson — check the words or that the backend is running",
+    "invalidYaml": "Invalid YAML — check the syntax",
+    "render": "Render lesson",
+    "empty": "No lessons yet.",
+    "createFirst": "Create your first YAML lesson",
+    "back": "← Back to lessons",
+    "import": "Add vocabulary to glossary",
+    "importedZero": "Already in your glossary",
+    "imported_one": "{{count}} word added to your glossary",
+    "imported_other": "{{count}} words added to your glossary",
+    "vocabSection": "Vocabulary ({{count}} words)",
+    "wordCount_one": "{{count}} word",
+    "wordCount_other": "{{count}} words",
+    "exercises": "Exercises",
+    "check": "Check",
+    "correct": "Correct!",
+    "answer": "Answer: {{answer}}",
+    "yourAnswer": "Your answer..."
+  }
+}

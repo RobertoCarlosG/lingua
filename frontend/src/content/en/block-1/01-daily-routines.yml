@@ -1,0 +1,112 @@
+title: "Bloque 1 · 01 — Daily routines and habits"
+language: en
+level: B2
+type: vocabulary
+objectives:
+  - "Aprender vocabulario británico de nivel B2 para describir rutinas y hábitos cotidianos"
+  - "Distinguir términos típicamente británicos (lie-in, fortnight, rubbish) de sus equivalentes americanos"
+  - "Usar el vocabulario nuevo en frases naturales sobre la vida diaria en el Reino Unido"
+vocabulary:
+  - word: "commute"
+    ipa: "/kəˈmjuːt/"
+    translation: "trayecto diario al trabajo"
+    definition: "the journey you make every day between your home and your workplace"
+    example: "My commute into central Manchester takes about forty minutes by train."
+    tags: ["sustantivo", "verbo", "B2"]
+  - word: "errand"
+    ipa: "/ˈerənd/"
+    translation: "recado, encargo"
+    definition: "a short trip to do a small task, such as posting a letter or buying milk"
+    example: "I spent the whole of Saturday morning running errands in town."
+    tags: ["sustantivo", "B2"]
+  - word: "lie-in"
+    ipa: "/ˈlaɪɪn/"
+    translation: "quedarse en la cama hasta tarde"
+    definition: "staying in bed later than usual in the morning, especially at the weekend"
+    example: "On Sundays I always have a lie-in until about ten o'clock."
+    tags: ["sustantivo", "británico", "B2"]
+  - word: "chore"
+    ipa: "/tʃɔː/"
+    translation: "tarea doméstica"
+    definition: "a routine task you have to do at home, often boring, such as cleaning or ironing"
+    example: "We share the household chores: I do the washing-up and she hoovers the carpets."
+    tags: ["sustantivo", "B2"]
+  - word: "fortnight"
+    ipa: "/ˈfɔːtnaɪt/"
+    translation: "quincena, dos semanas"
+    definition: "a period of two weeks; very common in British English"
+    example: "The recycling bins are collected once a fortnight in our street."
+    tags: ["sustantivo", "británico", "B2"]
+  - word: "run out of"
+    ipa: "/ˌrʌn ˈaʊt əv/"
+    translation: "quedarse sin (algo)"
+    definition: "to use all of something so that there is none left"
+    example: "We've run out of milk again, so I'll pop to the corner shop before breakfast."
+    tags: ["phrasal verb", "B2"]
+  - word: "kettle"
+    ipa: "/ˈketl/"
+    translation: "hervidor de agua, tetera eléctrica"
+    definition: "a container used to boil water, found in almost every British kitchen"
+    example: "Put the kettle on, will you? I'm dying for a cup of tea."
+    tags: ["sustantivo", "B2"]
+  - word: "rubbish"
+    ipa: "/ˈrʌbɪʃ/"
+    translation: "basura"
+    definition: "things you throw away; informally, it also means that something is very bad"
+    example: "Don't forget to take the rubbish out before you leave for work."
+    tags: ["sustantivo", "británico", "B2"]
+sections:
+  - title: "La rutina británica: mucho más que tea and biscuits"
+    type: explanation
+    content: |
+      Hablar de la rutina diaria en el Reino Unido tiene su propio vocabulario, y en el nivel B2
+      se espera que dejes atrás las palabras genéricas y uses los términos que un británico usaría.
+
+      Algunas claves culturales y lingüísticas:
+
+      1. El "commute" es un tema de conversación nacional. Los británicos hablan constantemente
+         de trenes retrasados y del tráfico: "How was your commute?" es una pregunta habitual
+         un lunes por la mañana.
+
+      2. "Lie-in" y "fortnight" son marcadores claros de inglés británico. Un estadounidense
+         diría "to sleep in" y "two weeks"; en Londres escucharás "I had a lie-in" y
+         "see you in a fortnight".
+
+      3. El "kettle" es casi un electrodoméstico sagrado: "to put the kettle on" significa
+         literalmente encender el hervidor, pero culturalmente significa "vamos a tomar un té
+         y charlar" o "vamos a calmarnos".
+
+      4. "Rubbish" sustituye al americano "garbage/trash". Fíjate también en "bin" (bote de
+         basura) y en la frase "to take the rubbish out" (sacar la basura).
+
+      5. "Run out of" es esencial para la vida doméstica: We've run out of bread / teabags /
+         washing-up liquid. Observa que en británico se prefiere el present perfect para estas
+         situaciones recientes: "We've run out of milk" y no "We ran out of milk".
+    tips:
+      - "Usa 'do the washing-up' (lavar los platos) y 'do the hoovering' (aspirar): los británicos dicen 'hoover' por la marca Hoover."
+      - "'Rubbish' también funciona como adjetivo informal: 'The weather was rubbish' (el clima estuvo pésimo)."
+      - "Recuerda que 'fortnight' viene de 'fourteen nights': catorce noches, dos semanas."
+exercises:
+  - type: translate
+    prompt: "Traduce al inglés británico, sin contracciones y sin punto final: 'Nos hemos quedado sin leche.'"
+    answer: "We have run out of milk"
+    explanation: "En británico se prefiere el present perfect (have run out of) para una situación reciente con efecto en el presente."
+  - type: fill_blank
+    prompt: "On Sundays I love having a ___ — I never get up before ten."
+    answer: "lie-in"
+    explanation: "'Lie-in' es el término británico para quedarse en la cama hasta tarde; el americano sería 'sleeping in'."
+  - type: multiple_choice
+    prompt: "¿Cuál es la palabra británica para un periodo de dos semanas?"
+    options: ["fortnight", "biweek", "fourteener", "double week"]
+    answer: "fortnight"
+    explanation: "'Fortnight' viene de 'fourteen nights' y es de uso cotidiano en el Reino Unido."
+  - type: multiple_choice
+    prompt: "Elige la opción más británica: 'Could you take the ___ out? The bin is overflowing.'"
+    options: ["rubbish", "garbage", "trash"]
+    answer: "rubbish"
+    explanation: "'Garbage' y 'trash' son americanos; en el Reino Unido se dice 'rubbish' y el contenedor es el 'bin'."
+  - type: reorder
+    prompt: "Ordena las palabras para formar una frase natural: 'kettle / the / put / I'll / on'"
+    answer: "I'll put the kettle on"
+    explanation: "'To put the kettle on' es la expresión fija para poner a hervir el agua del té."
+notes: "Lección de apertura del Bloque 1. Fíjate especialmente en los términos marcados como británicos: aparecerán de nuevo en el examen 07."

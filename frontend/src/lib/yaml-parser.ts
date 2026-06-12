@@ -1,4 +1,5 @@
 import yaml from 'js-yaml'
+import { LANGUAGE_CODES } from '@/lib/languages'
 import type { LessonYAML } from '@/types/database'
 
 export function parseLesson(yamlString: string): LessonYAML | null {
@@ -11,7 +12,7 @@ export function parseLesson(yamlString: string): LessonYAML | null {
   }
 }
 
-const VALID_LANGUAGES = ['en', 'pt']
+const VALID_LANGUAGES: string[] = LANGUAGE_CODES
 const VALID_LESSON_TYPES = ['vocabulary', 'phonetics', 'grammar', 'reading', 'conversation']
 const VALID_EXERCISE_TYPES = ['fill_blank', 'translate', 'multiple_choice', 'reorder']
 
@@ -19,9 +20,9 @@ export function validateLesson(lesson: LessonYAML): string[] {
   const errors: string[] = []
 
   if (!lesson.title) errors.push('Falta el campo "title"')
-  if (!lesson.language) errors.push('Falta el campo "language" (en | pt)')
+  if (!lesson.language) errors.push(`Falta el campo "language" (${VALID_LANGUAGES.join(' | ')})`)
   else if (!VALID_LANGUAGES.includes(lesson.language)) {
-    errors.push(`"language" debe ser en | pt, no "${lesson.language}"`)
+    errors.push(`"language" debe ser ${VALID_LANGUAGES.join(' | ')}, no "${lesson.language}"`)
   }
   if (!lesson.type) errors.push('Falta el campo "type"')
   else if (!VALID_LESSON_TYPES.includes(lesson.type)) {

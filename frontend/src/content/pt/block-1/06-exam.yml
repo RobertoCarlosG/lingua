@@ -1,0 +1,100 @@
+title: "Bloque 1 · 06 — Examen: Português básico I"
+language: pt
+level: A1
+type: vocabulary
+objectives:
+  - "Evaluar todo el contenido del Bloque 1: saludos, fonética, ser/estar/ter, números, días y comida"
+  - "Demostrar al menos 8 de 10 aciertos para aprobar el bloque"
+sections:
+  - title: "Instrucciones y mini-repaso"
+    type: explanation
+    content: |
+      Este es el examen del Bloque 1. Responde los ejercicios sin consultar
+      las lecciones. Necesitas al menos 8 de cada 10 aciertos para aprobar.
+
+      Mini-repaso antes de empezar:
+
+      1. Saludos: oi, bom dia, boa tarde, tudo bem?, prazer, tchau.
+         Recuerda: los hombres dicen 'obrigado' y las mujeres 'obrigada'.
+      2. Fonética: 'ão' es nasal (não, coração), 'nh' = ñ (banho),
+         'lh' = ll (trabalho), la r inicial suena /h/ (rio),
+         y di/ti suenan /dʒi/ y /tʃi/ (dia, tia).
+      3. Verbos: eu sou / estou / tenho; você é / está / tem.
+         En Brasil 'hay' se dice con TER: 'tem um problema'.
+      4. Números y días: três, dez, vinte; los días laborables son 'feiras'
+         (segunda-feira = lunes). La hora se pregunta en plural: 'Que horas são?'.
+      5. Restaurante: cardápio (menú), conta (cuenta), suco (jugo),
+         sobremesa (postre, falso amigo).
+    tips:
+      - "Lee cada pregunta con calma: muchas trampas son falsos amigos o detalles de género."
+      - "Si no apruebas, repasa las lecciones 01 a 05 y vuelve a intentarlo."
+exercises:
+  - type: translate
+    prompt: "Traduce al portugués: 'buenas tardes'"
+    answer: "boa tarde"
+    explanation: "'Tarde' es femenino: 'boa tarde', no 'bom tarde'."
+  - type: multiple_choice
+    prompt: "Un hombre quiere dar las gracias. ¿Qué dice?"
+    options:
+      - "obrigada"
+      - "obrigado"
+      - "obrigados"
+    answer: "obrigado"
+    explanation: "El agradecimiento concuerda con quien habla: los hombres dicen 'obrigado'."
+  - type: fill_blank
+    prompt: "Completa el saludo: 'Oi, tudo ___?'"
+    answer: "bem"
+    explanation: "'Tudo bem?' es el saludo-pregunta más común de Brasil."
+  - type: multiple_choice
+    prompt: "¿Cómo suena la 'r' inicial de 'rio' en Brasil?"
+    options:
+      - "como la 'r' fuerte del español"
+      - "como una 'j' suave aspirada /h/"
+      - "como una 'd'"
+    answer: "como una 'j' suave aspirada /h/"
+    explanation: "La r inicial brasileña es /h/: 'rio' /ˈhiw/."
+  - type: translate
+    prompt: "Traduce al portugués: 'corazón'"
+    answer: "coração"
+    explanation: "La terminación '-zón' del español corresponde a '-ção': coração."
+  - type: fill_blank
+    prompt: "Completa con la forma correcta de SER: 'Eu ___ do México.'"
+    answer: "sou"
+    explanation: "Origen → ser: 'eu sou do México'."
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'hay un problema' en el portugués coloquial de Brasil?"
+    options:
+      - "Tem um problema"
+      - "É um problema"
+      - "Está um problema"
+    answer: "Tem um problema"
+    explanation: "En Brasil la existencia se expresa con 'ter': 'tem' = 'hay'."
+  - type: fill_blank
+    prompt: "Completa con la forma correcta de TER: 'Nós ___ um carro.'"
+    answer: "temos"
+    explanation: "'Nós temos' = 'nosotros tenemos'."
+  - type: multiple_choice
+    prompt: "'Segunda-feira' corresponde en español a..."
+    options:
+      - "domingo"
+      - "lunes"
+      - "martes"
+    answer: "lunes"
+    explanation: "El domingo cuenta como primer día; el lunes es la 'segunda' feira."
+  - type: translate
+    prompt: "Escribe en portugués el número 3"
+    answer: "três"
+    explanation: "'Três', con acento circunflejo."
+  - type: fill_blank
+    prompt: "Para pedir el menú en un restaurante: 'O ___, por favor.'"
+    answer: "cardápio"
+    explanation: "'Cardápio' es la palabra brasileña para la carta o menú."
+  - type: multiple_choice
+    prompt: "En portugués, 'sobremesa' significa..."
+    options:
+      - "postre"
+      - "charla después de comer"
+      - "servilleta"
+    answer: "postre"
+    explanation: "Falso amigo: en portugués 'sobremesa' es el postre."
+notes: "Aprobado con 8/10 aciertos o más. Si fallas, repasa las lecciones 01-05 del bloque."

@@ -1,3 +1,5 @@
+import type { Language } from '@/lib/languages'
+
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
 
 export interface DictionaryMeaning {
@@ -15,8 +17,8 @@ export interface DictionaryEntry {
   translation_suggestion: string | null
 }
 
-export async function lookupWord(word: string): Promise<DictionaryEntry | null> {
-  const res = await fetch(`${API_URL}/api/dictionary/${encodeURIComponent(word)}`)
+export async function lookupWord(word: string, language: Language = 'en'): Promise<DictionaryEntry | null> {
+  const res = await fetch(`${API_URL}/api/dictionary/${language}/${encodeURIComponent(word)}`)
   if (!res.ok) return null
   return res.json()
 }

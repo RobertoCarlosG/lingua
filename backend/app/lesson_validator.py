@@ -2,6 +2,7 @@
 
 import yaml
 
+# Espejo del registro del frontend (frontend/src/lib/languages.ts)
 VALID_LANGUAGES = {"en", "pt"}
 VALID_LESSON_TYPES = {"vocabulary", "phonetics", "grammar", "reading", "conversation"}
 VALID_EXERCISE_TYPES = {"fill_blank", "translate", "multiple_choice", "reorder"}
@@ -26,10 +27,11 @@ def validate_lesson(yaml_content: str) -> dict:
     if not lesson.get("title"):
         errors.append('Falta el campo "title"')
     language = lesson.get("language")
+    valid_langs = " | ".join(sorted(VALID_LANGUAGES))
     if not language:
-        errors.append('Falta el campo "language" (en | pt)')
+        errors.append(f'Falta el campo "language" ({valid_langs})')
     elif language not in VALID_LANGUAGES:
-        errors.append(f'"language" debe ser en | pt, no "{language}"')
+        errors.append(f'"language" debe ser {valid_langs}, no "{language}"')
     lesson_type = lesson.get("type")
     if not lesson_type:
         errors.append('Falta el campo "type"')

@@ -1,0 +1,113 @@
+title: "Bloque 1 · 03 — Ser, estar e ter"
+language: pt
+level: A1
+type: grammar
+objectives:
+  - "Conjugar ser, estar y ter en presente de indicativo"
+  - "Elegir entre ser y estar igual que en español, con sus pequeñas diferencias"
+  - "Usar 'ter' para expresar existencia: 'tem um problema' = 'hay un problema'"
+vocabulary:
+  - word: "sou"
+    ipa: "/ˈsow/"
+    translation: "soy"
+    definition: "Primera persona de 'ser'. Se usa para identidad, origen y profesión, igual que en español: 'eu sou mexicano'."
+    example: "Eu sou do México."
+    tags: ["verbo", "ser", "A1"]
+  - word: "é"
+    ipa: "/ˈɛ/"
+    translation: "es"
+    definition: "Tercera persona de 'ser'. También se usa con 'você': 'você é' = 'tú eres'. Con acento agudo; 'e' sin acento significa 'y'."
+    example: "Ela é professora."
+    tags: ["verbo", "ser", "A1"]
+  - word: "estou"
+    ipa: "/isˈtow/"
+    translation: "estoy"
+    definition: "Primera persona de 'estar'. Estados y ubicación, como en español. En el habla coloquial se acorta a 'tô'."
+    example: "Eu estou em casa agora."
+    tags: ["verbo", "estar", "A1"]
+  - word: "está"
+    ipa: "/isˈta/"
+    translation: "está, estás"
+    definition: "Tercera persona de 'estar', también para 'você'. Coloquialmente se acorta a 'tá': 'tá bom' = 'está bien'."
+    example: "Você está cansado?"
+    tags: ["verbo", "estar", "A1"]
+  - word: "tenho"
+    ipa: "/ˈtẽɲu/"
+    translation: "tengo"
+    definition: "Primera persona de 'ter' (tener). Ojo a la pronunciación: 'nh' suena como la 'ñ' española, /ˈtẽɲu/."
+    example: "Eu tenho dois irmãos."
+    tags: ["verbo", "ter", "A1"]
+  - word: "tem"
+    ipa: "/ˈtẽj̃/"
+    translation: "tiene; hay"
+    definition: "Tercera persona de 'ter'. Además de 'tiene', en Brasil expresa existencia: 'tem um problema' = 'hay un problema'."
+    example: "Tem um restaurante bom aqui perto."
+    tags: ["verbo", "ter", "A1"]
+sections:
+  - title: "Presente de ser, estar y ter"
+    type: explanation
+    content: |
+      Buenas noticias: el portugués usa SER y ESTAR igual que el español
+      (identidad/origen vs. estado/ubicación). Solo hay que aprender las formas.
+
+      SER          ESTAR          TER (tener)
+      eu sou       eu estou       eu tenho
+      você/ele é   você/ele está  você/ele tem
+      nós somos    nós estamos    nós temos
+      eles são     eles estão     eles têm
+
+      Ejemplos:
+      - Eu sou mexicano. (origen → ser)
+      - Eu estou feliz hoje. (estado temporal → estar)
+      - Eu tenho 25 anos. (¡la edad se dice con TER, igual que en español con tener!)
+
+      Nota: 'têm' (ellos) lleva acento circunflejo solo para distinguirse de
+      'tem' (él/ella); se pronuncian igual.
+    tips:
+      - "'Você' se conjuga en tercera persona: 'você é', 'você está', 'você tem' (como 'usted' en español, aunque no sea formal)."
+      - "En el habla rápida los brasileños dicen 'tô' (estou) y 'tá' (está): 'Tô bem, e você?'."
+  - title: "Ter vs. haber: así se dice 'hay' en Brasil"
+    type: explanation
+    content: |
+      La gran diferencia con el español está en cómo expresar existencia.
+      En español usamos 'haber' ('hay un problema'); en el portugués hablado
+      de Brasil se usa TER:
+
+      - Tem um problema. = Hay un problema.
+      - Tem muita gente na rua. = Hay mucha gente en la calle.
+      - Não tem água. = No hay agua.
+
+      El verbo 'haver' ('há um problema') existe y es correcto, pero suena
+      formal o literario. En conversación, los brasileños dicen 'tem'.
+    tips:
+      - "Para preguntar si hay algo: '¿Tem banheiro aqui?' = '¿Hay baño aquí?'."
+      - "No traduzcas 'hay' literalmente con 'haver' al hablar: di 'tem' y sonarás natural."
+exercises:
+  - type: fill_blank
+    prompt: "Completa con la forma correcta de SER: 'Eu ___ do México.'"
+    answer: "sou"
+    explanation: "Origen → ser: 'eu sou', igual que 'yo soy'."
+  - type: fill_blank
+    prompt: "Completa con la forma correcta de ESTAR: 'Ela ___ cansada hoje.'"
+    answer: "está"
+    explanation: "Estado temporal → estar: 'ela está cansada'."
+  - type: multiple_choice
+    prompt: "¿Cómo dice un brasileño, en el habla de todos los días, 'hay un problema'?"
+    options:
+      - "Tem um problema"
+      - "É um problema"
+      - "Está um problema"
+    answer: "Tem um problema"
+    explanation: "En Brasil la existencia se expresa con 'ter': 'tem' = 'hay'."
+  - type: translate
+    prompt: "Traduce al portugués: 'yo tengo'"
+    answer: "eu tenho"
+    explanation: "Primera persona de 'ter'. Recuerda que 'nh' suena como 'ñ': /ˈtẽɲu/."
+  - type: multiple_choice
+    prompt: "Elige la forma correcta: 'Você ___ brasileiro?'"
+    options:
+      - "é"
+      - "está"
+      - "tem"
+    answer: "é"
+    explanation: "Nacionalidad → ser, y 'você' se conjuga en tercera persona: 'você é'."

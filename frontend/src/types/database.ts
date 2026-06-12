@@ -1,4 +1,6 @@
-export type Language = 'en' | 'pt'
+import type { Language } from '@/lib/languages'
+
+export type { Language }
 
 export type WordStatus = 'new' | 'learning' | 'known' | 'mastered'
 

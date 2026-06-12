@@ -1,0 +1,111 @@
+title: "Bloque 2 · 01 — The workplace: jobs and roles"
+language: en
+level: B2
+type: vocabulary
+objectives:
+  - "Aprender vocabulario británico esencial del entorno laboral"
+  - "Distinguir términos británicos de sus equivalentes americanos (CV vs résumé, annual leave vs vacation)"
+  - "Usar con naturalidad palabras como redundancy, payslip y line manager en contextos profesionales"
+vocabulary:
+  - word: "CV"
+    ipa: "/ˌsiː ˈviː/"
+    translation: "currículum"
+    definition: "A document that describes your education, qualifications and work experience. British speakers say CV, not résumé."
+    example: "Please send your CV and a cover letter to our HR department."
+    tags: ["sustantivo", "B2"]
+  - word: "annual leave"
+    ipa: "/ˌænjuəl ˈliːv/"
+    translation: "vacaciones (días de descanso pagados)"
+    definition: "The paid days off work that an employee receives every year."
+    example: "I have booked two weeks of annual leave for my holiday in August."
+    tags: ["sustantivo", "B2"]
+  - word: "redundancy"
+    ipa: "/rɪˈdʌndənsi/"
+    translation: "despido por reestructuración"
+    definition: "The situation when you lose your job because your employer no longer needs that position."
+    example: "The factory announced two hundred redundancies after losing the contract."
+    tags: ["sustantivo", "B2"]
+  - word: "payslip"
+    ipa: "/ˈpeɪslɪp/"
+    translation: "recibo de nómina"
+    definition: "A document that shows how much you have been paid and what has been deducted."
+    example: "Check your payslip carefully to see how much tax you have paid this month."
+    tags: ["sustantivo", "B2"]
+  - word: "colleague"
+    ipa: "/ˈkɒliːɡ/"
+    translation: "colega, compañero de trabajo"
+    definition: "A person you work with, especially in a professional job."
+    example: "My colleagues organised a small party for my last day at the office."
+    tags: ["sustantivo", "B2"]
+  - word: "deadline"
+    ipa: "/ˈdedlaɪn/"
+    translation: "fecha límite"
+    definition: "The time or date by which a task must be finished."
+    example: "We are working overtime to meet the deadline on Friday."
+    tags: ["sustantivo", "B2"]
+  - word: "overtime"
+    ipa: "/ˈəʊvətaɪm/"
+    translation: "horas extra"
+    definition: "Time that you work beyond your normal working hours, usually paid at a higher rate."
+    example: "She did six hours of overtime last week to finish the report."
+    tags: ["sustantivo", "B2"]
+  - word: "line manager"
+    ipa: "/ˈlaɪn ˌmænɪdʒə/"
+    translation: "jefe directo, supervisor inmediato"
+    definition: "The person who is directly responsible for managing your work."
+    example: "If you want to request annual leave, speak to your line manager first."
+    tags: ["sustantivo", "B2"]
+sections:
+  - title: "Vocabulario laboral británico: lo que no te enseñan las series americanas"
+    type: explanation
+    content: |
+      En el Reino Unido el vocabulario del trabajo tiene diferencias importantes
+      respecto al inglés americano, y en un contexto profesional británico se
+      espera que uses las formas locales:
+
+      - CV (curriculum vitae), nunca "résumé". En una oferta británica leerás
+        "send your CV", jamás "send your resume".
+      - annual leave = tus días de vacaciones pagadas. "Holiday" se usa en el
+        día a día ("I'm on holiday next week"), mientras que "annual leave" es
+        el término formal de recursos humanos. Los americanos dicen "vacation".
+      - redundancy = perder el empleo porque la empresa elimina tu puesto
+        (reestructuración, recortes). No es lo mismo que "being sacked/fired"
+        (despido por mal desempeño): la redundancy no es culpa tuya. El verbo
+        es "to be made redundant".
+      - line manager = tu jefe directo. En EE. UU. se dice más "supervisor" o
+        simplemente "boss"; en empresas británicas "line manager" es el término
+        estándar en documentos y correos.
+      - payslip = el recibo que detalla tu sueldo, impuestos (income tax) y
+        cotizaciones (National Insurance).
+
+      Otros términos como colleague, deadline y overtime son comunes a ambas
+      variedades, pero fíjate en la pronunciación británica no rótica:
+      colleague /ˈkɒliːɡ/, overtime /ˈəʊvətaɪm/ (la "r" final de manager o la
+      de overtime no se pronuncia: /ˈmænɪdʒə/).
+    tips:
+      - "Memoriza 'to be made redundant' como bloque: 'I was made redundant last year' = me despidieron por recorte de personal."
+      - "En correos formales británicos escribe 'annual leave', no 'vacations': 'I will be on annual leave from 3 to 14 July.'"
+      - "Cuidado con 'colleague': se pronuncia /ˈkɒliːɡ/, con dos sílabas, no tres."
+exercises:
+  - type: translate
+    prompt: "Traduce al inglés británico la palabra 'currículum' (el documento que envías al solicitar empleo, 2 letras)."
+    answer: "CV"
+    explanation: "En el Reino Unido se dice CV (curriculum vitae); 'résumé' es la forma americana."
+  - type: fill_blank
+    prompt: "Completa: 'I will be on ___ leave from 1 to 12 September, so my colleague will cover my projects.'"
+    answer: "annual"
+    explanation: "Annual leave es el término formal británico para las vacaciones pagadas."
+  - type: multiple_choice
+    prompt: "¿Qué palabra describe la situación en la que pierdes tu empleo porque la empresa elimina tu puesto?"
+    options: ["redundancy", "resignation", "promotion", "overtime"]
+    answer: "redundancy"
+    explanation: "Redundancy es el despido por reestructuración; resignation es renunciar tú mismo."
+  - type: multiple_choice
+    prompt: "Completa con el término británico estándar: 'You should discuss your workload with your ___ before accepting new projects.'"
+    options: ["line manager", "payslip", "deadline", "applicant"]
+    answer: "line manager"
+    explanation: "El line manager es tu jefe directo, la persona que supervisa tu trabajo."
+  - type: translate
+    prompt: "Traduce al inglés: 'Mi colega trabaja horas extra cada viernes.' (usa 'overtime' y empieza con 'My colleague')"
+    answer: "My colleague works overtime every Friday."
+    explanation: "Overtime funciona como sustantivo incontable: work overtime, do overtime."

@@ -1,0 +1,105 @@
+title: "Bloque 4 · 04 — Phrasal verbs at C1"
+language: en
+level: C1
+type: vocabulary
+objectives:
+  - "Dominar ocho phrasal verbs avanzados frecuentes en prensa, política y negocios."
+  - "Distinguir matices: suavizar (water down) no es lo mismo que omitir (gloss over)."
+  - "Usar phrasal verbs en registro neutro-formal, no solo en conversación casual."
+vocabulary:
+  - word: "phase out"
+    ipa: "/ˌfeɪz ˈaʊt/"
+    translation: "eliminar gradualmente"
+    definition: "To stop using or providing something gradually, in planned stages."
+    example: "The government plans to phase out new petrol cars by 2035."
+    tags: ["phrasal verb", "C1"]
+  - word: "factor in"
+    ipa: "/ˌfæktər ˈɪn/"
+    translation: "tomar en cuenta (en un cálculo o decisión)"
+    definition: "To include something as a relevant element when making a calculation or decision."
+    example: "Remember to factor in VAT when you draw up the final quote."
+    tags: ["phrasal verb", "C1"]
+  - word: "boil down to"
+    ipa: "/ˌbɔɪl ˈdaʊn tə/"
+    translation: "reducirse a; resumirse en"
+    definition: "To have something as its most basic or essential point."
+    example: "All the arguments about the merger boil down to one question: who keeps control?"
+    tags: ["phrasal verb", "C1"]
+  - word: "gloss over"
+    ipa: "/ˌɡlɒs ˈəʊvə/"
+    translation: "pasar por alto; restar importancia a"
+    definition: "To avoid discussing something embarrassing or problematic, or to treat it as unimportant."
+    example: "The annual report glosses over the scheme's most serious failures."
+    tags: ["phrasal verb", "C1"]
+  - word: "hammer out"
+    ipa: "/ˌhæmər ˈaʊt/"
+    translation: "negociar arduamente (un acuerdo)"
+    definition: "To reach an agreement or solution after long, difficult discussion."
+    example: "The unions and management finally hammered out a deal at four in the morning."
+    tags: ["phrasal verb", "C1"]
+  - word: "single out"
+    ipa: "/ˌsɪŋɡl ˈaʊt/"
+    translation: "señalar; destacar a alguien (para bien o para mal)"
+    definition: "To choose one person or thing from a group for special attention, praise or criticism."
+    example: "The inspector singled out two departments for particular praise."
+    tags: ["phrasal verb", "C1"]
+  - word: "water down"
+    ipa: "/ˌwɔːtə ˈdaʊn/"
+    translation: "diluir; suavizar (una propuesta o ley)"
+    definition: "To make a proposal, law or statement weaker and less effective than originally intended."
+    example: "The bill was watered down considerably before it got through Parliament."
+    tags: ["phrasal verb", "C1"]
+  - word: "tide over"
+    ipa: "/ˌtaɪd ˈəʊvə/"
+    translation: "sacar de un apuro (temporalmente)"
+    definition: "To help someone get through a difficult period, especially with money."
+    example: "Could you lend me fifty quid to tide me over until payday?"
+    tags: ["phrasal verb", "C1"]
+sections:
+  - title: "Phrasal verbs que sí aparecen en los periódicos"
+    type: explanation
+    content: |
+      Mito común: los phrasal verbs son siempre informales y en contextos serios hay que sustituirlos por
+      verbos latinos. Falso a nivel C1. Los ocho de esta lección aparecen a diario en la BBC, The Guardian
+      y el Financial Times: 'ministers hammered out a compromise', 'the directive was watered down',
+      'coal is being phased out'.
+
+      Claves para usarlos bien:
+
+      1. Muchos son separables: 'water the proposal down' o 'water down the proposal'. Pero si el objeto
+         es un pronombre, va obligatoriamente en medio: 'water it down', nunca 'water down it'.
+      2. 'Boil down to' y 'tide over' tienen estructuras fijas: 'it boils down to + sustantivo/pregunta' y
+         'tide somebody over (until...)'. Apréndelas como plantillas completas.
+      3. El matiz importa: 'gloss over' implica esconder algo incómodo; 'water down' implica debilitar algo
+         a propósito; 'single out' puede ser para elogiar o para criticar, según el contexto.
+
+      En RP, la pronunciación une las palabras: la r final de 'factor' y 'hammer' solo suena porque la
+      partícula siguiente empieza con vocal (linking r): /ˌfæktər ˈɪn/, /ˌhæmər ˈaʊt/.
+    tips:
+      - "Aprende cada phrasal verb dentro de una frase periodística completa, no aislado."
+      - "Con pronombre, la partícula va al final: 'phase it out', 'factor it in', 'water it down'."
+      - "'Tide somebody over' casi siempre habla de dinero y va seguido de 'until'."
+exercises:
+  - type: fill_blank
+    prompt: "The UK plans to ___ out coal-fired power stations entirely. (eliminar gradualmente)"
+    answer: "phase"
+    explanation: "'Phase out' describe una eliminación planificada y por etapas."
+  - type: multiple_choice
+    prompt: "¿Qué phrasal verb significa 'negociar arduamente hasta cerrar un acuerdo'?"
+    options: ["hammer out", "gloss over", "water down", "single out"]
+    answer: "hammer out"
+    explanation: "'Hammer out a deal/an agreement' evoca el esfuerzo de forjar algo a martillazos."
+  - type: translate
+    prompt: "Traduce al inglés con un phrasal verb: 'tomar en cuenta' (en un cálculo)"
+    answer: "factor in"
+    explanation: "'Factor in' significa incluir un elemento en un cálculo o una decisión."
+  - type: fill_blank
+    prompt: "In the end, the whole dispute ___ down to a disagreement over money."
+    answer: "boils"
+    explanation: "'It all boils down to...' presenta la esencia de un asunto complejo."
+  - type: multiple_choice
+    prompt: "Si un informe 'glosses over' los problemas de un proyecto, el informe..."
+    options: ["los menciona de pasada para restarles importancia", "los analiza en profundidad", "los resuelve", "los traduce a otro idioma"]
+    answer: "los menciona de pasada para restarles importancia"
+    explanation: "'Gloss over' es pasar por encima de algo incómodo sin tratarlo honestamente."
+notes: "Busca estos phrasal verbs en titulares reales de la BBC: verlos en contexto periodístico fija el registro correcto."
