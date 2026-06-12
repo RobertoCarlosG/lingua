@@ -92,7 +92,7 @@ export function DashboardPage() {
       {stats.due > 0 && (
         <Link
           to="/review"
-          className={`flex items-center justify-between glass p-4 transition-all hover:bg-white/[0.08] border ${config.theme.cardHover.replace('hover:', '')}`}
+          className={`flex items-center justify-between glass p-4 transition-all hover:bg-white/[0.08] border ${config.theme.border}`}
         >
           <div className="flex items-center gap-3">
             <Brain size={18} className={config.theme.accent} />
@@ -184,7 +184,8 @@ export function DashboardPage() {
               }`}
             >
               <p className="text-xs text-white/40 mb-1">{day}</p>
-              <div className={`w-2 h-2 rounded-full mx-auto ${count > 0 ? chart.dot ?? '' : ''}`}
+              <div
+                className="w-2 h-2 rounded-full mx-auto"
                 style={{ backgroundColor: count > 0 ? chart.stroke : 'rgba(255,255,255,0.2)' }}
               />
             </div>

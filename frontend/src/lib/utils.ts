@@ -4,8 +4,8 @@ export function cn(...classes: (string | boolean | undefined | null)[]): string 
   return classes.filter(Boolean).join(' ')
 }
 
-export function formatDate(dateString: string): string {
-  return new Intl.DateTimeFormat('es-MX', {
+export function formatDate(dateString: string, locale = 'es-MX'): string {
+  return new Intl.DateTimeFormat(locale, {
     day: 'numeric',
     month: 'short',
     year: 'numeric',

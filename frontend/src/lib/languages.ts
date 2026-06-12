@@ -20,10 +20,14 @@ export interface LanguageTheme {
   accent: string
   /** Borde al pasar el cursor por tarjetas de vocabulario */
   cardHover: string
+  /** Borde estático de acento (banners, contenedores destacados) */
+  border: string
   /** Botón de acción primaria de la página */
   button: string
   /** Estado activo en el selector de idioma */
   toggleActive: string
+  /** Relleno de barras de progreso */
+  progress: string
 }
 
 export interface LanguageConfig {
@@ -50,8 +54,10 @@ export const LEARNING_LANGUAGES = {
       gradient: 'text-gradient-en',
       accent: 'text-blue-300',
       cardHover: 'hover:border-blue-500/20',
+      border: 'border-blue-500/20',
       button: 'bg-blue-500/15 border-blue-500/25 text-blue-300 hover:bg-blue-500/25',
       toggleActive: 'bg-blue-500/20 border border-blue-500/30 text-blue-300 shadow-sm',
+      progress: 'bg-blue-500/70',
     },
     dictionary: { lookup: true, generate: true },
   },
@@ -64,8 +70,10 @@ export const LEARNING_LANGUAGES = {
       gradient: 'text-gradient-pt',
       accent: 'text-purple-300',
       cardHover: 'hover:border-purple-500/20',
+      border: 'border-purple-500/20',
       button: 'bg-purple-500/15 border-purple-500/25 text-purple-300 hover:bg-purple-500/25',
       toggleActive: 'bg-purple-500/20 border border-purple-500/30 text-purple-300 shadow-sm',
+      progress: 'bg-purple-500/70',
     },
     dictionary: { lookup: true, generate: false },
   },

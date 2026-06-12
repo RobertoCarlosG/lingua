@@ -1,7 +1,9 @@
 import { useEffect, useState, useRef } from 'react'
 import { Plus, FileText, ChevronRight, Volume2, CheckCircle, Circle, AlertCircle, Wand2, Loader2, Upload, BookPlus } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { generateLessonYaml } from '@/lib/dictionary'
 import { lessonVocabToWords } from '@/lib/lesson-to-vocab'
+import { languageConfig, type Language } from '@/lib/languages'
 import { seedLessons } from '@/lib/seed-lessons'
 import { supabase } from '@/lib/supabase'
 import { useStore } from '@/lib/store'
@@ -19,20 +21,16 @@ function IPABadge({ ipa }: { ipa: string }) {
   )
 }
 
-function VocabCard({ item, language }: { item: VocabItem; language: 'en' | 'pt' }) {
-  const isEN = language === 'en'
+function VocabCard({ item, language }: { item: VocabItem; language: Language }) {
+  const theme = languageConfig(language).theme
   return (
-    <div className={cn(
-      'glass-sm p-4 space-y-2',
-      isEN ? 'hover:border-blue-500/20' : 'hover:border-purple-500/20',
-      'transition-all'
-    )}>
+    <div className={cn('glass-sm p-4 space-y-2', theme.cardHover, 'transition-all')}>
       <div className="flex items-start justify-between gap-2">
         <div>
           <p className="font-semibold text-white text-base">{item.word}</p>
           {item.ipa && <IPABadge ipa={item.ipa} />}
         </div>
-        <p className={cn('text-sm font-medium shrink-0', isEN ? 'text-blue-300' : 'text-purple-300')}>
+        <p className={cn('text-sm font-medium shrink-0', theme.accent)}>
           {item.translation}
         </p>
       </div>
@@ -54,6 +52,7 @@ function VocabCard({ item, language }: { item: VocabItem; language: 'en' | 'pt' 
 }
 
 function ExerciseBlock({ exercise, index }: { exercise: Exercise; index: number }) {
+  const { t } = useTranslation()
   const [answer, setAnswer] = useState('')
   const [revealed, setRevealed] = useState(false)
   const [correct, setCorrect] = useState<boolean | null>(null)
@@ -93,7 +92,7 @@ function ExerciseBlock({ exercise, index }: { exercise: Exercise; index: number 
       ) : (
         <input
           className="glass-input w-full px-3 py-2 text-sm"
-          placeholder="Tu respuesta..."
+          placeholder={t('lessons.yourAnswer')}
           value={answer}
           onChange={e => { setAnswer(e.target.value); setRevealed(false); setCorrect(null) }}
           onKeyDown={e => e.key === 'Enter' && checkAnswer()}
@@ -105,12 +104,12 @@ function ExerciseBlock({ exercise, index }: { exercise: Exercise; index: number 
           onClick={checkAnswer}
           className="px-3 py-1.5 rounded-lg text-xs bg-white/[0.08] hover:bg-white/[0.14] border border-white/10 text-white/60 hover:text-white transition-all"
         >
-          Verificar
+          {t('lessons.check')}
         </button>
         {revealed && (
           <div className={cn('flex items-center gap-1.5 text-xs', correct ? 'text-green-400' : 'text-red-400')}>
             {correct ? <CheckCircle size={13} /> : <Circle size={13} />}
-            {correct ? '¡Correcto!' : `Respuesta: ${exercise.answer}`}
+            {correct ? t('lessons.correct') : t('lessons.answer', { answer: exercise.answer })}
           </div>
         )}
       </div>
@@ -123,20 +122,21 @@ function ExerciseBlock({ exercise, index }: { exercise: Exercise; index: number 
 }
 
 function LessonRenderer({ lesson }: { lesson: LessonYAML }) {
-  const isEN = lesson.language === 'en'
+  const { t } = useTranslation()
+  const config = languageConfig(lesson.language)
 
   return (
     <div className="space-y-6 animate-fade-in">
       <div>
         <div className="flex items-center gap-2 mb-1">
-          <span className={isEN ? 'lang-badge-en' : 'lang-badge-pt'}>
-            {isEN ? 'English' : 'Português'} · {lesson.level}
+          <span className={config.theme.badge}>
+            {config.label} · {lesson.level}
           </span>
           <span className="text-xs px-2 py-0.5 rounded bg-white/[0.06] text-white/40 border border-white/[0.08]">
             {lesson.type}
           </span>
         </div>
-        <h2 className={`text-xl font-semibold mt-2 ${isEN ? 'text-gradient-en' : 'text-gradient-pt'}`}>
+        <h2 className={`text-xl font-semibold mt-2 ${config.theme.gradient}`}>
           {lesson.title}
         </h2>
         {lesson.objectives && (
@@ -174,7 +174,7 @@ function LessonRenderer({ lesson }: { lesson: LessonYAML }) {
 
       {lesson.vocabulary && lesson.vocabulary.length > 0 && (
         <div>
-          <h3 className="text-sm font-medium text-white/50 mb-3">Vocabulario ({lesson.vocabulary.length} palabras)</h3>
+          <h3 className="text-sm font-medium text-white/50 mb-3">{t('lessons.vocabSection', { count: lesson.vocabulary.length })}</h3>
           <div className="grid md:grid-cols-2 gap-2">
             {lesson.vocabulary.map((item, i) => (
               <VocabCard key={i} item={item} language={lesson.language} />
@@ -185,7 +185,7 @@ function LessonRenderer({ lesson }: { lesson: LessonYAML }) {
 
       {lesson.exercises && lesson.exercises.length > 0 && (
         <div>
-          <h3 className="text-sm font-medium text-white/50 mb-3">Ejercicios</h3>
+          <h3 className="text-sm font-medium text-white/50 mb-3">{t('lessons.exercises')}</h3>
           <div className="space-y-3">
             {lesson.exercises.map((ex, i) => (
               <ExerciseBlock key={i} exercise={ex} index={i} />
@@ -205,6 +205,7 @@ function LessonRenderer({ lesson }: { lesson: LessonYAML }) {
 
 function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
   const { activeLanguage } = useStore()
+  const { t } = useTranslation()
   const [yaml, setYaml] = useState(LESSON_TEMPLATE_VOCAB)
   const [errors, setErrors] = useState<string[]>([])
   const [template, setTemplate] = useState<'vocab' | 'phonetics'>('vocab')
@@ -218,7 +219,7 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
     const text = await file.text()
     setYaml(text)
     const parsed = parseLesson(text)
-    setErrors(parsed ? validateLesson(parsed) : ['YAML inválido — revisa la sintaxis'])
+    setErrors(parsed ? validateLesson(parsed) : [t('lessons.invalidYaml')])
     e.target.value = ''
   }
 
@@ -232,7 +233,7 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
       setYaml(generated)
       setGenWords('')
     } else {
-      setErrors(['No se pudo generar la lección — revisa las palabras o que el backend esté activo'])
+      setErrors([t('lessons.generateError')])
     }
     setGenerating(false)
   }
@@ -240,7 +241,7 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
   function handleRender() {
     const parsed = parseLesson(yaml)
     if (!parsed) {
-      setErrors(['YAML inválido — revisa la sintaxis'])
+      setErrors([t('lessons.invalidYaml')])
       return
     }
     const errs = validateLesson(parsed)
@@ -261,17 +262,17 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
   return (
     <div className="space-y-3">
       <div className="flex items-center gap-2 flex-wrap">
-        <span className="text-xs text-white/40">Plantilla:</span>
-        {(['vocab', 'phonetics'] as const).map(t => (
+        <span className="text-xs text-white/40">{t('lessons.template')}</span>
+        {(['vocab', 'phonetics'] as const).map(tpl => (
           <button
-            key={t}
-            onClick={() => loadTemplate(t)}
+            key={tpl}
+            onClick={() => loadTemplate(tpl)}
             className={cn(
               'text-xs px-2.5 py-1 rounded-lg border transition-all',
-              template === t ? 'bg-white/10 border-white/20 text-white' : 'border-white/10 text-white/40 hover:text-white/70'
+              template === tpl ? 'bg-white/10 border-white/20 text-white' : 'border-white/10 text-white/40 hover:text-white/70'
             )}
           >
-            {t === 'vocab' ? 'Vocabulario' : 'Fonética'}
+            {tpl === 'vocab' ? t('lessons.templateVocab') : t('lessons.templatePhonetics')}
           </button>
         ))}
         <span className="flex-1" />
@@ -288,15 +289,15 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
           className="glass-btn px-2.5 py-1 text-xs text-white/60 flex items-center gap-1.5"
         >
           <Upload size={12} />
-          Subir .yml
+          {t('lessons.upload')}
         </button>
       </div>
 
-      {activeLanguage === 'en' && (
+      {languageConfig(activeLanguage).dictionary.generate && (
         <div className="flex gap-1.5">
           <input
             className="glass-input flex-1 px-3 py-2 text-xs"
-            placeholder="Genera desde palabras: accomplish, endeavor, insight..."
+            placeholder={t('lessons.generatePlaceholder')}
             value={genWords}
             onChange={e => setGenWords(e.target.value)}
             onKeyDown={e => e.key === 'Enter' && handleGenerate()}
@@ -308,7 +309,7 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
             className="glass-btn px-3 text-xs text-blue-300 flex items-center gap-1.5 disabled:opacity-40 shrink-0"
           >
             {generating ? <Loader2 size={13} className="animate-spin" /> : <Wand2 size={13} />}
-            Generar YAML
+            {t('lessons.generate')}
           </button>
         </div>
       )}
@@ -335,7 +336,7 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
         onClick={handleRender}
         className="w-full py-2.5 rounded-xl text-sm font-medium bg-gradient-to-r from-blue-600/70 to-purple-600/70 hover:from-blue-600/90 hover:to-purple-600/90 border border-white/10 text-white transition-all"
       >
-        Renderizar lección
+        {t('lessons.render')}
       </button>
     </div>
   )
@@ -344,6 +345,7 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
 export function LessonsPage() {
   const { activeLanguage } = useStore()
   const { user } = useAuth()
+  const { t } = useTranslation()
   const [lessons, setLessons] = useState<Lesson[]>([])
   const [activeLesson, setActiveLesson] = useState<LessonYAML | null>(null)
   const [showEditor, setShowEditor] = useState(false)
@@ -410,7 +412,7 @@ export function LessonsPage() {
     }
   }
 
-  const isEN = activeLanguage === 'en'
+  const config = languageConfig(activeLanguage)
 
   return (
     <div className="space-y-5">
@@ -418,39 +420,37 @@ export function LessonsPage() {
         <>
           <div className="flex items-center justify-between">
             <div>
-              <h1 className={`text-2xl font-semibold ${isEN ? 'text-gradient-en' : 'text-gradient-pt'}`}>
-                Lecciones {isEN ? '🇺🇸' : '🇧🇷'}
+              <h1 className={`text-2xl font-semibold ${config.theme.gradient}`}>
+                {t('lessons.title')} {config.flag}
               </h1>
-              <p className="text-white/40 text-sm mt-0.5">Crea lecciones con YAML, se renderizan aquí</p>
+              <p className="text-white/40 text-sm mt-0.5">{t('lessons.subtitle')}</p>
             </div>
             <button
               onClick={() => setShowEditor(!showEditor)}
               className={cn(
                 'flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium border transition-all',
-                isEN
-                  ? 'bg-blue-500/15 border-blue-500/25 text-blue-300 hover:bg-blue-500/25'
-                  : 'bg-purple-500/15 border-purple-500/25 text-purple-300 hover:bg-purple-500/25'
+                config.theme.button
               )}
             >
               <Plus size={15} />
-              Nueva lección
+              {t('lessons.new')}
             </button>
           </div>
 
           {showEditor && (
             <div className="glass p-5">
-              <h2 className="text-sm font-medium text-white/70 mb-4">Editor YAML</h2>
+              <h2 className="text-sm font-medium text-white/70 mb-4">{t('lessons.editorTitle')}</h2>
               <YAMLEditor onRender={handleRenderYAML} />
             </div>
           )}
 
           {loading ? (
-            <div className="glass p-8 text-center text-white/30 text-sm">Cargando...</div>
+            <div className="glass p-8 text-center text-white/30 text-sm">{t('common.loading')}</div>
           ) : lessons.length === 0 && !showEditor ? (
             <div className="glass p-10 text-center">
-              <p className="text-white/30 text-sm">No hay lecciones aún.</p>
+              <p className="text-white/30 text-sm">{t('lessons.empty')}</p>
               <button onClick={() => setShowEditor(true)} className="text-blue-400 text-sm mt-2 hover:underline">
-                Crear primera lección con YAML
+                {t('lessons.createFirst')}
               </button>
             </div>
           ) : (
@@ -468,12 +468,12 @@ export function LessonsPage() {
                         <p className="font-medium text-white text-sm truncate">{lesson.title}</p>
                         {parsed && (
                           <div className="flex items-center gap-1.5 mt-1.5">
-                            <span className={isEN ? 'lang-badge-en' : 'lang-badge-pt'}>
+                            <span className={config.theme.badge}>
                               {parsed.level}
                             </span>
                             <span className="text-xs text-white/30">{parsed.type}</span>
                             {parsed.vocabulary && (
-                              <span className="text-xs text-white/30">{parsed.vocabulary.length} palabras</span>
+                              <span className="text-xs text-white/30">{t('lessons.wordCount', { count: parsed.vocabulary.length })}</span>
                             )}
                           </div>
                         )}
@@ -493,7 +493,7 @@ export function LessonsPage() {
               onClick={() => setActiveLesson(null)}
               className="flex items-center gap-1.5 text-sm text-white/40 hover:text-white/70 transition-colors"
             >
-              ← Volver a lecciones
+              {t('lessons.back')}
             </button>
             {(activeLesson.vocabulary?.length ?? 0) > 0 && (
               <button
@@ -515,9 +515,9 @@ export function LessonsPage() {
                 )}
                 {imported !== null
                   ? imported === 0
-                    ? 'Ya estaban en tu glosario'
-                    : `${imported} palabras agregadas al glosario`
-                  : 'Agregar vocabulario al glosario'}
+                    ? t('lessons.importedZero')
+                    : t('lessons.imported', { count: imported })
+                  : t('lessons.import')}
               </button>
             )}
           </div>

@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { Brain, CheckCircle2, RotateCcw } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { supabase } from '@/lib/supabase'
 import { useStore } from '@/lib/store'
 import { useAuth } from '@/lib/auth'
+import { languageConfig } from '@/lib/languages'
 import { cn } from '@/lib/utils'
 import { reviewWord, statusForInterval, type Rating } from '@/lib/srs'
 import { toDateString } from '@/lib/stats'
@@ -14,6 +16,7 @@ const SESSION_LIMIT = 30
 export function ReviewPage() {
   const { activeLanguage } = useStore()
   const { user } = useAuth()
+  const { t } = useTranslation()
   const [queue, setQueue] = useState<VocabWord[]>([])
   const [index, setIndex] = useState(0)
   const [loading, setLoading] = useState(true)
@@ -89,16 +92,16 @@ export function ReviewPage() {
     })
   }
 
-  const isEN = activeLanguage === 'en'
+  const config = languageConfig(activeLanguage)
 
   return (
     <div className="space-y-5 max-w-2xl mx-auto">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className={`text-2xl font-semibold ${isEN ? 'text-gradient-en' : 'text-gradient-pt'}`}>
-            Repaso {isEN ? '🇺🇸' : '🇧🇷'}
+          <h1 className={`text-2xl font-semibold ${config.theme.gradient}`}>
+            {t('review.title')} {config.flag}
           </h1>
-          <p className="text-white/40 text-sm mt-0.5">Repetición espaciada de tu vocabulario</p>
+          <p className="text-white/40 text-sm mt-0.5">{t('review.subtitle')}</p>
         </div>
         {!loading && queue.length > 0 && !finished && (
           <span className="glass-sm px-3 py-1.5 text-sm text-white/60">
@@ -108,35 +111,33 @@ export function ReviewPage() {
       </div>
 
       {loading ? (
-        <div className="glass p-8 text-center text-white/30 text-sm">Cargando...</div>
+        <div className="glass p-8 text-center text-white/30 text-sm">{t('common.loading')}</div>
       ) : queue.length === 0 ? (
         <div className="glass p-10 text-center space-y-2">
           <Brain size={28} className="mx-auto text-white/20" />
-          <p className="text-white/50 text-sm">No hay palabras pendientes de repaso. 🎉</p>
-          <p className="text-white/30 text-xs">
-            Agrega palabras en Vocabulario o importa una lección para alimentar el repaso.
-          </p>
+          <p className="text-white/50 text-sm">{t('review.emptyTitle')}</p>
+          <p className="text-white/30 text-xs">{t('review.emptyHint')}</p>
         </div>
       ) : finished ? (
         <div className="glass p-10 text-center space-y-3">
           <CheckCircle2 size={32} className="mx-auto text-green-400" />
-          <p className="text-white text-lg font-medium">¡Sesión completada!</p>
+          <p className="text-white text-lg font-medium">{t('review.done')}</p>
           <p className="text-white/50 text-sm">
-            {queue.length} palabras repasadas · {missed} para reforzar
+            {t('review.summary', { total: queue.length, missed })}
           </p>
           <button
             onClick={fetchDueWords}
             className="glass-btn inline-flex items-center gap-2 px-4 py-2 text-sm text-white/70 mt-2"
           >
             <RotateCcw size={14} />
-            Buscar más palabras
+            {t('review.more')}
           </button>
         </div>
       ) : (
         <>
           <div className="h-1.5 rounded-full bg-white/[0.06] overflow-hidden">
             <div
-              className={cn('h-full rounded-full transition-all', isEN ? 'bg-blue-500/70' : 'bg-purple-500/70')}
+              className={cn('h-full rounded-full transition-all', config.theme.progress)}
               style={{ width: `${(index / queue.length) * 100}%` }}
             />
           </div>

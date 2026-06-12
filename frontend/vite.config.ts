@@ -18,6 +18,19 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        // Separa vendors pesados en chunks cacheables; recharts solo se usa
+        // en el dashboard y supabase/react casi nunca cambian entre deploys
+        manualChunks: {
+          react: ['react', 'react-dom', 'react-router-dom'],
+          charts: ['recharts'],
+          supabase: ['@supabase/supabase-js'],
+        },
+      },
+    },
+  },
   test: {
     environment: 'jsdom',
     globals: true,

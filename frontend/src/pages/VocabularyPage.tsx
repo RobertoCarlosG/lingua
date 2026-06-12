@@ -1,19 +1,14 @@
 import { useEffect, useState } from 'react'
 import { Plus, Search, ChevronDown, BookMarked, Loader2 } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { supabase } from '@/lib/supabase'
 import { lookupWord } from '@/lib/dictionary'
 import { initialSrs } from '@/lib/srs'
 import { useStore } from '@/lib/store'
 import { useAuth } from '@/lib/auth'
-import { cn, formatDate } from '@/lib/utils'
+import { languageConfig, type Language } from '@/lib/languages'
+import { cn } from '@/lib/utils'
 import type { VocabWord, WordStatus } from '@/types/database'
-
-const STATUS_LABELS: Record<WordStatus, string> = {
-  new: 'Nueva',
-  learning: 'Aprendiendo',
-  known: 'Conocida',
-  mastered: 'Dominada',
-}
 
 const STATUS_COLORS: Record<WordStatus, string> = {
   new: 'bg-slate-500/20 text-slate-300 border-slate-500/30',
@@ -25,8 +20,9 @@ const STATUS_COLORS: Record<WordStatus, string> = {
 function AddWordModal({ onClose, onSave, language }: {
   onClose: () => void
   onSave: (word: Omit<VocabWord, 'id' | 'created_at' | 'user_id'>) => void
-  language: 'en' | 'pt'
+  language: Language
 }) {
+  const { t } = useTranslation()
   const [form, setForm] = useState({
     word: '', ipa: '', translation: '', definition: '', example_sentence: '', tags: '',
   })
@@ -37,7 +33,7 @@ function AddWordModal({ onClose, onSave, language }: {
     if (!form.word.trim() || looking) return
     setLooking(true)
     setLookupError(null)
-    const entry = await lookupWord(form.word)
+    const entry = await lookupWord(form.word, language)
     if (entry) {
       const meaning = entry.meanings[0]
       setForm(f => ({
@@ -50,7 +46,7 @@ function AddWordModal({ onClose, onSave, language }: {
         tags: f.tags || (meaning?.part_of_speech ?? ''),
       }))
     } else {
-      setLookupError('No se encontró en el diccionario')
+      setLookupError(t('vocab.notFound'))
     }
     setLooking(false)
   }
@@ -78,19 +74,19 @@ function AddWordModal({ onClose, onSave, language }: {
   return (
     <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
       <div className="glass w-full max-w-md p-6 animate-slide-up">
-        <h2 className="text-base font-semibold text-white mb-4">Agregar palabra</h2>
+        <h2 className="text-base font-semibold text-white mb-4">{t('vocab.modalTitle')}</h2>
         <form onSubmit={handleSubmit} className="space-y-3">
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="text-xs text-white/40 mb-1 block">Palabra</label>
+              <label className="text-xs text-white/40 mb-1 block">{t('vocab.word')}</label>
               <div className="flex gap-1.5">
                 <input className={inputClass} value={form.word} onChange={e => setForm(f => ({...f, word: e.target.value}))} placeholder="accomplish" required />
-                {language === 'en' && (
+                {languageConfig(language).dictionary.lookup && (
                   <button
                     type="button"
                     onClick={handleLookup}
                     disabled={looking || !form.word.trim()}
-                    title="Buscar en el diccionario"
+                    title={t('vocab.lookupTitle')}
                     className="glass-btn px-2.5 text-blue-300 disabled:opacity-40 shrink-0"
                   >
                     {looking ? <Loader2 size={14} className="animate-spin" /> : <BookMarked size={14} />}
@@ -100,29 +96,29 @@ function AddWordModal({ onClose, onSave, language }: {
               {lookupError && <p className="text-xs text-amber-400 mt-1">{lookupError}</p>}
             </div>
             <div>
-              <label className="text-xs text-white/40 mb-1 block">IPA</label>
+              <label className="text-xs text-white/40 mb-1 block">{t('vocab.ipa')}</label>
               <input className={inputClass} value={form.ipa} onChange={e => setForm(f => ({...f, ipa: e.target.value}))} placeholder="/əˈkʌmplɪʃ/" />
             </div>
           </div>
           <div>
-            <label className="text-xs text-white/40 mb-1 block">Traducción</label>
+            <label className="text-xs text-white/40 mb-1 block">{t('vocab.translation')}</label>
             <input className={inputClass} value={form.translation} onChange={e => setForm(f => ({...f, translation: e.target.value}))} placeholder="lograr, alcanzar" required />
           </div>
           <div>
-            <label className="text-xs text-white/40 mb-1 block">Definición</label>
+            <label className="text-xs text-white/40 mb-1 block">{t('vocab.definition')}</label>
             <input className={inputClass} value={form.definition} onChange={e => setForm(f => ({...f, definition: e.target.value}))} placeholder="To succeed in doing something difficult" />
           </div>
           <div>
-            <label className="text-xs text-white/40 mb-1 block">Ejemplo</label>
+            <label className="text-xs text-white/40 mb-1 block">{t('vocab.example')}</label>
             <input className={inputClass} value={form.example_sentence} onChange={e => setForm(f => ({...f, example_sentence: e.target.value}))} placeholder="She has accomplished all her goals." />
           </div>
           <div>
-            <label className="text-xs text-white/40 mb-1 block">Tags (separados por coma)</label>
+            <label className="text-xs text-white/40 mb-1 block">{t('vocab.tags')}</label>
             <input className={inputClass} value={form.tags} onChange={e => setForm(f => ({...f, tags: e.target.value}))} placeholder="verbo, formal, C1" />
           </div>
           <div className="flex gap-2 pt-1">
-            <button type="button" onClick={onClose} className="flex-1 glass-btn px-4 py-2 text-sm text-white/60">Cancelar</button>
-            <button type="submit" className="flex-1 bg-blue-600/80 hover:bg-blue-600 border border-blue-500/30 rounded-xl px-4 py-2 text-sm text-white transition-all">Guardar</button>
+            <button type="button" onClick={onClose} className="flex-1 glass-btn px-4 py-2 text-sm text-white/60">{t('common.cancel')}</button>
+            <button type="submit" className="flex-1 bg-blue-600/80 hover:bg-blue-600 border border-blue-500/30 rounded-xl px-4 py-2 text-sm text-white transition-all">{t('common.save')}</button>
           </div>
         </form>
       </div>
@@ -133,6 +129,7 @@ function AddWordModal({ onClose, onSave, language }: {
 export function VocabularyPage() {
   const { activeLanguage } = useStore()
   const { user } = useAuth()
+  const { t } = useTranslation()
   const [words, setWords] = useState<VocabWord[]>([])
   const [search, setSearch] = useState('')
   const [filterStatus, setFilterStatus] = useState<WordStatus | 'all'>('all')
@@ -179,28 +176,28 @@ export function VocabularyPage() {
     return matchSearch && matchStatus
   })
 
-  const isEN = activeLanguage === 'en'
+  const config = languageConfig(activeLanguage)
+
+  const statusLabel = (s: WordStatus) => t(`vocab.status.${s}`)
 
   return (
     <div className="space-y-5">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className={`text-2xl font-semibold ${isEN ? 'text-gradient-en' : 'text-gradient-pt'}`}>
-            Vocabulario {isEN ? '🇺🇸' : '🇧🇷'}
+          <h1 className={`text-2xl font-semibold ${config.theme.gradient}`}>
+            {t('vocab.title')} {config.flag}
           </h1>
-          <p className="text-white/40 text-sm mt-0.5">{words.length} palabras en tu glosario</p>
+          <p className="text-white/40 text-sm mt-0.5">{t('vocab.subtitle', { count: words.length })}</p>
         </div>
         <button
           onClick={() => setShowAdd(true)}
           className={cn(
             'flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium border transition-all',
-            isEN
-              ? 'bg-blue-500/15 border-blue-500/25 text-blue-300 hover:bg-blue-500/25'
-              : 'bg-purple-500/15 border-purple-500/25 text-purple-300 hover:bg-purple-500/25'
+            config.theme.button
           )}
         >
           <Plus size={15} />
-          Agregar
+          {t('vocab.add')}
         </button>
       </div>
 
@@ -209,7 +206,7 @@ export function VocabularyPage() {
           <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30" />
           <input
             className="glass-input w-full pl-9 pr-3 py-2 text-sm"
-            placeholder="Buscar palabra..."
+            placeholder={t('vocab.search')}
             value={search}
             onChange={e => setSearch(e.target.value)}
           />
@@ -226,19 +223,19 @@ export function VocabularyPage() {
                   : 'bg-transparent border-white/10 text-white/40 hover:text-white/70'
               )}
             >
-              {s === 'all' ? 'Todas' : STATUS_LABELS[s]}
+              {s === 'all' ? t('vocab.filterAll') : statusLabel(s)}
             </button>
           ))}
         </div>
       </div>
 
       {loading ? (
-        <div className="glass p-8 text-center text-white/30 text-sm">Cargando...</div>
+        <div className="glass p-8 text-center text-white/30 text-sm">{t('common.loading')}</div>
       ) : filtered.length === 0 ? (
         <div className="glass p-10 text-center">
-          <p className="text-white/30 text-sm">No hay palabras aún.</p>
+          <p className="text-white/30 text-sm">{t('vocab.empty')}</p>
           <button onClick={() => setShowAdd(true)} className="text-blue-400 text-sm mt-2 hover:underline">
-            Agrega tu primera palabra
+            {t('vocab.addFirst')}
           </button>
         </div>
       ) : (
@@ -260,7 +257,7 @@ export function VocabularyPage() {
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
                   <span className={cn('text-xs px-2 py-0.5 rounded-md border', STATUS_COLORS[word.status])}>
-                    {STATUS_LABELS[word.status]}
+                    {statusLabel(word.status)}
                   </span>
                   <ChevronDown
                     size={14}
@@ -295,7 +292,7 @@ export function VocabularyPage() {
                               : 'border-white/10 text-white/30 hover:text-white/60'
                           )}
                         >
-                          {STATUS_LABELS[s]}
+                          {statusLabel(s)}
                         </button>
                       ))}
                     </div>

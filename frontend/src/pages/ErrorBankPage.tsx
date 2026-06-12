@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
 import { Plus, AlertTriangle, RefreshCw } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { supabase } from '@/lib/supabase'
 import { useStore } from '@/lib/store'
 import { useAuth } from '@/lib/auth'
+import { languageConfig, type Language } from '@/lib/languages'
+import { dateLocale } from '@/lib/i18n'
 import { cn, formatDate } from '@/lib/utils'
 import type { ErrorEntry } from '@/types/database'
 
@@ -11,8 +14,9 @@ const CATEGORIES = ['gramática', 'vocabulario', 'pronunciación', 'preposición
 function AddErrorModal({ onClose, onSave, language }: {
   onClose: () => void
   onSave: (e: Omit<ErrorEntry, 'id' | 'created_at' | 'user_id'>) => void
-  language: 'en' | 'pt'
+  language: Language
 }) {
+  const { t } = useTranslation()
   const [form, setForm] = useState({
     error_text: '', correction: '', explanation: '', category: 'gramática',
   })
@@ -33,29 +37,29 @@ function AddErrorModal({ onClose, onSave, language }: {
   return (
     <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
       <div className="glass w-full max-w-md p-6 animate-slide-up">
-        <h2 className="text-base font-semibold text-white mb-4">Registrar error</h2>
+        <h2 className="text-base font-semibold text-white mb-4">{t('errors.modalTitle')}</h2>
         <form onSubmit={handleSubmit} className="space-y-3">
           <div>
-            <label className="text-xs text-white/40 mb-1 block">Lo que escribiste / dijiste</label>
-            <input className={inputClass} value={form.error_text} onChange={e => setForm(f => ({...f, error_text: e.target.value}))} placeholder='Ej: "I have went to..."' required />
+            <label className="text-xs text-white/40 mb-1 block">{t('errors.errorText')}</label>
+            <input className={inputClass} value={form.error_text} onChange={e => setForm(f => ({...f, error_text: e.target.value}))} placeholder='"I have went to..."' required />
           </div>
           <div>
-            <label className="text-xs text-white/40 mb-1 block">Corrección</label>
-            <input className={inputClass} value={form.correction} onChange={e => setForm(f => ({...f, correction: e.target.value}))} placeholder='Ej: "I have gone to..."' required />
+            <label className="text-xs text-white/40 mb-1 block">{t('errors.correction')}</label>
+            <input className={inputClass} value={form.correction} onChange={e => setForm(f => ({...f, correction: e.target.value}))} placeholder='"I have gone to..."' required />
           </div>
           <div>
-            <label className="text-xs text-white/40 mb-1 block">Explicación</label>
+            <label className="text-xs text-white/40 mb-1 block">{t('errors.explanation')}</label>
             <textarea className={cn(inputClass, "resize-none h-20")} value={form.explanation} onChange={e => setForm(f => ({...f, explanation: e.target.value}))} placeholder="go → gone (participio irregular)" />
           </div>
           <div>
-            <label className="text-xs text-white/40 mb-1 block">Categoría</label>
+            <label className="text-xs text-white/40 mb-1 block">{t('errors.category')}</label>
             <select className={inputClass} value={form.category} onChange={e => setForm(f => ({...f, category: e.target.value}))}>
               {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
             </select>
           </div>
           <div className="flex gap-2 pt-1">
-            <button type="button" onClick={onClose} className="flex-1 glass-btn px-4 py-2 text-sm text-white/60">Cancelar</button>
-            <button type="submit" className="flex-1 bg-amber-600/70 hover:bg-amber-600/90 border border-amber-500/30 rounded-xl px-4 py-2 text-sm text-white transition-all">Guardar</button>
+            <button type="button" onClick={onClose} className="flex-1 glass-btn px-4 py-2 text-sm text-white/60">{t('common.cancel')}</button>
+            <button type="submit" className="flex-1 bg-amber-600/70 hover:bg-amber-600/90 border border-amber-500/30 rounded-xl px-4 py-2 text-sm text-white transition-all">{t('common.save')}</button>
           </div>
         </form>
       </div>
@@ -66,6 +70,7 @@ function AddErrorModal({ onClose, onSave, language }: {
 export function ErrorBankPage() {
   const { activeLanguage } = useStore()
   const { user } = useAuth()
+  const { t } = useTranslation()
   const [errors, setErrors] = useState<ErrorEntry[]>([])
   const [showAdd, setShowAdd] = useState(false)
   const [loading, setLoading] = useState(true)
@@ -108,18 +113,18 @@ export function ErrorBankPage() {
     ))
   }
 
-  const isEN = activeLanguage === 'en'
+  const config = languageConfig(activeLanguage)
   const recurring = errors.filter(e => e.is_recurring)
 
   return (
     <div className="space-y-5">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className={`text-2xl font-semibold ${isEN ? 'text-gradient-en' : 'text-gradient-pt'}`}>
-            Banco de errores {isEN ? '🇺🇸' : '🇧🇷'}
+          <h1 className={`text-2xl font-semibold ${config.theme.gradient}`}>
+            {t('errors.title')} {config.flag}
           </h1>
           <p className="text-white/40 text-sm mt-0.5">
-            {errors.length} errores · {recurring.length} recurrentes
+            {t('errors.subtitle', { count: errors.length, recurring: recurring.length })}
           </p>
         </div>
         <button
@@ -127,7 +132,7 @@ export function ErrorBankPage() {
           className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium border bg-amber-500/15 border-amber-500/25 text-amber-300 hover:bg-amber-500/25 transition-all"
         >
           <Plus size={15} />
-          Registrar
+          {t('errors.register')}
         </button>
       </div>
 
@@ -135,7 +140,7 @@ export function ErrorBankPage() {
         <div className="glass border-amber-500/20 p-4">
           <div className="flex items-center gap-2 mb-3">
             <AlertTriangle size={14} className="text-amber-400" />
-            <h2 className="text-sm font-medium text-amber-300">Errores recurrentes — prestar atención</h2>
+            <h2 className="text-sm font-medium text-amber-300">{t('errors.recurringTitle')}</h2>
           </div>
           <div className="space-y-2">
             {recurring.map(e => (
@@ -153,10 +158,10 @@ export function ErrorBankPage() {
       )}
 
       {loading ? (
-        <div className="glass p-8 text-center text-white/30 text-sm">Cargando...</div>
+        <div className="glass p-8 text-center text-white/30 text-sm">{t('common.loading')}</div>
       ) : errors.length === 0 ? (
         <div className="glass p-10 text-center">
-          <p className="text-white/30 text-sm">Sin errores registrados. ¡Buen comienzo!</p>
+          <p className="text-white/30 text-sm">{t('errors.empty')}</p>
         </div>
       ) : (
         <div className="space-y-2">
@@ -170,17 +175,17 @@ export function ErrorBankPage() {
                     <span className="text-sm text-white font-medium">{error.correction}</span>
                     <span className="text-xs px-2 py-0.5 rounded bg-white/[0.06] text-white/40">{error.category}</span>
                     {error.is_recurring && (
-                      <span className="text-xs px-2 py-0.5 rounded bg-amber-500/15 border border-amber-500/25 text-amber-300">recurrente</span>
+                      <span className="text-xs px-2 py-0.5 rounded bg-amber-500/15 border border-amber-500/25 text-amber-300">{t('errors.recurringBadge')}</span>
                     )}
                   </div>
                   {error.explanation && (
                     <p className="text-xs text-white/40">{error.explanation}</p>
                   )}
-                  <p className="text-xs text-white/25">{formatDate(error.created_at)}</p>
+                  <p className="text-xs text-white/25">{formatDate(error.created_at, dateLocale())}</p>
                 </div>
                 <button
                   onClick={() => markRecurring(error.id, error.occurrence_count)}
-                  title="Marcar que ocurrió de nuevo"
+                  title={t('errors.markAgain')}
                   className="shrink-0 p-1.5 rounded-lg hover:bg-amber-500/10 text-white/20 hover:text-amber-400 transition-all"
                 >
                   <RefreshCw size={13} />
