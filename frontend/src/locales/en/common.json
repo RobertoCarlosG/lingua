@@ -101,6 +101,7 @@
     "tags": "Tags (comma-separated)",
     "lookupTitle": "Look up in the dictionary",
     "notFound": "Not found in the dictionary",
+    "saveError": "Could not save the word. Check that you are signed in and Supabase migrations are applied.",
     "status": {
       "new": "New",
       "learning": "Learning",
@@ -140,6 +141,8 @@
     "createFirst": "Create your first YAML lesson",
     "back": "← Back to lessons",
     "import": "Add vocabulary to glossary",
+    "importError": "Could not save vocabulary. Check that you are signed in and Supabase migrations are applied.",
+    "saveError": "Could not save the lesson. Check your session and Supabase migrations.",
     "importedZero": "Already in your glossary",
     "imported_one": "{{count}} word added to your glossary",
     "imported_other": "{{count}} words added to your glossary",

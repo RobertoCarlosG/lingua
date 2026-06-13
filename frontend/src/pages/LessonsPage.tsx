@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react'
+import { Fragment, useEffect, useState, useRef } from 'react'
 import { Plus, ChevronRight, Volume2, CheckCircle, Circle, AlertCircle, Wand2, Loader2, Upload, BookPlus, ArrowLeft } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { generateLessonYaml } from '@/lib/dictionary'
@@ -352,20 +352,35 @@ export function LessonsPage() {
   const [loading, setLoading] = useState(true)
   const [importing, setImporting] = useState(false)
   const [imported, setImported] = useState<number | null>(null)
+  const [importError, setImportError] = useState<string | null>(null)
 
   async function importVocabulary() {
-    if (!activeLesson?.vocabulary?.length || importing) return
+    if (!activeLesson?.vocabulary?.length || importing || !user) return
     setImporting(true)
+    setImportError(null)
     const words = lessonVocabToWords(activeLesson, new Date())
-    const { data: existingRows } = await supabase
+    const { data: existingRows, error: selectError } = await supabase
       .from('vocab_words')
       .select('word')
       .eq('language', activeLesson.language)
       .in('word', words.map(w => w.word))
+    if (selectError) {
+      setImportError(t('lessons.importError'))
+      setImporting(false)
+      return
+    }
     const existing = new Set((existingRows ?? []).map(r => r.word.toLowerCase()))
     const fresh = words.filter(w => !existing.has(w.word.toLowerCase()))
     if (fresh.length > 0) {
-      await supabase.from('vocab_words').insert(fresh.map(w => ({ ...w, user_id: user!.id })))
+      const { error: insertError } = await supabase
+        .from('vocab_words')
+        .insert(fresh.map(w => ({ ...w, user_id: user.id })))
+      if (insertError) {
+        console.error('vocab_words insert failed:', insertError)
+        setImportError(t('lessons.importError'))
+        setImporting(false)
+        return
+      }
     }
     setImported(fresh.length)
     setImporting(false)
@@ -374,6 +389,7 @@ export function LessonsPage() {
   useEffect(() => {
     setActiveLesson(null)
     setImported(null)
+    setImportError(null)
     fetchLessons()
   }, [activeLanguage])
 
@@ -392,16 +408,22 @@ export function LessonsPage() {
 
   async function handleRenderYAML(yamlContent: string) {
     const parsed = parseLesson(yamlContent)
-    if (!parsed) return
-    setActiveLesson(parsed)
+    if (!parsed || !user) return
+    setImportError(null)
     setImported(null)
     setShowEditor(false)
 
-    const { data } = await supabase
+    const { data, error } = await supabase
       .from('lessons')
-      .insert({ language: activeLanguage, title: parsed.title, yaml_content: yamlContent, user_id: user!.id, rendered_at: new Date().toISOString() })
+      .insert({ language: activeLanguage, title: parsed.title, yaml_content: yamlContent, user_id: user.id, rendered_at: new Date().toISOString() })
       .select()
       .single()
+    if (error) {
+      console.error('lessons insert failed:', error)
+      setImportError(t('lessons.saveError'))
+      return
+    }
+    setActiveLesson(parsed)
     if (data) setLessons(prev => [data, ...prev])
   }
 
@@ -410,6 +432,7 @@ export function LessonsPage() {
     if (parsed) {
       setActiveLesson(parsed)
       setImported(null)
+      setImportError(null)
     }
   }
 
@@ -417,8 +440,14 @@ export function LessonsPage() {
 
   return (
     <div className="space-y-6">
+      {importError && (
+        <div className="glass-sm p-3 border border-red-500/25 flex items-center gap-2 text-xs text-red-300">
+          <AlertCircle size={13} className="shrink-0" />
+          {importError}
+        </div>
+      )}
       {!activeLesson ? (
-        <>
+        <Fragment key="lesson-list">
           <div className="flex items-center justify-between gap-4">
             <div>
               <h1 className="text-3xl font-semibold tracking-tight text-gradient-brand">
@@ -483,9 +512,9 @@ export function LessonsPage() {
               })}
             </div>
           )}
-        </>
+        </Fragment>
       ) : (
-        <div>
+        <Fragment key="lesson-detail">
           <div className="flex items-center justify-between mb-6">
             <button
               onClick={() => setActiveLesson(null)}
@@ -521,7 +550,7 @@ export function LessonsPage() {
             )}
           </div>
           <LessonRenderer lesson={activeLesson} />
-        </div>
+        </Fragment>
       )}
     </div>
   )

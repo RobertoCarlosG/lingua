@@ -101,6 +101,7 @@
     "tags": "Tags (separadas por vírgula)",
     "lookupTitle": "Buscar no dicionário",
     "notFound": "Não encontrada no dicionário",
+    "saveError": "Não foi possível salvar a palavra. Verifique se você está autenticado e se as migrações do Supabase foram aplicadas.",
     "status": {
       "new": "Nova",
       "learning": "Aprendendo",
@@ -140,6 +141,8 @@
     "createFirst": "Criar primeira lição com YAML",
     "back": "← Voltar às lições",
     "import": "Adicionar vocabulário ao glossário",
+    "importError": "Não foi possível salvar o vocabulário. Verifique se você está autenticado e se as migrações do Supabase foram aplicadas.",
+    "saveError": "Não foi possível salvar a lição. Verifique sua sessão e as migrações do Supabase.",
     "importedZero": "Já estavam no seu glossário",
     "imported_one": "{{count}} palavra adicionada ao glossário",
     "imported_other": "{{count}} palavras adicionadas ao glossário",

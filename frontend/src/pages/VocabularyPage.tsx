@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Plus, Search, ChevronDown, BookMarked, Loader2 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { supabase } from '@/lib/supabase'
@@ -71,7 +72,7 @@ function AddWordModal({ onClose, onSave, language }: {
 
   const inputClass = "glass-input w-full px-3 py-2.5 text-sm"
 
-  return (
+  return createPortal(
     <div className="fixed inset-0 z-50 bg-ink-950/70 backdrop-blur-sm flex items-center justify-center p-4">
       <div className="glass w-full max-w-md p-6 animate-slide-up">
         <h2 className="text-base font-semibold text-1 mb-5">{t('vocab.modalTitle')}</h2>
@@ -122,7 +123,8 @@ function AddWordModal({ onClose, onSave, language }: {
           </div>
         </form>
       </div>
-    </div>
+    </div>,
+    document.body
   )
 }
 
@@ -136,6 +138,7 @@ export function VocabularyPage() {
   const [showAdd, setShowAdd] = useState(false)
   const [loading, setLoading] = useState(true)
   const [expanded, setExpanded] = useState<string | null>(null)
+  const [saveError, setSaveError] = useState<string | null>(null)
 
   useEffect(() => {
     fetchWords()
@@ -153,11 +156,18 @@ export function VocabularyPage() {
   }
 
   async function handleSave(wordData: Omit<VocabWord, 'id' | 'created_at' | 'user_id'>) {
-    const { data } = await supabase
+    if (!user) return
+    setSaveError(null)
+    const { data, error } = await supabase
       .from('vocab_words')
-      .insert({ ...wordData, user_id: user!.id })
+      .insert({ ...wordData, user_id: user.id })
       .select()
       .single()
+    if (error) {
+      console.error('vocab_words insert failed:', error)
+      setSaveError(t('vocab.saveError'))
+      return
+    }
     if (data) {
       setWords(prev => [data, ...prev])
       setShowAdd(false)
@@ -221,6 +231,12 @@ export function VocabularyPage() {
           ))}
         </div>
       </div>
+
+      {saveError && (
+        <div className="glass-sm p-3 border border-red-500/25 text-xs text-red-300">
+          {saveError}
+        </div>
+      )}
 
       {loading ? (
         <div className="glass p-10 text-center text-3 text-sm">{t('common.loading')}</div>
@@ -300,7 +316,7 @@ export function VocabularyPage() {
       {showAdd && (
         <AddWordModal
           language={activeLanguage}
-          onClose={() => setShowAdd(false)}
+          onClose={() => { setShowAdd(false); setSaveError(null) }}
           onSave={handleSave}
         />
       )}
