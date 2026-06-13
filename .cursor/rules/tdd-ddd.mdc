@@ -1,0 +1,48 @@
+---
+description: Metodología TDD + DDD de Lingua — capas, tests y ciclo de trabajo
+alwaysApply: true
+---
+
+# TDD + DDD en Lingua
+
+Combinamos **Test-Driven Development** con **Domain-Driven Design** ligero.
+
+## Capas (DDD)
+
+| Capa | Ubicación | Responsabilidad |
+|------|-----------|-----------------|
+| **Dominio** | `frontend/src/lib/` (`srs`, `yaml-parser`, `vocab-yaml`, `stats`, `languages`) | Reglas de negocio puras, sin UI ni Supabase |
+| **Casos de uso** | `frontend/src/lib/` (`import-vocab`, `import-sessions`, `seed-lessons`, `lesson-to-vocab`) | Orquestación dominio + infraestructura |
+| **Infraestructura** | `supabase.ts`, `auth.tsx`, `dictionary.ts` | Persistencia, auth, APIs externas |
+| **UI** | `frontend/src/pages/`, `frontend/src/components/` | Presentación; delega lógica al dominio |
+| **Tipos de dominio** | `frontend/src/types/database.ts` | Entidades y contratos |
+| **Backend dominio** | `backend/app/lesson_validator.py`, tests en `backend/tests/` | Validación YAML server-side |
+
+La lógica de negocio **no va en páginas React**. Extrae a `lib/` y testea ahí primero.
+
+## TDD — ciclo obligatorio
+
+1. **Red** — escribe o actualiza el test que describe el comportamiento
+2. **Green** — implementa lo mínimo para pasar
+3. **Refactor** — limpia sin romper tests
+
+Al terminar cualquier feature o fix, **todos los tests deben pasar**.
+
+## Dónde van los tests
+
+| Tipo | Patrón | Herramienta |
+|------|--------|-------------|
+| Unit (dominio/lib) | `src/lib/**/*.test.ts` | Vitest |
+| UI / integración | `src/**/*.test.tsx` en `components/` y `pages/` | Vitest + Testing Library |
+| Backend | `backend/tests/` | pytest |
+
+Helpers: `src/test/setup.ts` (i18n), `src/test/render-with-providers.tsx` (Router + store).
+
+## Verificación antes de cerrar
+
+```bash
+yarn verify       # unit + UI + build (frontend)
+yarn verify:all     # + pytest (backend)
+```
+
+Nunca marques trabajo completo con tests fallando o sin correr `yarn verify` tras cambios en frontend.

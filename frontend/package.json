@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "test": "vitest run",
+    "test:unit": "vitest run src/lib",
+    "test:ui": "vitest run src/components src/pages",
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx"
   },

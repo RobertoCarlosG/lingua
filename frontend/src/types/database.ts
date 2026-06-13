@@ -76,31 +76,31 @@ export type Database = {
     Tables: {
       vocab_words: {
         Row: VocabWord
-        Insert: Omit<VocabWord, 'id' | 'created_at'>
+        Insert: Omit<VocabWord, 'id' | 'created_at' | 'user_id'>
         Update: Partial<Omit<VocabWord, 'id'>>
         Relationships: []
       }
       error_entries: {
         Row: ErrorEntry
-        Insert: Omit<ErrorEntry, 'id' | 'created_at'>
+        Insert: Omit<ErrorEntry, 'id' | 'created_at' | 'user_id'>
         Update: Partial<Omit<ErrorEntry, 'id'>>
         Relationships: []
       }
       session_logs: {
         Row: SessionLog
-        Insert: Omit<SessionLog, 'id' | 'created_at'>
+        Insert: Omit<SessionLog, 'id' | 'created_at' | 'user_id'>
         Update: Partial<Omit<SessionLog, 'id'>>
         Relationships: []
       }
       lessons: {
         Row: Lesson
-        Insert: Omit<Lesson, 'id' | 'created_at'>
+        Insert: Omit<Lesson, 'id' | 'created_at' | 'user_id'>
         Update: Partial<Omit<Lesson, 'id'>>
         Relationships: []
       }
       reviews: {
         Row: Review
-        Insert: Omit<Review, 'id' | 'reviewed_at'>
+        Insert: Omit<Review, 'id' | 'reviewed_at' | 'user_id'>
         Update: Partial<Omit<Review, 'id'>>
         Relationships: []
       }

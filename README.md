@@ -115,13 +115,19 @@ Backend: http://localhost:3001
 
 ## Tests (TDD)
 
-```bash
-# Frontend (vitest) — 51 tests
-cd frontend && yarn vitest run
+Antes de hacer push, ejecuta desde la raíz del repo (mismo check que CI y Vercel):
 
-# Backend (pytest) — 18 tests
-cd backend && .venv/bin/pytest
+```bash
+yarn verify          # unit + UI + build (frontend)
+yarn verify:all      # frontend + pytest (backend)
+
+# Por capa
+yarn test:unit       # vitest — src/lib/**/*.test.ts
+yarn test:ui         # vitest — componentes e integración (*.test.tsx)
+yarn test:backend    # pytest
 ```
+
+**Capas:** unit (`src/lib`, 72 tests) · UI/integración (`src/components` + `src/pages`, 8 tests) · backend (`pytest`, 23 tests) · build (`tsc` + Vite). Metodología TDD + DDD documentada en `.cursor/rules/tdd-ddd.mdc`.
 
 El flujo de aprendizaje cierra el ciclo: subes o generas una lección YAML → su vocabulario
 entra al glosario con SRS inicial → la página **Repaso** te muestra las palabras vencidas

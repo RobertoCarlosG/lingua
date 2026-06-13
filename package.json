@@ -5,7 +5,13 @@
   "scripts": {
     "dev": "concurrently \"yarn workspace lingua-frontend dev\" \"yarn dev:api\"",
     "dev:api": "cd backend && .venv/bin/uvicorn app.main:app --reload --port 3001",
-    "build": "yarn workspace lingua-frontend build"
+    "build": "yarn workspace lingua-frontend build",
+    "test": "yarn workspace lingua-frontend test",
+    "test:unit": "yarn workspace lingua-frontend test:unit",
+    "test:ui": "yarn workspace lingua-frontend test:ui",
+    "test:backend": "cd backend && .venv/bin/pytest",
+    "verify": "yarn test:unit && yarn test:ui && yarn build",
+    "verify:all": "yarn verify && yarn test:backend"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

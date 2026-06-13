@@ -1,0 +1,19 @@
+---
+description: Comandos de verificación CI — ver también tdd-ddd.mdc
+globs: frontend/**/*,backend/**/*
+alwaysApply: false
+---
+
+# Verificación (TDD)
+
+Parte de la metodología en `tdd-ddd.mdc`. Antes de push o PR:
+
+```bash
+yarn verify          # test:unit + test:ui + build
+yarn verify:all      # frontend + pytest
+yarn test:unit       # solo src/lib
+yarn test:ui         # components + pages (*.test.tsx)
+yarn test:backend    # backend/tests
+```
+
+CI (`.github/workflows/ci.yml`) ejecuta los mismos pasos en GitHub Actions.
