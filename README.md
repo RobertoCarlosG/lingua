@@ -45,7 +45,13 @@ En la UI: botón de diccionario en "Agregar palabra" (autocompleta IPA/definici�
 ### 1. Supabase
 
 1. Ve a tu proyecto en supabase.com → SQL Editor
-2. Pega y ejecuta el contenido de `supabase/migrations/001_initial.sql`
+2. Ejecuta **en orden** cada archivo de `supabase/migrations/`:
+   - `001_initial.sql` — tablas base
+   - `002_auth_rls.sql` — auth con Google + Row Level Security (requerido para guardar datos)
+   - `003_more_languages.sql` — más idiomas en el CHECK de `language`
+   - `004_ja_and_grants.sql` — japonés + permisos INSERT para usuarios autenticados
+   - `005_fix_rls_policies.sql` — políticas RLS por operación (requerido si ves error 42501)
+   - `006_restore_rls_policies.sql` — **restaura políticas si RLS está activo pero sin policies**
 3. Ve a Settings → API y copia:
    - `Project URL` → `VITE_SUPABASE_URL`
    - `anon public` key → `VITE_SUPABASE_ANON_KEY`

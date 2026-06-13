@@ -15,26 +15,31 @@ DELETE FROM vocab_words    WHERE user_id = 'demo-user';
 --    y establecer auth.uid() como default
 -- ───────────────────────────────────────────
 ALTER TABLE vocab_words
+  ALTER COLUMN user_id DROP DEFAULT,
   ALTER COLUMN user_id TYPE uuid USING user_id::uuid,
   ALTER COLUMN user_id SET DEFAULT auth.uid(),
   ALTER COLUMN user_id SET NOT NULL;
 
 ALTER TABLE reviews
+  ALTER COLUMN user_id DROP DEFAULT,
   ALTER COLUMN user_id TYPE uuid USING user_id::uuid,
   ALTER COLUMN user_id SET DEFAULT auth.uid(),
   ALTER COLUMN user_id SET NOT NULL;
 
 ALTER TABLE error_entries
+  ALTER COLUMN user_id DROP DEFAULT,
   ALTER COLUMN user_id TYPE uuid USING user_id::uuid,
   ALTER COLUMN user_id SET DEFAULT auth.uid(),
   ALTER COLUMN user_id SET NOT NULL;
 
 ALTER TABLE session_logs
+  ALTER COLUMN user_id DROP DEFAULT,
   ALTER COLUMN user_id TYPE uuid USING user_id::uuid,
   ALTER COLUMN user_id SET DEFAULT auth.uid(),
   ALTER COLUMN user_id SET NOT NULL;
 
 ALTER TABLE lessons
+  ALTER COLUMN user_id DROP DEFAULT,
   ALTER COLUMN user_id TYPE uuid USING user_id::uuid,
   ALTER COLUMN user_id SET DEFAULT auth.uid(),
   ALTER COLUMN user_id SET NOT NULL;
