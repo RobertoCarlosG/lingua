@@ -32,34 +32,34 @@ function AddErrorModal({ onClose, onSave, language }: {
     })
   }
 
-  const inputClass = "glass-input w-full px-3 py-2 text-sm"
+  const inputClass = "glass-input w-full px-3 py-2.5 text-sm"
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 bg-ink-950/70 backdrop-blur-sm flex items-center justify-center p-4">
       <div className="glass w-full max-w-md p-6 animate-slide-up">
-        <h2 className="text-base font-semibold text-white mb-4">{t('errors.modalTitle')}</h2>
-        <form onSubmit={handleSubmit} className="space-y-3">
+        <h2 className="text-base font-semibold text-1 mb-5">{t('errors.modalTitle')}</h2>
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="text-xs text-white/40 mb-1 block">{t('errors.errorText')}</label>
+            <label className="text-xs text-2 font-medium mb-1.5 block">{t('errors.errorText')}</label>
             <input className={inputClass} value={form.error_text} onChange={e => setForm(f => ({...f, error_text: e.target.value}))} placeholder='"I have went to..."' required />
           </div>
           <div>
-            <label className="text-xs text-white/40 mb-1 block">{t('errors.correction')}</label>
+            <label className="text-xs text-2 font-medium mb-1.5 block">{t('errors.correction')}</label>
             <input className={inputClass} value={form.correction} onChange={e => setForm(f => ({...f, correction: e.target.value}))} placeholder='"I have gone to..."' required />
           </div>
           <div>
-            <label className="text-xs text-white/40 mb-1 block">{t('errors.explanation')}</label>
+            <label className="text-xs text-2 font-medium mb-1.5 block">{t('errors.explanation')}</label>
             <textarea className={cn(inputClass, "resize-none h-20")} value={form.explanation} onChange={e => setForm(f => ({...f, explanation: e.target.value}))} placeholder="go → gone (participio irregular)" />
           </div>
           <div>
-            <label className="text-xs text-white/40 mb-1 block">{t('errors.category')}</label>
-            <select className={inputClass} value={form.category} onChange={e => setForm(f => ({...f, category: e.target.value}))}>
+            <label className="text-xs text-2 font-medium mb-1.5 block">{t('errors.category')}</label>
+            <select className={cn(inputClass, "[&>option]:bg-ink-900")} value={form.category} onChange={e => setForm(f => ({...f, category: e.target.value}))}>
               {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
             </select>
           </div>
           <div className="flex gap-2 pt-1">
-            <button type="button" onClick={onClose} className="flex-1 glass-btn px-4 py-2 text-sm text-white/60">{t('common.cancel')}</button>
-            <button type="submit" className="flex-1 bg-amber-600/70 hover:bg-amber-600/90 border border-amber-500/30 rounded-xl px-4 py-2 text-sm text-white transition-all">{t('common.save')}</button>
+            <button type="button" onClick={onClose} className="btn btn-ghost flex-1">{t('common.cancel')}</button>
+            <button type="submit" className="btn btn-primary flex-1">{t('common.save')}</button>
           </div>
         </form>
       </div>
@@ -117,39 +117,38 @@ export function ErrorBankPage() {
   const recurring = errors.filter(e => e.is_recurring)
 
   return (
-    <div className="space-y-5">
-      <div className="flex items-center justify-between">
+    <div className="space-y-6">
+      <div className="flex items-center justify-between gap-4">
         <div>
-          <h1 className={`text-2xl font-semibold ${config.theme.gradient}`}>
+          <h1 className="text-3xl font-semibold tracking-tight text-gradient-brand">
             {t('errors.title')} {config.flag}
           </h1>
-          <p className="text-white/40 text-sm mt-0.5">
+          <p className="text-2 text-sm mt-1">
             {t('errors.subtitle', { count: errors.length, recurring: recurring.length })}
           </p>
         </div>
-        <button
-          onClick={() => setShowAdd(true)}
-          className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium border bg-amber-500/15 border-amber-500/25 text-amber-300 hover:bg-amber-500/25 transition-all"
-        >
-          <Plus size={15} />
+        <button onClick={() => setShowAdd(true)} className="btn btn-primary shrink-0">
+          <Plus size={16} />
           {t('errors.register')}
         </button>
       </div>
 
       {recurring.length > 0 && (
-        <div className="glass border-amber-500/20 p-4">
-          <div className="flex items-center gap-2 mb-3">
-            <AlertTriangle size={14} className="text-amber-400" />
-            <h2 className="text-sm font-medium text-amber-300">{t('errors.recurringTitle')}</h2>
+        <div className="glass p-5 border-amber-500/20">
+          <div className="flex items-center gap-2.5 mb-3">
+            <div className="w-7 h-7 rounded-xl bg-amber-500/15 flex items-center justify-center">
+              <AlertTriangle size={14} className="text-amber-400" />
+            </div>
+            <h2 className="text-sm font-semibold text-amber-300">{t('errors.recurringTitle')}</h2>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-2.5">
             {recurring.map(e => (
               <div key={e.id} className="flex items-start gap-3 text-sm">
-                <span className="text-amber-400/60 shrink-0">×{e.occurrence_count}</span>
+                <span className="text-amber-400/60 shrink-0 font-mono text-xs mt-0.5">×{e.occurrence_count}</span>
                 <div>
-                  <span className="text-white/40 line-through">{e.error_text}</span>
-                  <span className="text-white/70 mx-2">→</span>
-                  <span className="text-white">{e.correction}</span>
+                  <span className="text-2 line-through">{e.error_text}</span>
+                  <span className="text-3 mx-2">→</span>
+                  <span className="text-1 font-medium">{e.correction}</span>
                 </div>
               </div>
             ))}
@@ -158,37 +157,42 @@ export function ErrorBankPage() {
       )}
 
       {loading ? (
-        <div className="glass p-8 text-center text-white/30 text-sm">{t('common.loading')}</div>
+        <div className="glass p-10 text-center text-3 text-sm">{t('common.loading')}</div>
       ) : errors.length === 0 ? (
-        <div className="glass p-10 text-center">
-          <p className="text-white/30 text-sm">{t('errors.empty')}</p>
+        <div className="glass p-12 text-center">
+          <p className="text-2 text-sm">{t('errors.empty')}</p>
         </div>
       ) : (
         <div className="space-y-2">
           {errors.map(error => (
-            <div key={error.id} className={cn('glass p-4', error.is_recurring && 'border-amber-500/20')}>
+            <div key={error.id} className={cn('glass p-5', error.is_recurring && 'border-amber-500/20')}>
               <div className="flex items-start justify-between gap-3">
-                <div className="flex-1 space-y-1">
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <span className="text-sm text-white/40 line-through">{error.error_text}</span>
-                    <span className="text-white/30">→</span>
-                    <span className="text-sm text-white font-medium">{error.correction}</span>
-                    <span className="text-xs px-2 py-0.5 rounded bg-white/[0.06] text-white/40">{error.category}</span>
+                <div className="flex-1 space-y-2">
+                  <div className="flex items-center gap-2.5 flex-wrap">
+                    <span className="text-sm text-3 line-through">{error.error_text}</span>
+                    <span className="text-3 text-xs">→</span>
+                    <span className="text-sm text-1 font-semibold">{error.correction}</span>
+                    <span className="text-xs px-2 py-0.5 rounded-lg bg-white/[0.07] text-3 border border-white/[0.09]">
+                      {error.category}
+                    </span>
                     {error.is_recurring && (
-                      <span className="text-xs px-2 py-0.5 rounded bg-amber-500/15 border border-amber-500/25 text-amber-300">{t('errors.recurringBadge')}</span>
+                      <span className="text-xs px-2.5 py-0.5 rounded-lg bg-amber-500/15 border border-amber-500/25 text-amber-300">
+                        {t('errors.recurringBadge')}
+                      </span>
                     )}
                   </div>
                   {error.explanation && (
-                    <p className="text-xs text-white/40">{error.explanation}</p>
+                    <p className="text-xs text-2 leading-relaxed">{error.explanation}</p>
                   )}
-                  <p className="text-xs text-white/25">{formatDate(error.created_at, dateLocale())}</p>
+                  <p className="text-xs text-3">{formatDate(error.created_at, dateLocale())}</p>
                 </div>
                 <button
                   onClick={() => markRecurring(error.id, error.occurrence_count)}
                   title={t('errors.markAgain')}
-                  className="shrink-0 p-1.5 rounded-lg hover:bg-amber-500/10 text-white/20 hover:text-amber-400 transition-all"
+                  className="shrink-0 p-2 rounded-xl hover:bg-amber-500/10 text-3 hover:text-amber-400 transition-all"
+                  aria-label={t('errors.markAgain')}
                 >
-                  <RefreshCw size={13} />
+                  <RefreshCw size={14} />
                 </button>
               </div>
             </div>

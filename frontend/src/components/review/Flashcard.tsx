@@ -6,10 +6,10 @@ import type { VocabWord } from '@/types/database'
 import type { Rating } from '@/lib/srs'
 
 const RATING_BUTTONS: { rating: Rating; labelKey: string; className: string }[] = [
-  { rating: 'again', labelKey: 'flashcard.again', className: 'border-red-500/30 text-red-300 hover:bg-red-500/15' },
-  { rating: 'hard', labelKey: 'flashcard.hard', className: 'border-amber-500/30 text-amber-300 hover:bg-amber-500/15' },
-  { rating: 'good', labelKey: 'flashcard.good', className: 'border-blue-500/30 text-blue-300 hover:bg-blue-500/15' },
-  { rating: 'easy', labelKey: 'flashcard.easy', className: 'border-green-500/30 text-green-300 hover:bg-green-500/15' },
+  { rating: 'again', labelKey: 'flashcard.again', className: 'border-red-500/30 text-red-300 hover:bg-red-500/15 hover:border-red-500/50' },
+  { rating: 'hard', labelKey: 'flashcard.hard', className: 'border-amber-500/30 text-amber-300 hover:bg-amber-500/15 hover:border-amber-500/50' },
+  { rating: 'good', labelKey: 'flashcard.good', className: 'border-accent/35 text-accent-soft hover:bg-accent/15 hover:border-accent/55' },
+  { rating: 'easy', labelKey: 'flashcard.easy', className: 'border-green-500/30 text-green-300 hover:bg-green-500/15 hover:border-green-500/50' },
 ]
 
 export function Flashcard({ word, onRate }: { word: VocabWord; onRate: (rating: Rating) => void }) {
@@ -21,33 +21,41 @@ export function Flashcard({ word, onRate }: { word: VocabWord; onRate: (rating: 
   }, [word.id])
 
   return (
-    <div className="glass p-8 text-center space-y-5">
+    <div className="glass p-8 text-center space-y-6">
       <div>
-        <p className="text-3xl font-semibold text-white">{word.word}</p>
-        {word.ipa && <p className="text-sm font-mono text-white/40 mt-2">{word.ipa}</p>}
+        <p className="text-4xl font-semibold text-1 tracking-tight">{word.word}</p>
+        {word.ipa && (
+          <p className="text-sm font-mono text-3 mt-2">{word.ipa}</p>
+        )}
       </div>
 
       {!revealed ? (
         <button
           onClick={() => setRevealed(true)}
-          className="glass-btn inline-flex items-center gap-2 px-5 py-2.5 text-sm text-white/70"
+          className="btn btn-ghost mx-auto"
         >
-          <Eye size={15} />
+          <Eye size={16} />
           {t('flashcard.reveal')}
         </button>
       ) : (
         <div className="space-y-4 animate-fade-in">
-          <p className="text-xl text-white/90">{word.translation}</p>
-          {word.definition && <p className="text-sm text-white/50">{word.definition}</p>}
+          <p className="text-2xl text-1 font-medium">{word.translation}</p>
+          {word.definition && (
+            <p className="text-sm text-2 max-w-sm mx-auto leading-relaxed">{word.definition}</p>
+          )}
           {word.example_sentence && (
-            <p className="text-sm text-white/35 italic">"{word.example_sentence}"</p>
+            <p className="text-sm text-3 italic max-w-sm mx-auto">"{word.example_sentence}"</p>
           )}
           <div className="flex justify-center gap-2 pt-2">
             {RATING_BUTTONS.map(({ rating, labelKey, className }) => (
               <button
                 key={rating}
                 onClick={() => onRate(rating)}
-                className={cn('px-4 py-2 rounded-xl text-sm border bg-transparent transition-all', className)}
+                className={cn(
+                  'px-5 py-2.5 rounded-2xl text-sm border bg-transparent transition-all active:scale-[0.97]',
+                  'min-h-[44px]',
+                  className
+                )}
               >
                 {t(labelKey)}
               </button>

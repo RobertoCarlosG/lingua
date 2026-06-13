@@ -15,17 +15,25 @@ export default {
           hover: 'rgba(255,255,255,0.14)',
           strong: 'rgba(255,255,255,0.18)',
         },
-        en: {
-          50: '#eff6ff',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
+        // Deep navy ink ladder (page → controls)
+        ink: {
+          950: 'rgb(var(--ink-950) / <alpha-value>)',
+          900: 'rgb(var(--ink-900) / <alpha-value>)',
+          850: 'rgb(var(--ink-850) / <alpha-value>)',
+          800: 'rgb(var(--ink-800) / <alpha-value>)',
+          700: 'rgb(var(--ink-700) / <alpha-value>)',
         },
-        pt: {
-          50: '#fdf4ff',
-          400: '#c084fc',
-          500: '#a855f7',
-          600: '#9333ea',
+        // Brand accent — the single color that "leads"
+        accent: {
+          DEFAULT: 'rgb(var(--accent) / <alpha-value>)',
+          soft: 'rgb(var(--accent-soft) / <alpha-value>)',
+          strong: 'rgb(var(--accent-strong) / <alpha-value>)',
+        },
+        // Contrast-checked text ladder
+        content: {
+          1: 'rgb(var(--text-1) / <alpha-value>)',
+          2: 'rgb(var(--text-2) / <alpha-value>)',
+          3: 'rgb(var(--text-3) / <alpha-value>)',
         },
       },
       backdropBlur: {

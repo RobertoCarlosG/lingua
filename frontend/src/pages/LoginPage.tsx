@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Globe } from 'lucide-react'
+import { Sparkles } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '@/lib/auth'
 
@@ -16,26 +16,28 @@ export function LoginPage() {
   return (
     <div className="min-h-dvh flex items-center justify-center px-4">
       <div className="w-full max-w-sm space-y-8">
-        <div className="text-center space-y-3">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mx-auto">
-            <Globe size={28} className="text-white" />
+        <div className="text-center space-y-4">
+          <div className="w-16 h-16 rounded-3xl bg-gradient-to-br from-accent-soft to-accent-strong flex items-center justify-center mx-auto shadow-[0_8px_28px_-8px_rgba(45,110,235,0.9)]">
+            <Sparkles size={30} className="text-white" />
           </div>
-          <h1 className="text-2xl font-semibold text-white tracking-tight">Lingua</h1>
-          <p className="text-white/40 text-sm">{t('login.tagline')}</p>
+          <div>
+            <h1 className="text-3xl font-semibold tracking-tight text-gradient-brand">Lingua</h1>
+            <p className="text-2 text-sm mt-2">{t('login.tagline')}</p>
+          </div>
         </div>
 
-        <div className="glass p-6 space-y-4">
-          <p className="text-center text-sm text-white/50">{t('login.savePrompt')}</p>
+        <div className="glass p-7 space-y-5">
+          <p className="text-center text-sm text-2">{t('login.savePrompt')}</p>
           <button
             onClick={signInWithGoogle}
-            className="w-full flex items-center justify-center gap-3 px-4 py-3 rounded-xl bg-white text-slate-800 font-medium text-sm hover:bg-white/90 transition-colors"
+            className="w-full flex items-center justify-center gap-3 px-4 py-3.5 rounded-2xl bg-white text-slate-800 font-semibold text-sm hover:bg-white/90 active:scale-[0.98] transition-all shadow-[0_4px_20px_-6px_rgba(0,0,0,0.4)]"
           >
             <GoogleIcon />
             {t('login.google')}
           </button>
         </div>
 
-        <p className="text-center text-xs text-white/20 whitespace-pre-line">
+        <p className="text-center text-xs text-3 whitespace-pre-line leading-relaxed">
           {t('login.footer')}
         </p>
       </div>

@@ -6,7 +6,7 @@ export function LanguageToggle() {
   const { activeLanguage, setActiveLanguage } = useStore()
 
   return (
-    <div className="flex p-1 rounded-xl bg-white/[0.05] border border-white/[0.07] gap-1">
+    <div className="flex p-1 rounded-2xl bg-white/[0.05] border border-white/[0.08] gap-1">
       {LANGUAGE_CODES.map(code => {
         const { label, flag, theme } = LEARNING_LANGUAGES[code]
         return (
@@ -14,8 +14,8 @@ export function LanguageToggle() {
             key={code}
             onClick={() => setActiveLanguage(code)}
             className={cn(
-              'flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-xs font-medium transition-all duration-200',
-              activeLanguage === code ? theme.toggleActive : 'text-white/40 hover:text-white/70'
+              'flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-xs font-medium transition-all duration-200 min-h-[36px]',
+              activeLanguage === code ? theme.toggleActive : 'text-3 hover:text-2'
             )}
           >
             <span>{flag}</span>

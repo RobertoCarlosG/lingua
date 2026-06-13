@@ -93,43 +93,45 @@ export function ReviewPage() {
   }
 
   const config = languageConfig(activeLanguage)
+  const progress = queue.length > 0 ? (index / queue.length) * 100 : 0
 
   return (
-    <div className="space-y-5 max-w-2xl mx-auto">
+    <div className="space-y-6 max-w-2xl mx-auto">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className={`text-2xl font-semibold ${config.theme.gradient}`}>
+          <h1 className="text-3xl font-semibold tracking-tight text-gradient-brand">
             {t('review.title')} {config.flag}
           </h1>
-          <p className="text-white/40 text-sm mt-0.5">{t('review.subtitle')}</p>
+          <p className="text-2 text-sm mt-1">{t('review.subtitle')}</p>
         </div>
         {!loading && queue.length > 0 && !finished && (
-          <span className="glass-sm px-3 py-1.5 text-sm text-white/60">
+          <span className="glass-sm px-4 py-2 text-sm font-medium text-2">
             {index + 1} / {queue.length}
           </span>
         )}
       </div>
 
       {loading ? (
-        <div className="glass p-8 text-center text-white/30 text-sm">{t('common.loading')}</div>
+        <div className="glass p-10 text-center text-3 text-sm">{t('common.loading')}</div>
       ) : queue.length === 0 ? (
-        <div className="glass p-10 text-center space-y-2">
-          <Brain size={28} className="mx-auto text-white/20" />
-          <p className="text-white/50 text-sm">{t('review.emptyTitle')}</p>
-          <p className="text-white/30 text-xs">{t('review.emptyHint')}</p>
+        <div className="glass p-12 text-center space-y-3">
+          <div className="w-14 h-14 rounded-3xl bg-white/[0.06] flex items-center justify-center mx-auto">
+            <Brain size={26} className="text-3" />
+          </div>
+          <p className="text-2 text-sm font-medium">{t('review.emptyTitle')}</p>
+          <p className="text-3 text-xs">{t('review.emptyHint')}</p>
         </div>
       ) : finished ? (
-        <div className="glass p-10 text-center space-y-3">
-          <CheckCircle2 size={32} className="mx-auto text-green-400" />
-          <p className="text-white text-lg font-medium">{t('review.done')}</p>
-          <p className="text-white/50 text-sm">
+        <div className="glass p-12 text-center space-y-4">
+          <div className="w-14 h-14 rounded-3xl bg-green-500/15 flex items-center justify-center mx-auto">
+            <CheckCircle2 size={28} className="text-green-400" />
+          </div>
+          <p className="text-1 text-xl font-semibold">{t('review.done')}</p>
+          <p className="text-2 text-sm">
             {t('review.summary', { total: queue.length, missed })}
           </p>
-          <button
-            onClick={fetchDueWords}
-            className="glass-btn inline-flex items-center gap-2 px-4 py-2 text-sm text-white/70 mt-2"
-          >
-            <RotateCcw size={14} />
+          <button onClick={fetchDueWords} className="btn btn-ghost mx-auto mt-2">
+            <RotateCcw size={15} />
             {t('review.more')}
           </button>
         </div>
@@ -137,8 +139,8 @@ export function ReviewPage() {
         <>
           <div className="h-1.5 rounded-full bg-white/[0.06] overflow-hidden">
             <div
-              className={cn('h-full rounded-full transition-all', config.theme.progress)}
-              style={{ width: `${(index / queue.length) * 100}%` }}
+              className={cn('h-full rounded-full transition-all duration-500', config.theme.progress)}
+              style={{ width: `${progress}%` }}
             />
           </div>
           <Flashcard word={queue[index]} onRate={handleRate} />

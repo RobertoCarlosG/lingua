@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
-import { Plus, FileText, ChevronRight, Volume2, CheckCircle, Circle, AlertCircle, Wand2, Loader2, Upload, BookPlus } from 'lucide-react'
+import { Plus, ChevronRight, Volume2, CheckCircle, Circle, AlertCircle, Wand2, Loader2, Upload, BookPlus, ArrowLeft } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { generateLessonYaml } from '@/lib/dictionary'
 import { lessonVocabToWords } from '@/lib/lesson-to-vocab'
@@ -14,7 +14,7 @@ import type { Lesson, LessonYAML, VocabItem, Exercise } from '@/types/database'
 
 function IPABadge({ ipa }: { ipa: string }) {
   return (
-    <span className="inline-flex items-center gap-1 font-mono text-xs px-2 py-0.5 rounded bg-white/[0.06] text-white/50 border border-white/[0.08]">
+    <span className="inline-flex items-center gap-1 font-mono text-xs px-2 py-0.5 rounded-lg bg-white/[0.07] text-3 border border-white/[0.09]">
       <Volume2 size={10} />
       {ipa}
     </span>
@@ -22,28 +22,27 @@ function IPABadge({ ipa }: { ipa: string }) {
 }
 
 function VocabCard({ item, language }: { item: VocabItem; language: Language }) {
-  const theme = languageConfig(language).theme
   return (
-    <div className={cn('glass-sm p-4 space-y-2', theme.cardHover, 'transition-all')}>
+    <div className="glass-sm p-4 space-y-2 hover:border-accent/30 transition-all">
       <div className="flex items-start justify-between gap-2">
         <div>
-          <p className="font-semibold text-white text-base">{item.word}</p>
+          <p className="font-semibold text-1 text-base">{item.word}</p>
           {item.ipa && <IPABadge ipa={item.ipa} />}
         </div>
-        <p className={cn('text-sm font-medium shrink-0', theme.accent)}>
+        <p className="text-sm font-medium shrink-0 text-accent-soft">
           {item.translation}
         </p>
       </div>
       {item.definition && (
-        <p className="text-sm text-white/50">{item.definition}</p>
+        <p className="text-sm text-2 leading-relaxed">{item.definition}</p>
       )}
       {item.example && (
-        <p className="text-sm text-white/35 italic">"{item.example}"</p>
+        <p className="text-sm text-3 italic">"{item.example}"</p>
       )}
       {item.tags && item.tags.length > 0 && (
         <div className="flex gap-1 flex-wrap">
           {item.tags.map(t => (
-            <span key={t} className="text-xs px-1.5 py-0.5 rounded bg-white/[0.05] text-white/30">{t}</span>
+            <span key={t} className="text-xs px-1.5 py-0.5 rounded-lg bg-white/[0.06] text-3 border border-white/[0.07]">{t}</span>
           ))}
         </div>
       )}
@@ -64,10 +63,10 @@ function ExerciseBlock({ exercise, index }: { exercise: Exercise; index: number 
   }
 
   return (
-    <div className="glass-sm p-4 space-y-3">
+    <div className="glass-sm p-5 space-y-3">
       <div className="flex items-start gap-2">
-        <span className="text-xs font-mono text-white/30 mt-0.5 shrink-0">#{index + 1}</span>
-        <p className="text-sm text-white/80">{exercise.prompt}</p>
+        <span className="text-xs font-mono text-3 mt-0.5 shrink-0">#{index + 1}</span>
+        <p className="text-sm text-2 leading-relaxed">{exercise.prompt}</p>
       </div>
 
       {exercise.type === 'multiple_choice' && exercise.options ? (
@@ -77,12 +76,14 @@ function ExerciseBlock({ exercise, index }: { exercise: Exercise; index: number 
               key={opt}
               onClick={() => { setAnswer(opt); setRevealed(false); setCorrect(null) }}
               className={cn(
-                'text-left px-3 py-2 rounded-lg border text-sm transition-all',
+                'text-left px-3 py-2.5 rounded-2xl border text-sm transition-all',
                 answer === opt
                   ? revealed
-                    ? opt === exercise.answer ? 'bg-green-500/15 border-green-500/30 text-green-300' : 'bg-red-500/15 border-red-500/30 text-red-300'
-                    : 'bg-white/10 border-white/20 text-white'
-                  : 'border-white/10 text-white/50 hover:bg-white/[0.05] hover:text-white/80'
+                    ? opt === exercise.answer
+                      ? 'bg-green-500/15 border-green-500/30 text-green-300'
+                      : 'bg-red-500/15 border-red-500/30 text-red-300'
+                    : 'bg-white/10 border-white/20 text-1'
+                  : 'border-white/10 text-2 hover:bg-white/[0.05] hover:text-1 hover:border-white/20'
               )}
             >
               {opt}
@@ -91,7 +92,7 @@ function ExerciseBlock({ exercise, index }: { exercise: Exercise; index: number 
         </div>
       ) : (
         <input
-          className="glass-input w-full px-3 py-2 text-sm"
+          className="glass-input w-full px-3 py-2.5 text-sm"
           placeholder={t('lessons.yourAnswer')}
           value={answer}
           onChange={e => { setAnswer(e.target.value); setRevealed(false); setCorrect(null) }}
@@ -102,7 +103,7 @@ function ExerciseBlock({ exercise, index }: { exercise: Exercise; index: number 
       <div className="flex items-center justify-between">
         <button
           onClick={checkAnswer}
-          className="px-3 py-1.5 rounded-lg text-xs bg-white/[0.08] hover:bg-white/[0.14] border border-white/10 text-white/60 hover:text-white transition-all"
+          className="btn btn-ghost text-xs py-2 px-4"
         >
           {t('lessons.check')}
         </button>
@@ -115,7 +116,7 @@ function ExerciseBlock({ exercise, index }: { exercise: Exercise; index: number 
       </div>
 
       {revealed && exercise.explanation && (
-        <p className="text-xs text-white/40 border-t border-white/[0.06] pt-2">{exercise.explanation}</p>
+        <p className="text-xs text-3 border-t border-white/[0.07] pt-2.5 leading-relaxed">{exercise.explanation}</p>
       )}
     </div>
   )
@@ -128,22 +129,22 @@ function LessonRenderer({ lesson }: { lesson: LessonYAML }) {
   return (
     <div className="space-y-6 animate-fade-in">
       <div>
-        <div className="flex items-center gap-2 mb-1">
+        <div className="flex items-center gap-2 mb-2">
           <span className={config.theme.badge}>
             {config.label} · {lesson.level}
           </span>
-          <span className="text-xs px-2 py-0.5 rounded bg-white/[0.06] text-white/40 border border-white/[0.08]">
+          <span className="text-xs px-2 py-0.5 rounded-lg bg-white/[0.07] text-3 border border-white/[0.09]">
             {lesson.type}
           </span>
         </div>
-        <h2 className={`text-xl font-semibold mt-2 ${config.theme.gradient}`}>
+        <h2 className="text-2xl font-semibold tracking-tight text-gradient-brand mt-2">
           {lesson.title}
         </h2>
         {lesson.objectives && (
-          <ul className="mt-2 space-y-1">
+          <ul className="mt-3 space-y-1.5">
             {lesson.objectives.map((obj, i) => (
-              <li key={i} className="flex items-start gap-2 text-sm text-white/50">
-                <ChevronRight size={13} className="mt-0.5 shrink-0 text-white/25" />
+              <li key={i} className="flex items-start gap-2 text-sm text-2">
+                <ChevronRight size={13} className="mt-0.5 shrink-0 text-accent-soft" />
                 {obj}
               </li>
             ))}
@@ -155,12 +156,12 @@ function LessonRenderer({ lesson }: { lesson: LessonYAML }) {
         <div className="space-y-4">
           {lesson.sections.map((section, i) => (
             <div key={i} className="glass p-5">
-              <h3 className="text-sm font-semibold text-white/80 mb-2">{section.title}</h3>
-              <div className="text-sm text-white/60 whitespace-pre-line leading-relaxed">{section.content}</div>
+              <h3 className="text-sm font-semibold text-1 mb-3">{section.title}</h3>
+              <div className="text-sm text-2 whitespace-pre-line leading-relaxed">{section.content}</div>
               {section.tips && section.tips.length > 0 && (
-                <div className="mt-3 space-y-1.5">
+                <div className="mt-4 space-y-2">
                   {section.tips.map((tip, j) => (
-                    <div key={j} className="flex items-start gap-2 text-xs text-white/40">
+                    <div key={j} className="flex items-start gap-2 text-xs text-2">
                       <span className="text-amber-400 shrink-0">→</span>
                       {tip}
                     </div>
@@ -174,7 +175,7 @@ function LessonRenderer({ lesson }: { lesson: LessonYAML }) {
 
       {lesson.vocabulary && lesson.vocabulary.length > 0 && (
         <div>
-          <h3 className="text-sm font-medium text-white/50 mb-3">{t('lessons.vocabSection', { count: lesson.vocabulary.length })}</h3>
+          <h3 className="text-sm font-semibold text-2 mb-3">{t('lessons.vocabSection', { count: lesson.vocabulary.length })}</h3>
           <div className="grid md:grid-cols-2 gap-2">
             {lesson.vocabulary.map((item, i) => (
               <VocabCard key={i} item={item} language={lesson.language} />
@@ -185,7 +186,7 @@ function LessonRenderer({ lesson }: { lesson: LessonYAML }) {
 
       {lesson.exercises && lesson.exercises.length > 0 && (
         <div>
-          <h3 className="text-sm font-medium text-white/50 mb-3">{t('lessons.exercises')}</h3>
+          <h3 className="text-sm font-semibold text-2 mb-3">{t('lessons.exercises')}</h3>
           <div className="space-y-3">
             {lesson.exercises.map((ex, i) => (
               <ExerciseBlock key={i} exercise={ex} index={i} />
@@ -195,8 +196,8 @@ function LessonRenderer({ lesson }: { lesson: LessonYAML }) {
       )}
 
       {lesson.notes && (
-        <div className="glass-sm p-4 border-l-2 border-amber-500/30">
-          <p className="text-sm text-white/50 italic">{lesson.notes}</p>
+        <div className="glass-sm p-4" style={{ borderLeft: '2px solid rgba(88,150,255,0.3)' }}>
+          <p className="text-sm text-2 italic leading-relaxed">{lesson.notes}</p>
         </div>
       )}
     </div>
@@ -253,23 +254,25 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
     onRender(yaml)
   }
 
-  function loadTemplate(t: 'vocab' | 'phonetics') {
-    setTemplate(t)
-    setYaml(t === 'vocab' ? LESSON_TEMPLATE_VOCAB : LESSON_TEMPLATE_PHONETICS)
+  function loadTemplate(tpl: 'vocab' | 'phonetics') {
+    setTemplate(tpl)
+    setYaml(tpl === 'vocab' ? LESSON_TEMPLATE_VOCAB : LESSON_TEMPLATE_PHONETICS)
     setErrors([])
   }
 
   return (
     <div className="space-y-3">
       <div className="flex items-center gap-2 flex-wrap">
-        <span className="text-xs text-white/40">{t('lessons.template')}</span>
+        <span className="text-xs text-3">{t('lessons.template')}</span>
         {(['vocab', 'phonetics'] as const).map(tpl => (
           <button
             key={tpl}
             onClick={() => loadTemplate(tpl)}
             className={cn(
-              'text-xs px-2.5 py-1 rounded-lg border transition-all',
-              template === tpl ? 'bg-white/10 border-white/20 text-white' : 'border-white/10 text-white/40 hover:text-white/70'
+              'text-xs px-3 py-1.5 rounded-xl border transition-all',
+              template === tpl
+                ? 'bg-white/12 border-white/22 text-1'
+                : 'border-white/10 text-3 hover:text-2 hover:border-white/20'
             )}
           >
             {tpl === 'vocab' ? t('lessons.templateVocab') : t('lessons.templatePhonetics')}
@@ -286,9 +289,9 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
         <button
           type="button"
           onClick={() => fileInputRef.current?.click()}
-          className="glass-btn px-2.5 py-1 text-xs text-white/60 flex items-center gap-1.5"
+          className="btn btn-ghost text-xs py-1.5 px-3"
         >
-          <Upload size={12} />
+          <Upload size={13} />
           {t('lessons.upload')}
         </button>
       </div>
@@ -296,7 +299,7 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
       {languageConfig(activeLanguage).dictionary.generate && (
         <div className="flex gap-1.5">
           <input
-            className="glass-input flex-1 px-3 py-2 text-xs"
+            className="glass-input flex-1 px-3 py-2.5 text-xs"
             placeholder={t('lessons.generatePlaceholder')}
             value={genWords}
             onChange={e => setGenWords(e.target.value)}
@@ -306,7 +309,7 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
             type="button"
             onClick={handleGenerate}
             disabled={generating || !genWords.trim()}
-            className="glass-btn px-3 text-xs text-blue-300 flex items-center gap-1.5 disabled:opacity-40 shrink-0"
+            className="btn btn-ghost text-xs text-accent-soft disabled:opacity-40 shrink-0"
           >
             {generating ? <Loader2 size={13} className="animate-spin" /> : <Wand2 size={13} />}
             {t('lessons.generate')}
@@ -322,7 +325,7 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
       />
 
       {errors.length > 0 && (
-        <div className="glass-sm p-3 border border-red-500/20">
+        <div className="glass-sm p-3 border border-red-500/25">
           {errors.map((e, i) => (
             <div key={i} className="flex items-center gap-2 text-xs text-red-300">
               <AlertCircle size={12} />
@@ -332,10 +335,7 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
         </div>
       )}
 
-      <button
-        onClick={handleRender}
-        className="w-full py-2.5 rounded-xl text-sm font-medium bg-gradient-to-r from-blue-600/70 to-purple-600/70 hover:from-blue-600/90 hover:to-purple-600/90 border border-white/10 text-white transition-all"
-      >
+      <button onClick={handleRender} className="btn btn-primary w-full">
         {t('lessons.render')}
       </button>
     </div>
@@ -377,7 +377,6 @@ export function LessonsPage() {
 
   async function fetchLessons() {
     setLoading(true)
-    // Garantiza que el contenido precargado ya esté insertado antes del primer fetch
     await seedLessons()
     const { data } = await supabase
       .from('lessons')
@@ -415,41 +414,38 @@ export function LessonsPage() {
   const config = languageConfig(activeLanguage)
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-6">
       {!activeLesson ? (
         <>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-4">
             <div>
-              <h1 className={`text-2xl font-semibold ${config.theme.gradient}`}>
+              <h1 className="text-3xl font-semibold tracking-tight text-gradient-brand">
                 {t('lessons.title')} {config.flag}
               </h1>
-              <p className="text-white/40 text-sm mt-0.5">{t('lessons.subtitle')}</p>
+              <p className="text-2 text-sm mt-1">{t('lessons.subtitle')}</p>
             </div>
             <button
               onClick={() => setShowEditor(!showEditor)}
-              className={cn(
-                'flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium border transition-all',
-                config.theme.button
-              )}
+              className="btn btn-primary shrink-0"
             >
-              <Plus size={15} />
+              <Plus size={16} />
               {t('lessons.new')}
             </button>
           </div>
 
           {showEditor && (
             <div className="glass p-5">
-              <h2 className="text-sm font-medium text-white/70 mb-4">{t('lessons.editorTitle')}</h2>
+              <h2 className="text-sm font-semibold text-2 mb-4">{t('lessons.editorTitle')}</h2>
               <YAMLEditor onRender={handleRenderYAML} />
             </div>
           )}
 
           {loading ? (
-            <div className="glass p-8 text-center text-white/30 text-sm">{t('common.loading')}</div>
+            <div className="glass p-10 text-center text-3 text-sm">{t('common.loading')}</div>
           ) : lessons.length === 0 && !showEditor ? (
-            <div className="glass p-10 text-center">
-              <p className="text-white/30 text-sm">{t('lessons.empty')}</p>
-              <button onClick={() => setShowEditor(true)} className="text-blue-400 text-sm mt-2 hover:underline">
+            <div className="glass p-12 text-center space-y-3">
+              <p className="text-2 text-sm">{t('lessons.empty')}</p>
+              <button onClick={() => setShowEditor(true)} className="text-accent-soft text-sm hover:underline">
                 {t('lessons.createFirst')}
               </button>
             </div>
@@ -461,24 +457,24 @@ export function LessonsPage() {
                   <button
                     key={lesson.id}
                     onClick={() => openLesson(lesson)}
-                    className="glass p-4 text-left hover:bg-white/[0.08] transition-all group"
+                    className="glass glass-interactive p-5 text-left group"
                   >
                     <div className="flex items-start justify-between gap-2">
                       <div className="flex-1 min-w-0">
-                        <p className="font-medium text-white text-sm truncate">{lesson.title}</p>
+                        <p className="font-semibold text-1 text-sm truncate">{lesson.title}</p>
                         {parsed && (
-                          <div className="flex items-center gap-1.5 mt-1.5">
+                          <div className="flex items-center gap-2 mt-2">
                             <span className={config.theme.badge}>
                               {parsed.level}
                             </span>
-                            <span className="text-xs text-white/30">{parsed.type}</span>
+                            <span className="text-xs text-3">{parsed.type}</span>
                             {parsed.vocabulary && (
-                              <span className="text-xs text-white/30">{t('lessons.wordCount', { count: parsed.vocabulary.length })}</span>
+                              <span className="text-xs text-3">{t('lessons.wordCount', { count: parsed.vocabulary.length })}</span>
                             )}
                           </div>
                         )}
                       </div>
-                      <ChevronRight size={14} className="text-white/20 group-hover:text-white/50 transition-colors shrink-0 mt-0.5" />
+                      <ChevronRight size={15} className="text-3 group-hover:text-2 transition-colors shrink-0 mt-0.5" />
                     </div>
                   </button>
                 )
@@ -488,11 +484,12 @@ export function LessonsPage() {
         </>
       ) : (
         <div>
-          <div className="flex items-center justify-between mb-5">
+          <div className="flex items-center justify-between mb-6">
             <button
               onClick={() => setActiveLesson(null)}
-              className="flex items-center gap-1.5 text-sm text-white/40 hover:text-white/70 transition-colors"
+              className="btn btn-ghost text-sm"
             >
+              <ArrowLeft size={15} />
               {t('lessons.back')}
             </button>
             {(activeLesson.vocabulary?.length ?? 0) > 0 && (
@@ -500,10 +497,10 @@ export function LessonsPage() {
                 onClick={importVocabulary}
                 disabled={importing || imported !== null}
                 className={cn(
-                  'flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs border transition-all',
+                  'btn text-xs',
                   imported !== null
-                    ? 'bg-green-500/10 border-green-500/25 text-green-300 cursor-default'
-                    : 'bg-white/[0.06] border-white/15 text-white/70 hover:bg-white/[0.12]'
+                    ? 'bg-green-500/10 border border-green-500/25 text-green-300 cursor-default'
+                    : 'btn-ghost text-2'
                 )}
               >
                 {importing ? (

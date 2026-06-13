@@ -2,11 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+/* =============================================================
+   LINGUA · Liquid Glass (Navy) Design System
+   Single source of truth for color lives in :root as raw
+   "R G B" triplets so Tailwind can apply <alpha-value>.
+   ============================================================= */
+
 @layer base {
   :root {
-    --bg-orb-1: 220, 38, 127;
-    --bg-orb-2: 59, 130, 246;
-    --bg-orb-3: 124, 58, 237;
+    /* Page / surface ink ladder (deep navy) */
+    --ink-950: 5 9 18;     /* #050912  page base            */
+    --ink-900: 9 15 28;    /* #090F1C  raised base           */
+    --ink-850: 13 21 38;   /* #0D1526  panels                */
+    --ink-800: 19 29 51;   /* #131D33  controls              */
+    --ink-700: 28 41 70;   /* #1C2946  hover                 */
+
+    /* Brand accent (azure) — the one color that "leads" */
+    --accent:        88 150 255;  /* #5896FF */
+    --accent-soft:  150 188 255;  /* #96BCFF  text on glass  */
+    --accent-strong: 45 110 235;  /* #2D6EEB  filled buttons */
+
+    /* Ambient orbs that color the background */
+    --orb-azure:  56 110 240;
+    --orb-indigo: 99 91 230;
+    --orb-teal:   45 180 190;
+
+    /* Text on dark — contrast-checked ladders (WCAG AA) */
+    --text-1: 255 255 255;   /* primary    ~white            */
+    --text-2: 199 210 232;   /* secondary  ~AA on ink        */
+    --text-3: 148 162 190;   /* tertiary   meta / captions   */
   }
 
   * {
@@ -14,90 +38,185 @@
   }
 
   body {
-    @apply bg-slate-950 text-white antialiased;
+    @apply text-white antialiased;
+    color: rgb(var(--text-1));
+    background-color: rgb(var(--ink-950));
     background-image:
-      radial-gradient(ellipse 80% 60% at 20% 10%, rgba(var(--bg-orb-2), 0.15) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 50% at 80% 90%, rgba(var(--bg-orb-3), 0.12) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 40% at 50% 50%, rgba(var(--bg-orb-1), 0.06) 0%, transparent 70%);
+      radial-gradient(ellipse 90% 60% at 15% -5%, rgba(var(--orb-azure), 0.22) 0%, transparent 55%),
+      radial-gradient(ellipse 70% 55% at 90% 100%, rgba(var(--orb-indigo), 0.18) 0%, transparent 55%),
+      radial-gradient(ellipse 60% 50% at 55% 45%, rgba(var(--orb-teal), 0.07) 0%, transparent 70%);
     background-attachment: fixed;
     min-height: 100dvh;
   }
 
   ::selection {
-    @apply bg-blue-500/30 text-white;
+    background: rgba(var(--accent), 0.35);
+    color: rgb(var(--text-1));
   }
 
-  ::-webkit-scrollbar {
-    @apply w-1.5;
+  /* Visible keyboard focus everywhere */
+  :focus-visible {
+    outline: 2px solid rgba(var(--accent), 0.7);
+    outline-offset: 2px;
+    border-radius: 12px;
   }
-  ::-webkit-scrollbar-track {
-    @apply bg-transparent;
-  }
-  ::-webkit-scrollbar-thumb {
-    @apply bg-white/10 rounded-full;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-white/20;
-  }
+
+  ::-webkit-scrollbar { @apply w-1.5; }
+  ::-webkit-scrollbar-track { @apply bg-transparent; }
+  ::-webkit-scrollbar-thumb { @apply bg-white/10 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-white/20; }
 }
 
 @layer components {
+  /* ---------- Liquid Glass surfaces ----------
+     Signature = saturated backdrop + specular top edge (rim light)
+     + soft outer shadow for real depth. */
   .glass {
-    @apply bg-white/[0.06] backdrop-blur-glass border border-white/[0.10] rounded-2xl;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.08);
+    position: relative;
+    background-image: linear-gradient(157deg, rgba(255,255,255,0.085), rgba(255,255,255,0.025));
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    backdrop-filter: blur(24px) saturate(180%);
+    @apply border border-white/[0.12] rounded-3xl;
+    box-shadow:
+      inset 0 1px 0 0 rgba(255,255,255,0.22),
+      inset 0 -1px 0 0 rgba(0,0,0,0.20),
+      0 18px 48px -16px rgba(0,0,0,0.65);
   }
 
   .glass-sm {
-    @apply bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl;
+    background-image: linear-gradient(157deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
+    -webkit-backdrop-filter: blur(16px) saturate(170%);
+    backdrop-filter: blur(16px) saturate(170%);
+    @apply border border-white/[0.10] rounded-2xl;
+    box-shadow:
+      inset 0 1px 0 0 rgba(255,255,255,0.16),
+      0 10px 30px -14px rgba(0,0,0,0.6);
   }
 
-  .glass-btn {
-    @apply bg-white/[0.07] hover:bg-white/[0.12] border border-white/10 hover:border-white/20
-           backdrop-blur-md rounded-xl transition-all duration-200 active:scale-[0.98];
+  /* Interactive glass tile (hoverable cards / list rows) */
+  .glass-interactive {
+    @apply glass transition-all duration-200;
   }
+  .glass-interactive:hover {
+    background-image: linear-gradient(157deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
+    @apply border-white/[0.18];
+    transform: translateY(-1px);
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl font-medium
+           px-4 py-2.5 text-sm transition-all duration-200 active:scale-[0.98]
+           disabled:opacity-40 disabled:pointer-events-none select-none;
+    min-height: 44px; /* a11y touch target */
+  }
+
+  /* Primary = the only filled, brand-colored action on a screen */
+  .btn-primary {
+    color: #fff;
+    background-image: linear-gradient(180deg, rgb(var(--accent)), rgb(var(--accent-strong)));
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow:
+      inset 0 1px 0 0 rgba(255,255,255,0.35),
+      0 8px 22px -8px rgba(var(--accent-strong), 0.8);
+  }
+  .btn-primary:hover {
+    background-image: linear-gradient(180deg, rgb(var(--accent-soft)), rgb(var(--accent)));
+  }
+
+  /* Ghost = glass action, the default secondary button */
+  .btn-ghost {
+    color: rgb(var(--text-1));
+    background-image: linear-gradient(157deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04));
+    -webkit-backdrop-filter: blur(14px) saturate(170%);
+    backdrop-filter: blur(14px) saturate(170%);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.16);
+  }
+  .btn-ghost:hover {
+    background-image: linear-gradient(157deg, rgba(255,255,255,0.16), rgba(255,255,255,0.07));
+    border-color: rgba(255,255,255,0.22);
+  }
+
+  /* Keep legacy name working during migration */
+  .glass-btn { @apply btn-ghost; }
 
   .glass-input {
-    @apply bg-white/[0.06] border border-white/10 focus:border-white/25 focus:bg-white/[0.09]
-           rounded-xl backdrop-blur-md outline-none transition-all duration-200
-           placeholder:text-white/30 text-white;
+    color: rgb(var(--text-1));
+    background: rgba(255,255,255,0.05);
+    @apply border border-white/10 rounded-2xl outline-none transition-all duration-200
+           placeholder:text-white/30;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+  .glass-input:focus {
+    border-color: rgba(var(--accent), 0.55);
+    background: rgba(255,255,255,0.08);
+    box-shadow: 0 0 0 3px rgba(var(--accent), 0.15);
   }
 
-  .lang-badge-en {
-    @apply bg-blue-500/15 border border-blue-500/25 text-blue-300 rounded-lg px-2 py-0.5 text-xs font-medium;
-  }
-
-  .lang-badge-pt {
-    @apply bg-purple-500/15 border border-purple-500/25 text-purple-300 rounded-lg px-2 py-0.5 text-xs font-medium;
-  }
-
+  /* ---------- Navigation ---------- */
   .nav-item {
-    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-white/60
-           hover:text-white hover:bg-white/[0.08] transition-all duration-150 cursor-pointer;
+    @apply relative flex items-center gap-3 px-3 py-2.5 rounded-2xl text-sm
+           transition-all duration-150 cursor-pointer;
+    color: rgb(var(--text-3));
   }
-
+  .nav-item:hover {
+    color: rgb(var(--text-1));
+    background: rgba(255,255,255,0.06);
+  }
   .nav-item.active {
-    @apply text-white bg-white/[0.10] border border-white/[0.12];
+    color: rgb(var(--text-1));
+    background-image: linear-gradient(157deg, rgba(var(--accent), 0.22), rgba(var(--accent), 0.08));
+    border: 1px solid rgba(var(--accent), 0.35);
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.12);
+  }
+  /* accent rail on active item */
+  .nav-item.active::before {
+    content: '';
+    position: absolute;
+    left: -3px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 60%;
+    border-radius: 9999px;
+    background: rgb(var(--accent-soft));
+    box-shadow: 0 0 12px rgba(var(--accent), 0.8);
   }
 
-  .stat-card {
-    @apply glass p-5 flex flex-col gap-1;
+  .stat-card { @apply glass p-5 flex flex-col gap-1; }
+
+  /* ---------- Language badges (idioma = detalle) ---------- */
+  .lang-badge-en {
+    @apply rounded-lg px-2 py-0.5 text-xs font-medium;
+    background: rgba(var(--accent), 0.16);
+    border: 1px solid rgba(var(--accent), 0.30);
+    color: rgb(var(--accent-soft));
+  }
+  .lang-badge-pt {
+    @apply rounded-lg px-2 py-0.5 text-xs font-medium;
+    background: rgba(var(--orb-teal), 0.16);
+    border: 1px solid rgba(var(--orb-teal), 0.30);
+    color: #7fe3ea;
   }
 }
 
 @layer utilities {
-  .text-gradient-en {
-    @apply bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent;
-  }
+  .text-1 { color: rgb(var(--text-1)); }
+  .text-2 { color: rgb(var(--text-2)); }
+  .text-3 { color: rgb(var(--text-3)); }
 
-  .text-gradient-pt {
-    @apply bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent;
+  /* Brand title gradient — replaces per-language gradients */
+  .text-gradient-brand {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(100deg, #ffffff 0%, rgb(var(--accent-soft)) 55%, rgb(var(--accent)) 100%);
   }
+  /* Legacy aliases now point to the brand gradient */
+  .text-gradient-en { @apply text-gradient-brand; }
+  .text-gradient-pt { @apply text-gradient-brand; }
 
-  .glow-en {
-    box-shadow: 0 0 20px rgba(96, 165, 250, 0.25);
-  }
-
-  .glow-pt {
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);
-  }
+  .glow-brand { box-shadow: 0 0 28px rgba(var(--accent), 0.28); }
+  .glow-en { @apply glow-brand; }
+  .glow-pt { @apply glow-brand; }
 }

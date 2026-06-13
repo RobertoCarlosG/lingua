@@ -13,10 +13,11 @@ import {
 
 const WEEKLY_SESSION_GOAL = 5
 
-// Colores hex para recharts (no acepta clases de Tailwind)
+// Colores hex para recharts (no acepta clases de Tailwind).
+// Marca manda: ambos idiomas comparten el acento navy.
 const CHART_COLORS: Record<string, { stroke: string; item: string }> = {
-  en: { stroke: '#3b82f6', item: '#60a5fa' },
-  pt: { stroke: '#a855f7', item: '#c084fc' },
+  en: { stroke: '#5896FF', item: '#96BCFF' },
+  pt: { stroke: '#5896FF', item: '#96BCFF' },
 }
 
 export function DashboardPage() {
@@ -72,18 +73,18 @@ export function DashboardPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-4">
         <div>
-          <h1 className={`text-2xl font-semibold ${config.theme.gradient}`}>
+          <h1 className="text-3xl font-semibold tracking-tight text-gradient-brand">
             {config.flag} {t('dashboard.title', { language: config.label })}
           </h1>
-          <p className="text-white/40 text-sm mt-0.5">
+          <p className="text-2 text-sm mt-1">
             {t('dashboard.subtitle', { levels: config.levels })}
           </p>
         </div>
-        <div className="flex items-center gap-2 glass-sm px-3 py-2">
-          <Flame size={16} className={stats.streak > 0 ? 'text-orange-400' : 'text-white/20'} />
-          <span className="text-sm font-medium text-white">
+        <div className="flex items-center gap-2 glass-sm px-3.5 py-2.5 shrink-0">
+          <Flame size={18} className={stats.streak > 0 ? 'text-orange-400' : 'text-3'} />
+          <span className="text-sm font-semibold text-1">
             {t('dashboard.streak', { count: stats.streak })}
           </span>
         </div>
@@ -92,46 +93,50 @@ export function DashboardPage() {
       {stats.due > 0 && (
         <Link
           to="/review"
-          className={`flex items-center justify-between glass p-4 transition-all hover:bg-white/[0.08] border ${config.theme.border}`}
+          className="group flex items-center justify-between glass-interactive p-5"
         >
-          <div className="flex items-center gap-3">
-            <Brain size={18} className={config.theme.accent} />
+          <div className="flex items-center gap-4">
+            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-accent-soft to-accent-strong flex items-center justify-center shadow-[0_6px_18px_-6px_rgba(45,110,235,0.9)]">
+              <Brain size={20} className="text-white" />
+            </div>
             <div>
-              <p className="text-sm text-white font-medium">{t('dashboard.dueBanner', { count: stats.due })}</p>
-              <p className="text-xs text-white/40">{t('dashboard.dueHint')}</p>
+              <p className="text-sm text-1 font-semibold">{t('dashboard.dueBanner', { count: stats.due })}</p>
+              <p className="text-xs text-2 mt-0.5">{t('dashboard.dueHint')}</p>
             </div>
           </div>
-          <span className="text-white/40 text-sm">{t('dashboard.reviewCta')}</span>
+          <span className="btn btn-primary pointer-events-none">{t('dashboard.reviewCta')}</span>
         </Link>
       )}
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         {[
-          { label: t('dashboard.words'), value: stats.words, icon: BookOpen, color: config.theme.accent },
-          { label: t('dashboard.errors'), value: stats.errors, icon: AlertCircle, color: 'text-amber-400' },
-          { label: t('dashboard.sessions'), value: stats.sessions, icon: Calendar, color: 'text-teal-400' },
-          { label: t('dashboard.activeDays'), value: `${stats.sessionsThisWeek}/${WEEKLY_SESSION_GOAL}`, icon: Target, color: 'text-green-400' },
-        ].map(({ label, value, icon: Icon, color }) => (
+          { label: t('dashboard.words'), value: stats.words, icon: BookOpen, color: 'text-accent-soft', bg: 'from-accent/25 to-accent/5' },
+          { label: t('dashboard.errors'), value: stats.errors, icon: AlertCircle, color: 'text-amber-300', bg: 'from-amber-400/25 to-amber-400/5' },
+          { label: t('dashboard.sessions'), value: stats.sessions, icon: Calendar, color: 'text-teal-300', bg: 'from-teal-400/25 to-teal-400/5' },
+          { label: t('dashboard.activeDays'), value: `${stats.sessionsThisWeek}/${WEEKLY_SESSION_GOAL}`, icon: Target, color: 'text-green-300', bg: 'from-green-400/25 to-green-400/5' },
+        ].map(({ label, value, icon: Icon, color, bg }) => (
           <div key={label} className="stat-card">
             <div className="flex items-center justify-between">
-              <p className="text-xs text-white/40">{label}</p>
-              <Icon size={14} className={color} />
+              <p className="text-xs text-2 font-medium">{label}</p>
+              <div className={`w-7 h-7 rounded-xl bg-gradient-to-br ${bg} flex items-center justify-center`}>
+                <Icon size={14} className={color} />
+              </div>
             </div>
-            <p className="text-2xl font-semibold text-white mt-1">{value}</p>
+            <p className="text-3xl font-semibold text-1 mt-1 tracking-tight">{value}</p>
           </div>
         ))}
       </div>
 
       <div className="glass p-5">
         <div className="flex items-center gap-2 mb-4">
-          <TrendingUp size={15} className="text-white/40" />
-          <h2 className="text-sm font-medium text-white/70">{t('dashboard.chartTitle')}</h2>
+          <TrendingUp size={16} className="text-accent-soft" />
+          <h2 className="text-sm font-semibold text-2">{t('dashboard.chartTitle')}</h2>
         </div>
         {week.every(d => d.count === 0) ? (
-          <p className="text-sm text-white/30 text-center py-8">
+          <p className="text-sm text-3 text-center py-8">
             <Trans
               i18nKey="dashboard.noActivity"
-              components={{ reviewLink: <Link to="/review" className="text-blue-400 hover:underline" /> }}
+              components={{ reviewLink: <Link to="/review" className="text-accent-soft hover:underline" /> }}
             />
           </p>
         ) : (
@@ -165,28 +170,31 @@ export function DashboardPage() {
 
       <div className="glass p-5">
         <div className="flex items-center gap-2 mb-3">
-          <Calendar size={15} className="text-white/40" />
-          <h2 className="text-sm font-medium text-white/70">{t('dashboard.today', { date: todayLabel })}</h2>
+          <Calendar size={16} className="text-accent-soft" />
+          <h2 className="text-sm font-semibold text-2">{t('dashboard.today', { date: todayLabel })}</h2>
         </div>
-        <p className="text-white/60 text-sm">{focus}</p>
+        <p className="text-2 text-sm leading-relaxed">{focus}</p>
       </div>
 
       <div className="glass p-5">
-        <h2 className="text-sm font-medium text-white/70 mb-3">{t('dashboard.weekActivity')}</h2>
+        <h2 className="text-sm font-semibold text-2 mb-3">{t('dashboard.weekActivity')}</h2>
         <div className="grid grid-cols-7 gap-2">
           {week.map(({ date, day, count }) => (
             <div
               key={date}
-              className={`rounded-xl p-3 text-center border ${
+              className={`rounded-2xl p-3 text-center border transition-colors ${
                 count > 0
-                  ? 'bg-white/[0.08] border-white/[0.12]'
+                  ? 'bg-accent/[0.12] border-accent/25'
                   : 'bg-white/[0.03] border-white/[0.06]'
               }`}
             >
-              <p className="text-xs text-white/40 mb-1">{day}</p>
+              <p className="text-xs text-3 mb-1.5">{day}</p>
               <div
                 className="w-2 h-2 rounded-full mx-auto"
-                style={{ backgroundColor: count > 0 ? chart.stroke : 'rgba(255,255,255,0.2)' }}
+                style={{
+                  backgroundColor: count > 0 ? chart.stroke : 'rgba(255,255,255,0.2)',
+                  boxShadow: count > 0 ? `0 0 10px ${chart.stroke}` : 'none',
+                }}
               />
             </div>
           ))}

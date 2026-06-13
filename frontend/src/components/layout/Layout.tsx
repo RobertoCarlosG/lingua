@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { Outlet, NavLink } from 'react-router-dom'
 import {
   LayoutDashboard, BookOpen, AlertCircle, FileText,
-  Brain, Menu, X, Globe, LogOut, Languages
+  Brain, Menu, X, Sparkles, LogOut, Languages
 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { LANGUAGE_CODES, LEARNING_LANGUAGES } from '@/lib/languages'
@@ -42,9 +42,10 @@ export function Layout() {
 
   return (
     <div className="flex h-dvh overflow-hidden">
+      {/* Scrim for mobile drawer */}
       {sidebarOpen && (
         <div
-          className="fixed inset-0 bg-black/40 z-20 lg:hidden"
+          className="fixed inset-0 bg-ink-950/60 backdrop-blur-sm z-20 lg:hidden"
           onClick={() => setSidebarOpen(false)}
         />
       )}
@@ -52,103 +53,107 @@ export function Layout() {
       <aside
         className={cn(
           'fixed lg:relative z-30 h-full flex flex-col',
-          'w-64 shrink-0',
-          'bg-slate-950/80 backdrop-blur-heavy border-r border-white/[0.07]',
+          'w-64 shrink-0 p-3',
           'transition-transform duration-300',
-          sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0 lg:w-0 lg:overflow-hidden'
+          sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0 lg:w-0 lg:p-0 lg:overflow-hidden'
         )}
       >
-        <div className="flex items-center justify-between px-5 py-4 border-b border-white/[0.07]">
-          <div className="flex items-center gap-2.5">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-              <Globe size={14} className="text-white" />
-            </div>
-            <span className="font-semibold text-white tracking-tight">Lingua</span>
-          </div>
-          <button
-            onClick={() => setSidebarOpen(false)}
-            className="lg:hidden p-1 rounded-lg hover:bg-white/10 text-white/40 hover:text-white transition-colors"
-          >
-            <X size={16} />
-          </button>
-        </div>
-
-        <div className="px-3 py-4">
-          <LanguageToggle />
-        </div>
-
-        <nav className="flex-1 px-3 space-y-0.5 overflow-y-auto">
-          {NAV_ITEMS.map(({ to, icon: Icon, key }) => (
-            <NavLink
-              key={to}
-              to={to}
-              className={({ isActive }) =>
-                cn('nav-item', isActive && 'active')
-              }
-            >
-              <Icon size={17} />
-              <span>{t(key)}</span>
-            </NavLink>
-          ))}
-        </nav>
-
-        <div className="px-4 py-4 border-t border-white/[0.07] space-y-3">
-          <div className="flex items-center gap-2">
-            <Languages size={13} className="text-white/25 shrink-0" />
-            <select
-              value={uiLanguage}
-              onChange={e => handleUiLanguageChange(e.target.value as UiLanguage)}
-              title={t('layout.uiLanguage')}
-              className="flex-1 bg-transparent text-xs text-white/50 outline-none cursor-pointer [&>option]:bg-slate-900"
-            >
-              {UI_LANGUAGE_CODES.map(code => (
-                <option key={code} value={code}>{UI_LANGUAGES[code]}</option>
-              ))}
-            </select>
-          </div>
-          <p className="text-xs text-white/25 font-mono">{levelsSummary}</p>
-          {user && (
+        {/* The sidebar itself is a floating liquid-glass panel */}
+        <div className="glass h-full flex flex-col rounded-3xl overflow-hidden">
+          <div className="flex items-center justify-between px-5 py-4 border-b border-white/[0.08]">
             <div className="flex items-center gap-2.5">
-              {user.user_metadata?.avatar_url ? (
-                <img
-                  src={user.user_metadata.avatar_url}
-                  alt=""
-                  className="w-7 h-7 rounded-full ring-1 ring-white/10"
-                />
-              ) : (
-                <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-xs text-white/50">
-                  {(user.user_metadata?.full_name ?? user.email ?? '?')[0].toUpperCase()}
-                </div>
-              )}
-              <div className="flex-1 min-w-0">
-                <p className="text-xs text-white/60 truncate">
-                  {user.user_metadata?.full_name ?? user.email}
-                </p>
+              <div className="w-8 h-8 rounded-2xl bg-gradient-to-br from-accent-soft to-accent-strong flex items-center justify-center shadow-[0_4px_14px_-4px_rgba(45,110,235,0.8)]">
+                <Sparkles size={15} className="text-white" />
               </div>
-              <button
-                onClick={signOut}
-                title={t('layout.signOut')}
-                className="p-1.5 rounded-lg hover:bg-white/10 text-white/30 hover:text-white/70 transition-colors"
-              >
-                <LogOut size={14} />
-              </button>
+              <span className="font-semibold tracking-tight text-1">Lingua</span>
             </div>
-          )}
+            <button
+              onClick={() => setSidebarOpen(false)}
+              className="lg:hidden p-2 rounded-xl hover:bg-white/10 text-3 hover:text-1 transition-colors"
+              aria-label={t('layout.close', { defaultValue: 'Close menu' })}
+            >
+              <X size={16} />
+            </button>
+          </div>
+
+          <div className="px-3 py-4">
+            <LanguageToggle />
+          </div>
+
+          <nav className="flex-1 px-3 space-y-1 overflow-y-auto">
+            {NAV_ITEMS.map(({ to, icon: Icon, key }) => (
+              <NavLink
+                key={to}
+                to={to}
+                className={({ isActive }) => cn('nav-item', isActive && 'active')}
+              >
+                <Icon size={18} />
+                <span>{t(key)}</span>
+              </NavLink>
+            ))}
+          </nav>
+
+          <div className="px-4 py-4 border-t border-white/[0.08] space-y-3">
+            <div className="flex items-center gap-2">
+              <Languages size={14} className="text-3 shrink-0" />
+              <select
+                value={uiLanguage}
+                onChange={e => handleUiLanguageChange(e.target.value as UiLanguage)}
+                title={t('layout.uiLanguage')}
+                className="flex-1 bg-transparent text-xs text-2 outline-none cursor-pointer [&>option]:bg-ink-900"
+              >
+                {UI_LANGUAGE_CODES.map(code => (
+                  <option key={code} value={code}>{UI_LANGUAGES[code]}</option>
+                ))}
+              </select>
+            </div>
+            <p className="text-xs text-3 font-mono">{levelsSummary}</p>
+            {user && (
+              <div className="flex items-center gap-2.5">
+                {user.user_metadata?.avatar_url ? (
+                  <img
+                    src={user.user_metadata.avatar_url}
+                    alt=""
+                    className="w-8 h-8 rounded-full ring-1 ring-white/15"
+                  />
+                ) : (
+                  <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-xs text-2">
+                    {(user.user_metadata?.full_name ?? user.email ?? '?')[0].toUpperCase()}
+                  </div>
+                )}
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs text-2 truncate">
+                    {user.user_metadata?.full_name ?? user.email}
+                  </p>
+                </div>
+                <button
+                  onClick={signOut}
+                  title={t('layout.signOut')}
+                  className="p-2 rounded-xl hover:bg-white/10 text-3 hover:text-1 transition-colors"
+                  aria-label={t('layout.signOut')}
+                >
+                  <LogOut size={15} />
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </aside>
 
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
-        <header className="flex items-center gap-3 px-4 py-3 border-b border-white/[0.07] lg:hidden">
+        {/* Persistent top bar — toggles the sidebar on every breakpoint */}
+        <header className="flex items-center gap-3 px-4 py-3">
           <button
-            onClick={() => setSidebarOpen(true)}
-            className="p-1.5 rounded-lg hover:bg-white/10 text-white/60 hover:text-white transition-colors"
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className="p-2.5 rounded-2xl glass-sm hover:bg-white/10 text-2 hover:text-1 transition-colors"
+            aria-label={t('layout.toggleMenu', { defaultValue: 'Toggle menu' })}
           >
             <Menu size={18} />
           </button>
-          <span className="font-semibold text-white">Lingua</span>
+          <span className="font-semibold text-1 lg:hidden">Lingua</span>
         </header>
 
-        <main className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
+        <main className="flex-1 overflow-y-auto px-4 pb-8 md:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto animate-fade-in">
             <Outlet />
           </div>
