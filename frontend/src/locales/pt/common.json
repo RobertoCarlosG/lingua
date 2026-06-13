@@ -21,6 +21,19 @@
     "cancel": "Cancelar",
     "save": "Salvar"
   },
+  "yamlImport": {
+    "upload": "Enviar YAML",
+    "downloadVocabTemplate": "Modelo",
+    "downloadSessionsTemplate": "Modelo de sessões",
+    "importSuccess": "{{imported}} importados · {{skipped}} já existiam",
+    "importError": "Não foi possível importar o YAML",
+    "invalidYaml": "YAML inválido",
+    "languageMismatch": "O YAML é de {{yamlLang}} mas você selecionou {{activeLang}}",
+    "importVocabOnLesson": "Importar vocabulário ao glossário ao salvar",
+    "sessionImportSuccess": "{{count}} sessões importadas",
+    "lessonSaved": "Lição salva",
+    "vocabImportedFromLesson": "{{count}} palavras adicionadas ao glossário"
+  },
   "dashboard": {
     "title": "Progresso de {{language}}",
     "subtitle": "Nível atual: {{levels}}",
@@ -102,6 +115,7 @@
     "lookupTitle": "Buscar no dicionário",
     "notFound": "Não encontrada no dicionário",
     "saveError": "Não foi possível salvar a palavra. Verifique se você está autenticado e se as migrações do Supabase foram aplicadas.",
+    "uploadYaml": "Enviar YAML",
     "status": {
       "new": "Nova",
       "learning": "Aprendendo",
@@ -132,6 +146,13 @@
     "templateVocab": "Vocabulário",
     "templatePhonetics": "Fonética",
     "upload": "Enviar .yml",
+    "downloadTemplate": "Baixar modelo",
+    "promptModalTitle": "Gerar lições com IA",
+    "promptModalSubtitle": "Modelo baixado. Copie este prompt no ChatGPT, Claude ou outro assistente para criar lições de {{language}} {{flag}} no formato correto.",
+    "promptModalHint": "Personalize [TEMA], [NIVEL] e [TIPO] antes de enviar. A resposta deve ser apenas YAML, sem blocos de código.",
+    "promptCopy": "Copiar prompt",
+    "promptCopied": "Copiado!",
+    "promptModalDone": "Entendi",
     "generatePlaceholder": "Gere a partir de palavras: accomplish, endeavor, insight...",
     "generate": "Gerar YAML",
     "generateError": "Não foi possível gerar a lição — verifique as palavras ou se o backend está ativo",

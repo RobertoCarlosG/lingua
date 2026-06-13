@@ -21,6 +21,19 @@
     "cancel": "Cancel",
     "save": "Save"
   },
+  "yamlImport": {
+    "upload": "Upload YAML",
+    "downloadVocabTemplate": "Template",
+    "downloadSessionsTemplate": "Sessions template",
+    "importSuccess": "{{imported}} imported · {{skipped}} already existed",
+    "importError": "Could not import YAML",
+    "invalidYaml": "Invalid YAML",
+    "languageMismatch": "YAML is for {{yamlLang}} but you have {{activeLang}} selected",
+    "importVocabOnLesson": "Import vocabulary to glossary on save",
+    "sessionImportSuccess": "{{count}} sessions imported",
+    "lessonSaved": "Lesson saved",
+    "vocabImportedFromLesson": "{{count}} words added to glossary"
+  },
   "dashboard": {
     "title": "{{language}} progress",
     "subtitle": "Current level: {{levels}}",
@@ -102,6 +115,7 @@
     "lookupTitle": "Look up in the dictionary",
     "notFound": "Not found in the dictionary",
     "saveError": "Could not save the word. Check that you are signed in and Supabase migrations are applied.",
+    "uploadYaml": "Upload YAML",
     "status": {
       "new": "New",
       "learning": "Learning",
@@ -132,6 +146,13 @@
     "templateVocab": "Vocabulary",
     "templatePhonetics": "Phonetics",
     "upload": "Upload .yml",
+    "downloadTemplate": "Download template",
+    "promptModalTitle": "Generate lessons with AI",
+    "promptModalSubtitle": "Template downloaded. Copy this prompt into ChatGPT, Claude, or another assistant to create {{language}} {{flag}} lessons in the correct format.",
+    "promptModalHint": "Customize [TEMA], [NIVEL], and [TIPO] before sending. The response should be YAML only, with no code fences.",
+    "promptCopy": "Copy prompt",
+    "promptCopied": "Copied!",
+    "promptModalDone": "Got it",
     "generatePlaceholder": "Generate from words: accomplish, endeavor, insight...",
     "generate": "Generate YAML",
     "generateError": "Could not generate the lesson — check the words or that the backend is running",

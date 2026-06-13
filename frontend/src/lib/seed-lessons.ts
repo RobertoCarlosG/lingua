@@ -45,24 +45,22 @@ export async function seedLessons(): Promise<number> {
   // Import dinámico: evita exigir las env vars de Supabase al importar este módulo
   const { supabase } = await import('./supabase')
 
-  // Con RLS cada usuario ve solo sus lecciones, así que la precarga es por usuario
-  const { data: { session } } = await supabase.auth.getSession()
-  const userId = session?.user?.id
-  if (!userId) return 0
+  const { data: { user }, error } = await supabase.auth.getUser()
+  if (error || !user) return 0
 
-  let promise = seedPromises.get(userId)
+  let promise = seedPromises.get(user.id)
   if (!promise) {
-    promise = doSeed(userId).catch(err => {
+    promise = doSeed().catch(err => {
       console.error('No se pudieron precargar las lecciones:', err)
-      seedPromises.delete(userId)
+      seedPromises.delete(user.id)
       return 0
     })
-    seedPromises.set(userId, promise)
+    seedPromises.set(user.id, promise)
   }
   return promise
 }
 
-async function doSeed(userId: string): Promise<number> {
+async function doSeed(): Promise<number> {
   const bundled = bundledLessons()
   if (bundled.length === 0) return 0
 
@@ -74,7 +72,6 @@ async function doSeed(userId: string): Promise<number> {
   if (fresh.length === 0) return 0
 
   const rows = fresh.map(l => ({
-    user_id: userId,
     language: l.language,
     title: l.title,
     yaml_content: l.yaml,

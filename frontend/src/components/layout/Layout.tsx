@@ -23,13 +23,13 @@ const NAV_ITEMS = [
 
 export function Layout() {
   const { sidebarOpen, setSidebarOpen, uiLanguage, setUiLanguage } = useStore()
-  const { user, signOut } = useAuth()
+  const { user, loading: authLoading, signOut } = useAuth()
   const { t, i18n } = useTranslation()
 
   // Precarga las lecciones incluidas en el build para que la app no inicie vacía
   useEffect(() => {
-    seedLessons()
-  }, [])
+    if (!authLoading && user) seedLessons()
+  }, [authLoading, user])
 
   function handleUiLanguageChange(lang: UiLanguage) {
     setUiLanguage(lang)

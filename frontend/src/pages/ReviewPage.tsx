@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
-import { Brain, CheckCircle2, RotateCcw } from 'lucide-react'
+import { Brain, CheckCircle2, RotateCcw, Upload, Download, AlertCircle, CheckCircle, Loader2 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { supabase } from '@/lib/supabase'
 import { useStore } from '@/lib/store'
 import { useAuth } from '@/lib/auth'
 import { languageConfig } from '@/lib/languages'
 import { cn } from '@/lib/utils'
+import { YamlFileButton } from '@/components/import/YamlFileButton'
+import { importVocabWords } from '@/lib/import-vocab'
+import { downloadVocabTemplate, parseVocabFromYaml } from '@/lib/vocab-yaml'
 import { reviewWord, statusForInterval, type Rating } from '@/lib/srs'
 import { toDateString } from '@/lib/stats'
 import { Flashcard } from '@/components/review/Flashcard'
@@ -22,6 +25,9 @@ export function ReviewPage() {
   const [loading, setLoading] = useState(true)
   const [missed, setMissed] = useState(0)
   const [finished, setFinished] = useState(false)
+  const [importMsg, setImportMsg] = useState<string | null>(null)
+  const [importError, setImportError] = useState<string | null>(null)
+  const [importing, setImporting] = useState(false)
   const startedAt = useRef(Date.now())
 
   useEffect(() => {
@@ -43,6 +49,37 @@ export function ReviewPage() {
       .limit(SESSION_LIMIT)
     setQueue(data ?? [])
     setLoading(false)
+  }
+
+  async function handleYamlUpload(text: string) {
+    if (!user || importing) return
+    setImportError(null)
+    setImportMsg(null)
+    setImporting(true)
+
+    const parsed = parseVocabFromYaml(text)
+    if (parsed.errors.length > 0 && parsed.words.length === 0) {
+      setImportError(parsed.errors.join(' · '))
+      setImporting(false)
+      return
+    }
+    if (parsed.language && parsed.language !== activeLanguage) {
+      setImportError(t('yamlImport.languageMismatch', {
+        yamlLang: languageConfig(parsed.language).label,
+        activeLang: languageConfig(activeLanguage).label,
+      }))
+      setImporting(false)
+      return
+    }
+
+    const result = await importVocabWords(activeLanguage, parsed.words)
+    if (result.error) {
+      setImportError(t('yamlImport.importError'))
+    } else {
+      setImportMsg(t('yamlImport.importSuccess', { imported: result.imported, skipped: result.skipped }))
+      await fetchDueWords()
+    }
+    setImporting(false)
   }
 
   async function handleRate(rating: Rating) {
@@ -67,7 +104,7 @@ export function ReviewPage() {
           last_reviewed_at: now.toISOString(),
         })
         .eq('id', word.id),
-      supabase.from('reviews').insert({ word_id: word.id, rating, user_id: user!.id }),
+      supabase.from('reviews').insert({ word_id: word.id, rating }),
     ])
 
     if (index + 1 >= queue.length) {
@@ -81,7 +118,6 @@ export function ReviewPage() {
   async function logSession() {
     const minutes = Math.max(1, Math.round((Date.now() - startedAt.current) / 60000))
     await supabase.from('session_logs').insert({
-      user_id: user!.id,
       language: activeLanguage,
       date: toDateString(new Date()),
       duration_minutes: minutes,
@@ -109,7 +145,37 @@ export function ReviewPage() {
             {index + 1} / {queue.length}
           </span>
         )}
+        <div className="flex items-center gap-2 shrink-0">
+          <button
+            type="button"
+            onClick={downloadVocabTemplate}
+            className="btn btn-ghost text-xs py-2 px-3"
+          >
+            <Download size={14} />
+            {t('yamlImport.downloadVocabTemplate')}
+          </button>
+          <YamlFileButton
+            label={t('yamlImport.upload')}
+            icon={importing ? <Loader2 size={14} className="animate-spin" /> : <Upload size={14} />}
+            onLoad={handleYamlUpload}
+            disabled={importing}
+            className="text-xs py-2 px-3"
+          />
+        </div>
       </div>
+
+      {importError && (
+        <div className="glass-sm p-3 border border-red-500/25 text-xs text-red-300 flex items-center gap-2">
+          <AlertCircle size={13} className="shrink-0" />
+          {importError}
+        </div>
+      )}
+      {importMsg && (
+        <div className="glass-sm p-3 border border-green-500/25 text-xs text-green-300 flex items-center gap-2">
+          <CheckCircle size={13} className="shrink-0" />
+          {importMsg}
+        </div>
+      )}
 
       {loading ? (
         <div className="glass p-10 text-center text-3 text-sm">{t('common.loading')}</div>

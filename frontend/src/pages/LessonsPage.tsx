@@ -1,5 +1,10 @@
 import { Fragment, useEffect, useState, useRef } from 'react'
-import { Plus, ChevronRight, Volume2, CheckCircle, Circle, AlertCircle, Wand2, Loader2, Upload, BookPlus, ArrowLeft } from 'lucide-react'
+import { Plus, ChevronRight, Volume2, CheckCircle, Circle, AlertCircle, Wand2, Loader2, Upload, BookPlus, ArrowLeft, Download } from 'lucide-react'
+import { LessonPromptModal } from '@/components/lessons/LessonPromptModal'
+import { YamlFileButton } from '@/components/import/YamlFileButton'
+import { downloadLessonTemplate } from '@/lib/lesson-import'
+import { importVocabWords } from '@/lib/import-vocab'
+import { parseVocabFromYaml } from '@/lib/vocab-yaml'
 import { useTranslation } from 'react-i18next'
 import { generateLessonYaml } from '@/lib/dictionary'
 import { lessonVocabToWords } from '@/lib/lesson-to-vocab'
@@ -204,7 +209,7 @@ function LessonRenderer({ lesson }: { lesson: LessonYAML }) {
   )
 }
 
-function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
+function YAMLEditor({ onRender }: { onRender: (yaml: string, importVocab: boolean) => void }) {
   const { activeLanguage } = useStore()
   const { t } = useTranslation()
   const [yaml, setYaml] = useState(LESSON_TEMPLATE_VOCAB)
@@ -212,7 +217,14 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
   const [template, setTemplate] = useState<'vocab' | 'phonetics'>('vocab')
   const [genWords, setGenWords] = useState('')
   const [generating, setGenerating] = useState(false)
+  const [showPromptModal, setShowPromptModal] = useState(false)
+  const [importVocabOnSave, setImportVocabOnSave] = useState(true)
   const fileInputRef = useRef<HTMLInputElement>(null)
+
+  function handleDownloadTemplate() {
+    downloadLessonTemplate()
+    setShowPromptModal(true)
+  }
 
   async function handleFileUpload(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0]
@@ -251,7 +263,7 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
       return
     }
     setErrors([])
-    onRender(yaml)
+    onRender(yaml, importVocabOnSave)
   }
 
   function loadTemplate(tpl: 'vocab' | 'phonetics') {
@@ -288,6 +300,14 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
         />
         <button
           type="button"
+          onClick={handleDownloadTemplate}
+          className="btn btn-ghost text-xs py-1.5 px-3"
+        >
+          <Download size={13} />
+          {t('lessons.downloadTemplate')}
+        </button>
+        <button
+          type="button"
           onClick={() => fileInputRef.current?.click()}
           className="btn btn-ghost text-xs py-1.5 px-3"
         >
@@ -295,6 +315,13 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
           {t('lessons.upload')}
         </button>
       </div>
+
+      {showPromptModal && (
+        <LessonPromptModal
+          language={activeLanguage}
+          onClose={() => setShowPromptModal(false)}
+        />
+      )}
 
       {languageConfig(activeLanguage).dictionary.generate && (
         <div className="flex gap-1.5">
@@ -335,6 +362,16 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string) => void }) {
         </div>
       )}
 
+      <label className="flex items-center gap-2.5 text-xs text-2 cursor-pointer select-none">
+        <input
+          type="checkbox"
+          checked={importVocabOnSave}
+          onChange={e => setImportVocabOnSave(e.target.checked)}
+          className="rounded border-white/20"
+        />
+        {t('yamlImport.importVocabOnLesson')}
+      </label>
+
       <button onClick={handleRender} className="btn btn-primary w-full">
         {t('lessons.render')}
       </button>
@@ -359,30 +396,12 @@ export function LessonsPage() {
     setImporting(true)
     setImportError(null)
     const words = lessonVocabToWords(activeLesson, new Date())
-    const { data: existingRows, error: selectError } = await supabase
-      .from('vocab_words')
-      .select('word')
-      .eq('language', activeLesson.language)
-      .in('word', words.map(w => w.word))
-    if (selectError) {
+    const result = await importVocabWords(activeLesson.language, words)
+    if (result.error) {
       setImportError(t('lessons.importError'))
-      setImporting(false)
-      return
+    } else {
+      setImported(result.imported)
     }
-    const existing = new Set((existingRows ?? []).map(r => r.word.toLowerCase()))
-    const fresh = words.filter(w => !existing.has(w.word.toLowerCase()))
-    if (fresh.length > 0) {
-      const { error: insertError } = await supabase
-        .from('vocab_words')
-        .insert(fresh.map(w => ({ ...w, user_id: user.id })))
-      if (insertError) {
-        console.error('vocab_words insert failed:', insertError)
-        setImportError(t('lessons.importError'))
-        setImporting(false)
-        return
-      }
-    }
-    setImported(fresh.length)
     setImporting(false)
   }
 
@@ -406,7 +425,7 @@ export function LessonsPage() {
     setLoading(false)
   }
 
-  async function handleRenderYAML(yamlContent: string) {
+  async function handleRenderYAML(yamlContent: string, alsoImportVocab = false) {
     const parsed = parseLesson(yamlContent)
     if (!parsed || !user) return
     setImportError(null)
@@ -415,7 +434,7 @@ export function LessonsPage() {
 
     const { data, error } = await supabase
       .from('lessons')
-      .insert({ language: activeLanguage, title: parsed.title, yaml_content: yamlContent, user_id: user.id, rendered_at: new Date().toISOString() })
+      .insert({ language: activeLanguage, title: parsed.title, yaml_content: yamlContent, rendered_at: new Date().toISOString() })
       .select()
       .single()
     if (error) {
@@ -425,6 +444,47 @@ export function LessonsPage() {
     }
     setActiveLesson(parsed)
     if (data) setLessons(prev => [data, ...prev])
+
+    if (alsoImportVocab && parsed.vocabulary?.length) {
+      const result = await importVocabWords(activeLanguage, lessonVocabToWords(parsed, new Date()))
+      if (result.error) {
+        setImportError(t('lessons.importError'))
+      } else {
+        setImported(result.imported)
+      }
+    }
+  }
+
+  async function handleQuickYamlUpload(text: string) {
+    if (!user) return
+    setImportError(null)
+    setImported(null)
+
+    const parsed = parseLesson(text)
+    if (parsed && validateLesson(parsed).length === 0) {
+      await handleRenderYAML(text, true)
+      return
+    }
+
+    const vocab = parseVocabFromYaml(text)
+    if (vocab.words.length === 0) {
+      setImportError(vocab.errors.join(' · ') || t('yamlImport.invalidYaml'))
+      return
+    }
+    if (vocab.language && vocab.language !== activeLanguage) {
+      setImportError(t('yamlImport.languageMismatch', {
+        yamlLang: languageConfig(vocab.language).label,
+        activeLang: languageConfig(activeLanguage).label,
+      }))
+      return
+    }
+
+    const result = await importVocabWords(activeLanguage, vocab.words)
+    if (result.error) {
+      setImportError(t('yamlImport.importError'))
+    } else {
+      setImported(result.imported)
+    }
   }
 
   function openLesson(lesson: Lesson) {
@@ -446,6 +506,14 @@ export function LessonsPage() {
           {importError}
         </div>
       )}
+      {!activeLesson && imported !== null && !importError && (
+        <div className="glass-sm p-3 border border-green-500/25 flex items-center gap-2 text-xs text-green-300">
+          <CheckCircle size={13} className="shrink-0" />
+          {imported === 0
+            ? t('lessons.importedZero')
+            : t('yamlImport.vocabImportedFromLesson', { count: imported })}
+        </div>
+      )}
       {!activeLesson ? (
         <Fragment key="lesson-list">
           <div className="flex items-center justify-between gap-4">
@@ -455,13 +523,21 @@ export function LessonsPage() {
               </h1>
               <p className="text-2 text-sm mt-1">{t('lessons.subtitle')}</p>
             </div>
-            <button
-              onClick={() => setShowEditor(!showEditor)}
-              className="btn btn-primary shrink-0"
-            >
-              <Plus size={16} />
-              {t('lessons.new')}
-            </button>
+            <div className="flex items-center gap-2 shrink-0">
+              <YamlFileButton
+                label={t('lessons.upload')}
+                icon={<Upload size={14} />}
+                onLoad={handleQuickYamlUpload}
+                className="text-xs py-2 px-3"
+              />
+              <button
+                onClick={() => setShowEditor(!showEditor)}
+                className="btn btn-primary"
+              >
+                <Plus size={16} />
+                {t('lessons.new')}
+              </button>
+            </div>
           </div>
 
           {showEditor && (

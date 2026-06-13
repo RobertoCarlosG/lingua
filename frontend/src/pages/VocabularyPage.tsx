@@ -1,14 +1,18 @@
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { Plus, Search, ChevronDown, BookMarked, Loader2 } from 'lucide-react'
+import { Plus, Search, ChevronDown, BookMarked, Loader2, Upload, Download, AlertCircle, CheckCircle } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { supabase } from '@/lib/supabase'
 import { lookupWord } from '@/lib/dictionary'
 import { initialSrs } from '@/lib/srs'
 import { useStore } from '@/lib/store'
 import { useAuth } from '@/lib/auth'
-import { languageConfig, type Language } from '@/lib/languages'
 import { cn } from '@/lib/utils'
+import { YamlFileButton } from '@/components/import/YamlFileButton'
+import { importVocabWords } from '@/lib/import-vocab'
+import { downloadVocabTemplate, parseVocabFromYaml } from '@/lib/vocab-yaml'
+import { languageConfig } from '@/lib/languages'
+import type { Language } from '@/lib/languages'
 import type { VocabWord, WordStatus } from '@/types/database'
 
 const STATUS_COLORS: Record<WordStatus, string> = {
@@ -139,6 +143,8 @@ export function VocabularyPage() {
   const [loading, setLoading] = useState(true)
   const [expanded, setExpanded] = useState<string | null>(null)
   const [saveError, setSaveError] = useState<string | null>(null)
+  const [importMsg, setImportMsg] = useState<string | null>(null)
+  const [importing, setImporting] = useState(false)
 
   useEffect(() => {
     fetchWords()
@@ -160,7 +166,7 @@ export function VocabularyPage() {
     setSaveError(null)
     const { data, error } = await supabase
       .from('vocab_words')
-      .insert({ ...wordData, user_id: user.id })
+      .insert({ ...wordData })
       .select()
       .single()
     if (error) {
@@ -172,6 +178,37 @@ export function VocabularyPage() {
       setWords(prev => [data, ...prev])
       setShowAdd(false)
     }
+  }
+
+  async function handleYamlUpload(text: string) {
+    if (!user || importing) return
+    setSaveError(null)
+    setImportMsg(null)
+    setImporting(true)
+
+    const parsed = parseVocabFromYaml(text)
+    if (parsed.errors.length > 0 && parsed.words.length === 0) {
+      setSaveError(parsed.errors.join(' · '))
+      setImporting(false)
+      return
+    }
+    if (parsed.language && parsed.language !== activeLanguage) {
+      setSaveError(t('yamlImport.languageMismatch', {
+        yamlLang: languageConfig(parsed.language).label,
+        activeLang: languageConfig(activeLanguage).label,
+      }))
+      setImporting(false)
+      return
+    }
+
+    const result = await importVocabWords(activeLanguage, parsed.words)
+    if (result.error) {
+      setSaveError(t('yamlImport.importError'))
+    } else {
+      setImportMsg(t('yamlImport.importSuccess', { imported: result.imported, skipped: result.skipped }))
+      await fetchWords()
+    }
+    setImporting(false)
   }
 
   async function updateStatus(id: string, status: WordStatus) {
@@ -198,10 +235,27 @@ export function VocabularyPage() {
           </h1>
           <p className="text-2 text-sm mt-1">{t('vocab.subtitle', { count: words.length })}</p>
         </div>
-        <button onClick={() => setShowAdd(true)} className="btn btn-primary shrink-0">
-          <Plus size={16} />
-          {t('vocab.add')}
-        </button>
+        <div className="flex items-center gap-2 shrink-0">
+          <button
+            type="button"
+            onClick={downloadVocabTemplate}
+            className="btn btn-ghost text-xs py-2 px-3"
+          >
+            <Download size={14} />
+            {t('yamlImport.downloadVocabTemplate')}
+          </button>
+          <YamlFileButton
+            label={t('vocab.uploadYaml')}
+            icon={importing ? <Loader2 size={14} className="animate-spin" /> : <Upload size={14} />}
+            onLoad={handleYamlUpload}
+            disabled={importing}
+            className="text-xs py-2 px-3"
+          />
+          <button onClick={() => setShowAdd(true)} className="btn btn-primary">
+            <Plus size={16} />
+            {t('vocab.add')}
+          </button>
+        </div>
       </div>
 
       <div className="flex gap-2 flex-wrap">
@@ -233,8 +287,16 @@ export function VocabularyPage() {
       </div>
 
       {saveError && (
-        <div className="glass-sm p-3 border border-red-500/25 text-xs text-red-300">
+        <div className="glass-sm p-3 border border-red-500/25 text-xs text-red-300 flex items-center gap-2">
+          <AlertCircle size={13} className="shrink-0" />
           {saveError}
+        </div>
+      )}
+
+      {importMsg && (
+        <div className="glass-sm p-3 border border-green-500/25 text-xs text-green-300 flex items-center gap-2">
+          <CheckCircle size={13} className="shrink-0" />
+          {importMsg}
         </div>
       )}
 

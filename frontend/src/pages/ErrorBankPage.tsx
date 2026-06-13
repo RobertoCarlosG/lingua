@@ -93,7 +93,7 @@ export function ErrorBankPage() {
   async function handleSave(errorData: Omit<ErrorEntry, 'id' | 'created_at' | 'user_id'>) {
     const { data } = await supabase
       .from('error_entries')
-      .insert({ ...errorData, user_id: user!.id })
+      .insert({ ...errorData })
       .select()
       .single()
     if (data) {

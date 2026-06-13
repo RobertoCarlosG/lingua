@@ -1,10 +1,14 @@
-import { useEffect, useState } from 'react'
-import { BookOpen, AlertCircle, Flame, Target, TrendingUp, Calendar, Brain, CheckSquare, Square, Plus, ArrowRight } from 'lucide-react'
+import { useCallback, useEffect, useState } from 'react'
+import { BookOpen, AlertCircle, Flame, Target, TrendingUp, Calendar, Brain, CheckSquare, Square, Plus, ArrowRight, Upload, Download, CheckCircle, Loader2 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { Trans, useTranslation } from 'react-i18next'
 import { supabase } from '@/lib/supabase'
 import { useStore } from '@/lib/store'
+import { useAuth } from '@/lib/auth'
 import { languageConfig } from '@/lib/languages'
+import { YamlFileButton } from '@/components/import/YamlFileButton'
+import { importSessionLogs } from '@/lib/import-sessions'
+import { downloadSessionsTemplate, parseSessionsFromYaml } from '@/lib/session-yaml'
 import { dateLocale } from '@/lib/i18n'
 import { computeStreak, weeklyActivity, toDateString, type DayActivity } from '@/lib/stats'
 import {
@@ -21,60 +25,96 @@ const CHART_COLORS: Record<string, { stroke: string; item: string }> = {
 
 export function DashboardPage() {
   const { activeLanguage } = useStore()
+  const { user } = useAuth()
   const { t } = useTranslation()
   const [stats, setStats] = useState({ words: 0, errors: 0, sessions: 0, streak: 0, due: 0, sessionsThisWeek: 0, lessons: 0 })
   const [week, setWeek] = useState<DayActivity[]>([])
   const [userName, setUserName] = useState('')
+  const [importMsg, setImportMsg] = useState<string | null>(null)
+  const [importError, setImportError] = useState<string | null>(null)
+  const [importing, setImporting] = useState(false)
+
+  const loadStats = useCallback(async () => {
+    const today = toDateString(new Date())
+    const since = new Date()
+    since.setDate(since.getDate() - 60)
+    const locale = dateLocale()
+
+    const [authRes, wordsRes, errorsRes, sessionsRes, dueRes, logsRes, lessonsRes] = await Promise.all([
+      supabase.auth.getUser(),
+      supabase.from('vocab_words').select('id', { count: 'exact', head: true }).eq('language', activeLanguage),
+      supabase.from('error_entries').select('id', { count: 'exact', head: true }).eq('language', activeLanguage),
+      supabase.from('session_logs').select('id', { count: 'exact', head: true }).eq('language', activeLanguage),
+      supabase.from('vocab_words').select('id', { count: 'exact', head: true })
+        .eq('language', activeLanguage)
+        .or(`due_at.is.null,due_at.lte.${new Date().toISOString()}`),
+      supabase.from('session_logs').select('date, words_reviewed')
+        .eq('language', activeLanguage)
+        .gte('date', toDateString(since)),
+      supabase.from('lessons').select('id', { count: 'exact', head: true }).eq('language', activeLanguage),
+    ])
+
+    const authUser = authRes.data?.user
+    if (authUser) {
+      setUserName(authUser.user_metadata?.full_name ?? authUser.email?.split('@')[0] ?? '')
+    }
+
+    const logs = logsRes.data ?? []
+    const weekData = weeklyActivity(
+      logs.map(l => ({ date: l.date, count: l.words_reviewed ?? 0 })),
+      today,
+      locale
+    )
+    const activeDaysThisWeek = new Set(
+      weekData.filter(d => d.count > 0).map(d => d.date)
+    ).size
+
+    setStats({
+      words: wordsRes.count ?? 0,
+      errors: errorsRes.count ?? 0,
+      sessions: sessionsRes.count ?? 0,
+      due: dueRes.count ?? 0,
+      streak: computeStreak(logs.map(l => l.date), today),
+      sessionsThisWeek: activeDaysThisWeek,
+      lessons: lessonsRes.count ?? 0,
+    })
+    setWeek(weekData)
+  }, [activeLanguage])
 
   useEffect(() => {
-    async function fetchStats() {
-      const today = toDateString(new Date())
-      const since = new Date()
-      since.setDate(since.getDate() - 60)
-      const locale = dateLocale()
+    loadStats()
+  }, [loadStats])
 
-      const [authRes, wordsRes, errorsRes, sessionsRes, dueRes, logsRes, lessonsRes] = await Promise.all([
-        supabase.auth.getUser(),
-        supabase.from('vocab_words').select('id', { count: 'exact', head: true }).eq('language', activeLanguage),
-        supabase.from('error_entries').select('id', { count: 'exact', head: true }).eq('language', activeLanguage),
-        supabase.from('session_logs').select('id', { count: 'exact', head: true }).eq('language', activeLanguage),
-        supabase.from('vocab_words').select('id', { count: 'exact', head: true })
-          .eq('language', activeLanguage)
-          .or(`due_at.is.null,due_at.lte.${new Date().toISOString()}`),
-        supabase.from('session_logs').select('date, words_reviewed')
-          .eq('language', activeLanguage)
-          .gte('date', toDateString(since)),
-        supabase.from('lessons').select('id', { count: 'exact', head: true }).eq('language', activeLanguage),
-      ])
+  async function handleSessionsYamlUpload(text: string) {
+    if (!user || importing) return
+    setImportError(null)
+    setImportMsg(null)
+    setImporting(true)
 
-      const user = authRes.data?.user
-      if (user) {
-        setUserName(user.user_metadata?.full_name ?? user.email?.split('@')[0] ?? '')
-      }
-
-      const logs = logsRes.data ?? []
-      const weekData = weeklyActivity(
-        logs.map(l => ({ date: l.date, count: l.words_reviewed ?? 0 })),
-        today,
-        locale
-      )
-      const activeDaysThisWeek = new Set(
-        weekData.filter(d => d.count > 0).map(d => d.date)
-      ).size
-
-      setStats({
-        words: wordsRes.count ?? 0,
-        errors: errorsRes.count ?? 0,
-        sessions: sessionsRes.count ?? 0,
-        due: dueRes.count ?? 0,
-        streak: computeStreak(logs.map(l => l.date), today),
-        sessionsThisWeek: activeDaysThisWeek,
-        lessons: lessonsRes.count ?? 0,
-      })
-      setWeek(weekData)
+    const parsed = parseSessionsFromYaml(text)
+    if (parsed.errors.length > 0 && parsed.sessions.length === 0) {
+      setImportError(parsed.errors.join(' · '))
+      setImporting(false)
+      return
     }
-    fetchStats()
-  }, [activeLanguage])
+    if (parsed.language && parsed.language !== activeLanguage) {
+      setImportError(t('yamlImport.languageMismatch', {
+        yamlLang: languageConfig(parsed.language).label,
+        activeLang: languageConfig(activeLanguage).label,
+      }))
+      setImporting(false)
+      return
+    }
+
+    const result = await importSessionLogs(parsed.sessions)
+    if (result.error) {
+      setImportError(t('yamlImport.importError'))
+    } else {
+      setImportMsg(t('yamlImport.sessionImportSuccess', { count: result.imported }))
+      await loadStats()
+    }
+    setImporting(false)
+  }
 
   const config = languageConfig(activeLanguage)
   const chart = CHART_COLORS[activeLanguage] ?? CHART_COLORS.en
@@ -116,6 +156,19 @@ export function DashboardPage() {
           </span>
         </div>
       </div>
+
+      {importError && (
+        <div className="glass-sm p-3 border border-red-500/25 text-xs text-red-300 flex items-center gap-2">
+          <AlertCircle size={13} className="shrink-0" />
+          {importError}
+        </div>
+      )}
+      {importMsg && (
+        <div className="glass-sm p-3 border border-green-500/25 text-xs text-green-300 flex items-center gap-2">
+          <CheckCircle size={13} className="shrink-0" />
+          {importMsg}
+        </div>
+      )}
 
       {stats.due > 0 && (
         <Link
@@ -192,9 +245,28 @@ export function DashboardPage() {
       )}
 
       <div className="glass p-5">
-        <div className="flex items-center gap-2 mb-4">
-          <TrendingUp size={16} className="text-accent-soft" />
-          <h2 className="text-sm font-semibold text-2">{t('dashboard.chartTitle')}</h2>
+        <div className="flex items-center justify-between gap-3 mb-4 flex-wrap">
+          <div className="flex items-center gap-2">
+            <TrendingUp size={16} className="text-accent-soft" />
+            <h2 className="text-sm font-semibold text-2">{t('dashboard.chartTitle')}</h2>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={downloadSessionsTemplate}
+              className="btn btn-ghost text-xs py-1.5 px-3"
+            >
+              <Download size={13} />
+              {t('yamlImport.downloadSessionsTemplate')}
+            </button>
+            <YamlFileButton
+              label={t('yamlImport.upload')}
+              icon={importing ? <Loader2 size={13} className="animate-spin" /> : <Upload size={13} />}
+              onLoad={handleSessionsYamlUpload}
+              disabled={importing}
+              className="text-xs py-1.5 px-3"
+            />
+          </div>
         </div>
         {isEmpty ? (
           <Link

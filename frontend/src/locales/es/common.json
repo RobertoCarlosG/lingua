@@ -21,6 +21,19 @@
     "cancel": "Cancelar",
     "save": "Guardar"
   },
+  "yamlImport": {
+    "upload": "Subir YAML",
+    "downloadVocabTemplate": "Plantilla",
+    "downloadSessionsTemplate": "Plantilla sesiones",
+    "importSuccess": "{{imported}} importados · {{skipped}} ya existían",
+    "importError": "No se pudo importar el YAML",
+    "invalidYaml": "YAML inválido",
+    "languageMismatch": "El YAML es de {{yamlLang}} pero tienes seleccionado {{activeLang}}",
+    "importVocabOnLesson": "Importar vocabulario al glosario al guardar",
+    "sessionImportSuccess": "{{count}} sesiones importadas",
+    "lessonSaved": "Lección guardada",
+    "vocabImportedFromLesson": "{{count}} palabras agregadas al glosario"
+  },
   "dashboard": {
     "title": "Progreso de {{language}}",
     "subtitle": "Nivel actual: {{levels}}",
@@ -102,6 +115,7 @@
     "lookupTitle": "Buscar en el diccionario",
     "notFound": "No se encontró en el diccionario",
     "saveError": "No se pudo guardar la palabra. Verifica que iniciaste sesión y que las migraciones de Supabase estén aplicadas.",
+    "uploadYaml": "Subir YAML",
     "status": {
       "new": "Nueva",
       "learning": "Aprendiendo",
@@ -132,6 +146,13 @@
     "templateVocab": "Vocabulario",
     "templatePhonetics": "Fonética",
     "upload": "Subir .yml",
+    "downloadTemplate": "Descargar plantilla",
+    "promptModalTitle": "Genera lecciones con IA",
+    "promptModalSubtitle": "Plantilla descargada. Copia este prompt en ChatGPT, Claude u otro asistente para crear lecciones de {{language}} {{flag}} en el formato correcto.",
+    "promptModalHint": "Personaliza [TEMA], [NIVEL] y [TIPO] antes de enviarlo. La respuesta debe ser solo YAML, sin bloques de código.",
+    "promptCopy": "Copiar prompt",
+    "promptCopied": "¡Copiado!",
+    "promptModalDone": "Entendido",
     "generatePlaceholder": "Genera desde palabras: accomplish, endeavor, insight...",
     "generate": "Generar YAML",
     "generateError": "No se pudo generar la lección — revisa las palabras o que el backend esté activo",
