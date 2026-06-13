@@ -200,6 +200,12 @@
     border: 1px solid rgba(var(--orb-teal), 0.30);
     color: #7fe3ea;
   }
+  .lang-badge-ja {
+    @apply rounded-lg px-2 py-0.5 text-xs font-medium;
+    background: rgba(var(--orb-indigo), 0.18);
+    border: 1px solid rgba(var(--orb-indigo), 0.32);
+    color: #b8b4ff;
+  }
 }
 
 @layer utilities {
@@ -215,8 +221,10 @@
   /* Legacy aliases now point to the brand gradient */
   .text-gradient-en { @apply text-gradient-brand; }
   .text-gradient-pt { @apply text-gradient-brand; }
+  .text-gradient-ja { @apply text-gradient-brand; }
 
   .glow-brand { box-shadow: 0 0 28px rgba(var(--accent), 0.28); }
   .glow-en { @apply glow-brand; }
   .glow-pt { @apply glow-brand; }
+  .glow-ja { @apply glow-brand; }
 }

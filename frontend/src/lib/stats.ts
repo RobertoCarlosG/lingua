@@ -1,7 +1,5 @@
 // Estadísticas derivadas de la actividad (fechas en formato YYYY-MM-DD local).
 
-const DAY_LABELS = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb']
-
 export interface DayActivity {
   date: string
   day: string
@@ -39,21 +37,24 @@ export function computeStreak(dates: string[], today: string): number {
   return streak
 }
 
-/** Actividad de los últimos 7 días (el más viejo primero, hoy al final). */
+/** Actividad de los últimos 7 días (el más viejo primero, hoy al final).
+ *  locale: BCP-47 string used to format the short weekday label. */
 export function weeklyActivity(
   rows: { date: string; count: number }[],
-  today: string
+  today: string,
+  locale = 'es-MX'
 ): DayActivity[] {
   const totals = new Map<string, number>()
   for (const row of rows) {
     totals.set(row.date, (totals.get(row.date) ?? 0) + row.count)
   }
+  const fmt = new Intl.DateTimeFormat(locale, { weekday: 'short' })
   const week: DayActivity[] = []
   for (let i = 6; i >= 0; i--) {
     const date = addDays(today, -i)
     week.push({
       date,
-      day: DAY_LABELS[parseLocalDate(date).getDay()],
+      day: fmt.format(parseLocalDate(date)),
       count: totals.get(date) ?? 0,
     })
   }

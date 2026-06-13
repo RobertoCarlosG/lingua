@@ -372,6 +372,8 @@ export function LessonsPage() {
   }
 
   useEffect(() => {
+    setActiveLesson(null)
+    setImported(null)
     fetchLessons()
   }, [activeLanguage])
 

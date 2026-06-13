@@ -79,6 +79,22 @@ export const LEARNING_LANGUAGES = {
     },
     dictionary: { lookup: true, generate: false },
   },
+  ja: {
+    label: '日本語',
+    flag: '🇯🇵',
+    levels: 'N5 → N4',
+    theme: {
+      badge: 'lang-badge-ja',
+      gradient: 'text-gradient-brand',
+      accent: 'text-accent-soft',
+      cardHover: 'hover:border-accent/30',
+      border: 'border-accent/25',
+      button: 'btn-primary',
+      toggleActive: 'bg-accent/20 border border-accent/35 text-accent-soft shadow-sm',
+      progress: 'bg-accent/70',
+    },
+    dictionary: { lookup: false, generate: false },
+  },
 } as const satisfies Record<string, LanguageConfig>
 
 export type Language = keyof typeof LEARNING_LANGUAGES

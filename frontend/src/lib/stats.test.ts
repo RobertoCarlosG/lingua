@@ -46,11 +46,12 @@ describe('weeklyActivity', () => {
     expect(week.every(d => d.count === 0)).toBe(true)
   })
 
-  it('etiqueta los días en español', () => {
-    const week = weeklyActivity([], TODAY)
-    expect(week[6].day).toBe('Mar') // 2026-06-09 es martes
-    expect(week[5].day).toBe('Lun')
-    expect(week[0].day).toBe('Mié')
+  it('etiqueta los días usando Intl (locale es-MX por defecto)', () => {
+    const week = weeklyActivity([], TODAY, 'es-MX')
+    // Intl.DateTimeFormat retorna minúsculas en es-MX
+    expect(week[6].day).toBe(new Intl.DateTimeFormat('es-MX', { weekday: 'short' }).format(new Date(2026, 5, 9)))
+    expect(week[5].day).toBe(new Intl.DateTimeFormat('es-MX', { weekday: 'short' }).format(new Date(2026, 5, 8)))
+    expect(week[0].day).toBe(new Intl.DateTimeFormat('es-MX', { weekday: 'short' }).format(new Date(2026, 5, 3)))
   })
 
   it('suma la actividad por día', () => {
