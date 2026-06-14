@@ -61,6 +61,8 @@ export type Review = {
   reviewed_at: string
 }
 
+export type LessonStatus = 'pending' | 'completed'
+
 export type Lesson = {
   id: string
   user_id: string
@@ -69,6 +71,8 @@ export type Lesson = {
   yaml_content: string
   rendered_at: string | null
   created_at: string
+  status: LessonStatus
+  sort_order: number | null
 }
 
 export type Database = {
@@ -94,7 +98,10 @@ export type Database = {
       }
       lessons: {
         Row: Lesson
-        Insert: Omit<Lesson, 'id' | 'created_at' | 'user_id'>
+        Insert: Omit<Lesson, 'id' | 'created_at' | 'user_id' | 'status' | 'sort_order'> & {
+          status?: LessonStatus
+          sort_order?: number | null
+        }
         Update: Partial<Omit<Lesson, 'id'>>
         Relationships: []
       }

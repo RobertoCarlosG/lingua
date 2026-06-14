@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useState, useRef } from 'react'
-import { Plus, ChevronRight, Volume2, CheckCircle, Circle, AlertCircle, Wand2, Loader2, Upload, BookPlus, ArrowLeft, Download } from 'lucide-react'
+import { Plus, ChevronRight, Volume2, CheckCircle, CheckCircle2, Circle, AlertCircle, Wand2, Loader2, Upload, BookPlus, ArrowLeft, Download, Trash2, RotateCcw } from 'lucide-react'
 import { LessonPromptModal } from '@/components/lessons/LessonPromptModal'
+import { LessonReview } from '@/components/lessons/LessonReview'
 import { YamlFileButton } from '@/components/import/YamlFileButton'
 import { downloadLessonTemplate } from '@/lib/lesson-import'
 import { importVocabWords } from '@/lib/import-vocab'
@@ -15,7 +16,14 @@ import { useStore } from '@/lib/store'
 import { useAuth } from '@/lib/auth'
 import { cn } from '@/lib/utils'
 import { parseLesson, validateLesson, LESSON_TEMPLATE_VOCAB, LESSON_TEMPLATE_PHONETICS } from '@/lib/yaml-parser'
-import type { Lesson, LessonYAML, VocabItem, Exercise } from '@/types/database'
+import type { Lesson, LessonStatus, LessonYAML, VocabItem, Exercise } from '@/types/database'
+
+type SortMode = 'recent' | 'title' | 'status'
+
+type ReviewState = {
+  lessonId: string
+  lesson: LessonYAML
+}
 
 function IPABadge({ ipa }: { ipa: string }) {
   return (
@@ -390,6 +398,9 @@ export function LessonsPage() {
   const [importing, setImporting] = useState(false)
   const [imported, setImported] = useState<number | null>(null)
   const [importError, setImportError] = useState<string | null>(null)
+  const [sortMode, setSortMode] = useState<SortMode>('recent')
+  const [showCompleted, setShowCompleted] = useState(true)
+  const [reviewState, setReviewState] = useState<ReviewState | null>(null)
 
   async function importVocabulary() {
     if (!activeLesson?.vocabulary?.length || importing || !user) return
@@ -407,22 +418,47 @@ export function LessonsPage() {
 
   useEffect(() => {
     setActiveLesson(null)
+    setReviewState(null)
     setImported(null)
     setImportError(null)
     fetchLessons()
-  }, [activeLanguage])
+  }, [activeLanguage, sortMode])
 
   async function fetchLessons() {
     setLoading(true)
     await seedLessons()
-    const { data } = await supabase
+    const query = supabase
       .from('lessons')
       .select('*')
       .eq('language', activeLanguage)
-      .order('created_at', { ascending: false })
-      .order('title', { ascending: true })
+
+    if (sortMode === 'title') query.order('title', { ascending: true })
+    else if (sortMode === 'status') query.order('status').order('created_at', { ascending: false })
+    else query.order('created_at', { ascending: false })
+
+    const { data } = await query
     setLessons(data ?? [])
     setLoading(false)
+  }
+
+  async function handleDeleteLesson(id: string) {
+    await supabase.from('lessons').delete().eq('id', id)
+    setLessons(prev => prev.filter(l => l.id !== id))
+    setActiveLesson(null)
+    setReviewState(null)
+  }
+
+  async function toggleLessonStatus(id: string, next: LessonStatus) {
+    await supabase.from('lessons').update({ status: next }).eq('id', id)
+    setLessons(prev => prev.map(l => (l.id === id ? { ...l, status: next } : l)))
+  }
+
+  function startReview(lesson: Lesson) {
+    const parsed = parseLesson(lesson.yaml_content)
+    if (!parsed?.exercises?.length) return
+    setImported(null)
+    setImportError(null)
+    setReviewState({ lessonId: lesson.id, lesson: parsed })
   }
 
   async function handleRenderYAML(yamlContent: string, alsoImportVocab = false) {
@@ -497,6 +533,26 @@ export function LessonsPage() {
   }
 
   const config = languageConfig(activeLanguage)
+  const visibleLessons = showCompleted
+    ? lessons
+    : lessons.filter(l => l.status !== 'completed')
+
+  if (reviewState) {
+    return (
+      <div className="space-y-6">
+        <LessonReview
+          lesson={reviewState.lesson}
+          onFinish={async (score, total) => {
+            if (total > 0 && score / total >= 0.7) {
+              await toggleLessonStatus(reviewState.lessonId, 'completed')
+            }
+            setReviewState(null)
+          }}
+          onExit={() => setReviewState(null)}
+        />
+      </div>
+    )
+  }
 
   return (
     <div className="space-y-6">
@@ -548,6 +604,35 @@ export function LessonsPage() {
             </div>
           )}
 
+          {!loading && lessons.length > 0 && (
+            <div className="flex items-center gap-2 flex-wrap">
+              <button
+                onClick={() => setShowCompleted(v => !v)}
+                className={cn('px-3 py-1.5 rounded-xl text-xs border transition-all',
+                  showCompleted
+                    ? 'bg-white/10 border-white/20 text-1'
+                    : 'border-white/10 text-3 hover:text-2'
+                )}
+              >
+                {showCompleted ? t('lessons.hideCompleted') : t('lessons.showCompleted')}
+              </button>
+              <span className="flex-1" />
+              {(['recent', 'title', 'status'] as SortMode[]).map(mode => (
+                <button
+                  key={mode}
+                  onClick={() => setSortMode(mode)}
+                  className={cn('px-3 py-1.5 rounded-xl text-xs border transition-all',
+                    sortMode === mode
+                      ? 'bg-white/10 border-white/20 text-1'
+                      : 'border-white/10 text-3 hover:text-2'
+                  )}
+                >
+                  {t(`lessons.sort.${mode}`)}
+                </button>
+              ))}
+            </div>
+          )}
+
           {loading ? (
             <div className="glass p-10 text-center text-3 text-sm">{t('common.loading')}</div>
           ) : lessons.length === 0 && !showEditor ? (
@@ -557,19 +642,33 @@ export function LessonsPage() {
                 {t('lessons.createFirst')}
               </button>
             </div>
+          ) : visibleLessons.length === 0 ? (
+            <div className="glass p-10 text-center text-3 text-sm">{t('lessons.allCompletedHidden')}</div>
           ) : (
             <div className="grid md:grid-cols-2 gap-3">
-              {lessons.map(lesson => {
+              {visibleLessons.map(lesson => {
                 const parsed = parseLesson(lesson.yaml_content)
+                const hasExercises = (parsed?.exercises?.length ?? 0) > 0
+                const isDone = lesson.status === 'completed'
                 return (
-                  <button
+                  <div
                     key={lesson.id}
                     onClick={() => openLesson(lesson)}
-                    className="glass glass-interactive p-5 text-left group"
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLesson(lesson) } }}
+                    className="glass glass-interactive p-5 text-left group cursor-pointer"
                   >
                     <div className="flex items-start justify-between gap-2">
                       <div className="flex-1 min-w-0">
-                        <p className="font-semibold text-1 text-sm truncate">{lesson.title}</p>
+                        <div className="flex items-center gap-2">
+                          <p className="font-semibold text-1 text-sm truncate">{lesson.title}</p>
+                          {isDone && (
+                            <span className="text-xs px-2 py-0.5 rounded-lg bg-green-500/15 border border-green-500/25 text-green-300 shrink-0">
+                              {t('lessons.done')}
+                            </span>
+                          )}
+                        </div>
                         {parsed && (
                           <div className="flex items-center gap-2 mt-2">
                             <span className={config.theme.badge}>
@@ -582,9 +681,45 @@ export function LessonsPage() {
                           </div>
                         )}
                       </div>
-                      <ChevronRight size={15} className="text-3 group-hover:text-2 transition-colors shrink-0 mt-0.5" />
+                      <div className="flex items-center gap-1 shrink-0">
+                        <button
+                          onClick={e => {
+                            e.stopPropagation()
+                            toggleLessonStatus(lesson.id, isDone ? 'pending' : 'completed')
+                          }}
+                          className={cn(
+                            'p-1.5 rounded-lg transition-all',
+                            isDone
+                              ? 'text-green-400 bg-green-500/10 hover:bg-green-500/20'
+                              : 'text-white/20 hover:text-green-400 hover:bg-green-500/10'
+                          )}
+                          title={isDone ? t('lessons.markPending') : t('lessons.markDone')}
+                        >
+                          {isDone ? <CheckCircle2 size={14} /> : <Circle size={14} />}
+                        </button>
+                        {hasExercises && (
+                          <button
+                            onClick={e => { e.stopPropagation(); startReview(lesson) }}
+                            className="p-1.5 rounded-lg text-white/20 hover:text-accent-soft hover:bg-accent/10 transition-all"
+                            title={t('lessons.review')}
+                          >
+                            <RotateCcw size={14} />
+                          </button>
+                        )}
+                        <button
+                          onClick={e => {
+                            e.stopPropagation()
+                            if (window.confirm(t('lessons.confirmDelete'))) handleDeleteLesson(lesson.id)
+                          }}
+                          className="p-1.5 rounded-lg text-white/20 hover:text-red-400 hover:bg-red-500/10 transition-all"
+                          title={t('lessons.delete')}
+                        >
+                          <Trash2 size={14} />
+                        </button>
+                        <ChevronRight size={15} className="text-3 group-hover:text-2 transition-colors mt-0.5" />
+                      </div>
                     </div>
-                  </button>
+                  </div>
                 )
               })}
             </div>

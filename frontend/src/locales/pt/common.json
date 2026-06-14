@@ -19,7 +19,9 @@
   "common": {
     "loading": "Carregando...",
     "cancel": "Cancelar",
-    "save": "Salvar"
+    "save": "Salvar",
+    "next": "Próximo",
+    "back": "Voltar"
   },
   "yamlImport": {
     "upload": "Enviar YAML",
@@ -174,6 +176,28 @@
     "check": "Verificar",
     "correct": "Correto!",
     "answer": "Resposta: {{answer}}",
-    "yourAnswer": "Sua resposta..."
+    "yourAnswer": "Sua resposta...",
+    "confirmDelete": "Excluir esta lição? Esta ação não pode ser desfeita.",
+    "delete": "Excluir lição",
+    "markDone": "Marcar como concluída",
+    "markPending": "Marcar como pendente",
+    "done": "Concluída",
+    "hideCompleted": "Ocultar concluídas",
+    "showCompleted": "Mostrar concluídas",
+    "allCompletedHidden": "Todas as lições estão concluídas e ocultas.",
+    "sort": {
+      "recent": "Recentes",
+      "title": "A → Z",
+      "status": "Por status"
+    },
+    "review": "Revisar lição",
+    "reviewNoExercises": "Esta lição não tem exercícios para revisar.",
+    "reviewAnswer": "Sua resposta...",
+    "reviewCheck": "Verificar",
+    "reviewCorrect": "Correto! 🎉",
+    "reviewWrong": "Incorreto. A resposta é: {{answer}}",
+    "reviewDone": "Revisão concluída!",
+    "reviewScore": "{{score}} / {{total}} corretas ({{pct}}%)",
+    "reviewFinish": "Ver resultado"
   }
 }

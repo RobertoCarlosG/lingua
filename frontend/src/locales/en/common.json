@@ -19,7 +19,9 @@
   "common": {
     "loading": "Loading...",
     "cancel": "Cancel",
-    "save": "Save"
+    "save": "Save",
+    "next": "Next",
+    "back": "Back"
   },
   "yamlImport": {
     "upload": "Upload YAML",
@@ -174,6 +176,28 @@
     "check": "Check",
     "correct": "Correct!",
     "answer": "Answer: {{answer}}",
-    "yourAnswer": "Your answer..."
+    "yourAnswer": "Your answer...",
+    "confirmDelete": "Delete this lesson? This action cannot be undone.",
+    "delete": "Delete lesson",
+    "markDone": "Mark as completed",
+    "markPending": "Mark as pending",
+    "done": "Completed",
+    "hideCompleted": "Hide completed",
+    "showCompleted": "Show completed",
+    "allCompletedHidden": "All lessons are completed and hidden.",
+    "sort": {
+      "recent": "Recent",
+      "title": "A → Z",
+      "status": "By status"
+    },
+    "review": "Review lesson",
+    "reviewNoExercises": "This lesson has no exercises to review.",
+    "reviewAnswer": "Your answer...",
+    "reviewCheck": "Check",
+    "reviewCorrect": "Correct! 🎉",
+    "reviewWrong": "Incorrect. The answer is: {{answer}}",
+    "reviewDone": "Review complete!",
+    "reviewScore": "{{score}} / {{total}} correct ({{pct}}%)",
+    "reviewFinish": "See result"
   }
 }
