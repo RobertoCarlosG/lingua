@@ -347,7 +347,7 @@ function YAMLEditor({ onRender }: { onRender: (yaml: string, importVocab: boolea
       <textarea
         value={yaml}
         onChange={e => { setYaml(e.target.value); setErrors([]) }}
-        className="glass-input w-full px-4 py-3 text-xs font-mono leading-relaxed resize-none h-80"
+        className="glass-input w-full px-4 py-3 text-xs font-mono leading-relaxed resize-none h-52 sm:h-64 md:h-80"
         spellCheck={false}
       />
 
@@ -518,7 +518,7 @@ export function LessonsPage() {
         <Fragment key="lesson-list">
           <div className="flex items-center justify-between gap-4">
             <div>
-              <h1 className="text-3xl font-semibold tracking-tight text-gradient-brand">
+              <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gradient-brand">
                 {t('lessons.title')} {config.flag}
               </h1>
               <p className="text-2 text-sm mt-1">{t('lessons.subtitle')}</p>
@@ -529,13 +529,14 @@ export function LessonsPage() {
                 icon={<Upload size={14} />}
                 onLoad={handleQuickYamlUpload}
                 className="text-xs py-2 px-3"
+                labelClassName="hidden sm:inline"
               />
               <button
                 onClick={() => setShowEditor(!showEditor)}
                 className="btn btn-primary"
               >
                 <Plus size={16} />
-                {t('lessons.new')}
+                <span className="hidden sm:inline">{t('lessons.new')}</span>
               </button>
             </div>
           </div>

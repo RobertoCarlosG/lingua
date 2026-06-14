@@ -1,0 +1,147 @@
+language: ja
+title: "Bloque 1 · 04 — Números del 1 al 10 y contadores básicos"
+level: N5
+type: vocabulary
+description: "Aprende los números del 1 al 10 en japonés y los primeros contadores. El japonés usa palabras especiales para contar según el tipo de objeto."
+objectives:
+  - "Contar del 1 al 10 en japonés (lectura onyomi)"
+  - "Reconocer los números escritos en kanji"
+  - "Usar el contador básico 〜つ para objetos en general"
+vocabulary:
+  - word: "一 / いち (ichi)"
+    translation: "1 — uno"
+    example: "りんごがいちごあります。"
+    example_translation: "Hay una manzana."
+  - word: "二 / に (ni)"
+    translation: "2 — dos"
+    example: "こどもがふたりいます。"
+    example_translation: "Hay dos niños."
+  - word: "三 / さん (san)"
+    translation: "3 — tres"
+    example: "ねこがさんびきいます。"
+    example_translation: "Hay tres gatos."
+  - word: "四 / し / よん (shi / yon)"
+    translation: "4 — cuatro (shi suena como 'muerte', por eso se prefiere よん en muchos contextos)"
+    example: "よんじかんねました。"
+    example_translation: "Dormí cuatro horas."
+  - word: "五 / ご (go)"
+    translation: "5 — cinco"
+    example: "ごふんまってください。"
+    example_translation: "Por favor espere cinco minutos."
+  - word: "六 / ろく (roku)"
+    translation: "6 — seis"
+    example: "ろくじにおきます。"
+    example_translation: "Me despierto a las seis."
+  - word: "七 / しち / なな (shichi / nana)"
+    translation: "7 — siete (なな es más común en el habla cotidiana)"
+    example: "ななにんのなかまがいます。"
+    example_translation: "Tengo siete compañeros."
+  - word: "八 / はち (hachi)"
+    translation: "8 — ocho"
+    example: "はちがつはなつです。"
+    example_translation: "Agosto es verano."
+  - word: "九 / く / きゅう (ku / kyuu)"
+    translation: "9 — nueve"
+    example: "きゅうじにねます。"
+    example_translation: "Me duermo a las nueve."
+  - word: "十 / じゅう (juu)"
+    translation: "10 — diez"
+    example: "じゅうえんです。"
+    example_translation: "Son diez yenes."
+  - word: "〜つ (hitotsu, futatsu...)"
+    translation: "contador general para objetos (1=ひとつ, 2=ふたつ, 3=みっつ)"
+    example: "りんごをみっつください。"
+    example_translation: "Tres manzanas, por favor."
+  - word: "〜ほん (hon)"
+    translation: "contador para objetos largos y delgados (lápices, botellas, paraguas)"
+    example: "えんぴつがにほんあります。"
+    example_translation: "Hay dos lápices."
+  - word: "〜まい (mai)"
+    translation: "contador para objetos planos (papeles, camisetas, hojas)"
+    example: "かみをいちまいください。"
+    example_translation: "Una hoja de papel, por favor."
+  - word: "〜えん (en)"
+    translation: "yenes — la moneda japonesa"
+    example: "ひゃくえんです。"
+    example_translation: "Son cien yenes."
+  - word: "なんばん (nanban)"
+    translation: "¿qué número?"
+    example: "なんばんですか？"
+    example_translation: "¿Qué número es?"
+sections:
+  - title: "Los números en japonés: ¡más fácil de lo que parece!"
+    type: explanation
+    content: |
+      Buenas noticias: los números del 1 al 10 en japonés son más fáciles de aprender
+      que el sistema español para hispanohablantes, porque los números del 11 en adelante
+      son completamente regulares:
+      - 11 = じゅういち (diez + uno)
+      - 12 = じゅうに (diez + dos)
+      - 20 = にじゅう (dos + diez)
+      - 21 = にじゅういち (dos + diez + uno)
+
+      ¡No hay "once", "doce", "trece"! Todo es combinación lógica.
+
+      Los contadores: el reto único del japonés
+
+      En japonés no se dice "tres manzanas" directamente. Se usan palabras especiales
+      llamadas CONTADORES que cambian según el tipo de objeto:
+
+      - 〜つ (general): ひとつ, ふたつ, みっつ... para cosas en general
+      - 〜ほん: para cosas largas (lápices, botellas, ríos, películas)
+      - 〜まい: para cosas planas (hojas, camisetas, billetes, rebanadas)
+      - 〜ひき: para animales pequeños (gatos, perros, peces)
+      - 〜にん: para personas
+
+      Al principio parece difícil, pero con práctica se vuelve intuitivo.
+
+      Nota cultural: el número 4
+      El número 4 (し) suena igual que la palabra "muerte" (死), por eso en Japón
+      muchos edificios no tienen planta 4, igual que en España algunos edificios
+      evitan el piso 13.
+    tips:
+      - "Memoriza ichi, ni, san primero: son los más usados y los más fáciles."
+      - "Para precios, usa el número + えん (yen): ごひゃくえん = 500 yenes."
+      - "Los contadores se aprenden poco a poco con la práctica: no intentes memorizarlos todos a la vez."
+exercises:
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'siete' en japonés (forma cotidiana)?"
+    options: ["しち", "なな", "ご", "ろく"]
+    answer: "なな"
+  - type: multiple_choice
+    prompt: "¿Qué kanji representa el número 5?"
+    options: ["四", "五", "六", "七"]
+    answer: "五"
+  - type: multiple_choice
+    prompt: "¿Por qué el número 4 a veces se lee よん en lugar de し?"
+    options: ["Porque し es muy difícil de pronunciar", "Porque し suena igual que la palabra 'muerte'", "Porque よん es más moderno", "No hay diferencia"]
+    answer: "Porque し suena igual que la palabra 'muerte'"
+  - type: multiple_choice
+    prompt: "¿Cuánto es じゅう en español?"
+    options: ["7", "8", "9", "10"]
+    answer: "10"
+  - type: multiple_choice
+    prompt: "Para contar lápices y botellas, ¿qué contador se usa?"
+    options: ["〜まい", "〜にん", "〜ほん", "〜つ"]
+    answer: "〜ほん"
+  - type: translate
+    prompt: "¿Cómo se dice '8' en japonés (romaji)?"
+    answer: "hachi"
+    explanation: "Ocho en japonés es はち (hachi). El kanji es 八."
+  - type: multiple_choice
+    prompt: "La frase 'ごふんまってください' significa:"
+    options: ["Son las cinco", "Por favor espere cinco minutos", "Hay cinco personas", "Cinco yenes"]
+    answer: "Por favor espere cinco minutos"
+  - type: fill_blank
+    prompt: "¿Cómo se forma el número 12 en japonés? じゅう + ___ = じゅうに"
+    answer: "に"
+    explanation: "12 = じゅう (10) + に (2). El sistema japonés es completamente regular a partir del 11."
+  - type: multiple_choice
+    prompt: "Para contar hojas de papel, ¿qué contador es correcto?"
+    options: ["〜ほん", "〜まい", "〜ひき", "〜にん"]
+    answer: "〜まい"
+  - type: multiple_choice
+    prompt: "¿Qué significa じゅうえん?"
+    options: ["Diez personas", "Diez libros", "Diez yenes", "Las diez (hora)"]
+    answer: "Diez yenes"
+notes: "Lección 4 del bloque 1. ¡Los números son muy útiles en tiendas, restaurantes y transporte desde el primer día en Japón!"

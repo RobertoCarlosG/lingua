@@ -1,0 +1,105 @@
+language: ja
+title: "Bloque 2 · 05 — Ciudad y transporte"
+level: N5
+type: vocabulary
+description: "Vocabulario para moverte por una ciudad japonesa: lugares, medios de transporte y frases para pedir y dar indicaciones básicas."
+vocabulary:
+  - word: "駅 (eki)"
+    translation: "estación (de tren / metro)"
+    example: "駅はどこですか。"
+    example_translation: "¿Dónde está la estación?"
+  - word: "電車 (densha)"
+    translation: "tren eléctrico / metro"
+    example: "電車で学校に行きます。"
+    example_translation: "Voy a la escuela en tren."
+  - word: "バス (basu)"
+    translation: "autobús"
+    example: "バスで病院に行きます。"
+    example_translation: "Voy al hospital en autobús."
+  - word: "タクシー (takushī)"
+    translation: "taxi"
+    example: "タクシーを呼んでください。"
+    example_translation: "Por favor, llame un taxi."
+  - word: "自転車 (jitensha)"
+    translation: "bicicleta"
+    example: "自転車で公園に行きます。"
+    example_translation: "Voy al parque en bicicleta."
+  - word: "道 (michi)"
+    translation: "camino / calle"
+    example: "この道をまっすぐ行ってください。"
+    example_translation: "Por favor, siga recto por esta calle."
+  - word: "右 (migi)"
+    translation: "derecha"
+    example: "次の角を右に曲がってください。"
+    example_translation: "En la próxima esquina, gire a la derecha."
+  - word: "左 (hidari)"
+    translation: "izquierda"
+    example: "左に曲がると銀行があります。"
+    example_translation: "Si gira a la izquierda, encontrará el banco."
+  - word: "近く (chikaku)"
+    translation: "cerca / cerca de"
+    example: "駅の近くにコンビニがあります。"
+    example_translation: "Hay una tienda de conveniencia cerca de la estación."
+  - word: "遠い (tōi)"
+    translation: "lejos"
+    example: "病院は遠いですか。"
+    example_translation: "¿Está lejos el hospital?"
+  - word: "病院 (byōin)"
+    translation: "hospital"
+    example: "病院はここから近いです。"
+    example_translation: "El hospital está cerca de aquí."
+  - word: "銀行 (ginkō)"
+    translation: "banco"
+    example: "銀行はどこにありますか。"
+    example_translation: "¿Dónde está el banco?"
+  - word: "コンビニ (konbini)"
+    translation: "tienda de conveniencia (convenience store)"
+    example: "コンビニは二十四時間開いています。"
+    example_translation: "La tienda de conveniencia está abierta las 24 horas."
+  - word: "交差点 (kōsaten)"
+    translation: "intersección / cruce"
+    example: "交差点で右に曲がってください。"
+    example_translation: "Por favor, gire a la derecha en la intersección."
+  - word: "切符 (kippu)"
+    translation: "boleto / billete"
+    example: "切符を買います。"
+    example_translation: "Compro un boleto."
+exercises:
+  - type: multiple_choice
+    prompt: "¿Qué significa 駅 (eki)?"
+    options: ["estación", "calle", "banco", "hospital"]
+    answer: "estación"
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'voy a la escuela en tren'?"
+    options: ["電車で学校に行きます。", "バスで学校に行きます。", "自転車で学校に行きます。", "タクシーで学校に行きます。"]
+    answer: "電車で学校に行きます。"
+  - type: translate
+    prompt: "Traduce al español: この道をまっすぐ行ってください。"
+    answer: "Por favor, siga recto por esta calle."
+  - type: translate
+    prompt: "Traduce al japonés: '¿Dónde está el banco?'"
+    answer: "銀行はどこにありますか。"
+  - type: fill_blank
+    prompt: "次の角を___に曲がってください。(En la próxima esquina, gire a la derecha.)"
+    options: ["右", "左", "近く", "遠い"]
+    answer: "右"
+  - type: multiple_choice
+    prompt: "¿Qué significa 切符 (kippu)?"
+    options: ["boleto / billete", "bicicleta", "autobús", "intersección"]
+    answer: "boleto / billete"
+  - type: reorder
+    prompt: "Ordena las palabras: 'Hay una tienda de conveniencia cerca de la estación.'"
+    options: ["駅の", "近くに", "コンビニが", "あります。"]
+    answer: "駅の近くにコンビニがあります。"
+  - type: fill_blank
+    prompt: "___を呼んでください。(Por favor, llame un taxi.)"
+    options: ["タクシー", "バス", "電車", "自転車"]
+    answer: "タクシー"
+  - type: multiple_choice
+    prompt: "¿Cómo se pregunta si algo está lejos?"
+    options: ["遠いですか。", "近くですか。", "どこですか。", "いくらですか。"]
+    answer: "遠いですか。"
+  - type: multiple_choice
+    prompt: "¿Qué significa 交差点 (kōsaten)?"
+    options: ["intersección / cruce", "calle", "esquina", "camino"]
+    answer: "intersección / cruce"

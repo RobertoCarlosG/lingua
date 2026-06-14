@@ -79,6 +79,22 @@ export const LEARNING_LANGUAGES = {
     },
     dictionary: { lookup: true, generate: false },
   },
+  fr: {
+    label: 'Français',
+    flag: '🇫🇷',
+    levels: 'A1 → A2',
+    theme: {
+      badge: 'lang-badge-fr',
+      gradient: 'text-gradient-brand',
+      accent: 'text-accent-soft',
+      cardHover: 'hover:border-accent/30',
+      border: 'border-accent/25',
+      button: 'btn-primary',
+      toggleActive: 'bg-accent/20 border border-accent/35 text-accent-soft shadow-sm',
+      progress: 'bg-accent/70',
+    },
+    dictionary: { lookup: false, generate: false },
+  },
   ja: {
     label: '日本語',
     flag: '🇯🇵',

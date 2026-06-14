@@ -1,0 +1,107 @@
+language: fr
+title: "Bloque 1 · 04 — La famille"
+level: A1
+type: vocabulary
+description: "Aprende el vocabulario de la familia en francés. Muchos términos tienen raíz latina, similar al español: père/padre, mère/madre, frère/hermano, sœur/hermana."
+vocabulary:
+  - word: "la famille"
+    translation: "la familia"
+    example: "J'aime ma famille."
+    example_translation: "Quiero a mi familia."
+  - word: "le père"
+    translation: "el padre"
+    example: "Mon père s'appelle Jean."
+    example_translation: "Mi padre se llama Jean."
+  - word: "la mère"
+    translation: "la madre"
+    example: "Ma mère est médecin."
+    example_translation: "Mi madre es médica."
+  - word: "les parents"
+    translation: "los padres"
+    example: "Mes parents habitent à Paris."
+    example_translation: "Mis padres viven en París."
+  - word: "le frère"
+    translation: "el hermano"
+    example: "J'ai un frère."
+    example_translation: "Tengo un hermano."
+  - word: "la sœur"
+    translation: "la hermana"
+    example: "Ma sœur a douze ans."
+    example_translation: "Mi hermana tiene doce años."
+  - word: "le grand-père"
+    translation: "el abuelo"
+    example: "Mon grand-père est très gentil."
+    example_translation: "Mi abuelo es muy amable."
+  - word: "la grand-mère"
+    translation: "la abuela"
+    example: "Ma grand-mère fait de bons gâteaux."
+    example_translation: "Mi abuela hace ricos pasteles."
+  - word: "les grands-parents"
+    translation: "los abuelos"
+    example: "Mes grands-parents habitent à Lyon."
+    example_translation: "Mis abuelos viven en Lyon."
+  - word: "le fils"
+    translation: "el hijo"
+    example: "C'est le fils de Paul."
+    example_translation: "Es el hijo de Paul."
+  - word: "la fille"
+    translation: "la hija"
+    example: "Ma fille a cinq ans."
+    example_translation: "Mi hija tiene cinco años."
+  - word: "l'oncle"
+    translation: "el tío"
+    example: "Mon oncle habite en Espagne."
+    example_translation: "Mi tío vive en España."
+  - word: "la tante"
+    translation: "la tía"
+    example: "Ma tante s'appelle Claire."
+    example_translation: "Mi tía se llama Claire."
+  - word: "le cousin / la cousine"
+    translation: "el primo / la prima"
+    example: "J'ai trois cousins et deux cousines."
+    example_translation: "Tengo tres primos y dos primas."
+  - word: "le bébé"
+    translation: "el bebé"
+    example: "Le bébé dort."
+    example_translation: "El bebé duerme."
+exercises:
+  - type: translate
+    prompt: "Traduce al francés: 'la abuela'"
+    answer: "la grand-mère"
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'la hermana' en francés?"
+    options: ["le frère", "la sœur", "la fille", "la cousine"]
+    answer: "la sœur"
+  - type: fill_blank
+    prompt: "Mi padre se llama Jean: 'Mon ___ s'appelle Jean.'"
+    answer: "père"
+  - type: translate
+    prompt: "Traduce al español: 'mes parents habitent à Paris'"
+    answer: "mis padres viven en París"
+  - type: multiple_choice
+    prompt: "'Ma ___ a douze ans.' — Mi hermana tiene doce años."
+    options: ["mère", "tante", "sœur", "cousine"]
+    answer: "sœur"
+  - type: reorder
+    prompt: "Forma la frase: 'trois / j'ai / cousins'"
+    answer: "j'ai trois cousins"
+  - type: translate
+    prompt: "Traduce al francés: 'el hijo'"
+    answer: "le fils"
+  - type: multiple_choice
+    prompt: "¿Qué significa 'les grands-parents'?"
+    options: ["los padres", "los tíos", "los abuelos", "los primos"]
+    answer: "los abuelos"
+  - type: fill_blank
+    prompt: "Mi tío vive en España: 'Mon ___ habite en Espagne.'"
+    answer: "oncle"
+  - type: translate
+    prompt: "Traduce al francés: 'la familia'"
+    answer: "la famille"
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'la hija' en francés?"
+    options: ["la fille", "la fils", "la sœur", "la mère"]
+    answer: "la fille"
+  - type: fill_blank
+    prompt: "Mi abuela hace ricos pasteles: 'Ma grand-mère fait de bons ___'"
+    answer: "gâteaux"

@@ -78,10 +78,10 @@ function AddWordModal({ onClose, onSave, language }: {
 
   return createPortal(
     <div className="fixed inset-0 z-50 bg-ink-950/70 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="glass w-full max-w-md p-6 animate-slide-up">
+      <div className="glass w-full max-w-md p-4 sm:p-6 animate-slide-up">
         <h2 className="text-base font-semibold text-1 mb-5">{t('vocab.modalTitle')}</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label className="text-xs text-2 font-medium mb-1.5 block">{t('vocab.word')}</label>
               <div className="flex gap-1.5">
@@ -242,7 +242,7 @@ export function VocabularyPage() {
             className="btn btn-ghost text-xs py-2 px-3"
           >
             <Download size={14} />
-            {t('yamlImport.downloadVocabTemplate')}
+            <span className="hidden sm:inline">{t('yamlImport.downloadVocabTemplate')}</span>
           </button>
           <YamlFileButton
             label={t('vocab.uploadYaml')}
@@ -250,16 +250,17 @@ export function VocabularyPage() {
             onLoad={handleYamlUpload}
             disabled={importing}
             className="text-xs py-2 px-3"
+            labelClassName="hidden sm:inline"
           />
           <button onClick={() => setShowAdd(true)} className="btn btn-primary">
             <Plus size={16} />
-            {t('vocab.add')}
+            <span className="hidden sm:inline">{t('vocab.add')}</span>
           </button>
         </div>
       </div>
 
       <div className="flex gap-2 flex-wrap">
-        <div className="relative flex-1 min-w-48">
+        <div className="relative flex-1 min-w-0">
           <Search size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-3" />
           <input
             className="glass-input w-full pl-10 pr-3 py-2.5 text-sm"
@@ -314,7 +315,7 @@ export function VocabularyPage() {
           {filtered.map(word => (
             <div key={word.id} className="glass overflow-hidden">
               <button
-                className="w-full flex items-center gap-4 px-5 py-3.5 text-left hover:bg-white/[0.03] transition-colors"
+                className="w-full flex items-center gap-3 sm:gap-4 px-3 sm:px-5 py-3 sm:py-3.5 text-left hover:bg-white/[0.03] transition-colors"
                 onClick={() => setExpanded(expanded === word.id ? null : word.id)}
               >
                 <div className="flex-1 min-w-0">

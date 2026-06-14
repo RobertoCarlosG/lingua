@@ -1,0 +1,105 @@
+language: ja
+title: "Bloque 2 · 04 — Tiempo y clima"
+level: N5
+type: vocabulary
+description: "Aprende a hablar del clima y las estaciones del año en japonés. Vocabulario clave para entender el pronóstico del tiempo y describir el clima."
+vocabulary:
+  - word: "天気 (tenki)"
+    translation: "tiempo / clima"
+    example: "今日の天気はどうですか。"
+    example_translation: "¿Cómo está el tiempo hoy?"
+  - word: "晴れ (hare)"
+    translation: "soleado / despejado"
+    example: "明日は晴れです。"
+    example_translation: "Mañana estará soleado."
+  - word: "雨 (ame)"
+    translation: "lluvia"
+    example: "今日は雨が降っています。"
+    example_translation: "Hoy está lloviendo."
+  - word: "雪 (yuki)"
+    translation: "nieve"
+    example: "冬に雪が降ります。"
+    example_translation: "En invierno cae nieve."
+  - word: "曇り (kumori)"
+    translation: "nublado"
+    example: "今日は曇りです。"
+    example_translation: "Hoy está nublado."
+  - word: "風 (kaze)"
+    translation: "viento"
+    example: "強い風が吹いています。"
+    example_translation: "Está soplando un viento fuerte."
+  - word: "暑い (atsui)"
+    translation: "caluroso / hace calor"
+    example: "夏はとても暑いです。"
+    example_translation: "El verano es muy caluroso."
+  - word: "寒い (samui)"
+    translation: "frío / hace frío"
+    example: "今日はとても寒いです。"
+    example_translation: "Hoy hace mucho frío."
+  - word: "涼しい (suzushii)"
+    translation: "fresco (temperatura agradable)"
+    example: "秋は涼しいです。"
+    example_translation: "El otoño es fresco."
+  - word: "暖かい (atatakai)"
+    translation: "cálido / templado"
+    example: "春は暖かいです。"
+    example_translation: "La primavera es cálida."
+  - word: "春 (haru)"
+    translation: "primavera"
+    example: "春は桜が咲きます。"
+    example_translation: "En primavera florecen los cerezos."
+  - word: "夏 (natsu)"
+    translation: "verano"
+    example: "夏休みに海へ行きます。"
+    example_translation: "En las vacaciones de verano voy al mar."
+  - word: "秋 (aki)"
+    translation: "otoño"
+    example: "秋は紅葉がきれいです。"
+    example_translation: "En otoño las hojas rojas son hermosas."
+  - word: "冬 (fuyu)"
+    translation: "invierno"
+    example: "冬はスキーをします。"
+    example_translation: "En invierno practico esquí."
+  - word: "気温 (kion)"
+    translation: "temperatura"
+    example: "今日の気温は三十度です。"
+    example_translation: "La temperatura hoy es de treinta grados."
+exercises:
+  - type: multiple_choice
+    prompt: "¿Qué significa 天気 (tenki)?"
+    options: ["tiempo / clima", "temperatura", "viento", "estación"]
+    answer: "tiempo / clima"
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'está lloviendo' en japonés?"
+    options: ["雨が降っています。", "雪が降っています。", "晴れです。", "風が吹いています。"]
+    answer: "雨が降っています。"
+  - type: translate
+    prompt: "Traduce al español: 夏はとても暑いです。"
+    answer: "El verano es muy caluroso."
+  - type: translate
+    prompt: "Traduce al japonés: 'El otoño es fresco.'"
+    answer: "秋は涼しいです。"
+  - type: fill_blank
+    prompt: "冬に___が降ります。(En invierno cae nieve.)"
+    options: ["雪", "雨", "風", "天気"]
+    answer: "雪"
+  - type: multiple_choice
+    prompt: "¿Cuál es la palabra para 'nublado' en japonés?"
+    options: ["曇り (kumori)", "晴れ (hare)", "雨 (ame)", "涼しい (suzushii)"]
+    answer: "曇り (kumori)"
+  - type: multiple_choice
+    prompt: "¿Qué significa 暖かい (atatakai)?"
+    options: ["cálido / templado", "caluroso", "frío", "fresco"]
+    answer: "cálido / templado"
+  - type: reorder
+    prompt: "Ordena las palabras: '¿Cómo está el tiempo hoy?'"
+    options: ["今日の", "天気は", "どうですか。"]
+    answer: "今日の天気はどうですか。"
+  - type: fill_blank
+    prompt: "春は___です。(La primavera es cálida.)"
+    options: ["暖かい", "寒い", "暑い", "涼しい"]
+    answer: "暖かい"
+  - type: multiple_choice
+    prompt: "¿En qué estación se usa la palabra 雪 (yuki)?"
+    options: ["冬 (fuyu) — invierno", "夏 (natsu) — verano", "春 (haru) — primavera", "秋 (aki) — otoño"]
+    answer: "冬 (fuyu) — invierno"

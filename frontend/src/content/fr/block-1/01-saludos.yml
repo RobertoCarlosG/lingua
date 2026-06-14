@@ -1,0 +1,107 @@
+language: fr
+title: "Bloque 1 · 01 — Salutations et présentations"
+level: A1
+type: vocabulary
+description: "Aprende a saludar, despedirte y presentarte en francés. Muchas palabras son parecidas al español, pero la pronunciación cambia bastante."
+vocabulary:
+  - word: "bonjour"
+    translation: "buenos días / buenas tardes / hola"
+    example: "Bonjour, je m'appelle Marie."
+    example_translation: "Buenos días, me llamo Marie."
+  - word: "bonsoir"
+    translation: "buenas noches (saludo)"
+    example: "Bonsoir, comment ça va?"
+    example_translation: "Buenas noches, ¿cómo estás?"
+  - word: "salut"
+    translation: "hola / adiós (informal)"
+    example: "Salut, ça va?"
+    example_translation: "¡Hola! ¿Qué tal?"
+  - word: "au revoir"
+    translation: "adiós, hasta luego"
+    example: "Au revoir, à demain!"
+    example_translation: "Adiós, ¡hasta mañana!"
+  - word: "bonne nuit"
+    translation: "buenas noches (despedida)"
+    example: "Bonne nuit, dors bien!"
+    example_translation: "Buenas noches, ¡que duermas bien!"
+  - word: "merci"
+    translation: "gracias"
+    example: "Merci beaucoup!"
+    example_translation: "¡Muchas gracias!"
+  - word: "s'il vous plaît"
+    translation: "por favor (formal)"
+    example: "Un café, s'il vous plaît."
+    example_translation: "Un café, por favor."
+  - word: "je m'appelle"
+    translation: "me llamo"
+    example: "Je m'appelle Lucas."
+    example_translation: "Me llamo Lucas."
+  - word: "comment vous appelez-vous?"
+    translation: "¿cómo se llama usted?"
+    example: "Bonjour, comment vous appelez-vous?"
+    example_translation: "Buenos días, ¿cómo se llama usted?"
+  - word: "enchanté / enchantée"
+    translation: "encantado / encantada, mucho gusto"
+    example: "Enchanté de vous rencontrer!"
+    example_translation: "Encantado de conocerle."
+  - word: "comment ça va?"
+    translation: "¿cómo estás? / ¿qué tal?"
+    example: "Bonjour Paul, comment ça va?"
+    example_translation: "Hola Paul, ¿cómo estás?"
+  - word: "ça va bien"
+    translation: "estoy bien / todo bien"
+    example: "Ça va bien, merci!"
+    example_translation: "Estoy bien, ¡gracias!"
+  - word: "oui"
+    translation: "sí"
+    example: "Oui, je parle français."
+    example_translation: "Sí, hablo francés."
+  - word: "non"
+    translation: "no"
+    example: "Non, merci."
+    example_translation: "No, gracias."
+  - word: "excusez-moi"
+    translation: "perdone, disculpe"
+    example: "Excusez-moi, vous parlez espagnol?"
+    example_translation: "Disculpe, ¿habla usted español?"
+exercises:
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'buenos días' en francés?"
+    options: ["bonsoir", "bonjour", "bonne nuit", "salut"]
+    answer: "bonjour"
+  - type: translate
+    prompt: "Traduce al francés: 'me llamo'"
+    answer: "je m'appelle"
+  - type: fill_blank
+    prompt: "Para despedirte formalmente dices: 'Au ___'"
+    answer: "revoir"
+  - type: multiple_choice
+    prompt: "Tu amigo te pregunta '¿qué tal?'. ¿Qué dice exactamente?"
+    options: ["comment vous appelez-vous?", "comment ça va?", "bonne nuit", "excusez-moi"]
+    answer: "comment ça va?"
+  - type: translate
+    prompt: "Traduce al francés: 'muchas gracias'"
+    answer: "merci beaucoup"
+  - type: fill_blank
+    prompt: "Cuando conoces a alguien y quieres decir 'mucho gusto', dices: '___ de vous rencontrer!'"
+    answer: "enchanté"
+  - type: multiple_choice
+    prompt: "¿Cuál es el saludo informal en francés, similar al español 'hola'?"
+    options: ["bonjour", "bonsoir", "salut", "au revoir"]
+    answer: "salut"
+  - type: translate
+    prompt: "Traduce al francés: 'por favor' (formal)"
+    answer: "s'il vous plaît"
+  - type: reorder
+    prompt: "Ordena para presentarte: 'm'appelle / je / Sophie'"
+    answer: "je m'appelle Sophie"
+  - type: multiple_choice
+    prompt: "Son las 9 de la noche. ¿Qué saludo usas?"
+    options: ["bonjour", "salut", "bonsoir", "bonne nuit"]
+    answer: "bonsoir"
+  - type: fill_blank
+    prompt: "Responde que estás bien: 'Ça va ___, merci!'"
+    answer: "bien"
+  - type: translate
+    prompt: "Traduce al español: 'Excusez-moi, comment vous appelez-vous?'"
+    answer: "Disculpe, ¿cómo se llama usted?"

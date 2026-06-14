@@ -1,0 +1,107 @@
+language: fr
+title: "Bloque 1 · 03 — Les couleurs et les formes"
+level: A1
+type: vocabulary
+description: "Aprende los colores y formas básicas en francés. Recuerda que los adjetivos de color en francés también concuerdan en género y número con el sustantivo, igual que en español."
+vocabulary:
+  - word: "rouge"
+    translation: "rojo / roja"
+    example: "La voiture est rouge."
+    example_translation: "El coche es rojo."
+  - word: "bleu / bleue"
+    translation: "azul"
+    example: "Le ciel est bleu."
+    example_translation: "El cielo es azul."
+  - word: "vert / verte"
+    translation: "verde"
+    example: "L'herbe est verte."
+    example_translation: "El pasto es verde."
+  - word: "jaune"
+    translation: "amarillo / amarilla"
+    example: "Le soleil est jaune."
+    example_translation: "El sol es amarillo."
+  - word: "blanc / blanche"
+    translation: "blanco / blanca"
+    example: "La neige est blanche."
+    example_translation: "La nieve es blanca."
+  - word: "noir / noire"
+    translation: "negro / negra"
+    example: "Le chat est noir."
+    example_translation: "El gato es negro."
+  - word: "orange"
+    translation: "naranja"
+    example: "Une orange est orange."
+    example_translation: "Una naranja es naranja."
+  - word: "rose"
+    translation: "rosa"
+    example: "La fleur est rose."
+    example_translation: "La flor es rosa."
+  - word: "violet / violette"
+    translation: "morado / violeta"
+    example: "Le stylo est violet."
+    example_translation: "El bolígrafo es morado."
+  - word: "marron"
+    translation: "marrón, café"
+    example: "Le chien est marron."
+    example_translation: "El perro es marrón."
+  - word: "gris / grise"
+    translation: "gris"
+    example: "Le ciel est gris aujourd'hui."
+    example_translation: "El cielo está gris hoy."
+  - word: "un cercle"
+    translation: "un círculo"
+    example: "La lune est un cercle."
+    example_translation: "La luna es un círculo."
+  - word: "un carré"
+    translation: "un cuadrado"
+    example: "La fenêtre est un carré."
+    example_translation: "La ventana es un cuadrado."
+  - word: "un triangle"
+    translation: "un triángulo"
+    example: "Un triangle a trois côtés."
+    example_translation: "Un triángulo tiene tres lados."
+  - word: "un rectangle"
+    translation: "un rectángulo"
+    example: "La porte est un rectangle."
+    example_translation: "La puerta es un rectángulo."
+exercises:
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'rojo' en francés?"
+    options: ["rouge", "rose", "roux", "rouge-vif"]
+    answer: "rouge"
+  - type: translate
+    prompt: "Traduce al francés: 'el cielo es azul'"
+    answer: "le ciel est bleu"
+  - type: fill_blank
+    prompt: "La nieve es blanca: 'La neige est ___'"
+    answer: "blanche"
+  - type: multiple_choice
+    prompt: "'La fleur est ___' — la flor es rosa. ¿Qué color va en el espacio?"
+    options: ["rouge", "rose", "violet", "blanche"]
+    answer: "rose"
+  - type: translate
+    prompt: "Traduce al español: 'le chat est noir'"
+    answer: "el gato es negro"
+  - type: fill_blank
+    prompt: "El triángulo tiene tres lados: 'Un triangle a trois ___'"
+    answer: "côtés"
+  - type: multiple_choice
+    prompt: "¿Cuál de estas palabras es una forma geométrica?"
+    options: ["rouge", "vert", "cercle", "bleu"]
+    answer: "cercle"
+  - type: translate
+    prompt: "Traduce al francés: 'verde' (femenino, concordado)"
+    answer: "verte"
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'marrón/café' en francés?"
+    options: ["marron", "brun", "chocolat", "gris"]
+    answer: "marron"
+  - type: reorder
+    prompt: "Forma la frase: 'est / voiture / rouge / la'"
+    answer: "la voiture est rouge"
+  - type: fill_blank
+    prompt: "Un cuadrado en francés: 'un ___'"
+    answer: "carré"
+  - type: translate
+    prompt: "Traduce al español: 'le stylo est violet'"
+    answer: "el bolígrafo es morado"

@@ -1,0 +1,99 @@
+language: fr
+title: "Bloque 1 · 06 — Examen du Bloc 1"
+level: A1
+type: vocabulary
+description: "Examen de repaso del Bloque 1. Cubre los temas de las lecciones 01 a 05: saludos y presentaciones, números del 1 al 20, colores y formas, familia, y comida y bebida."
+vocabulary:
+  - word: "bonjour"
+    translation: "buenos días / hola"
+    example: "Bonjour, je m'appelle Marie."
+    example_translation: "Buenos días, me llamo Marie."
+  - word: "merci"
+    translation: "gracias"
+    example: "Merci beaucoup!"
+    example_translation: "¡Muchas gracias!"
+  - word: "vingt"
+    translation: "veinte"
+    example: "Il y a vingt élèves dans la classe."
+    example_translation: "Hay veinte alumnos en la clase."
+  - word: "rouge"
+    translation: "rojo"
+    example: "La voiture est rouge."
+    example_translation: "El coche es rojo."
+  - word: "la famille"
+    translation: "la familia"
+    example: "J'aime ma famille."
+    example_translation: "Quiero a mi familia."
+  - word: "le pain"
+    translation: "el pan"
+    example: "Je mange du pain."
+    example_translation: "Como pan."
+exercises:
+  - type: multiple_choice
+    prompt: "¿Cómo saludas formalmente en francés durante el día?"
+    options: ["salut", "bonsoir", "bonjour", "bonne nuit"]
+    answer: "bonjour"
+  - type: translate
+    prompt: "Traduce al francés: 'me llamo'"
+    answer: "je m'appelle"
+  - type: fill_blank
+    prompt: "Para dar las gracias dices: '___ beaucoup!'"
+    answer: "merci"
+  - type: multiple_choice
+    prompt: "¿Cuánto es 'dix-sept'?"
+    options: ["15", "16", "17", "18"]
+    answer: "17"
+  - type: translate
+    prompt: "Traduce al francés: 'doce'"
+    answer: "douze"
+  - type: fill_blank
+    prompt: "Completa la secuencia: quinze, seize, ___, dix-huit"
+    answer: "dix-sept"
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'verde' en francés?"
+    options: ["rouge", "vert", "bleu", "jaune"]
+    answer: "vert"
+  - type: translate
+    prompt: "Traduce al español: 'la neige est blanche'"
+    answer: "la nieve es blanca"
+  - type: multiple_choice
+    prompt: "¿Qué forma geométrica es 'un triangle'?"
+    options: ["un círculo", "un cuadrado", "un triángulo", "un rectángulo"]
+    answer: "un triángulo"
+  - type: fill_blank
+    prompt: "Mi padre en francés: 'mon ___'"
+    answer: "père"
+  - type: translate
+    prompt: "Traduce al francés: 'la abuela'"
+    answer: "la grand-mère"
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'la hermana' en francés?"
+    options: ["la mère", "la fille", "la sœur", "la cousine"]
+    answer: "la sœur"
+  - type: reorder
+    prompt: "Presenta a tu familia: 'frère / j'ai / un'"
+    answer: "j'ai un frère"
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'el queso' en francés?"
+    options: ["le pain", "le lait", "le fromage", "le vin"]
+    answer: "le fromage"
+  - type: translate
+    prompt: "Traduce al francés: 'el agua'"
+    answer: "l'eau"
+  - type: fill_blank
+    prompt: "Bebo jugo de naranja: 'Je bois du jus d'___'"
+    answer: "orange"
+  - type: multiple_choice
+    prompt: "¿Qué significa 'les légumes'?"
+    options: ["las frutas", "las verduras", "los pasteles", "los pescados"]
+    answer: "las verduras"
+  - type: translate
+    prompt: "Traduce al español: 'un café s'il vous plaît'"
+    answer: "un café por favor"
+  - type: fill_blank
+    prompt: "Para despedirte formalmente dices: 'Au ___'"
+    answer: "revoir"
+  - type: multiple_choice
+    prompt: "¿Cuántos colores básicos has aprendido en el Bloque 1? Elige el color que NO viste."
+    options: ["rouge", "bleu", "dorado", "vert"]
+    answer: "dorado"

@@ -1,0 +1,86 @@
+language: fr
+title: "Bloque 2 · 03 — Le présent de l'indicatif"
+level: A2
+type: grammar
+description: "Aprende a conjugar los verbos regulares del primer grupo (-er), segundo grupo (-ir) y tercer grupo (-re) en presente de indicativo en francés."
+sections:
+  - title: "Verbos en -ER (1er groupe)"
+    type: explanation
+    content: |
+      Los verbos del primer grupo terminan en -er en infinitivo (parler, manger, travailler).
+      Es el grupo más numeroso y regular. Se elimina -er y se añaden estas terminaciones:
+
+        je     → -e       (je parle)
+        tu     → -es      (tu parles)
+        il/elle → -e      (il parle)
+        nous   → -ons     (nous parlons)
+        vous   → -ez      (vous parlez)
+        ils/elles → -ent  (ils parlent)
+
+      Ejemplos clave: parler (hablar), aimer (amar), travailler (trabajar),
+      habiter (vivir en), écouter (escuchar), regarder (mirar).
+
+  - title: "Verbos en -IR (2e groupe)"
+    type: explanation
+    content: |
+      Los verbos del segundo grupo terminan en -ir y su participe présent acaba en -issant
+      (finir → finissant). Se elimina -ir y se añaden:
+
+        je       → -is      (je finis)
+        tu       → -is      (tu finis)
+        il/elle  → -it      (il finit)
+        nous     → -issons  (nous finissons)
+        vous     → -issez   (vous finissez)
+        ils/elles → -issent  (ils finissent)
+
+      Ejemplos clave: finir (terminar), choisir (elegir), grandir (crecer),
+      réussir (tener éxito), remplir (llenar).
+
+  - title: "Verbos en -RE (3e groupe)"
+    type: explanation
+    content: |
+      Los verbos del tercer grupo terminan en -re (vendre, attendre, répondre).
+      Se elimina -re y se añaden:
+
+        je       → -s       (je vends)
+        tu       → -s       (tu vends)
+        il/elle  → -        (il vend)  ← sin terminación
+        nous     → -ons     (nous vendons)
+        vous     → -ez      (vous vendez)
+        ils/elles → -ent    (ils vendent)
+
+      Ejemplos clave: vendre (vender), attendre (esperar), répondre (responder),
+      entendre (oír), perdre (perder).
+exercises:
+  - type: fill_blank
+    prompt: "Je ___ (parler) français avec mes amis."
+    answer: "parle"
+  - type: fill_blank
+    prompt: "Nous ___ (travailler) de huit heures à dix-sept heures."
+    answer: "travaillons"
+  - type: multiple_choice
+    prompt: "¿Cuál es la conjugación correcta de 'finir' para 'vous' ?"
+    options: ["vous finit", "vous finissez", "vous finiss", "vous finis"]
+    answer: "vous finissez"
+  - type: fill_blank
+    prompt: "Ils ___ (choisir) un restaurant pour le dîner."
+    answer: "choisissent"
+  - type: translate
+    prompt: "Traduce al francés: 'Ella espera el autobús.' (attendre)"
+    answer: "Elle attend le bus."
+  - type: reorder
+    prompt: "Ordena las palabras para formar la oración correcta: [tu / le / réponds / professeur / au]"
+    answer: "Tu réponds au professeur."
+  - type: fill_blank
+    prompt: "Vous ___ (habiter) à Paris depuis combien de temps ?"
+    answer: "habitez"
+  - type: multiple_choice
+    prompt: "¿Qué oración usa correctamente el verbo 'vendre' ?"
+    options: ["Il vendes ses livres.", "Il vend ses livres.", "Il vendre ses livres.", "Il vendons ses livres."]
+    answer: "Il vend ses livres."
+  - type: translate
+    prompt: "Traduce al francés: 'Nosotros elegimos siempre el mismo café.' (choisir)"
+    answer: "Nous choisissons toujours le même café."
+  - type: fill_blank
+    prompt: "Elle ___ (écouter) de la musique le soir."
+    answer: "écoute"

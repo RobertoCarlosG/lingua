@@ -21,9 +21,9 @@ export function Flashcard({ word, onRate }: { word: VocabWord; onRate: (rating: 
   }, [word.id])
 
   return (
-    <div className="glass p-8 text-center space-y-6">
+    <div className="glass p-5 sm:p-8 text-center space-y-6">
       <div>
-        <p className="text-4xl font-semibold text-1 tracking-tight">{word.word}</p>
+        <p className="text-3xl sm:text-4xl font-semibold text-1 tracking-tight break-all">{word.word}</p>
         {word.ipa && (
           <p className="text-sm font-mono text-3 mt-2">{word.ipa}</p>
         )}
@@ -39,20 +39,20 @@ export function Flashcard({ word, onRate }: { word: VocabWord; onRate: (rating: 
         </button>
       ) : (
         <div className="space-y-4 animate-fade-in">
-          <p className="text-2xl text-1 font-medium">{word.translation}</p>
+          <p className="text-xl sm:text-2xl text-1 font-medium">{word.translation}</p>
           {word.definition && (
             <p className="text-sm text-2 max-w-sm mx-auto leading-relaxed">{word.definition}</p>
           )}
           {word.example_sentence && (
             <p className="text-sm text-3 italic max-w-sm mx-auto">"{word.example_sentence}"</p>
           )}
-          <div className="flex justify-center gap-2 pt-2">
+          <div className="grid grid-cols-2 gap-2 sm:flex sm:justify-center sm:gap-2 pt-2">
             {RATING_BUTTONS.map(({ rating, labelKey, className }) => (
               <button
                 key={rating}
                 onClick={() => onRate(rating)}
                 className={cn(
-                  'px-5 py-2.5 rounded-2xl text-sm border bg-transparent transition-all active:scale-[0.97]',
+                  'px-2 sm:px-5 py-2.5 rounded-2xl text-sm border bg-transparent transition-all active:scale-[0.97]',
                   'min-h-[44px]',
                   className
                 )}

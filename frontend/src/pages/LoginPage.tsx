@@ -15,7 +15,7 @@ export function LoginPage() {
 
   return (
     <div className="min-h-dvh flex items-center justify-center px-4">
-      <div className="w-full max-w-sm space-y-8">
+      <div className="w-full max-w-sm space-y-6 sm:space-y-8">
         <div className="text-center space-y-4">
           <div className="w-16 h-16 rounded-3xl bg-gradient-to-br from-accent-soft to-accent-strong flex items-center justify-center mx-auto shadow-[0_8px_28px_-8px_rgba(45,110,235,0.9)]">
             <Sparkles size={30} className="text-white" />
@@ -26,7 +26,7 @@ export function LoginPage() {
           </div>
         </div>
 
-        <div className="glass p-7 space-y-5">
+        <div className="glass p-5 sm:p-7 space-y-5">
           <p className="text-center text-sm text-2">{t('login.savePrompt')}</p>
           <button
             onClick={signInWithGoogle}

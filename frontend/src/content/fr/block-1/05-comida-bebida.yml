@@ -1,0 +1,107 @@
+language: fr
+title: "Bloque 1 · 05 — La nourriture et les boissons"
+level: A1
+type: vocabulary
+description: "Vocabulario esencial de comidas y bebidas en francés. Algunos cognados con el español facilitan el aprendizaje: café, chocolat, fruit, légume. Aprende también a pedir en un restaurante."
+vocabulary:
+  - word: "le pain"
+    translation: "el pan"
+    example: "Je mange du pain au petit-déjeuner."
+    example_translation: "Como pan en el desayuno."
+  - word: "le fromage"
+    translation: "el queso"
+    example: "Le fromage français est délicieux."
+    example_translation: "El queso francés es delicioso."
+  - word: "la viande"
+    translation: "la carne"
+    example: "Je n'aime pas la viande."
+    example_translation: "No me gusta la carne."
+  - word: "le poisson"
+    translation: "el pescado"
+    example: "Je mange du poisson le vendredi."
+    example_translation: "Como pescado los viernes."
+  - word: "les légumes"
+    translation: "las verduras, los vegetales"
+    example: "Les légumes sont bons pour la santé."
+    example_translation: "Las verduras son buenas para la salud."
+  - word: "les fruits"
+    translation: "las frutas"
+    example: "J'aime les fruits rouges."
+    example_translation: "Me gustan las frutas rojas."
+  - word: "la pomme"
+    translation: "la manzana"
+    example: "Une pomme par jour, c'est bon!"
+    example_translation: "¡Una manzana al día es bueno!"
+  - word: "la soupe"
+    translation: "la sopa"
+    example: "La soupe est chaude."
+    example_translation: "La sopa está caliente."
+  - word: "le gâteau"
+    translation: "el pastel, la torta"
+    example: "C'est mon anniversaire, j'ai un gâteau!"
+    example_translation: "Es mi cumpleaños, ¡tengo un pastel!"
+  - word: "l'eau"
+    translation: "el agua"
+    example: "Je bois de l'eau."
+    example_translation: "Bebo agua."
+  - word: "le café"
+    translation: "el café"
+    example: "Un café, s'il vous plaît."
+    example_translation: "Un café, por favor."
+  - word: "le lait"
+    translation: "la leche"
+    example: "Je prends du café avec du lait."
+    example_translation: "Tomo café con leche."
+  - word: "le jus d'orange"
+    translation: "el jugo de naranja"
+    example: "Je bois du jus d'orange le matin."
+    example_translation: "Bebo jugo de naranja por la mañana."
+  - word: "le chocolat chaud"
+    translation: "el chocolate caliente"
+    example: "En hiver, j'aime le chocolat chaud."
+    example_translation: "En invierno, me gusta el chocolate caliente."
+  - word: "le vin"
+    translation: "el vino"
+    example: "En France, on boit souvent du vin."
+    example_translation: "En Francia, se bebe vino con frecuencia."
+exercises:
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'el pan' en francés?"
+    options: ["le pain", "le vin", "le lait", "le gâteau"]
+    answer: "le pain"
+  - type: translate
+    prompt: "Traduce al francés: 'el agua'"
+    answer: "l'eau"
+  - type: fill_blank
+    prompt: "Como pan en el desayuno: 'Je mange du ___ au petit-déjeuner.'"
+    answer: "pain"
+  - type: multiple_choice
+    prompt: "'Les ___ sont bons pour la santé.' ¿Qué palabra completa la frase sobre verduras?"
+    options: ["fruits", "légumes", "gâteaux", "poissons"]
+    answer: "légumes"
+  - type: translate
+    prompt: "Traduce al español: 'je bois du jus d'orange le matin'"
+    answer: "bebo jugo de naranja por la mañana"
+  - type: fill_blank
+    prompt: "El queso francés es delicioso: 'Le ___ français est délicieux.'"
+    answer: "fromage"
+  - type: multiple_choice
+    prompt: "¿Qué significa 'le gâteau'?"
+    options: ["el pastel", "la galleta", "el pan", "la sopa"]
+    answer: "el pastel"
+  - type: reorder
+    prompt: "Forma la frase: 'plaît / café / un / s'il / vous'"
+    answer: "un café s'il vous plaît"
+  - type: translate
+    prompt: "Traduce al francés: 'la leche'"
+    answer: "le lait"
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'la manzana' en francés?"
+    options: ["la pomme", "la poire", "la banane", "l'orange"]
+    answer: "la pomme"
+  - type: fill_blank
+    prompt: "Tomo café con leche: 'Je prends du café avec du ___'"
+    answer: "lait"
+  - type: translate
+    prompt: "Traduce al francés: 'el pescado'"
+    answer: "le poisson"

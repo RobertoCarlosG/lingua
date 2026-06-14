@@ -1,0 +1,57 @@
+language: fr
+title: "Bloque 2 · 06 — Examen du Bloc 2"
+level: A2
+type: vocabulary
+description: "Examen de repaso del Bloque 2: rutina diaria, lugares de la ciudad, presente de indicativo, tiempo meteorológico y compras. 12 ejercicios variados."
+exercises:
+  - type: multiple_choice
+    prompt: "¿Cuál de estas frases describe correctamente la rutina matinal?"
+    options:
+      - "Je me couche à sept heures du matin."
+      - "Je me lève à sept heures du matin."
+      - "Je me repose à sept heures du matin."
+      - "Je m'habille à minuit."
+    answer: "Je me lève à sept heures du matin."
+  - type: fill_blank
+    prompt: "Nous ___ (travailler) du lundi au vendredi. (presente de indicativo)"
+    answer: "travaillons"
+  - type: translate
+    prompt: "Traduce al francés: 'Hace frío en invierno en el norte de Francia.'"
+    answer: "Il fait froid en hiver dans le nord de la France."
+  - type: multiple_choice
+    prompt: "¿Dónde vas a comprar el pan en Francia?"
+    options: ["la pharmacie", "la poste", "la boulangerie", "la mairie"]
+    answer: "la boulangerie"
+  - type: reorder
+    prompt: "Ordena las palabras para hablar de las rebajas: [en / les / d'été / commencent / soldes / juillet]"
+    answer: "Les soldes d'été commencent en juillet."
+  - type: fill_blank
+    prompt: "Il ___ (pleuvoir) tous les jours en novembre."
+    answer: "pleut"
+  - type: multiple_choice
+    prompt: "¿Cuál es la conjugación correcta de 'finir' para 'ils' ?"
+    options: ["ils finit", "ils finissent", "ils finissons", "ils finir"]
+    answer: "ils finissent"
+  - type: translate
+    prompt: "Traduce al español: 'Les enfants se couchent à neuf heures.'"
+    answer: "Los niños se acuestan a las nueve."
+  - type: fill_blank
+    prompt: "Vous faites quelle ___ ? (preguntando por la talla en una tienda)"
+    answer: "taille"
+  - type: multiple_choice
+    prompt: "¿Qué expresión meteorológica significa 'hay sol'?"
+    options: ["il fait froid", "il y a du soleil", "il neige", "il fait mauvais"]
+    answer: "il y a du soleil"
+  - type: translate
+    prompt: "Traduce al francés: 'Vamos al ayuntamiento para hacer los trámites.'"
+    answer: "Nous allons à la mairie pour faire les papiers."
+  - type: reorder
+    prompt: "Ordena las palabras para formar una frase sobre el tiempo: [au / les / pousser / fleurs / commencent / à / printemps]"
+    answer: "Au printemps, les fleurs commencent à pousser."
+  - type: fill_blank
+    prompt: "Je voudrais payer en ___, je n'ai pas de carte. (efectivo)"
+    answer: "espèces"
+  - type: multiple_choice
+    prompt: "¿Qué verbo completaría correctamente: 'Elle ___ de la musique le soir' ?"
+    options: ["écoutes", "écoute", "écoutons", "écoutez"]
+    answer: "écoute"

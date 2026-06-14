@@ -1,0 +1,144 @@
+language: ja
+title: "Bloque 1 · 02 — Katakana básico: palabras del mundo moderno"
+level: N5
+type: phonetics
+description: "Aprende el katakana, el silabario que se usa principalmente para palabras extranjeras. Reconocerás muchas palabras que ya conoces en español o inglés."
+objectives:
+  - "Reconocer las 5 vocales del katakana (アイウエオ)"
+  - "Leer katakana básico de los grupos カ, サ, タ, ナ y マ"
+  - "Entender para qué se usa el katakana y por qué es diferente del hiragana"
+vocabulary:
+  - word: "ア (a)"
+    translation: "vocal 'a' en katakana"
+    example: "アイスクリーム (aisukuriimu)"
+    example_translation: "helado (del inglés 'ice cream')"
+  - word: "イ (i)"
+    translation: "vocal 'i' en katakana"
+    example: "イタリア (Itaria)"
+    example_translation: "Italia"
+  - word: "ウ (u)"
+    translation: "vocal 'u' en katakana"
+    example: "ウイスキー (uisukii)"
+    example_translation: "whisky"
+  - word: "エ (e)"
+    translation: "vocal 'e' en katakana"
+    example: "エアコン (eakon)"
+    example_translation: "aire acondicionado"
+  - word: "オ (o)"
+    translation: "vocal 'o' en katakana"
+    example: "オレンジ (orenji)"
+    example_translation: "naranja (del inglés 'orange')"
+  - word: "カ (ka)"
+    translation: "sílaba 'ka' en katakana"
+    example: "カメラ (kamera)"
+    example_translation: "cámara"
+  - word: "キ (ki)"
+    translation: "sílaba 'ki' en katakana"
+    example: "キロ (kiro)"
+    example_translation: "kilómetro / kilo"
+  - word: "ク (ku)"
+    translation: "sílaba 'ku' en katakana"
+    example: "クラス (kurasu)"
+    example_translation: "clase (del inglés 'class')"
+  - word: "コ (ko)"
+    translation: "sílaba 'ko' en katakana"
+    example: "コーヒー (koohii)"
+    example_translation: "café (del inglés 'coffee')"
+  - word: "サ (sa)"
+    translation: "sílaba 'sa' en katakana"
+    example: "サッカー (sakkaa)"
+    example_translation: "fútbol (del inglés 'soccer')"
+  - word: "タ (ta)"
+    translation: "sílaba 'ta' en katakana"
+    example: "タクシー (takushii)"
+    example_translation: "taxi"
+  - word: "テ (te)"
+    translation: "sílaba 'te' en katakana"
+    example: "テレビ (terebi)"
+    example_translation: "televisión"
+  - word: "ナ (na)"
+    translation: "sílaba 'na' en katakana"
+    example: "ナイフ (naifu)"
+    example_translation: "cuchillo (del inglés 'knife')"
+  - word: "マ (ma)"
+    translation: "sílaba 'ma' en katakana"
+    example: "マンゴー (mangoo)"
+    example_translation: "mango"
+  - word: "メ (me)"
+    translation: "sílaba 'me' en katakana"
+    example: "メニュー (menyuu)"
+    example_translation: "menú"
+sections:
+  - title: "Katakana: el silabario de lo extranjero"
+    type: explanation
+    content: |
+      El katakana tiene exactamente los mismos sonidos que el hiragana, pero se usa en
+      situaciones distintas. Aprenderlo es muy motivador para hispanohablantes porque
+      podrás leer muchísimas palabras que reconocerás del español o el inglés.
+
+      ¿Cuándo se usa el katakana?
+
+      1. PALABRAS EXTRANJERAS (préstamos): テレビ (terebi = televisión),
+         コーヒー (koohii = café), タクシー (takushii = taxi).
+
+      2. NOMBRES EXTRANJEROS: マリア (Maria), スペイン (Supein = España).
+
+      3. ONOMATOPEYAS y efectos de sonido en cómics (manga).
+
+      4. Énfasis, como si pusiéramos una palabra en MAYÚSCULAS.
+
+      Diferencias visuales con el hiragana:
+      - El hiragana tiene formas redondeadas y curvas (como letra cursiva).
+      - El katakana tiene formas más angulares y rectas (como letra de imprenta).
+
+      Truco para hispanohablantes:
+      Muchas palabras en katakana son adaptaciones del inglés o incluso del español:
+      - マンゴー (mangoo) ← mango (¡igual!)
+      - タコス (takosu) ← tacos
+      - パン (pan) ← pan (del portugués, pero lo reconocerás)
+    tips:
+      - "Busca palabras en katakana que reconozcas del español. Será tu ventaja como hispanohablante."
+      - "Las vocales largas en katakana se escriben con una raya horizontal: ー (como en コーヒー)."
+      - "Compara siempre el katakana con el hiragana correspondiente para ver sus diferencias."
+exercises:
+  - type: multiple_choice
+    prompt: "¿Qué significa テレビ (terebi)?"
+    options: ["teléfono", "televisión", "radio", "tablet"]
+    answer: "televisión"
+  - type: multiple_choice
+    prompt: "¿Qué katakana representa la sílaba 'ko'?"
+    options: ["カ", "キ", "ク", "コ"]
+    answer: "コ"
+  - type: multiple_choice
+    prompt: "La palabra コーヒー (koohii) significa:"
+    options: ["té", "agua", "café", "jugo"]
+    answer: "café"
+  - type: multiple_choice
+    prompt: "¿Para qué se usa principalmente el katakana?"
+    options: ["Para escribir verbos japoneses", "Para palabras extranjeras y nombres extranjeros", "Para números", "Para nombres japoneses tradicionales"]
+    answer: "Para palabras extranjeras y nombres extranjeros"
+  - type: multiple_choice
+    prompt: "¿Cómo se escribe 'taxi' en katakana?"
+    options: ["タクシー", "テクシー", "トクシー", "タキシー"]
+    answer: "タクシー"
+  - type: fill_blank
+    prompt: "El símbolo ー en katakana indica que la vocal anterior es ___ (más larga)."
+    answer: "larga"
+    explanation: "La raya horizontal ー alarga la vocal anterior. コーヒー tiene dos vocales largas: 'oo' y 'ii'."
+  - type: multiple_choice
+    prompt: "¿Qué significa オレンジ (orenji)?"
+    options: ["manzana", "uva", "naranja", "limón"]
+    answer: "naranja"
+  - type: multiple_choice
+    prompt: "¿Cuál es la diferencia visual principal entre hiragana y katakana?"
+    options: ["El hiragana es más angular; el katakana más redondeado", "El hiragana es más redondeado; el katakana más angular", "No hay diferencia visual", "El katakana tiene más caracteres"]
+    answer: "El hiragana es más redondeado; el katakana más angular"
+  - type: multiple_choice
+    prompt: "La palabra サッカー (sakkaa) significa:"
+    options: ["béisbol", "baloncesto", "tenis", "fútbol"]
+    answer: "fútbol"
+  - type: fill_blank
+    prompt: "¿Cómo se escribe 'España' en katakana? スペ___ン"
+    answer: "イ"
+    explanation: "España en japonés es スペイン (Supein), adaptación del sonido español."
+notes: "Lección 2 del bloque 1. El katakana es una ventaja enorme para hispanohablantes: ¡hay cientos de palabras que reconocerás!"

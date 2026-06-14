@@ -52,7 +52,7 @@ describe('validateLesson', () => {
   })
 
   it('rechaza language y type desconocidos', () => {
-    const errors = validateLesson({ title: 'X', language: 'fr', type: 'dancing' } as unknown as LessonYAML)
+    const errors = validateLesson({ title: 'X', language: 'zz', type: 'dancing' } as unknown as LessonYAML)
     const joined = errors.join(' ')
     expect(joined).toContain('language')
     expect(joined).toContain('type')

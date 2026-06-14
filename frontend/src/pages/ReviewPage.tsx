@@ -133,26 +133,26 @@ export function ReviewPage() {
 
   return (
     <div className="space-y-6 max-w-2xl mx-auto">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-3xl font-semibold tracking-tight text-gradient-brand">
+          <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gradient-brand">
             {t('review.title')} {config.flag}
           </h1>
           <p className="text-2 text-sm mt-1">{t('review.subtitle')}</p>
         </div>
-        {!loading && queue.length > 0 && !finished && (
-          <span className="glass-sm px-4 py-2 text-sm font-medium text-2">
-            {index + 1} / {queue.length}
-          </span>
-        )}
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-2 flex-wrap">
+          {!loading && queue.length > 0 && !finished && (
+            <span className="glass-sm px-3 py-2 text-sm font-medium text-2">
+              {index + 1} / {queue.length}
+            </span>
+          )}
           <button
             type="button"
             onClick={downloadVocabTemplate}
             className="btn btn-ghost text-xs py-2 px-3"
           >
             <Download size={14} />
-            {t('yamlImport.downloadVocabTemplate')}
+            <span className="hidden sm:inline">{t('yamlImport.downloadVocabTemplate')}</span>
           </button>
           <YamlFileButton
             label={t('yamlImport.upload')}
@@ -160,6 +160,7 @@ export function ReviewPage() {
             onLoad={handleYamlUpload}
             disabled={importing}
             className="text-xs py-2 px-3"
+            labelClassName="hidden sm:inline"
           />
         </div>
       </div>
@@ -203,7 +204,7 @@ export function ReviewPage() {
         </div>
       ) : (
         <>
-          <div className="h-1.5 rounded-full bg-white/[0.06] overflow-hidden">
+          <div className="h-2 rounded-full bg-white/[0.06] overflow-hidden">
             <div
               className={cn('h-full rounded-full transition-all duration-500', config.theme.progress)}
               style={{ width: `${progress}%` }}

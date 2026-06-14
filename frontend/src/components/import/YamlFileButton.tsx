@@ -6,10 +6,11 @@ interface YamlFileButtonProps {
   onLoad: (text: string, filename: string) => void | Promise<void>
   icon?: React.ReactNode
   className?: string
+  labelClassName?: string
   disabled?: boolean
 }
 
-export function YamlFileButton({ label, onLoad, icon, className, disabled }: YamlFileButtonProps) {
+export function YamlFileButton({ label, onLoad, icon, className, labelClassName, disabled }: YamlFileButtonProps) {
   const inputRef = useRef<HTMLInputElement>(null)
 
   async function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -35,7 +36,7 @@ export function YamlFileButton({ label, onLoad, icon, className, disabled }: Yam
         className={cn('btn btn-ghost shrink-0', className)}
       >
         {icon}
-        {label}
+        <span className={labelClassName}>{label}</span>
       </button>
     </>
   )

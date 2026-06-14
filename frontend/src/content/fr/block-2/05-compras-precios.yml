@@ -1,0 +1,96 @@
+language: fr
+title: "Bloque 2 · 05 — Les achats et les prix"
+level: A2
+type: vocabulary
+description: "Vocabulario y frases clave para hacer compras en francés: pedir precios, pagar, preguntar por tallas y desenvolverse en tiendas y mercados."
+vocabulary:
+  - word: "combien ça coûte ?"
+    translation: "¿cuánto cuesta?"
+    example: "Excusez-moi, combien ça coûte ce pull ?"
+    example_translation: "Perdone, ¿cuánto cuesta este jersey?"
+  - word: "le prix"
+    translation: "el precio"
+    example: "Le prix affiché est de dix-neuf euros."
+    example_translation: "El precio marcado es de diecinueve euros."
+  - word: "payer"
+    translation: "pagar"
+    example: "Je voudrais payer par carte, s'il vous plaît."
+    example_translation: "Me gustaría pagar con tarjeta, por favor."
+  - word: "la monnaie"
+    translation: "el cambio / las monedas"
+    example: "Vous avez la monnaie pour vingt euros ?"
+    example_translation: "¿Tiene cambio de veinte euros?"
+  - word: "le ticket de caisse"
+    translation: "el recibo / el ticket"
+    example: "Gardez votre ticket de caisse pour les échanges."
+    example_translation: "Guarde su recibo para los cambios."
+  - word: "une remise"
+    translation: "un descuento"
+    example: "Il y a une remise de vingt pour cent sur les vêtements."
+    example_translation: "Hay un descuento del veinte por ciento en la ropa."
+  - word: "les soldes"
+    translation: "las rebajas"
+    example: "Les soldes d'été commencent en juillet."
+    example_translation: "Las rebajas de verano empiezan en julio."
+  - word: "la taille"
+    translation: "la talla"
+    example: "Vous faites quelle taille ?"
+    example_translation: "¿Qué talla tiene usted?"
+  - word: "essayer"
+    translation: "probar / probarse"
+    example: "Est-ce que je peux essayer cette veste ?"
+    example_translation: "¿Puedo probarme esta chaqueta?"
+  - word: "la cabine d'essayage"
+    translation: "el probador"
+    example: "Les cabines d'essayage sont au fond du magasin."
+    example_translation: "Los probadores están al fondo de la tienda."
+  - word: "rembourser"
+    translation: "reembolsar / devolver el dinero"
+    example: "Si l'article est défectueux, on vous rembourse."
+    example_translation: "Si el artículo tiene defecto, le devolvemos el dinero."
+  - word: "gratuit"
+    translation: "gratuito"
+    example: "La livraison est gratuite pour les commandes de plus de cinquante euros."
+    example_translation: "El envío es gratuito para pedidos de más de cincuenta euros."
+  - word: "l'addition"
+    translation: "la cuenta (en restaurante)"
+    example: "L'addition, s'il vous plaît !"
+    example_translation: "¡La cuenta, por favor!"
+  - word: "en espèces"
+    translation: "en efectivo"
+    example: "Je préfère payer en espèces."
+    example_translation: "Prefiero pagar en efectivo."
+exercises:
+  - type: multiple_choice
+    prompt: "¿Cómo preguntas el precio de algo en francés?"
+    options: ["Où est-ce ?", "Combien ça coûte ?", "Qu'est-ce que c'est ?", "Comment allez-vous ?"]
+    answer: "Combien ça coûte ?"
+  - type: fill_blank
+    prompt: "Je voudrais ___ par carte, s'il vous plaît. (pagar)"
+    answer: "payer"
+  - type: translate
+    prompt: "Traduce al francés: 'Las rebajas de verano empiezan en julio.'"
+    answer: "Les soldes d'été commencent en juillet."
+  - type: multiple_choice
+    prompt: "¿Qué es 'la cabine d'essayage' ?"
+    options: ["la caja registradora", "el escaparate", "el probador", "el almacén"]
+    answer: "el probador"
+  - type: fill_blank
+    prompt: "Gardez votre ___ de caisse pour les échanges. (recibo)"
+    answer: "ticket"
+  - type: reorder
+    prompt: "Ordena las palabras: [de / remise / il / une / vingt / y / a / pour cent]"
+    answer: "Il y a une remise de vingt pour cent."
+  - type: translate
+    prompt: "Traduce al español: 'Vous faites quelle taille ?'"
+    answer: "¿Qué talla tiene usted?"
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'en efectivo' en francés?"
+    options: ["par carte", "en ligne", "en espèces", "par chèque"]
+    answer: "en espèces"
+  - type: fill_blank
+    prompt: "Est-ce que je peux ___ cette veste ? (probarse)"
+    answer: "essayer"
+  - type: translate
+    prompt: "Traduce al francés: 'Si el artículo tiene defecto, le devolvemos el dinero.'"
+    answer: "Si l'article est défectueux, on vous rembourse."

@@ -59,7 +59,7 @@ export function Layout() {
         )}
       >
         {/* The sidebar itself is a floating liquid-glass panel */}
-        <div className="glass h-full flex flex-col rounded-3xl overflow-hidden">
+        <div className="glass h-full flex flex-col rounded-3xl">
           <div className="flex items-center justify-between px-5 py-4 border-b border-white/[0.08]">
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-2xl bg-gradient-to-br from-accent-soft to-accent-strong flex items-center justify-center shadow-[0_4px_14px_-4px_rgba(45,110,235,0.8)]">

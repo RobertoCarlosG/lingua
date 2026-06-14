@@ -1,0 +1,141 @@
+language: ja
+title: "Bloque 1 · 01 — Hiragana básico: las vocales y primeras consonantes"
+level: N5
+type: phonetics
+description: "Aprende las 5 vocales del hiragana y los primeros grupos de consonantes. Es el primer paso para leer y escribir en japonés."
+objectives:
+  - "Reconocer y leer las 5 vocales del hiragana (あいうえお)"
+  - "Leer las sílabas del grupo か, さ, た, な y は"
+  - "Entender que el hiragana es un silabario: cada símbolo representa una sílaba, no una letra"
+vocabulary:
+  - word: "あ (a)"
+    translation: "sonido 'a' — como en 'casa'"
+    example: "あめ (ame)"
+    example_translation: "lluvia"
+  - word: "い (i)"
+    translation: "sonido 'i' — como en 'isla'"
+    example: "いぬ (inu)"
+    example_translation: "perro"
+  - word: "う (u)"
+    translation: "sonido 'u' — labios sin redondear, más suave que en español"
+    example: "うみ (umi)"
+    example_translation: "mar"
+  - word: "え (e)"
+    translation: "sonido 'e' — como en 'mesa'"
+    example: "えき (eki)"
+    example_translation: "estación de tren"
+  - word: "お (o)"
+    translation: "sonido 'o' — como en 'oso'"
+    example: "おかね (okane)"
+    example_translation: "dinero"
+  - word: "か (ka)"
+    translation: "sílaba 'ka'"
+    example: "かさ (kasa)"
+    example_translation: "paraguas"
+  - word: "き (ki)"
+    translation: "sílaba 'ki'"
+    example: "きって (kitte)"
+    example_translation: "sello (de correos)"
+  - word: "く (ku)"
+    translation: "sílaba 'ku'"
+    example: "くつ (kutsu)"
+    example_translation: "zapatos"
+  - word: "さ (sa)"
+    translation: "sílaba 'sa'"
+    example: "さかな (sakana)"
+    example_translation: "pez / pescado"
+  - word: "し (shi)"
+    translation: "sílaba 'shi' — atención: no es 'si' sino 'shi'"
+    example: "しろ (shiro)"
+    example_translation: "blanco / castillo"
+  - word: "た (ta)"
+    translation: "sílaba 'ta'"
+    example: "たまご (tamago)"
+    example_translation: "huevo"
+  - word: "な (na)"
+    translation: "sílaba 'na'"
+    example: "なまえ (namae)"
+    example_translation: "nombre"
+  - word: "は (ha)"
+    translation: "sílaba 'ha' — cuando es partícula gramatical se lee 'wa'"
+    example: "はな (hana)"
+    example_translation: "flor / nariz"
+  - word: "ま (ma)"
+    translation: "sílaba 'ma'"
+    example: "まど (mado)"
+    example_translation: "ventana"
+  - word: "わ (wa)"
+    translation: "sílaba 'wa'"
+    example: "わたし (watashi)"
+    example_translation: "yo"
+sections:
+  - title: "¿Qué es el hiragana?"
+    type: explanation
+    content: |
+      El japonés usa tres sistemas de escritura, y el hiragana es el primero que debes aprender.
+      A diferencia del alfabeto español, en el hiragana cada símbolo representa una SÍLABA completa,
+      no una letra suelta. Por eso se llama silabario.
+
+      Puntos clave para hispanohablantes:
+
+      1. Las 5 vocales (あいうえお) suenan muy parecido al español: a, i, u, e, o.
+         La única diferencia es la 'u' (う): en japonés se pronuncia sin redondear los labios,
+         casi como decir la 'u' del español pero con la boca más plana.
+
+      2. El japonés NO tiene acentos tónicos tan marcados como en español. Intenta pronunciar
+         cada sílaba con duración similar.
+
+      3. La sílaba し se escribe 'shi' en romaji, no 'si'. Es el sonido de 'sh' en inglés
+         combinado con 'i'.
+
+      4. La は cuando funciona como partícula de sujeto (después de un sustantivo) se lee 'wa',
+         no 'ha'. Ejemplo: わたしは (watashi wa) = yo [soy/estoy].
+
+      5. Truco de memorización: asocia cada símbolo con una palabra española que empiece igual.
+         Ejemplo: あ parece una 'a' con adorno → 'a' de 'arco'.
+    tips:
+      - "Practica escribir los caracteres a mano: la memoria muscular ayuda mucho a recordarlos."
+      - "Aprende los hiragana en grupos de 5 (filas del silabario) para no saturarte."
+      - "Flashcards con el carácter por un lado y el romaji por el otro son muy efectivas."
+exercises:
+  - type: multiple_choice
+    prompt: "¿Qué sílaba representa el carácter 'き'?"
+    options: ["ka", "ki", "ku", "ke"]
+    answer: "ki"
+  - type: multiple_choice
+    prompt: "La palabra 'いぬ (inu)' significa:"
+    options: ["gato", "pez", "perro", "pájaro"]
+    answer: "perro"
+  - type: multiple_choice
+    prompt: "¿Cuál de estos hiragana representa la sílaba 'sa'?"
+    options: ["さ", "し", "す", "そ"]
+    answer: "さ"
+  - type: multiple_choice
+    prompt: "La palabra 'たまご' se lee:"
+    options: ["tamago", "takago", "namago", "tamako"]
+    answer: "tamago"
+  - type: multiple_choice
+    prompt: "¿Qué significa 'はな (hana)'?"
+    options: ["ventana", "huevo", "flor / nariz", "paraguas"]
+    answer: "flor / nariz"
+  - type: fill_blank
+    prompt: "La vocal japonesa que suena diferente al español, sin redondear los labios, es: ___ (う)"
+    answer: "u"
+    explanation: "La 'u' japonesa (う) se pronuncia con los labios más planos que en español."
+  - type: multiple_choice
+    prompt: "La palabra 'わたし (watashi)' significa:"
+    options: ["tú", "él", "yo", "nosotros"]
+    answer: "yo"
+  - type: multiple_choice
+    prompt: "¿Cuántos caracteres tiene el hiragana completo (sin contar combinaciones)?"
+    options: ["26", "46", "52", "100"]
+    answer: "46"
+  - type: fill_blank
+    prompt: "El hiragana 'は' como partícula gramatical se lee ___, no 'ha'."
+    answer: "wa"
+    explanation: "は es la partícula de sujeto más común en japonés y se lee 'wa' en ese contexto."
+  - type: multiple_choice
+    prompt: "¿Qué significa 'うみ (umi)'?"
+    options: ["montaña", "río", "cielo", "mar"]
+    answer: "mar"
+notes: "Primer paso del bloque 1. Dedica tiempo extra al reconocimiento visual antes de pasar a la lección 2."

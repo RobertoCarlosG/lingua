@@ -1,0 +1,104 @@
+language: ja
+title: "Bloque 2 · 02 — Comida y restaurante"
+level: N5
+type: vocabulary
+description: "Vocabulario esencial para pedir comida, entender un menú japonés y hablar en un restaurante. Incluye comidas típicas japonesas y frases útiles."
+vocabulary:
+  - word: "食べ物 (tabemono)"
+    translation: "comida / alimento"
+    example: "日本の食べ物が好きです。"
+    example_translation: "Me gusta la comida japonesa."
+  - word: "ご飯 (gohan)"
+    translation: "arroz / comida (en general)"
+    example: "毎朝ご飯を食べます。"
+    example_translation: "Como arroz todas las mañanas."
+  - word: "パン (pan)"
+    translation: "pan"
+    example: "朝はパンを食べます。"
+    example_translation: "Por las mañanas como pan."
+  - word: "魚 (sakana)"
+    translation: "pescado"
+    example: "魚が好きですか。"
+    example_translation: "¿Te gusta el pescado?"
+  - word: "肉 (niku)"
+    translation: "carne"
+    example: "この肉はおいしいです。"
+    example_translation: "Esta carne está deliciosa."
+  - word: "野菜 (yasai)"
+    translation: "verduras"
+    example: "野菜をたくさん食べてください。"
+    example_translation: "Por favor, come muchas verduras."
+  - word: "水 (mizu)"
+    translation: "agua"
+    example: "お水をください。"
+    example_translation: "Por favor, deme agua."
+  - word: "お茶 (ocha)"
+    translation: "té (japonés)"
+    example: "お茶を一杯飲みます。"
+    example_translation: "Tomo una taza de té."
+  - word: "ラーメン (rāmen)"
+    translation: "ramen (fideos japoneses)"
+    example: "ラーメンは日本の人気料理です。"
+    example_translation: "El ramen es un plato popular de Japón."
+  - word: "すし (sushi)"
+    translation: "sushi"
+    example: "すしを食べたいです。"
+    example_translation: "Quiero comer sushi."
+  - word: "メニュー (menyū)"
+    translation: "menú"
+    example: "メニューを見せてください。"
+    example_translation: "Por favor, muéstreme el menú."
+  - word: "おいしい (oishii)"
+    translation: "delicioso / rico"
+    example: "この料理はとてもおいしいです。"
+    example_translation: "Este plato está muy delicioso."
+  - word: "いくら (ikura)"
+    translation: "¿cuánto cuesta?"
+    example: "これはいくらですか。"
+    example_translation: "¿Cuánto cuesta esto?"
+  - word: "注文 (chūmon)"
+    translation: "pedido / orden"
+    example: "注文してもいいですか。"
+    example_translation: "¿Puedo hacer mi pedido?"
+  - word: "勘定 (kanjō)"
+    translation: "cuenta (del restaurante)"
+    example: "すみません、お勘定をお願いします。"
+    example_translation: "Disculpe, la cuenta por favor."
+exercises:
+  - type: multiple_choice
+    prompt: "¿Qué significa 食べ物 (tabemono)?"
+    options: ["comida", "bebida", "restaurante", "menú"]
+    answer: "comida"
+  - type: multiple_choice
+    prompt: "¿Cómo se pide agua en japonés?"
+    options: ["お水をください。", "お茶をください。", "メニューをください。", "ご飯をください。"]
+    answer: "お水をください。"
+  - type: translate
+    prompt: "Traduce al español: この料理はとてもおいしいです。"
+    answer: "Este plato está muy delicioso."
+  - type: translate
+    prompt: "Traduce al japonés: '¿Puedo hacer mi pedido?'"
+    answer: "注文してもいいですか。"
+  - type: fill_blank
+    prompt: "___ を見せてください。(Por favor, muéstreme el menú.)"
+    options: ["メニュー", "ご飯", "お茶", "魚"]
+    answer: "メニュー"
+  - type: multiple_choice
+    prompt: "¿Qué significa 肉 (niku)?"
+    options: ["carne", "verduras", "pescado", "arroz"]
+    answer: "carne"
+  - type: reorder
+    prompt: "Ordena las palabras para decir: 'Me gusta la comida japonesa.'"
+    options: ["日本の", "が", "食べ物", "好きです。"]
+    answer: "日本の食べ物が好きです。"
+  - type: fill_blank
+    prompt: "すみません、お___をお願いします。(Disculpe, la cuenta por favor.)"
+    options: ["勘定", "注文", "メニュー", "水"]
+    answer: "勘定"
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'té japonés' en japonés?"
+    options: ["お茶 (ocha)", "お水 (omizu)", "ラーメン (rāmen)", "パン (pan)"]
+    answer: "お茶 (ocha)"
+  - type: translate
+    prompt: "Traduce al español: すしを食べたいです。"
+    answer: "Quiero comer sushi."

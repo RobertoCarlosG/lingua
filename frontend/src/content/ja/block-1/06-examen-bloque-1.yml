@@ -1,0 +1,122 @@
+language: ja
+title: "Bloque 1 · 06 — Examen: Hiragana, Katakana, Saludos, Números y Objetos"
+level: N5
+type: vocabulary
+description: "Examen final del Bloque 1. Cubre todos los temas vistos: hiragana, katakana, saludos, presentación, números y objetos cotidianos. ¡Tómatelo con calma y confía en lo que has aprendido!"
+objectives:
+  - "Demostrar el reconocimiento de caracteres hiragana y katakana básicos"
+  - "Usar los saludos y fórmulas de presentación correctamente"
+  - "Identificar los números del 1 al 10 y su uso con contadores"
+  - "Reconocer colores y objetos cotidianos en japonés"
+exercises:
+  - type: multiple_choice
+    prompt: "[HIRAGANA] ¿Qué sílaba representa el carácter 'さ'?"
+    options: ["ka", "sa", "ta", "na"]
+    answer: "sa"
+  - type: multiple_choice
+    prompt: "[HIRAGANA] La palabra 'わたし (watashi)' significa:"
+    options: ["tú", "él/ella", "yo", "nosotros"]
+    answer: "yo"
+  - type: multiple_choice
+    prompt: "[HIRAGANA] ¿Cuál es la vocal japonesa que se pronuncia con los labios más planos que en español?"
+    options: ["あ (a)", "い (i)", "う (u)", "え (e)"]
+    answer: "う (u)"
+  - type: multiple_choice
+    prompt: "[KATAKANA] ¿Qué significa テレビ (terebi)?"
+    options: ["teléfono", "televisión", "tablet", "radio"]
+    answer: "televisión"
+  - type: multiple_choice
+    prompt: "[KATAKANA] ¿Para qué se usa principalmente el katakana?"
+    options: ["Para escribir gramática japonesa", "Para escribir palabras extranjeras y nombres extranjeros", "Para escribir poesía", "Para números"]
+    answer: "Para escribir palabras extranjeras y nombres extranjeros"
+  - type: multiple_choice
+    prompt: "[KATAKANA] ¿Cómo se escribe 'café' en katakana?"
+    options: ["カフェ", "コーヒー", "チャ", "ミルク"]
+    answer: "コーヒー"
+  - type: multiple_choice
+    prompt: "[SALUDOS] ¿Qué saludo usas al conocer a alguien por primera vez?"
+    options: ["さようなら", "おはようございます", "はじめまして", "またね"]
+    answer: "はじめまして"
+  - type: multiple_choice
+    prompt: "[SALUDOS] ¿Qué significa ありがとうございます?"
+    options: ["Buenos días", "Muchas gracias", "Perdón", "De nada"]
+    answer: "Muchas gracias"
+  - type: translate
+    prompt: "[SALUDOS] Traduce al japonés la fórmula completa: 'Mucho gusto. Me llamo Ana. Encantada.' (Ana = アナ)"
+    answer: "はじめまして。わたしはアナです。よろしくおねがいします。"
+    explanation: "La fórmula estándar japonesa de presentación: はじめまして + nombre + です + よろしくおねがいします."
+  - type: multiple_choice
+    prompt: "[SALUDOS] ¿Cuándo usas こんばんは?"
+    options: ["Por la mañana", "Al mediodía", "Por la tarde-noche", "Como despedida"]
+    answer: "Por la tarde-noche"
+  - type: multiple_choice
+    prompt: "[NÚMEROS] ¿Cuánto es 'ろく (roku)'?"
+    options: ["5", "6", "7", "8"]
+    answer: "6"
+  - type: multiple_choice
+    prompt: "[NÚMEROS] ¿Cómo se dice '10' en japonés?"
+    options: ["きゅう", "はち", "じゅう", "なな"]
+    answer: "じゅう"
+  - type: multiple_choice
+    prompt: "[NÚMEROS] ¿Por qué el número 4 a veces se lee よん en lugar de し?"
+    options: ["Porque し es difícil de pronunciar", "Porque し suena igual que la palabra 'muerte'", "No hay razón, son intercambiables", "Porque よん es más antiguo"]
+    answer: "Porque し suena igual que la palabra 'muerte'"
+  - type: multiple_choice
+    prompt: "[NÚMEROS] Para contar hojas de papel, ¿qué contador es correcto?"
+    options: ["〜ほん", "〜にん", "〜まい", "〜ひき"]
+    answer: "〜まい"
+  - type: multiple_choice
+    prompt: "[COLORES] ¿Cómo se dice 'blanco' en japonés?"
+    options: ["あか", "くろ", "しろ", "あお"]
+    answer: "しろ"
+  - type: multiple_choice
+    prompt: "[COLORES] La frase 'そらはあおいです' significa:"
+    options: ["El mar es verde", "El cielo es azul", "La nieve es blanca", "La flor es roja"]
+    answer: "El cielo es azul"
+  - type: multiple_choice
+    prompt: "[OBJETOS] ¿Cómo se dice 'libro' en japonés?"
+    options: ["かばん", "ほん", "くつ", "まど"]
+    answer: "ほん"
+  - type: translate
+    prompt: "[OBJETOS] ¿Cómo dices 'Esto es una silla'? (silla = いす)"
+    answer: "これはいすです"
+    explanation: "La estructura これは〜です se usa para señalar y nombrar objetos cercanos al hablante."
+  - type: multiple_choice
+    prompt: "[OBJETOS] ¿Qué significa つくえ (tsukue)?"
+    options: ["Silla", "Ventana", "Escritorio / mesa de estudio", "Teléfono"]
+    answer: "Escritorio / mesa de estudio"
+  - type: multiple_choice
+    prompt: "[REPASO GENERAL] ¿Qué responderías a 'げんきですか?'"
+    options: ["さようなら", "はい、げんきです", "ありがとうございます", "みどりです"]
+    answer: "はい、げんきです"
+  - type: fill_blank
+    prompt: "[REPASO GENERAL] Para decir 'Soy de México' en japonés: メキシコ___きました。"
+    answer: "から"
+    explanation: "La estructura es país + からきました (vine de / soy de). から significa 'desde / de'."
+  - type: multiple_choice
+    prompt: "[REPASO GENERAL] ¿Cuál de estas palabras se escribiría en katakana?"
+    options: ["わたし (yo)", "はな (flor)", "テレビ (televisión)", "さかな (pescado)"]
+    answer: "テレビ (televisión)"
+sections:
+  - title: "Consejos para el examen"
+    type: explanation
+    content: |
+      ¡Enhorabuena por llegar al final del Bloque 1! Has aprendido:
+
+      ✦ Hiragana: las 5 vocales (あいうえお) y los grupos か, さ, た, な, は, ま, わ
+      ✦ Katakana: las 5 vocales (アイウエオ) y grupos básicos
+      ✦ Saludos: おはようございます, こんにちは, こんばんは, さようなら, ありがとうございます
+      ✦ Presentación: はじめまして, わたしは〜です, よろしくおねがいします
+      ✦ Números del 1 al 10 y los primeros contadores
+      ✦ Colores: あか, あお, きいろ, しろ, くろ, みどり
+      ✦ Objetos: ほん, かばん, くつ, つくえ, いす, まど
+
+      Consejos para este examen:
+      1. Léelo con calma, sin prisa.
+      2. Si no recuerdas algo, piensa en el contexto de la frase.
+      3. Los errores son parte del aprendizaje. ¡Toma nota de lo que falla para repasarlo!
+    tips:
+      - "Después del examen, repasa las lecciones donde hayas tenido más errores."
+      - "El Bloque 2 construye sobre estos fundamentos, así que vale la pena tenerlos sólidos."
+      - "¡Estás aprendiendo japonés! Eso ya es un logro increíble."
+notes: "Examen final del Bloque 1 para japonés N5. Cubre 5 temas: hiragana, katakana, saludos, números y objetos. 22 ejercicios en total."

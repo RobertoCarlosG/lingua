@@ -1,0 +1,137 @@
+language: ja
+title: "Bloque 1 · 03 — Saludos y presentación personal"
+level: N5
+type: conversation
+description: "Aprende los saludos esenciales del japonés cotidiano y cómo presentarte por primera vez. Estas frases las usarás desde el primer día."
+objectives:
+  - "Usar los saludos básicos según el momento del día"
+  - "Presentarte diciendo tu nombre y de dónde eres"
+  - "Responder cuando te presentan a alguien"
+vocabulary:
+  - word: "おはようございます (ohayou gozaimasu)"
+    translation: "buenos días (formal)"
+    example: "おはようございます、田中さん。"
+    example_translation: "Buenos días, señor Tanaka."
+  - word: "こんにちは (konnichiwa)"
+    translation: "buenas tardes / hola (durante el día)"
+    example: "こんにちは！げんきですか？"
+    example_translation: "¡Hola! ¿Cómo estás?"
+  - word: "こんばんは (konbanwa)"
+    translation: "buenas noches (saludo)"
+    example: "こんばんは。きょうはさむいですね。"
+    example_translation: "Buenas noches. Hace frío hoy, ¿verdad?"
+  - word: "さようなら (sayounara)"
+    translation: "adiós (despedida formal, implica que no se verán pronto)"
+    example: "さようなら、またね。"
+    example_translation: "Adiós, hasta luego."
+  - word: "またね (mata ne)"
+    translation: "hasta luego / nos vemos (informal)"
+    example: "またね！きをつけて。"
+    example_translation: "¡Hasta luego! Ten cuidado."
+  - word: "ありがとうございます (arigatou gozaimasu)"
+    translation: "muchas gracias (formal)"
+    example: "たすけてくれて、ありがとうございます。"
+    example_translation: "Gracias por ayudarme."
+  - word: "どういたしまして (dou itashimashite)"
+    translation: "de nada"
+    example: "「ありがとう」「どういたしまして」"
+    example_translation: "'Gracias.' 'De nada.'"
+  - word: "すみません (sumimasen)"
+    translation: "perdón / disculpe / oiga (para llamar la atención)"
+    example: "すみません、えきはどこですか？"
+    example_translation: "Disculpe, ¿dónde está la estación?"
+  - word: "わたしは〜です (watashi wa ~ desu)"
+    translation: "yo soy ~ / me llamo ~"
+    example: "わたしはマリアです。"
+    example_translation: "Me llamo María."
+  - word: "はじめまして (hajimemashite)"
+    translation: "mucho gusto (al conocer a alguien por primera vez)"
+    example: "はじめまして。わたしはカルロスです。"
+    example_translation: "Mucho gusto. Me llamo Carlos."
+  - word: "よろしくおねがいします (yoroshiku onegaishimasu)"
+    translation: "encantado de conocerle / espero que nos llevemos bien (frase de presentación)"
+    example: "はじめまして、よろしくおねがいします。"
+    example_translation: "Mucho gusto, encantado de conocerle."
+  - word: "〜からきました (~ kara kimashita)"
+    translation: "vine de ~ / soy de ~"
+    example: "スペインからきました。"
+    example_translation: "Soy de España."
+  - word: "おなまえは？(onamae wa?)"
+    translation: "¿cómo se llama usted? / ¿cuál es su nombre?"
+    example: "おなまえはなんですか？"
+    example_translation: "¿Cómo se llama usted?"
+  - word: "げんきですか (genki desu ka?)"
+    translation: "¿cómo estás? / ¿te encuentras bien?"
+    example: "A: げんきですか？B: はい、げんきです！"
+    example_translation: "A: ¿Cómo estás? B: ¡Estoy bien!"
+sections:
+  - title: "Primeras palabras en japonés: saludos y presentaciones"
+    type: explanation
+    content: |
+      El japonés tiene diferentes niveles de formalidad y esto se nota desde el primer saludo.
+      Para un principiante hispanohablante, aquí van las claves más importantes:
+
+      1. こんにちは (konnichiwa) es el saludo más versátil: funciona desde el mediodía
+         hasta el atardecer. Si dudas, úsalo.
+
+      2. さようなら (sayounara) tiene un matiz de "quizás no nos volvamos a ver pronto".
+         Para despedirte de alguien que verás mañana, es más natural またね (mata ne)
+         o またあした (mata ashita = hasta mañana).
+
+      3. La fórmula de presentación japonesa tiene un orden diferente al español:
+         はじめまして → nombre + です → よろしくおねがいします
+         Es decir: primero dices "mucho gusto", luego tu nombre, y al final algo
+         parecido a "espero que nos llevemos bien".
+
+      4. すみません (sumimasen) es una palabra mágica: sirve para pedir perdón,
+         para llamar la atención de un camarero o para disculparse al pasar
+         entre personas. ¡Úsala mucho!
+
+      5. El sufijo さん (san) es el equivalente de "señor/señora" y se pone
+         después del nombre o apellido. Nunca lo uses para referirte a ti mismo.
+    tips:
+      - "おはようございます es formal; entre amigos basta con おはよう (ohayou)."
+      - "Inclina ligeramente la cabeza al saludar: es el equivalente del apretón de manos."
+      - "よろしくおねがいします tiene muchos usos: presentaciones, pedir un favor, iniciar un proyecto."
+exercises:
+  - type: multiple_choice
+    prompt: "¿Qué saludo usas por la mañana (formal)?"
+    options: ["こんにちは", "こんばんは", "おはようございます", "さようなら"]
+    answer: "おはようございます"
+  - type: multiple_choice
+    prompt: "¿Qué frase usas al conocer a alguien por primera vez?"
+    options: ["さようなら", "はじめまして", "またね", "すみません"]
+    answer: "はじめまして"
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'de nada' en japonés?"
+    options: ["ありがとうございます", "すみません", "どういたしまして", "はじめまして"]
+    answer: "どういたしまして"
+  - type: translate
+    prompt: "¿Cómo dices 'Soy de España' en japonés? (Pista: España = スペイン, vine de = からきました)"
+    answer: "スペインからきました"
+    explanation: "La estructura es: país + からきました. Literalmente 'desde España vine'."
+  - type: multiple_choice
+    prompt: "こんばんは se usa:"
+    options: ["Por la mañana", "Al mediodía", "Por la tarde-noche", "Para despedirse"]
+    answer: "Por la tarde-noche"
+  - type: fill_blank
+    prompt: "Para decir 'Me llamo Ana' en japonés: わたしは___です。"
+    answer: "アナ"
+    explanation: "Los nombres extranjeros se escriben en katakana. La estructura es わたしは[nombre]です."
+  - type: multiple_choice
+    prompt: "¿Qué significa すみません?"
+    options: ["Gracias", "Adiós", "Perdón / Disculpe", "Buenas noches"]
+    answer: "Perdón / Disculpe"
+  - type: multiple_choice
+    prompt: "La respuesta correcta a 'げんきですか?' es:"
+    options: ["さようなら", "はい、げんきです", "おはようございます", "どういたしまして"]
+    answer: "はい、げんきです"
+  - type: multiple_choice
+    prompt: "さようなら implica que:"
+    options: ["Os veréis mañana", "Quizás no os veréis pronto", "Es la mañana", "Estás agradecido"]
+    answer: "Quizás no os veréis pronto"
+  - type: translate
+    prompt: "Traduce al japonés: 'Mucho gusto, me llamo Carlos. Encantado.' (Carlos = カルロス)"
+    answer: "はじめまして、わたしはカルロスです。よろしくおねがいします。"
+    explanation: "Esta es la fórmula completa de presentación japonesa estándar."
+notes: "Lección 3 del bloque 1. Practica estas frases en voz alta: la pronunciación mejora mucho con la práctica oral."

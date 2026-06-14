@@ -36,8 +36,8 @@ function AddErrorModal({ onClose, onSave, language }: {
 
   return (
     <div className="fixed inset-0 z-50 bg-ink-950/70 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="glass w-full max-w-md p-6 animate-slide-up">
-        <h2 className="text-base font-semibold text-1 mb-5">{t('errors.modalTitle')}</h2>
+      <div className="glass w-full max-w-md p-4 sm:p-6 animate-slide-up">
+        <h2 className="text-base font-semibold text-1 mb-4 sm:mb-5">{t('errors.modalTitle')}</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="text-xs text-2 font-medium mb-1.5 block">{t('errors.errorText')}</label>

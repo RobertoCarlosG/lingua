@@ -1,0 +1,96 @@
+language: fr
+title: "Bloque 2 · 02 — Les lieux de la ville"
+level: A2
+type: vocabulary
+description: "Vocabulario para identificar y describir los lugares más importantes de una ciudad francesa: comercios, servicios públicos y puntos de referencia."
+vocabulary:
+  - word: "la mairie"
+    translation: "el ayuntamiento"
+    example: "Nous allons à la mairie pour faire les papiers."
+    example_translation: "Vamos al ayuntamiento para hacer los trámites."
+  - word: "la boulangerie"
+    translation: "la panadería"
+    example: "Il y a une boulangerie au coin de la rue."
+    example_translation: "Hay una panadería en la esquina de la calle."
+  - word: "la pharmacie"
+    translation: "la farmacia"
+    example: "Je cherche une pharmacie ouverte le dimanche."
+    example_translation: "Busco una farmacia abierta el domingo."
+  - word: "la gare"
+    translation: "la estación de tren"
+    example: "Le train part de la gare à midi."
+    example_translation: "El tren sale de la estación a mediodía."
+  - word: "l'hôpital"
+    translation: "el hospital"
+    example: "L'hôpital est à deux kilomètres d'ici."
+    example_translation: "El hospital está a dos kilómetros de aquí."
+  - word: "la bibliothèque"
+    translation: "la biblioteca"
+    example: "J'emprunte des livres à la bibliothèque chaque semaine."
+    example_translation: "Tomo prestados libros de la biblioteca cada semana."
+  - word: "le marché"
+    translation: "el mercado"
+    example: "Le marché a lieu tous les samedis matin."
+    example_translation: "El mercado se celebra todos los sábados por la mañana."
+  - word: "le musée"
+    translation: "el museo"
+    example: "Ce musée est gratuit le premier dimanche du mois."
+    example_translation: "Este museo es gratuito el primer domingo del mes."
+  - word: "la poste"
+    translation: "la oficina de correos"
+    example: "Je dois envoyer un colis à la poste."
+    example_translation: "Tengo que enviar un paquete en la oficina de correos."
+  - word: "le supermarché"
+    translation: "el supermercado"
+    example: "Le supermarché ferme à vingt et une heures."
+    example_translation: "El supermercado cierra a las veintiuna horas."
+  - word: "le parc"
+    translation: "el parque"
+    example: "Les enfants jouent dans le parc l'après-midi."
+    example_translation: "Los niños juegan en el parque por la tarde."
+  - word: "l'école"
+    translation: "la escuela"
+    example: "L'école commence à huit heures et demie."
+    example_translation: "La escuela empieza a las ocho y media."
+  - word: "la rue"
+    translation: "la calle"
+    example: "Quelle est l'adresse ? C'est au 12, rue des Fleurs."
+    example_translation: "¿Cuál es la dirección? Es en el número 12 de la calle de las Flores."
+  - word: "le carrefour"
+    translation: "el cruce / la intersección"
+    example: "Tournez à gauche au carrefour."
+    example_translation: "Gire a la izquierda en el cruce."
+exercises:
+  - type: multiple_choice
+    prompt: "¿Dónde compras el pan en Francia?"
+    options: ["la pharmacie", "la boulangerie", "la mairie", "la poste"]
+    answer: "la boulangerie"
+  - type: translate
+    prompt: "Traduce al francés: 'El hospital está a dos kilómetros de aquí.'"
+    answer: "L'hôpital est à deux kilomètres d'ici."
+  - type: fill_blank
+    prompt: "Je dois envoyer un colis à la ___. (oficina de correos)"
+    answer: "poste"
+  - type: multiple_choice
+    prompt: "¿Qué es 'la mairie' ?"
+    options: ["la farmacia", "el mercado", "el ayuntamiento", "la biblioteca"]
+    answer: "el ayuntamiento"
+  - type: reorder
+    prompt: "Ordena las palabras: [samedi / le / a / lieu / marché / le / tous / les / matin]"
+    answer: "Le marché a lieu tous les samedis matin."
+  - type: fill_blank
+    prompt: "Les enfants jouent dans le ___ l'après-midi. (parque)"
+    answer: "parc"
+  - type: translate
+    prompt: "Traduce al español: 'J'emprunte des livres à la bibliothèque chaque semaine.'"
+    answer: "Tomo prestados libros de la biblioteca cada semana."
+  - type: multiple_choice
+    prompt: "¿Cómo se llama el lugar donde coges el tren?"
+    options: ["le musée", "la gare", "le carrefour", "l'école"]
+    answer: "la gare"
+  - type: fill_blank
+    prompt: "Tournez à gauche au ___. (cruce)"
+    answer: "carrefour"
+  - type: translate
+    prompt: "Traduce al francés: 'El supermercado cierra a las veintiuna horas.'"
+    answer: "Le supermarché ferme à vingt et une heures."

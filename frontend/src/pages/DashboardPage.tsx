@@ -139,7 +139,7 @@ export function DashboardPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-semibold tracking-tight text-gradient-brand">
+          <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gradient-brand">
             {isEmpty
               ? t('dashboard.welcome', { name: userName || '…' })
               : `${config.flag} ${t('dashboard.title', { language: config.label })}`
@@ -238,7 +238,7 @@ export function DashboardPage() {
                   <Icon size={14} className={color} />
                 </div>
               </div>
-              <p className="text-3xl font-semibold text-1 mt-1 tracking-tight">{value}</p>
+              <p className="text-2xl sm:text-3xl font-semibold text-1 mt-1 tracking-tight">{value}</p>
             </div>
           ))}
         </div>
@@ -327,19 +327,19 @@ export function DashboardPage() {
       {!isEmpty && (
         <div className="glass p-5">
           <h2 className="text-sm font-semibold text-2 mb-3">{t('dashboard.weekActivity')}</h2>
-          <div className="grid grid-cols-7 gap-2">
+          <div className="grid grid-cols-7 gap-1 sm:gap-2">
             {week.map(({ date, day, count }) => (
               <div
                 key={date}
-                className={`rounded-2xl p-3 text-center border transition-colors ${
+                className={`rounded-xl sm:rounded-2xl p-1.5 sm:p-3 text-center border transition-colors ${
                   count > 0
                     ? 'bg-accent/[0.12] border-accent/25'
                     : 'bg-white/[0.03] border-white/[0.06]'
                 }`}
               >
-                <p className="text-xs text-3 mb-1.5">{day}</p>
+                <p className="text-[9px] sm:text-xs text-3 mb-1">{day}</p>
                 <div
-                  className="w-2 h-2 rounded-full mx-auto"
+                  className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full mx-auto"
                   style={{
                     backgroundColor: count > 0 ? chart.stroke : 'rgba(255,255,255,0.2)',
                     boxShadow: count > 0 ? `0 0 10px ${chart.stroke}` : 'none',

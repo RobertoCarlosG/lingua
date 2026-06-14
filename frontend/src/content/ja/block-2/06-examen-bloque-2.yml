@@ -1,0 +1,83 @@
+language: ja
+title: "Bloque 2 · 06 — Examen de Bloque 2"
+level: N5
+type: vocabulary
+description: "Examen de repaso del Bloque 2. Cubre todos los temas: familia y pronombres, comida y restaurante, verbos básicos (forma ます), tiempo y clima, ciudad y transporte. Demuestra lo que aprendiste."
+vocabulary: []
+exercises:
+  - type: multiple_choice
+    prompt: "¿Qué significa 家族 (kazoku)?"
+    options: ["familia", "comida", "ciudad", "clima"]
+    answer: "familia"
+  - type: multiple_choice
+    prompt: "¿Cuál es la forma ます de 食べる (taberu)?"
+    options: ["食べます", "食べる", "食べない", "食べません"]
+    answer: "食べます"
+  - type: translate
+    prompt: "Traduce al español: 今日の天気はどうですか。"
+    answer: "¿Cómo está el tiempo hoy?"
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'Mi madre es maestra' en japonés?"
+    options: ["母は先生です。", "父は先生です。", "姉は先生です。", "祖母は先生です。"]
+    answer: "母は先生です。"
+  - type: fill_blank
+    prompt: "お___をください。(Por favor, deme agua.)"
+    options: ["水", "茶", "パン", "魚"]
+    answer: "水"
+  - type: multiple_choice
+    prompt: "¿Qué significa 駅 (eki)?"
+    options: ["estación", "banco", "hospital", "calle"]
+    answer: "estación"
+  - type: translate
+    prompt: "Traduce al japonés: 'Voy a la escuela en tren.' (forma formal)"
+    answer: "電車で学校に行きます。"
+  - type: multiple_choice
+    prompt: "¿Cuál es la forma ます del verbo irregular する (suru)?"
+    options: ["します", "すます", "するます", "します"]
+    answer: "します"
+  - type: fill_blank
+    prompt: "冬はとても___です。(En invierno hace mucho frío.)"
+    options: ["寒い", "暑い", "涼しい", "暖かい"]
+    answer: "寒い"
+  - type: reorder
+    prompt: "Ordena las palabras para decir: 'Leo el periódico todos los días.' (formal)"
+    options: ["毎日", "新聞を", "読みます。"]
+    answer: "毎日新聞を読みます。"
+  - type: multiple_choice
+    prompt: "¿Qué pronombre personal significa 'nosotros' en japonés?"
+    options: ["私たち (watashitachi)", "あなた (anata)", "彼女 (kanojo)", "彼 (kare)"]
+    answer: "私たち (watashitachi)"
+  - type: translate
+    prompt: "Traduce al español: メニューを見せてください。"
+    answer: "Por favor, muéstreme el menú."
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'gire a la izquierda' en japonés?"
+    options: ["左に曲がってください。", "右に曲がってください。", "まっすぐ行ってください。", "止まってください。"]
+    answer: "左に曲がってください。"
+  - type: fill_blank
+    prompt: "春は___です。(La primavera es cálida.)"
+    options: ["暖かい", "寒い", "暑い", "涼しい"]
+    answer: "暖かい"
+  - type: multiple_choice
+    prompt: "¿Cómo se niega 飲みます en forma ます?"
+    options: ["飲みません", "飲まない", "飲まなかった", "飲みませんでした"]
+    answer: "飲みません"
+  - type: translate
+    prompt: "Traduce al japonés: '¿Dónde está la estación?'"
+    answer: "駅はどこですか。"
+  - type: multiple_choice
+    prompt: "¿Qué significa おいしい (oishii)?"
+    options: ["delicioso", "frío", "lejos", "derecha"]
+    answer: "delicioso"
+  - type: reorder
+    prompt: "Ordena las palabras: 'Mi familia tiene cuatro personas.'"
+    options: ["私の", "家族は", "四人", "です。"]
+    answer: "私の家族は四人です。"
+  - type: fill_blank
+    prompt: "___で病院に行きます。(Voy al hospital en autobús.)"
+    options: ["バス", "タクシー", "電車", "自転車"]
+    answer: "バス"
+  - type: multiple_choice
+    prompt: "¿Cuál es la forma ます de 書く (kaku)?"
+    options: ["書きます", "書ます", "書います", "書します"]
+    answer: "書きます"

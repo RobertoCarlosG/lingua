@@ -1,0 +1,146 @@
+language: ja
+title: "Bloque 2 · 03 — Verbos básicos"
+level: N5
+type: grammar
+description: "Aprende los verbos más comunes en japonés: forma diccionario (forma plana) y forma ます (masu). La forma ます es educada y se usa en conversaciones cotidianas."
+sections:
+  - title: "Forma plana vs. forma ます"
+    type: explanation
+    content: |
+      En japonés existen dos niveles principales de habla: informal y formal/educado.
+
+      FORMA PLANA (diccionario): se usa entre amigos, en textos escritos y como base gramatical.
+      FORMA ます (masu): se usa en situaciones formales, en el trabajo, con desconocidos y personas mayores.
+
+      La forma ます se construye así según el grupo del verbo:
+      - Grupo 1 (u-verbos): el sonido final cambia a -i + ます
+        飲む (nomu) → 飲み + ます → 飲みます
+      - Grupo 2 (ru-verbos): se quita -る y se añade ます
+        食べる (taberu) → 食べ + ます → 食べます
+      - Irregulares: する (suru) → します / くる (kuru) → きます
+
+      Para negar en forma ます: cambia ます → ません
+      Para pasado en forma ます: cambia ます → ました
+    tips:
+      - "Si el infinitivo termina en -eru o -iru, probablemente sea grupo 2 (ru-verbo)."
+      - "Memoriza する (hacer) y くる (venir) por separado: son completamente irregulares."
+  - title: "Los 10 verbos más usados en N5"
+    type: explanation
+    content: |
+      COMER:      食べる → 食べます (taberu → tabemasu)
+      BEBER:      飲む   → 飲みます (nomu → nomimasu)
+      IR:         行く   → 行きます (iku → ikimasu)
+      VENIR:      くる   → きます   (kuru → kimasu) [irregular]
+      HACER:      する   → します   (suru → shimasu) [irregular]
+      VER/MIRAR:  見る   → 見ます   (miru → mimasu)
+      ESCUCHAR:   聞く   → 聞きます (kiku → kikimasu)
+      LEER:       読む   → 読みます (yomu → yomimasu)
+      ESCRIBIR:   書く   → 書きます (kaku → kakimasu)
+      HABLAR:     話す   → 話します (hanasu → hanashimasu)
+    tips:
+      - "Aprende los pares (forma plana + ます) juntos: así los activarás en cualquier contexto."
+      - "話す → 話します: los verbos en -su cambian a -shi + ます."
+vocabulary:
+  - word: "食べる (taberu)"
+    translation: "comer (forma plana)"
+    example: "毎日野菜を食べる。"
+    example_translation: "Como verduras todos los días. (informal)"
+  - word: "食べます (tabemasu)"
+    translation: "comer (forma ます)"
+    example: "毎日野菜を食べます。"
+    example_translation: "Como verduras todos los días. (formal)"
+  - word: "飲む (nomu)"
+    translation: "beber (forma plana)"
+    example: "水を飲む。"
+    example_translation: "Bebo agua. (informal)"
+  - word: "飲みます (nomimasu)"
+    translation: "beber (forma ます)"
+    example: "毎朝お茶を飲みます。"
+    example_translation: "Bebo té todas las mañanas. (formal)"
+  - word: "行く (iku)"
+    translation: "ir (forma plana)"
+    example: "学校に行く。"
+    example_translation: "Voy a la escuela. (informal)"
+  - word: "行きます (ikimasu)"
+    translation: "ir (forma ます)"
+    example: "明日、学校に行きます。"
+    example_translation: "Mañana voy a la escuela. (formal)"
+  - word: "見る (miru)"
+    translation: "ver / mirar (forma plana)"
+    example: "テレビを見る。"
+    example_translation: "Veo la televisión. (informal)"
+  - word: "見ます (mimasu)"
+    translation: "ver / mirar (forma ます)"
+    example: "毎晩テレビを見ます。"
+    example_translation: "Veo la televisión cada noche. (formal)"
+  - word: "読む (yomu)"
+    translation: "leer (forma plana)"
+    example: "本を読む。"
+    example_translation: "Leo un libro. (informal)"
+  - word: "読みます (yomimasu)"
+    translation: "leer (forma ます)"
+    example: "毎日新聞を読みます。"
+    example_translation: "Leo el periódico todos los días. (formal)"
+  - word: "書く (kaku)"
+    translation: "escribir (forma plana)"
+    example: "手紙を書く。"
+    example_translation: "Escribo una carta. (informal)"
+  - word: "書きます (kakimasu)"
+    translation: "escribir (forma ます)"
+    example: "日記を書きます。"
+    example_translation: "Escribo un diario. (formal)"
+  - word: "話す (hanasu)"
+    translation: "hablar (forma plana)"
+    example: "日本語を話す。"
+    example_translation: "Hablo japonés. (informal)"
+  - word: "話します (hanashimasu)"
+    translation: "hablar (forma ます)"
+    example: "先生と日本語で話します。"
+    example_translation: "Hablo japonés con el maestro. (formal)"
+  - word: "聞く (kiku)"
+    translation: "escuchar / preguntar (forma plana)"
+    example: "音楽を聞く。"
+    example_translation: "Escucho música. (informal)"
+  - word: "聞きます (kikimasu)"
+    translation: "escuchar / preguntar (forma ます)"
+    example: "毎日音楽を聞きます。"
+    example_translation: "Escucho música todos los días. (formal)"
+exercises:
+  - type: multiple_choice
+    prompt: "¿Cuál es la forma ます de 食べる (taberu)?"
+    options: ["食べます", "食べる", "食べません", "食べました"]
+    answer: "食べます"
+  - type: multiple_choice
+    prompt: "¿Cuál es la forma ます de 飲む (nomu)?"
+    options: ["飲みます", "飲む", "飲ます", "飲みる"]
+    answer: "飲みます"
+  - type: translate
+    prompt: "Traduce al español (forma formal): 毎朝お茶を飲みます。"
+    answer: "Bebo té todas las mañanas."
+  - type: fill_blank
+    prompt: "学校に___。(Voy a la escuela. — forma ます)"
+    options: ["行きます", "行く", "行きません", "行った"]
+    answer: "行きます"
+  - type: multiple_choice
+    prompt: "¿Cómo se niega 食べます en forma ます?"
+    options: ["食べません", "食べない", "食べなかった", "食べませんでした"]
+    answer: "食べません"
+  - type: reorder
+    prompt: "Ordena las palabras: 'Veo la televisión cada noche.' (formal)"
+    options: ["毎晩", "テレビを", "見ます。"]
+    answer: "毎晩テレビを見ます。"
+  - type: translate
+    prompt: "Traduce al japonés (forma formal): 'Leo el periódico todos los días.'"
+    answer: "毎日新聞を読みます。"
+  - type: multiple_choice
+    prompt: "¿Cuál es la forma ます del verbo irregular する (suru)?"
+    options: ["します", "すます", "するます", "しります"]
+    answer: "します"
+  - type: fill_blank
+    prompt: "先生と日本語で___。(Hablo japonés con el maestro. — forma ます)"
+    options: ["話します", "話す", "話きます", "話しません"]
+    answer: "話します"
+  - type: multiple_choice
+    prompt: "La forma pasada de 行きます es:"
+    options: ["行きました", "行きませんでした", "行った", "行きます"]
+    answer: "行きました"

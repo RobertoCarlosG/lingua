@@ -1,0 +1,104 @@
+language: ja
+title: "Bloque 2 · 01 — Familia y pronombres"
+level: N5
+type: vocabulary
+description: "Aprende los miembros de la familia y los pronombres personales en japonés. Vocabulario esencial para hablar de ti mismo y de las personas cercanas."
+vocabulary:
+  - word: "家族 (kazoku)"
+    translation: "familia"
+    example: "私の家族は四人です。"
+    example_translation: "Mi familia tiene cuatro personas."
+  - word: "父 (chichi)"
+    translation: "padre (mi padre)"
+    example: "父は医者です。"
+    example_translation: "Mi padre es médico."
+  - word: "母 (haha)"
+    translation: "madre (mi madre)"
+    example: "母は料理が上手です。"
+    example_translation: "Mi madre cocina muy bien."
+  - word: "兄 (ani)"
+    translation: "hermano mayor (mi hermano mayor)"
+    example: "兄は大学生です。"
+    example_translation: "Mi hermano mayor es universitario."
+  - word: "姉 (ane)"
+    translation: "hermana mayor (mi hermana mayor)"
+    example: "姉は東京に住んでいます。"
+    example_translation: "Mi hermana mayor vive en Tokio."
+  - word: "弟 (otōto)"
+    translation: "hermano menor (mi hermano menor)"
+    example: "弟は十歳です。"
+    example_translation: "Mi hermano menor tiene diez años."
+  - word: "妹 (imōto)"
+    translation: "hermana menor (mi hermana menor)"
+    example: "妹はかわいいです。"
+    example_translation: "Mi hermana menor es linda."
+  - word: "祖父 (sofu)"
+    translation: "abuelo (mi abuelo)"
+    example: "祖父は七十五歳です。"
+    example_translation: "Mi abuelo tiene setenta y cinco años."
+  - word: "祖母 (sobo)"
+    translation: "abuela (mi abuela)"
+    example: "祖母はよく話します。"
+    example_translation: "Mi abuela habla mucho."
+  - word: "私 (watashi)"
+    translation: "yo"
+    example: "私は学生です。"
+    example_translation: "Yo soy estudiante."
+  - word: "あなた (anata)"
+    translation: "tú / usted"
+    example: "あなたの名前は何ですか。"
+    example_translation: "¿Cuál es tu nombre?"
+  - word: "彼 (kare)"
+    translation: "él / novio"
+    example: "彼は背が高いです。"
+    example_translation: "Él es alto."
+  - word: "彼女 (kanojo)"
+    translation: "ella / novia"
+    example: "彼女は先生です。"
+    example_translation: "Ella es maestra."
+  - word: "私たち (watashitachi)"
+    translation: "nosotros"
+    example: "私たちは友達です。"
+    example_translation: "Nosotros somos amigos."
+  - word: "子供 (kodomo)"
+    translation: "niño / hijo"
+    example: "子供は公園で遊んでいます。"
+    example_translation: "El niño está jugando en el parque."
+exercises:
+  - type: multiple_choice
+    prompt: "¿Qué significa 家族 (kazoku)?"
+    options: ["familia", "ciudad", "comida", "tiempo"]
+    answer: "familia"
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'mi madre' en japonés?"
+    options: ["母 (haha)", "父 (chichi)", "姉 (ane)", "祖母 (sobo)"]
+    answer: "母 (haha)"
+  - type: translate
+    prompt: "Traduce al español: 私は学生です。"
+    answer: "Yo soy estudiante."
+  - type: translate
+    prompt: "Traduce al japonés: 'Mi abuelo tiene setenta años.'"
+    answer: "祖父は七十歳です。"
+  - type: fill_blank
+    prompt: "___は医者です。(Mi padre es médico.)"
+    options: ["父", "母", "兄", "弟"]
+    answer: "父"
+  - type: multiple_choice
+    prompt: "¿Qué pronombre significa 'nosotros' en japonés?"
+    options: ["私たち (watashitachi)", "あなた (anata)", "彼 (kare)", "私 (watashi)"]
+    answer: "私たち (watashitachi)"
+  - type: translate
+    prompt: "Traduce al español: 彼女は先生です。"
+    answer: "Ella es maestra."
+  - type: fill_blank
+    prompt: "___は大学生です。(Mi hermano mayor es universitario.)"
+    options: ["兄", "弟", "姉", "妹"]
+    answer: "兄"
+  - type: multiple_choice
+    prompt: "¿Cuál es la palabra para 'hermana menor' en japonés?"
+    options: ["妹 (imōto)", "姉 (ane)", "彼女 (kanojo)", "子供 (kodomo)"]
+    answer: "妹 (imōto)"
+  - type: reorder
+    prompt: "Ordena las palabras para formar: 'Mi familia tiene cuatro personas.'"
+    options: ["私の", "は", "四人", "家族", "です。"]
+    answer: "私の家族は四人です。"

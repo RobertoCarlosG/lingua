@@ -29,10 +29,16 @@ describe('bundledLessons', () => {
     expect(new Set(keys).size).toBe(keys.length)
   })
 
-  it('usa los niveles esperados: en → B2/C1, pt → A1/A2', () => {
+  it('usa los niveles esperados: en → B2/C1, pt/fr → A1/A2, ja → N5/N4', () => {
+    const ALLOWED_LEVELS: Record<string, string[]> = {
+      en: ['B2', 'C1'],
+      pt: ['A1', 'A2'],
+      fr: ['A1', 'A2'],
+      ja: ['N5', 'N4'],
+    }
     for (const lesson of all) {
       const parsed = parseLesson(lesson.yaml)!
-      const allowed = lesson.language === 'en' ? ['B2', 'C1'] : ['A1', 'A2']
+      const allowed = ALLOWED_LEVELS[lesson.language] ?? []
       expect(allowed, `${lesson.path} tiene nivel ${parsed.level}`).toContain(parsed.level)
     }
   })

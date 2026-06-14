@@ -1,0 +1,144 @@
+language: ja
+title: "Bloque 1 · 05 — Colores y objetos cotidianos"
+level: N5
+type: vocabulary
+description: "Aprende los colores principales y los objetos más comunes del día a día. Con este vocabulario podrás describir cosas simples a tu alrededor."
+objectives:
+  - "Reconocer y usar los colores básicos en japonés"
+  - "Nombrar objetos comunes del entorno cotidiano"
+  - "Construir frases simples de descripción con これは〜です (esto es ~)"
+vocabulary:
+  - word: "あか / 赤 (aka)"
+    translation: "rojo"
+    example: "そのりんごはあかいです。"
+    example_translation: "Esa manzana es roja."
+  - word: "あお / 青 (ao)"
+    translation: "azul (y a veces verde en ciertos contextos tradicionales)"
+    example: "そらはあおいです。"
+    example_translation: "El cielo es azul."
+  - word: "きいろ / 黄色 (kiiro)"
+    translation: "amarillo"
+    example: "バナナはきいろいです。"
+    example_translation: "El plátano es amarillo."
+  - word: "しろ / 白 (shiro)"
+    translation: "blanco"
+    example: "ゆきはしろいです。"
+    example_translation: "La nieve es blanca."
+  - word: "くろ / 黒 (kuro)"
+    translation: "negro"
+    example: "そのねこはくろいです。"
+    example_translation: "Ese gato es negro."
+  - word: "みどり / 緑 (midori)"
+    translation: "verde"
+    example: "きはみどりです。"
+    example_translation: "El árbol es verde."
+  - word: "ほん / 本 (hon)"
+    translation: "libro"
+    example: "これはわたしのほんです。"
+    example_translation: "Este es mi libro."
+  - word: "かばん (kaban)"
+    translation: "bolsa / mochila / maletín"
+    example: "あのかばんはおおきいです。"
+    example_translation: "Esa bolsa es grande."
+  - word: "くつ / 靴 (kutsu)"
+    translation: "zapatos"
+    example: "あたらしいくつをかいました。"
+    example_translation: "Compré zapatos nuevos."
+  - word: "でんわ / 電話 (denwa)"
+    translation: "teléfono"
+    example: "でんわをかけてもいいですか？"
+    example_translation: "¿Puedo hacer una llamada?"
+  - word: "つくえ / 机 (tsukue)"
+    translation: "escritorio / mesa de estudio"
+    example: "つくえのうえにほんがあります。"
+    example_translation: "Hay un libro encima del escritorio."
+  - word: "いす / 椅子 (isu)"
+    translation: "silla"
+    example: "いすにすわってください。"
+    example_translation: "Por favor siéntese en la silla."
+  - word: "まど / 窓 (mado)"
+    translation: "ventana"
+    example: "まどをあけてください。"
+    example_translation: "Por favor abra la ventana."
+  - word: "これ / それ / あれ (kore / sore / are)"
+    translation: "esto / eso / aquello (según la distancia al hablante)"
+    example: "これはなんですか？"
+    example_translation: "¿Qué es esto?"
+  - word: "おおきい / ちいさい (ookii / chiisai)"
+    translation: "grande / pequeño"
+    example: "あのいぬはおおきいです。"
+    example_translation: "Ese perro es grande."
+sections:
+  - title: "Colores y objetos: describiendo el mundo en japonés"
+    type: explanation
+    content: |
+      Con los colores y los objetos cotidianos podrás empezar a hacer descripciones
+      simples en japonés. Hay algunos puntos interesantes para hispanohablantes:
+
+      Los colores "i-adjetivos":
+      En japonés hay dos tipos de adjetivos. Los colores básicos como あか, あお, しろ,
+      くろ y きいろ son "i-adjetivos" porque terminan en い cuando modifican a un nombre:
+      - あかい本 (akai hon) = libro rojo
+      - あおいそら (aoi sora) = cielo azul
+      - きいろいバナナ (kiiroi banana) = plátano amarillo
+
+      Los colores みどり (verde) y otros son "na-adjetivos" y usan な antes del sustantivo.
+
+      La estructura これは〜です:
+      Para decir "esto es un/una ~", la estructura es muy simple:
+      これは[objeto]です。 = "Esto es [objeto]."
+      Ejemplos:
+      - これはほんです。= Esto es un libro.
+      - それはかばんです。= Eso es una bolsa.
+      - あれはつくえです。= Aquello es un escritorio.
+
+      Nota cultural: el azul y el verde
+      En japonés tradicional, el color あお (ao) cubría tanto el azul como algunos
+      verdes. Por eso hoy en día los semáforos en verde se llaman あおしんごう
+      (señal azul). みどり se introdujo más tarde para distinguir el verde.
+    tips:
+      - "Los i-adjetivos de color (あかい, あおい, しろい, くろい, きいろい) añaden い antes del sustantivo."
+      - "Practica señalando objetos a tu alrededor y nombrándolos en japonés."
+      - "La estructura これは〜ですか (¿Esto es ~?) te permitirá hacer preguntas desde el primer día."
+exercises:
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'rojo' en japonés?"
+    options: ["あお", "あか", "しろ", "くろ"]
+    answer: "あか"
+  - type: multiple_choice
+    prompt: "La frase 'そらはあおいです' significa:"
+    options: ["El mar es azul", "El cielo es azul", "La nieve es blanca", "El árbol es verde"]
+    answer: "El cielo es azul"
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'libro' en japonés?"
+    options: ["くつ", "かばん", "ほん", "まど"]
+    answer: "ほん"
+  - type: multiple_choice
+    prompt: "¿Qué significa これ?"
+    options: ["Aquello (lejos de ambos)", "Eso (cerca del oyente)", "Esto (cerca del hablante)", "¿Qué?"]
+    answer: "Esto (cerca del hablante)"
+  - type: translate
+    prompt: "¿Cómo dices 'Esto es una ventana'? (ventana = まど)"
+    answer: "これはまどです"
+    explanation: "La estructura これは〜です es la base para señalar y nombrar objetos."
+  - type: multiple_choice
+    prompt: "¿Qué color es 'きいろ (kiiro)'?"
+    options: ["Rojo", "Azul", "Verde", "Amarillo"]
+    answer: "Amarillo"
+  - type: multiple_choice
+    prompt: "¿Cómo se dice 'silla' en japonés?"
+    options: ["つくえ", "まど", "いす", "ほん"]
+    answer: "いす"
+  - type: multiple_choice
+    prompt: "La curiosidad cultural sobre あお es que en japonés tradicional cubría:"
+    options: ["Solo el azul", "El azul y ciertos verdes", "El rojo y el naranja", "El blanco y el gris"]
+    answer: "El azul y ciertos verdes"
+  - type: fill_blank
+    prompt: "Para decir 'el libro rojo' en japonés: ___ ほん (usa el i-adjetivo de rojo)"
+    answer: "あかい"
+    explanation: "Los i-adjetivos de color se colocan directamente antes del sustantivo: あかいほん = libro rojo."
+  - type: multiple_choice
+    prompt: "¿Qué significa おおきい?"
+    options: ["Pequeño", "Grande", "Nuevo", "Viejo"]
+    answer: "Grande"
+notes: "Lección 5 del bloque 1. ¡Ya tienes vocabulario suficiente para la lección final del bloque! Revisa todas las lecciones anteriores antes del examen."

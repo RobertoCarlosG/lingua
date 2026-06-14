@@ -3,7 +3,7 @@
 import yaml
 
 # Espejo del registro del frontend (frontend/src/lib/languages.ts)
-VALID_LANGUAGES = {"en", "pt"}
+VALID_LANGUAGES = {"en", "pt", "fr", "ja"}
 VALID_LESSON_TYPES = {"vocabulary", "phonetics", "grammar", "reading", "conversation"}
 VALID_EXERCISE_TYPES = {"fill_blank", "translate", "multiple_choice", "reorder"}
 
