@@ -188,6 +188,7 @@
     "sort": {
       "recent": "Recent",
       "title": "A → Z",
+      "level": "By level",
       "status": "By status"
     },
     "review": "Review lesson",

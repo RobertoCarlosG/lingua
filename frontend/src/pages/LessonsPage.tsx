@@ -18,7 +18,7 @@ import { cn } from '@/lib/utils'
 import { parseLesson, validateLesson, LESSON_TEMPLATE_VOCAB, LESSON_TEMPLATE_PHONETICS } from '@/lib/yaml-parser'
 import type { Lesson, LessonStatus, LessonYAML, VocabItem, Exercise } from '@/types/database'
 
-type SortMode = 'recent' | 'title' | 'status'
+type SortMode = 'recent' | 'title' | 'status' | 'level'
 
 type ReviewState = {
   lessonId: string
@@ -533,9 +533,19 @@ export function LessonsPage() {
   }
 
   const config = languageConfig(activeLanguage)
-  const visibleLessons = showCompleted
+  const filteredLessons = showCompleted
     ? lessons
     : lessons.filter(l => l.status !== 'completed')
+  // 'level' no es columna de la BD (vive en el YAML), así que se ordena en cliente
+  const visibleLessons = sortMode === 'level'
+    ? [...filteredLessons].sort((a, b) =>
+        (parseLesson(a.yaml_content)?.level ?? '').localeCompare(
+          parseLesson(b.yaml_content)?.level ?? '',
+          undefined,
+          { numeric: true, sensitivity: 'base' }
+        )
+      )
+    : filteredLessons
 
   if (reviewState) {
     return (
@@ -617,7 +627,7 @@ export function LessonsPage() {
                 {showCompleted ? t('lessons.hideCompleted') : t('lessons.showCompleted')}
               </button>
               <span className="flex-1" />
-              {(['recent', 'title', 'status'] as SortMode[]).map(mode => (
+              {(['recent', 'title', 'level', 'status'] as SortMode[]).map(mode => (
                 <button
                   key={mode}
                   onClick={() => setSortMode(mode)}

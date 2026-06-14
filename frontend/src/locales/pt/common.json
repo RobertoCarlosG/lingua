@@ -188,6 +188,7 @@
     "sort": {
       "recent": "Recentes",
       "title": "A → Z",
+      "level": "Por nível",
       "status": "Por status"
     },
     "review": "Revisar lição",
