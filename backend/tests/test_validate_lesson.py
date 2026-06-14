@@ -66,7 +66,7 @@ def test_validate_reports_missing_required_fields(client):
 
 
 def test_validate_rejects_unknown_language_and_type(client):
-    lesson = 'title: "X"\nlanguage: fr\ntype: dancing'
+    lesson = 'title: "X"\nlanguage: zz\ntype: dancing'
     resp = client.post("/api/lessons/validate", json={"yaml_content": lesson})
 
     body = resp.json()
