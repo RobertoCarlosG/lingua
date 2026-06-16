@@ -7,6 +7,7 @@ import { ReviewPage } from '@/pages/ReviewPage'
 import { VocabularyPage } from '@/pages/VocabularyPage'
 import { ErrorBankPage } from '@/pages/ErrorBankPage'
 import { LessonsPage } from '@/pages/LessonsPage'
+import { ExplorePage } from '@/pages/ExplorePage'
 
 function AuthGuard({ children }: { children: React.ReactNode }) {
   const { session, loading } = useAuth()
@@ -32,6 +33,7 @@ export default function App() {
             <Route path="vocabulary" element={<VocabularyPage />} />
             <Route path="errors" element={<ErrorBankPage />} />
             <Route path="lessons" element={<LessonsPage />} />
+            <Route path="explore" element={<ExplorePage />} />
           </Route>
         </Routes>
       </BrowserRouter>

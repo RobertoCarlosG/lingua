@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { Outlet, NavLink } from 'react-router-dom'
 import {
   LayoutDashboard, BookOpen, AlertCircle, FileText,
-  Brain, Menu, X, Sparkles, LogOut, Languages
+  Brain, Menu, X, Sparkles, LogOut, Languages, Compass
 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { LANGUAGE_CODES, LEARNING_LANGUAGES } from '@/lib/languages'
@@ -19,6 +19,7 @@ const NAV_ITEMS = [
   { to: '/vocabulary', icon: BookOpen, key: 'nav.vocabulary' },
   { to: '/errors', icon: AlertCircle, key: 'nav.errors' },
   { to: '/lessons', icon: FileText, key: 'nav.lessons' },
+  { to: '/explore', icon: Compass, key: 'nav.explore', highlight: true },
 ]
 
 export function Layout() {
@@ -36,9 +37,12 @@ export function Layout() {
     i18n.changeLanguage(lang)
   }
 
-  const levelsSummary = LANGUAGE_CODES
-    .map(code => `${code.toUpperCase()}: ${LEARNING_LANGUAGES[code].levels}`)
-    .join(' · ')
+  const PILL_COLORS: Record<string, string> = {
+    en: 'bg-[rgba(45,110,235,0.12)] border-[rgba(45,110,235,0.28)] text-[rgb(var(--accent-soft))]',
+    pt: 'bg-[rgba(var(--orb-teal),0.12)] border-[rgba(var(--orb-teal),0.28)] text-[#7fe3ea]',
+    fr: 'bg-[rgba(var(--orb-teal),0.10)] border-[rgba(34,197,132,0.28)] text-[#5ee8b0]',
+    ja: 'bg-[rgba(var(--orb-indigo),0.15)] border-[rgba(var(--orb-indigo),0.30)] text-[#b8b4ff]',
+  }
 
   return (
     <div className="flex h-dvh overflow-hidden">
@@ -81,11 +85,11 @@ export function Layout() {
           </div>
 
           <nav className="flex-1 px-3 space-y-1 overflow-y-auto">
-            {NAV_ITEMS.map(({ to, icon: Icon, key }) => (
+            {NAV_ITEMS.map(({ to, icon: Icon, key, highlight }) => (
               <NavLink
                 key={to}
                 to={to}
-                className={({ isActive }) => cn('nav-item', isActive && 'active')}
+                className={({ isActive }) => cn('nav-item', isActive && 'active', highlight && 'nav-item-explore')}
               >
                 <Icon size={18} />
                 <span>{t(key)}</span>
@@ -107,7 +111,21 @@ export function Layout() {
                 ))}
               </select>
             </div>
-            <p className="text-xs text-3 font-mono">{levelsSummary}</p>
+            <div className="grid grid-cols-2 gap-1.5">
+              {LANGUAGE_CODES.map(code => (
+                <div
+                  key={code}
+                  className={cn(
+                    'flex items-center gap-1.5 px-2 py-1.5 rounded-xl border text-xs font-mono',
+                    PILL_COLORS[code]
+                  )}
+                >
+                  <span className="text-sm leading-none">{LEARNING_LANGUAGES[code].flag}</span>
+                  <span className="font-semibold">{code.toUpperCase()}</span>
+                  <span className="ml-auto opacity-60 text-[10px]">{LEARNING_LANGUAGES[code].levels}</span>
+                </div>
+              ))}
+            </div>
             {user && (
               <div className="flex items-center gap-2.5">
                 {user.user_metadata?.avatar_url ? (
