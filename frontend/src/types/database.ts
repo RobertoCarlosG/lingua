@@ -119,6 +119,14 @@ export type Database = {
   }
 }
 
+export interface LessonI18nBlock {
+  title?: string
+  objectives?: string[]
+  sections?: LessonSection[]
+  exercises?: Exercise[]
+  notes?: string
+}
+
 export interface LessonYAML {
   title: string
   language: Language
@@ -129,6 +137,10 @@ export interface LessonYAML {
   sections?: LessonSection[]
   exercises?: Exercise[]
   notes?: string
+  i18n?: {
+    en?: LessonI18nBlock
+    es?: LessonI18nBlock
+  }
 }
 
 export interface VocabItem {
